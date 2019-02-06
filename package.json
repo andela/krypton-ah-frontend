@@ -8,14 +8,19 @@
   },
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
-    "start": "webpack-dev-server --config webpack/webpack.dev.js --open --hot",
-    "test": "NODE_ENV=test jest --coverage ./test",
+    "start": "node ./server.js",
+    "dev": "webpack-dev-server --config webpack/webpack.dev.js --open --hot",
+    "test": "NODE_ENV=test jest --coverage",
     "lint": "./node_modules/eslint/bin/eslint.js './**/*.js'",
-    "coverage": "nyc npm test && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls"
+    "coverage": "nyc npm test && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
+    "heroku-postbuild": "npm run build"
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "./test/enzyme.setup.js"
+      "./utils/enzyme.setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   },
   "husky": {
@@ -34,6 +39,7 @@
   },
   "homepage": "https://github.com/andela/krypton-ah-frontend#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "normalize.css": "^8.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -41,9 +47,13 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "redux-saga": "^1.0.1",
+    "redux-thunk": "^2.3.0",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.85.0"
+    "semantic-ui-react": "^0.85.0",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -59,6 +69,7 @@
     "dotenv-webpack": "^1.7.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
@@ -75,10 +86,6 @@
     "react-test-renderer": "^16.7.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "url-loader": "^1.1.2",
-    "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14",
-    "webpack-merge": "^4.2.1"
+    "url-loader": "^1.1.2"
   }
 }

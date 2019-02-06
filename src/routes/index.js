@@ -1,6 +1,6 @@
 import Home from '../pages/Home';
 import Login from '../pages/Login';
-import FourOhFour from '../pages/404';
+import NotFound from '../pages/404';
 
 export default [
   {
@@ -17,7 +17,7 @@ export default [
   },
   {
     name: '404',
-    component: FourOhFour,
+    component: NotFound,
     exact: true,
     path: '*'
   }
