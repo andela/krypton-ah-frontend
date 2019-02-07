@@ -1,3 +1,2 @@
 dist/* 
 webpack*.*
-test/*.test.js

@@ -1,6 +1,6 @@
 import Home from '../pages/Home';
 import Login from '../pages/Login';
-import NotFound from '../pages/404';
+import NotFound from '../pages/NotFound';
 
 export default [
   {
