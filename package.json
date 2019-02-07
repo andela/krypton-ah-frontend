@@ -12,7 +12,6 @@
     "dev": "webpack-dev-server --config webpack/webpack.dev.js --open --hot",
     "test": "NODE_ENV=test jest --coverage",
     "lint": "./node_modules/eslint/bin/eslint.js './**/*.js'",
-    "coverage": "nyc npm test && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
     "heroku-postbuild": "npm run build"
   },
   "jest": {
@@ -64,7 +63,6 @@
     "babel-jest": "^24.0.0",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
-    "coveralls": "^3.0.2",
     "css-loader": "^2.1.0",
     "dotenv-webpack": "^1.7.0",
     "enzyme": "^3.8.0",
