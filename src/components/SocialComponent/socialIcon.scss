@@ -1,0 +1,17 @@
+@import "../colors";
+@import "../fonts";
+
+.ui {
+
+  &.image {
+    cursor: pointer !important;
+    width: 2.8rem !important;
+  }
+
+  &.images {
+    margin: 0 auto !important;
+    margin-top: 30px !important;
+    text-align: center;
+  }
+
+}

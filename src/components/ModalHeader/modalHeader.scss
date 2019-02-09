@@ -1,0 +1,28 @@
+@import "../colors";
+@import "../fonts";
+
+h2 {
+  &.header {
+    border-bottom: 0;
+    color: lighten($primarycolor, 53%);
+    
+    font: {
+      family: "roboto";
+      size: 1.5rem;
+      weight: 400;
+    }
+    margin-top: 1.25rem;
+    text-transform: uppercase;
+  }
+}
+
+hr {
+  border: 1px solid;
+  color: $black;
+  margin: {
+    bottom: 3.875rem;
+    left: 0;
+    top: -0.437rem;
+  }
+  width: 3.2rem;
+}

@@ -1,0 +1,40 @@
+@import "../colors";
+@import "../fonts";
+
+body {
+  font: {
+    family: "roboto";
+    weight: 100;
+  }
+}
+
+.ui {
+
+	&.tiny {
+	  &.modal {
+			border: 1px solid $primarycolor;
+			border-radius: 0.938rem;
+			margin: 2rem;
+			padding: 1.25rem;
+      width: 28rem;
+    }
+  }
+}
+
+.create-account span {
+  text-decoration: underline;
+}
+
+#signup-button {
+  border-radius: 0;
+  color: $black !important;
+  font-family: roboto, arial, 'sans-serif';
+  font-weight: 700;
+  margin: 3.125rem 0;
+
+  &:hover {
+    background: $primarycolor !important;
+    color: $white !important;
+    transition: 0.5s ease-in-out;
+  }
+}

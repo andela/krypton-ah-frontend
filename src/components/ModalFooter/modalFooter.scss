@@ -1,0 +1,27 @@
+@import "../colors";
+@import "../fonts";
+
+.create-account {
+  margin: 0 auto !important;
+
+  h5 {
+    font: {
+      size: 0.75rem;
+      weight: 200 !important;
+    };
+
+    margin: {
+      bottom: 1.875rem !important;
+      top: 3.125rem !important;
+    }
+
+    text-align: center;
+  }
+
+  span {
+    color: $red;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+}
