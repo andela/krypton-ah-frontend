@@ -5,6 +5,13 @@ exports[`App should match snapshot 1`] = `
   <h1>
     Welcome to Authors Havens
   </h1>
-  <UserModal />
+  <ModalComponent
+    baseText="Create an account."
+    divider="sign in"
+    link="Sign up"
+    title="sign in"
+  >
+    <SignIn />
+  </ModalComponent>
 </div>
 `;

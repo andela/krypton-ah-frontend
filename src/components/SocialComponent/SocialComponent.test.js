@@ -1,20 +1,22 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import SocialComponent from '../components/SocialComponent';
+import { componentSnapshots, expectedResult } from '../../utils/helpers';
 
-describe('Modal Social', () => {
+import SocialComponent from '.';
+
+function checkSocialIcons() {
   test('it should matches the snapshot', () => {
-    const component = create(<SocialComponent />); expect(component.toJSON()).toMatchSnapshot();
+    componentSnapshots(<SocialComponent />);
   });
-
   test('renders four <Image /> components', () => {
-    const wrapper = shallow(<SocialComponent />);
-    expect(wrapper.find('Image')).toHaveLength(4);
+    expectedResult(<SocialComponent />, 'Image', 4);
   });
-
   test('renders children with `.column`', () => {
     const wrapper = shallow(<SocialComponent />);
     expect(wrapper.find('.center').filter('.column')).toHaveLength(1);
   });
+}
+
+describe('Modal Social', () => {
+  checkSocialIcons();
 });

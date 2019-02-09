@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Modal Divider it should matches the snapshot 1`] = `
+exports[`Modal Footer should matches the snapshot 1`] = `
 <div>
   <button
     className="ui button ui button black"

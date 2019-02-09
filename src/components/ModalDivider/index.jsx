@@ -5,16 +5,16 @@ import './modalDivider.scss';
 
 
 function ModalDivider(props) {
-  const { title } = props;
+  const { text } = props;
   return (
     <>
-      <Divider horizontal>{ title }</Divider>
+      <Divider horizontal>{ text }</Divider>
     </>
   );
 }
 
 ModalDivider.propTypes = {
-  title: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired
 };
 
 export default ModalDivider;
