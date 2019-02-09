@@ -1,10 +1,10 @@
-@import '../_colors.scss';
-@import '../_fonts.scss';
+@import "../colors";
+@import "../fonts";
 
 .ui {
   &.image {
-    width: 2.8rem !important;
     cursor: pointer !important;
+    width: 2.8rem !important;
   }
   &.images {
     margin: 0 auto !important;

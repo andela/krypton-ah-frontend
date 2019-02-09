@@ -47,6 +47,7 @@
   "homepage": "https://github.com/andela/krypton-ah-frontend#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "enzyme": "^3.8.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
@@ -56,6 +57,7 @@
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "react-test-renderer": "^16.8.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.85.0",
     "webpack": "^4.29.0",
@@ -75,7 +77,6 @@
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^2.1.0",
     "dotenv-webpack": "^1.7.0",
-    "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",
     "enzyme-to-json": "^3.3.5",
     "eslint": "^5.13.0",
@@ -92,7 +93,6 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "nyc": "^13.2.0",
-    "react-test-renderer": "^16.8.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2"
