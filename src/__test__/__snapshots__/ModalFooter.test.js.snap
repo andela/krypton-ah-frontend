@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Footer it should matches the snapshot 1`] = `
+<div
+  className="createAccount"
+>
+  <h5
+    className="ui header"
+  >
+     
+    <span
+      color="red"
+    />
+  </h5>
+</div>
+`;

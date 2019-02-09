@@ -1,0 +1,15 @@
+@import '../colors';
+@import '../fonts';
+
+.ui {
+  &.horizontal {
+    &.divider {
+      font: {
+        size:0.875rem;
+        family: roboto;
+        weight: 100
+      };
+      text-transform: none
+    }
+  }
+}
