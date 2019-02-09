@@ -1,0 +1,21 @@
+@import '../_colors.scss';
+@import '../_fonts.scss';
+
+.createAccount {
+  margin: 0 auto !important;
+  h5 {
+    text-align: center;
+    font: {
+      size: 0.75rem;
+      weight: 200 !important;
+    };
+    margin: {
+      top: 3.125rem !important;
+      bottom: 1.875rem !important
+    }
+  }
+  span {
+    color: $red;
+    cursor: pointer;
+  }
+}

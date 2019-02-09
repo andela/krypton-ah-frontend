@@ -18,6 +18,10 @@
     "setupFilesAfterEnv": [
       "./enzyme.setup.js"
     ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
@@ -40,6 +44,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "normalize.css": "^8.0.1",
+    "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
@@ -62,6 +67,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.0.0",
     "babel-loader": "^8.0.5",
+    "check-prop-types": "^1.1.2",
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^2.1.0",
     "dotenv-webpack": "^1.7.0",
@@ -82,7 +88,7 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "nyc": "^13.2.0",
-    "react-test-renderer": "^16.7.0",
+    "react-test-renderer": "^16.8.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2"

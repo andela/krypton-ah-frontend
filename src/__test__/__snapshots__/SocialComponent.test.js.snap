@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Social it should matches the snapshot 1`] = `
+<div>
+  <div
+    className="center aligned column"
+  >
+    <div
+      className="ui tiny images"
+    >
+      <img
+        className="ui image"
+        src="test-file-stub"
+      />
+      <img
+        className="ui image"
+        src="test-file-stub"
+      />
+      <img
+        className="ui image"
+        src="test-file-stub"
+      />
+      <img
+        className="ui image"
+        src="test-file-stub"
+      />
+    </div>
+  </div>
+</div>
+`;

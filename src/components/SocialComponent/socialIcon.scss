@@ -1,0 +1,14 @@
+@import '../_colors.scss';
+@import '../_fonts.scss';
+
+.ui {
+  &.image {
+    width: 2.8rem !important;
+    cursor: pointer !important;
+  }
+  &.images {
+    margin: 0 auto !important;
+    margin-top: 30px !important;
+    text-align: center;
+  }
+}
