@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialMediaIcons should match snapshot 1`] = `
+<MenuMenu
+  className="SocialMediaContainer"
+  position={null}
+>
+  <MenuItem
+    className="socialMediaIcons smallIconPadding"
+    key="facebook"
+  >
+    <Icon
+      as="i"
+      className="socialMediaIcon"
+      fitted={true}
+      name="facebook f"
+      size="small"
+    />
+  </MenuItem>
+  <MenuItem
+    className="socialMediaIcons smallIconPadding"
+    key="twitter"
+  >
+    <Icon
+      as="i"
+      className="socialMediaIcon"
+      fitted={true}
+      name="twitter"
+      size="small"
+    />
+  </MenuItem>
+  <MenuItem
+    className="socialMediaIcons smallIconPadding"
+    key="google plus g"
+  >
+    <Icon
+      as="i"
+      className="socialMediaIcon"
+      fitted={true}
+      name="google plus g"
+      size="small"
+    />
+  </MenuItem>
+  <MenuItem
+    className="socialMediaIcons smallIconPadding"
+    key="instagram"
+  >
+    <Icon
+      as="i"
+      className="socialMediaIcon"
+      fitted={true}
+      name="instagram"
+      size="small"
+    />
+  </MenuItem>
+</MenuMenu>
+`;
+
+exports[`SocialMediaIcons should match snapshot 2`] = `
+<MenuMenu
+  className="SocialMediaContainer"
+  position={null}
+>
+  <MenuItem
+    className="socialMediaIcons bigIconPadding"
+    key="facebook"
+  >
+    <Icon
+      as="i"
+      className="socialMediaIcon"
+      fitted={true}
+      name="facebook f"
+      size="large"
+    />
+  </MenuItem>
+  <MenuItem
+    className="socialMediaIcons bigIconPadding"
+    key="twitter"
+  >
+    <Icon
+      as="i"
+      className="socialMediaIcon"
+      fitted={true}
+      name="twitter"
+      size="large"
+    />
+  </MenuItem>
+  <MenuItem
+    className="socialMediaIcons bigIconPadding"
+    key="google plus g"
+  >
+    <Icon
+      as="i"
+      className="socialMediaIcon"
+      fitted={true}
+      name="google plus g"
+      size="large"
+    />
+  </MenuItem>
+  <MenuItem
+    className="socialMediaIcons bigIconPadding"
+    key="instagram"
+  >
+    <Icon
+      as="i"
+      className="socialMediaIcon"
+      fitted={true}
+      name="instagram"
+      size="large"
+    />
+  </MenuItem>
+</MenuMenu>
+`;

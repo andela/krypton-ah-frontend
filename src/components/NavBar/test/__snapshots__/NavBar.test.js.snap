@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should match snapshot 1`] = `
+<Fragment>
+  <TinyBlackNavBar
+    stickTopMenu={[Function]}
+    unStickTopMenu={[Function]}
+  />
+  <WhiteNavBar
+    avatarUrl="test-file-stub"
+    fixed={false}
+    isAuthenticated={false}
+  />
+</Fragment>
+`;
+
+exports[`TinyBlackBar should match snapshot 1`] = `
+<Visibility
+  context={[Window]}
+  continuous={false}
+  offset={
+    Array [
+      0,
+      0,
+    ]
+  }
+  onBottomPassed={null}
+  onBottomVisible={null}
+  once={false}
+  updateOn="events"
+>
+  <Menu
+    className="tinyBlackNavBar"
+    position="relative"
+  >
+    <SocialMediaIcons
+      iconSize="small"
+      position="right"
+    />
+  </Menu>
+</Visibility>
+`;
+
+exports[`WhiteNavBar should match snapshot 1`] = `
+<Menu
+  borderless={true}
+  className="whiteNavBar"
+  fixed={null}
+>
+  <MenuMenu
+    className="whiteBarMenu"
+    position="left"
+  >
+    <MenuItem>
+      <Image
+        alt="AH-logo"
+        as="img"
+        className="ahIcon"
+        src="test-file-stub"
+        ui={true}
+      />
+    </MenuItem>
+    <MenuItem>
+      <h1>
+        Authors Haven
+      </h1>
+    </MenuItem>
+  </MenuMenu>
+  <MenuMenu
+    position="right"
+  >
+    <MenuItem>
+      <Icon
+        as="i"
+        fitted={true}
+        name="search"
+        size="big"
+      />
+    </MenuItem>
+    <MenuItem>
+      <Button
+        as="button"
+        secondary={true}
+      >
+        Write an Article
+      </Button>
+    </MenuItem>
+  </MenuMenu>
+</Menu>
+`;
+
+exports[`WhiteNavBar with props should match snapshot 1`] = `
+<Menu
+  borderless={true}
+  className="whiteNavBar"
+  fixed="top"
+>
+  <MenuMenu
+    className="whiteBarMenu"
+    position="left"
+  >
+    <MenuItem>
+      <Image
+        alt="AH-logo"
+        as="img"
+        className="ahIcon"
+        src="test-file-stub"
+        ui={true}
+      />
+    </MenuItem>
+    <MenuItem>
+      <h1>
+        Authors Haven
+      </h1>
+    </MenuItem>
+  </MenuMenu>
+  <MenuMenu
+    position="right"
+  >
+    <MenuItem>
+      <Icon
+        as="i"
+        fitted={true}
+        name="search"
+        size="big"
+      />
+    </MenuItem>
+    <MenuItem>
+      <Button
+        as="button"
+        secondary={true}
+      >
+        Write an Article
+      </Button>
+    </MenuItem>
+    <MenuItem>
+      <Dropdown
+        additionLabel="Add "
+        additionPosition="top"
+        className="link item"
+        closeOnBlur={true}
+        deburr={false}
+        icon="dropdown"
+        item={true}
+        minCharacters={1}
+        noResultsMessage="No results found."
+        openOnFocus={true}
+        pointing={true}
+        renderLabel={[Function]}
+        searchInput="text"
+        selectOnBlur={true}
+        selectOnNavigation={true}
+        simple={true}
+        trigger={
+          <Image
+            as="img"
+            avatar={true}
+            className="avatarImg"
+            src="https://fakeAvatar.com"
+            ui={true}
+          />
+        }
+        wrapSelection={true}
+      >
+        <DropdownMenu
+          className="right"
+        >
+          <DropdownItem>
+            PROFILE
+          </DropdownItem>
+          <DropdownItem>
+            BOOKMARKS
+          </DropdownItem>
+          <DropdownItem>
+            LOG OUT
+          </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </MenuItem>
+  </MenuMenu>
+</Menu>
+`;
