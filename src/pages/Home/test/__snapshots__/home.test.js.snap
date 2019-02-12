@@ -3,7 +3,7 @@
 exports[`App should match snapshot 1`] = `
 <div>
   <h1>
-    Welcome to Authors Havens
+    Welcome to Authors Haven
   </h1>
 </div>
 `;
