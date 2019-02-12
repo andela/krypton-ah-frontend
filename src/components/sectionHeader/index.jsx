@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import './Titleheader.scss';
-import { mockHeader } from '../../constants';
+import { mockHeader } from '../../mockData';
 
 export default function sectionHeader(props) {
   const { text } = props;

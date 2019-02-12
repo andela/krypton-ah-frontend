@@ -14,10 +14,7 @@ export default function WidgetContainer() {
     <Grid.Row columns={1}>
       <Grid.Column>
         <Title text="Trending" />
-        <FeaturedWidget
-          className="featured-widget"
-          articles={trendingArticles}
-        />
+        <FeaturedWidget className="featured-widget" articles={trendingArticles} />
         <Title text="Tags" />
         <List className="tags" divided relaxed>
           <Tags />

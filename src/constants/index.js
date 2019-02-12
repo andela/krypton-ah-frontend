@@ -47,10 +47,14 @@ const socialMediaLoginIcons = [
     key: 4
   }
 ];
+const API_BASE_URL = 'http://krypton-ah-stage.herokuapp.com';
+const authentication = 'authentication';
 
-module.exports = {
+export {
   socialMediaElements,
   articleDetails,
   advertimage,
-  socialMediaLoginIcons
+  socialMediaLoginIcons,
+  API_BASE_URL,
+  authentication,
 };

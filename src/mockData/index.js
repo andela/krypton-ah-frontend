@@ -1,3 +1,5 @@
+import { API_BASE_URL } from '../constants';
+
 const items = [
   {
     description:
@@ -74,7 +76,83 @@ const trendingArticles = [
   }
 ];
 
-module.exports = {
+const payload = {
+  firstname: 'john',
+  lastname: 'joseph',
+  email: 'jo@jos.com',
+  password: 'password123R'
+};
+const fakeUser2 = {
+  email: 'jo@jos.com',
+  password: 'password'
+};
+const signupEndpoint = `${API_BASE_URL}/api/v1/users/signup`;
+const signinEndpoint = `${API_BASE_URL}/api/v1/users/signin`;
+
+const signupOkResponse = {
+  status: 201,
+  success: true,
+  data: {
+    message: 'Account successfully created, Kindly check your email to activate your account. In case you did not receive the activation link in your mail, kindly visit this link localhost:3000/api/v1/users/resend/activation/mail to resend the mail.',
+  }
+};
+
+const mockResponse = {
+  message: 'Successfully logged in',
+};
+const error = {
+  response: {
+    status: 400,
+    success: false,
+    data: {
+      message: 'Oops! something went wrong, kindly try again',
+    }
+  }
+};
+const loginOkResponse = {
+  status: 200,
+  success: true,
+  data: {
+    token: 'sampleToken',
+    message: 'You have sccessfully login',
+  }
+};
+const loginBadResponse = {
+  status: 400,
+  success: false,
+  data: {
+    message: 'Incorrect credentials',
+  }
+};
+
+const startAction = [{ type: 'START' }];
+
+const signupSuccessAction = [
+  {
+    type: 'SIGNUP_SUCCESS',
+    payload
+  }
+];
+const signupFailureAction = [
+  {
+    type: 'SIGNUP_FAILURE',
+    payload
+  }
+];
+
+export {
+  payload,
+  fakeUser2,
+  signupEndpoint,
+  signinEndpoint,
+  mockResponse,
+  signupOkResponse,
+  startAction,
+  signupSuccessAction,
+  signupFailureAction,
+  error,
+  loginOkResponse,
+  loginBadResponse,
   items,
   categories,
   popularArticles,

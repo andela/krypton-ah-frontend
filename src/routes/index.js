@@ -3,6 +3,7 @@ import SignUp from '../pages/SignUp';
 import Login from '../pages/Login';
 import NotFound from '../pages/NotFound';
 import ViewArticle from '../pages/ViewArticle';
+import Verification from '../pages/Verification';
 
 export default [
   {
@@ -28,6 +29,12 @@ export default [
     component: SignUp,
     exact: true,
     path: '/signup'
+  },
+  {
+    name: 'verification',
+    component: Verification,
+    exact: true,
+    path: '/verification'
   },
   {
     name: '404',
