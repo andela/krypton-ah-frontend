@@ -7,6 +7,8 @@ exports[`titleHeader test should test for the titleheader component 1`] = `
 >
   <p
     className="titletext"
-  />
+  >
+    this is a placeholder header
+  </p>
 </Header>
 `;
