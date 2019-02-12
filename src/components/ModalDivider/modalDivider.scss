@@ -1,11 +1,10 @@
-@import "../colors";
-@import "../fonts";
+@import "../../styles/partials/colors";
+@import "../../styles/partials/fonts";
 
 .ui {
   &.horizontal {
     &.divider {
       font: {
-        family: roboto;
         size: 0.875rem;
         weight: 100;
       };

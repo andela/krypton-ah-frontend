@@ -1,64 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Modal Footer it should matches the snapshot 1`] = `
-<div>
-  <form
-    className="ui form"
-    onSubmit={[Function]}
+exports[`SignIn Form should matches the snapshot 1`] = `
+<Form
+  as="form"
+  onSubmit={[Function]}
+>
+  <FormGroup
+    widths="equal"
   >
-    <div
-      className="field"
-    >
-      <input
-        name="email"
-        onChange={[Function]}
-        placeholder="Email Address"
-        required={true}
-        type="email"
-        value=""
-      />
-    </div>
-    <div
-      className="field"
-    >
-      <input
-        name="password"
-        onChange={[Function]}
-        placeholder="Password"
-        required={true}
-        type="password"
-        value=""
-      />
-    </div>
-    <div
-      className="field"
-    >
-      <div
-        className="ui checkbox"
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        onMouseUp={[Function]}
-      >
-        <input
-          checked={false}
-          className="hidden"
-          readOnly={true}
-          tabIndex={0}
-          type="checkbox"
-        />
-        <label>
-          Remember me
-        </label>
-      </div>
-    </div>
-    <button
-      className="ui basic fluid button"
-      huge="true"
-      onClick={[Function]}
-      type="submit"
-    >
-      Sign In
-    </button>
-  </form>
-</div>
+    <FormInput
+      as={[Function]}
+      className="email"
+      control={[Function]}
+      fluid={true}
+      name="email"
+      onChange={[Function]}
+      placeholder="Email Address"
+      required={true}
+      type="email"
+      value=""
+    />
+  </FormGroup>
+  <FormGroup
+    widths="equal"
+  >
+    <FormInput
+      as={[Function]}
+      control={[Function]}
+      fluid={true}
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value=""
+    />
+  </FormGroup>
+  <FormField>
+    <Checkbox
+      label="Remember me"
+      type="checkbox"
+    />
+  </FormField>
+  <Button
+    as="button"
+    basic={true}
+    fluid={true}
+    huge="true"
+    onClick={[Function]}
+    type="submit"
+  >
+    Sign In
+  </Button>
+</Form>
 `;

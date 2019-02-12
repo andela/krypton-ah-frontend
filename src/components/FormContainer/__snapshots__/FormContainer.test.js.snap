@@ -1,16 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Modal Footer should matches the snapshot 1`] = `
-<div>
-  <button
-    className="ui button ui button black"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    Write An Article
-  </button>
-</div>
+exports[`SignIn Form should matches the snapshot 1`] = `
+<Modal
+  centered={true}
+  className="authModal"
+  closeOnDimmerClick={true}
+  closeOnDocumentClick={false}
+  dimmer={true}
+  eventPool="Modal"
+  onClose={[Function]}
+  open={true}
+  size="mini"
+>
+  <ModalContent>
+    <h2
+      className="header headerTitle"
+    >
+      sign in
+    </h2>
+    <hr
+      className="headerBotton"
+    />
+    <ModalDescription>
+      <ModalDivider
+        text="or sign in with"
+      />
+      <SocialIcons />
+      <h5
+        className="baseText"
+      >
+        Create an account
+         
+        <Link
+          replace={false}
+          to="/signin"
+        >
+          sign up
+        </Link>
+      </h5>
+    </ModalDescription>
+  </ModalContent>
+</Modal>
 `;

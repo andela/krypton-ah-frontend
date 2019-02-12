@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal FormInput it should matches the snapshot 1`] = `
+<FormInput
+  as={[Function]}
+  control={[Function]}
+  fluid={true}
+  name="text"
+  onChange={null}
+  placeholder="Email Address"
+  required={true}
+  type="text"
+  value="email"
+/>
+`;

@@ -1,30 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Modal Social it should matches the snapshot 1`] = `
-<div>
+<div
+  className="socialIconsHolder"
+>
   <div
-    className="center aligned column"
+    className="groupIcon"
+    key="1"
   >
-    <div
-      className="ui tiny images"
-    >
-      <img
-        className="ui image"
-        src="test-file-stub"
-      />
-      <img
-        className="ui image"
-        src="test-file-stub"
-      />
-      <img
-        className="ui image"
-        src="test-file-stub"
-      />
-      <img
-        className="ui image"
-        src="test-file-stub"
-      />
-    </div>
+    <Icon
+      as="i"
+      className="socialIcon"
+      name="facebook official"
+      size="big"
+    />
+    <span>
+      Facebook
+    </span>
+  </div>
+  <div
+    className="groupIcon"
+    key="2"
+  >
+    <Icon
+      as="i"
+      className="socialIcon"
+      name="google plus square"
+      size="big"
+    />
+    <span>
+      Google
+    </span>
+  </div>
+  <div
+    className="groupIcon"
+    key="3"
+  >
+    <Icon
+      as="i"
+      className="socialIcon"
+      name="linkedin"
+      size="big"
+    />
+    <span>
+      Linkedin
+    </span>
+  </div>
+  <div
+    className="groupIcon"
+    key="4"
+  >
+    <Icon
+      as="i"
+      className="socialIcon"
+      name="twitter square"
+      size="big"
+    />
+    <span>
+      Twitter
+    </span>
   </div>
 </div>
 `;

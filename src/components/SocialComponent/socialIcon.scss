@@ -1,14 +1,59 @@
-@import "../colors";
-@import "../fonts";
+@import "../../styles/partials/colors";
+@import "../../styles/partials/fonts";
 
 .ui {
   &.image {
-    cursor: pointer !important;
-    width: 2.8rem !important;
+    cursor: pointer;
+    width: 2.8rem;
   }
-  &.images {
-    margin: 0 auto !important;
-    margin-top: 30px !important;
+
+  &.ui.tiny.images {
+    width: 2.5rem;
+    margin-top: 1.875rem;
+    height: auto;
+    font-size: .85714286rem;
     text-align: center;
   }
+}
+
+.socialIconsHolder {
+  text-align: center;
+  margin: 1.25rem auto;
+
+  &.socialIcon {
+    text-align: center;
+  }
+
+  span {
+    font-size: 0.5rem;
+    display: inline-block;
+  }
+}
+
+.groupIcon {
+  width: 1.875rem;
+  display: inline-block;
+  margin-right: 0.938rem;
+  margin-top: 0.625rem;
+  cursor: pointer;
+}
+
+i.icon.facebook.official:before {
+  content: "\f082";
+  color: $facebook;
+}
+
+i.icon.twitter.square:before {
+  content: "\f081";
+  color: $twitter;
+}
+
+i.icon.google.plus.square:before {
+  content: "\f0d4";
+  color: $google
+}
+
+i.icon.linkedin:before {
+  content: "\f08c";
+  color: $linkedin
 }

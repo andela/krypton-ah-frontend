@@ -1,46 +1,64 @@
 import React from 'react';
 import { Form, Checkbox, Button } from 'semantic-ui-react';
+import InlineError from '../../helpers/InlineError';
+import { signInValidator } from '../../helpers/validateUser';
 
 class SignIn extends React.Component {
-  handleChange(event) {
-    this.setState({ [event.target.name]: event.target.value });
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: {
+        email: '',
+        password: ''
+      },
+      errors: {}
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(event) {
     event.preventDefault();
+    const { user } = this.state;
+    const errors = signInValidator(user);
+    if (errors) {
+      this.setState({ errors });
+    }
+  }
+
+  handleChange(event) {
+    const { user } = this.state;
+    const { name, value } = event.target;
+    user[name] = value;
+    this.setState({
+      user
+    });
   }
 
   render() {
-    const { email, password } = this.state;
+    const {
+      user, errors
+    } = this.state;
+
     return (
-      <div>
-        <Form onSubmit={this.handleSubmit.bind(this)}>
-          <Form.Field>
-            <input
-            type="email"
-            required
-            name="email"
-            value={email}
-            placeholder="Email Address"
-            onChange={this.handleChange.bind(this)}
+      <Form onSubmit={this.handleSubmit}>
+        <Form.Group widths="equal">
+          <Form.Input
+            type="email" className="email" fluid placeholder="Email Address" name="email" value={user.email} onChange={this.handleChange} required
           />
-          </Form.Field>
-          <Form.Field>
-            <input
-            type="password"
-            required
-            name="password"
-            value={password}
-            placeholder="Password"
-            onChange={this.handleChange.bind(this)}
+        </Form.Group>
+        {errors.email && <InlineError text={errors.email} />}
+        <Form.Group widths="equal">
+          <Form.Input
+            fluid type="password" placeholder="Password" value={user.password} name="password" onChange={this.handleChange} required
           />
-          </Form.Field>
-          <Form.Field>
-            <Checkbox label="Remember me" />
-          </Form.Field>
-          <Button onClick={this.handleSubmit.bind(this)} type="submit" basic fluid huge="true">Sign In</Button>
-        </Form>
-      </div>
+        </Form.Group>
+        { errors.password && <InlineError text={errors.password} />}
+        <Form.Field>
+          <Checkbox label="Remember me" />
+        </Form.Field>
+        <Button type="submit" basic fluid huge="true" onClick={this.handleSubmit}>Sign In</Button>
+      </Form>
     );
   }
 }
