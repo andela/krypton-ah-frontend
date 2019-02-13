@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const socialMediaElements = [
   {
     name: 'facebook f',
@@ -31,4 +30,8 @@ const items = [
   }
 ];
 
-module.exports = { items,socialMediaElements};
+const categories = ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing'];
+
+module.exports = {
+  items, socialMediaElements, categories
+};
