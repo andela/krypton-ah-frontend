@@ -10,5 +10,5 @@ const items = [
     title: 'Popular Title'
   }
 ];
-
-module.exports = { items };
+const categories = ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing'];
+module.exports = { items, categories };
