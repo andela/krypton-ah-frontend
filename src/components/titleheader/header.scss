@@ -1,26 +1,25 @@
 .ui.block.header {
-  border-width: 0em;
   background: #f3f4f5;
-  padding: 0.78571429rem 1rem;
+  border-radius: 0;
+  border-width: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-radius: 0em;
-  padding: 0;
   margin-bottom: 0.78em;
+  padding: 0.78571429rem 1rem;
 }
 
 p {
-  justify-content: center;
-  background-color: black;
-  width: fit-content;
-  color: white;
-  height: inherit;
-  padding: 0.78571429rem 1rem;
-  margin: 0em;
+  background-color: #000000;
+  color: #ffff;
   font-family: Roboto;
+  font-size: 0.72em;
   font-style: normal;
   font-weight: 500;
+  height: inherit;
+  justify-content: center;
   line-height: normal;
-  font-size: 0.72em;
+  margin: 0;
+  padding: 0.78571429rem 1rem;
   text-transform: uppercase;
+  width: fit-content;
 }
