@@ -5,8 +5,8 @@ import './reactionwidgets.scss';
 
 export default function articleswidgets(props) {
   const {
- date, ratingIcon, numberoflikes, numberofdislikes 
-} = props;
+    date, ratingIcon, numberoflikes, numberofdislikes
+  } = props;
   return (
     <div>
       <Menu className="widgetContainer">

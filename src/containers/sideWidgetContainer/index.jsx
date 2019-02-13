@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Image } from 'semantic-ui-react';
 import '../Homecontainer/HomeContainer.scss';
-import advert from '../Homecontainer/images/lunch.png';
+import advert from '../Homecontainer/images/home.png';
 import Title from '../../components/titleheader/header';
 import FeaturedWidget from '../../components/widgets/featuredwidget';
 import { items, Tags } from '../../constants';

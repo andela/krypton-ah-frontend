@@ -1,11 +1,11 @@
-import React from "react";
-import { Grid, Card } from "semantic-ui-react";
-import "./HomeContainer.scss";
-import business from "./images/business.png";
-import Title from "../../components/titleheader/header";
-import FeaturedWidget from "../../components/widgets/featuredwidget";
-import ArticlesIcons from "../../components/widgets/articleswidgets/reactionWidgets";
-import { items } from "../../constants";
+import React from 'react';
+import { Grid, Card } from 'semantic-ui-react';
+import './HomeContainer.scss';
+import business from './images/business.png';
+import Title from '../../components/titleheader/header';
+import FeaturedWidget from '../../components/widgets/featuredwidget';
+import ArticlesIcons from '../../components/widgets/articleswidgets/reactionWidgets';
+import { items } from '../../constants';
 
 export default function featuredArticles() {
   return (

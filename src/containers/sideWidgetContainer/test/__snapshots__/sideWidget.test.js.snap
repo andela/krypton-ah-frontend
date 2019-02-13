@@ -1,155 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button test should test for the button component 1`] = `
-<GridRow
-  columns={1}
->
-  <GridColumn>
-    <header
-      text="Trending"
-    />
-    <featuredwidget
-      className="featured-widget"
-      description="When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist "
-      title="Apple's news at CES 2019 shows it's facing some hard truths"
-    />
-    <header
-      text="Tags"
-    />
-    <List
-      className="tags"
-      divided={true}
-      relaxed={true}
-    >
-      <ListItem>
-        <ListContent>
-          <ListHeader
-            as="a"
-          >
-            #Politics
-          </ListHeader>
-        </ListContent>
-      </ListItem>
-      <ListItem>
-        <ListContent>
-          <ListHeader
-            as="a"
-          >
-            #Technology
-          </ListHeader>
-        </ListContent>
-      </ListItem>
-      <ListItem>
-        <ListContent>
-          <ListHeader
-            as="a"
-          >
-            #Family
-          </ListHeader>
-        </ListContent>
-      </ListItem>
-      <ListItem>
-        <ListContent>
-          <ListHeader
-            as="a"
-          >
-            #Family
-          </ListHeader>
-        </ListContent>
-      </ListItem>
-      <ListItem>
-        <ListContent>
-          <ListHeader
-            as="a"
-          >
-            #Family
-          </ListHeader>
-        </ListContent>
-      </ListItem>
-    </List>
-    <GridColumn
-      className="Categories"
-    >
-      <header
-        text="Categories"
-      />
-      <List
-        divided={true}
-        relaxed={true}
-      >
-        <ListItem>
-          <ListContent>
-            <ListHeader
-              as="a"
-            >
-              Politics
-            </ListHeader>
-          </ListContent>
-        </ListItem>
-        <ListItem>
-          <ListContent>
-            <ListHeader
-              as="a"
-            >
-              Technology
-            </ListHeader>
-          </ListContent>
-        </ListItem>
-        <ListItem>
-          <ListContent>
-            <ListHeader
-              as="a"
-            >
-              Family
-            </ListHeader>
-          </ListContent>
-        </ListItem>
-        <ListItem>
-          <ListContent>
-            <ListHeader
-              as="a"
-            >
-              Family
-            </ListHeader>
-          </ListContent>
-        </ListItem>
-        <ListItem>
-          <ListContent>
-            <ListHeader
-              as="a"
-            >
-              Family
-            </ListHeader>
-          </ListContent>
-        </ListItem>
-        <ListItem>
-          <ListContent>
-            <ListHeader
-              as="a"
-            >
-              Family
-            </ListHeader>
-          </ListContent>
-        </ListItem>
-        <ListItem>
-          <Label
-            as="a"
-          >
-            more
-          </Label>
-        </ListItem>
-      </List>
-    </GridColumn>
-  </GridColumn>
-  <GridColumn
-    className="Advert"
-  >
-    <Image
-      as="img"
-      src="test-file-stub"
-      ui={true}
-    />
-  </GridColumn>
+<fragment>
   <GridColumn
     className="NewsLetter"
   >
@@ -167,6 +19,63 @@ exports[`button test should test for the button component 1`] = `
     >
       Submit
     </Button>
+  </GridColumn>
+</fragment>
+`;
+
+exports[`button test should test for the button component 2`] = `
+<fragment>
+  <GridColumn
+    className="Categories"
+  >
+    <header
+      text="Categories"
+    />
+    <List
+      divided={true}
+      relaxed={true}
+    >
+      <tags />
+      <ListItem>
+        <Label
+          as="a"
+        >
+          more
+        </Label>
+      </ListItem>
+    </List>
+  </GridColumn>
+</fragment>
+`;
+
+exports[`button test should test for the sidewidget component 1`] = `
+<GridRow
+  columns={1}
+>
+  <GridColumn>
+    <header
+      text="Trending"
+    />
+    <featuredwidget
+      className="featured-widget"
+      description="When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist "
+      title="Apple's news at CES 2019 shows it's facing some hard truths"
+    />
+    <header
+      text="Tags"
+    />
+    <Component />
+    <categories />
+  </GridColumn>
+  <GridColumn
+    className="Advert"
+  >
+    <Image
+      as="img"
+      src="test-file-stub"
+      ui={true}
+    />
+    <newsLetter />
   </GridColumn>
 </GridRow>
 `;
