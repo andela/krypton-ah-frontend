@@ -30,26 +30,26 @@
       0 -0.056em 0 #000, 0.056em 0.056em 0 #000, -0.056em -0.056em 0 #000,
       0.056em -0.056em 0 #000, -0.056em 0.056em 0 #000,
       0.056em 0.056em 0.28em #000;
-    /* padding-bottom: 0em; */
   }
 }
 
 p.author {
-  margin: 0 0 0 auto;
-  width: 50%;
-  text-align: left;
   background-color: transparent;
-  padding-top: 0.3em;
-  padding-bottom: 0em;
   font-size: 0.9em;
+  margin: 0em 0em 0em auto;
+  padding-bottom: 0em;
+  padding-top: 0.3em;
+  text-align: left;
+  width: 50%;
 }
 
 .carousel .slide .legend.text {
+  background-color: transparent;
+  font-size: 1em;
   width: 94%;
   padding-bottom: 0em;
   opacity: 1;
-  background-color: transparent;
-  font-size: 1em;
+
   bottom: 0.7em;
   border-bottom-width: 0.083;
   text-shadow: 0.056em 0 0 #000, -0.056em 0 0 #000, 0 0.056em 0 #000,
@@ -59,9 +59,9 @@ p.author {
 }
 
 .legend.text .ui.widgetContainer.menu {
-  margin-left: -0.9em;
   background-color: transparent;
   color: white;
+  margin-left: -0.9em;
   text-align: right;
   .Icons {
     width: 100%;
