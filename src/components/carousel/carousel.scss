@@ -3,13 +3,9 @@
     overflow: hidden;
     margin: auto;
     width: 100%;
-    -webkit-transition: height 0.15s ease-in;
-    -moz-transition: height 0.15s ease-in;
-    -ms-transition: height 0.15s ease-in;
-    -o-transition: height 0.15s ease-in;
     transition: height 0.15s ease-in;
-    padding: 0em;
-    margin: 0em;
+    padding: 0rem;
+    margin: 0rem;
     height: fit-content;
   }
   .slide .legend.text .title {
@@ -22,49 +18,45 @@
     line-height: normal;
     text-align: right;
     background-color: transparent;
-    font-size: 2em;
-    bottom: 1.3em;
+    font-size: 2rem;
+    bottom: 1.3rem;
     border-bottom-style: solid;
-    border-bottom-width: 0.08em;
-    text-shadow: 0.056em 0 0 #000, -0.056em 0 0 #000, 0 0.056em 0 #000,
-      0 -0.056em 0 #000, 0.056em 0.056em 0 #000, -0.056em -0.056em 0 #000,
-      0.056em -0.056em 0 #000, -0.056em 0.056em 0 #000,
-      0.056em 0.056em 0.28em #000;
+    border-bottom-width: 0.08rem;
+    text-shadow: -1.2px -1.2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
   }
 }
 
 p.author {
-  background-color: transparent;
-  font-size: 0.9em;
-  margin: 0em 0em 0em auto;
-  padding-bottom: 0em;
-  padding-top: 0.3em;
-  text-align: left;
+  margin: 0 0 0 auto;
   width: 50%;
+  text-align: left;
+  background-color: transparent;
+  padding-top: 0.3rem;
+  padding-bottom: 0rem;
+  font-size: 0.9rem;
 }
 
 .carousel .slide .legend.text {
-  background-color: transparent;
-  font-size: 1em;
   width: 94%;
-  padding-bottom: 0em;
+  padding-bottom: 0rem;
   opacity: 1;
-
-  bottom: 0.7em;
+  background-color: transparent;
+  font-size: 1rem;
+  bottom: 0.7rem;
   border-bottom-width: 0.083;
-  text-shadow: 0.056em 0 0 #000, -0.056em 0 0 #000, 0 0.056em 0 #000,
-    0 -0.056em 0 #000, 0.056em 0.056em 0 #000, -0.056em -0.056em 0 #000,
-    0.056em -0.056em 0 #000, -0.056em 0.056em 0 #000,
-    0.056em 0.056em 0.28em #000;
+  text-shadow: -1.2px -1.2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .legend.text .ui.widgetContainer.menu {
+  margin-left: -0.9rem;
   background-color: transparent;
   color: white;
-  margin-left: -0.9em;
   text-align: right;
   .Icons {
-    width: 100%;
-    margin-right: 24%;
+    width: 48%;
+    margin: 0 0 0 auto;
+    text-align: left;
   }
 }

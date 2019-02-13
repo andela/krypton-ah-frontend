@@ -1,10 +1,10 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
-import './HomeContainer.scss';
-import Carousel from '../Carouselcontainer/index';
-import Sidewidget from '../sideWidgetContainer/index';
+import Carousel from '../../components/carousel/index';
+import Sidewidget from '../sideWidgetContainer';
 import FeaturedArticles from './featuredArticles';
-import PopularArticles from './popularArticles';
+import PopularArticles from './PopularArticles';
+import './HomeContainer.scss';
 
 export default function MainContainer() {
   return (

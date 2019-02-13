@@ -1,5 +1,4 @@
 .content {
-  position: unset;
   width: 75%;
   padding-top: 1%;
 }
@@ -7,38 +6,38 @@
 .ui {
   &.grid {
     margin-bottom: 6px;
-    margin-top: 0;
+    margin-top: 0rem;
   }
-  &.divided.grid:not([class*="vertically divided"]) > {
+  &.divided.grid:not([class*='vertically divided']) > {
     .column:first-child,
     .row > .column:first-child {
-      padding: 0;
+      padding: 0rem;
       width: 60%;
       -webkit-box-shadow: none;
       box-shadow: none;
       margin-left: 15px;
     }
   }
-  &[class*="vertically divided"].grid
+  &[class*='vertically divided'].grid
     > .row:first-child
     > .column.tagContainer {
-    margin-top: -35.5em;
+    margin-top: -35.5rem;
   }
 }
 
 .column {
   &.tagContainer {
-    height: 30.5em;
+    height: 30.5rem;
   }
   &.trending {
-    height: 20.5em;
+    height: 20.5rem;
   }
 }
 
 .ui {
   &.divided.list.tags {
-    height: 13em;
-    > .item {
+    height: 13rem;
+    > .itrem {
       width: fit-content;
       display: inline-flex;
       border-style: solid;
@@ -51,7 +50,7 @@
       border-top: 1px solid rgba(34, 36, 38, 0.15);
     }
   }
-  &[class*="two column"].grid > {
+  &[class*='two column'].grid > {
     .column:not(.row),
     .row > .column {
       width: 38%;
@@ -63,8 +62,8 @@
 }
 
 .column.Advert {
-  margin: 0;
-  width: 20em;
+  margin: 0rem;
+  width: 20rem;
 }
 
 .rightGrid .content {
@@ -72,8 +71,8 @@
   height: fit-content !important;
 }
 
-.Categories .item a.header {
-  padding-top: 0.7em;
+.Categories .itrem a.header {
+  padding-top: 0.7rem;
 }
 
 .column.Advert img.ui.image {
@@ -87,21 +86,21 @@
     &.buttons .button {
       float: right;
       width: 45%;
-      margin-right: 0;
-      border-radius: 0;
+      margin-right: 0rem;
+      border-radius: 0rem;
     }
   }
   &.input > input {
     border-color: black;
-    border-radius: 0;
+    border-radius: 0rem;
   }
   &.card,
   &.cards > .card {
-    border-radius: 0;
+    border-radius: 0rem;
     width: 100%;
     box-shadow: none;
   }
-  &[class*="vertically divided"].grid > {
+  &[class*='vertically divided'].grid > {
     .column:not(.row),
     .row > .column {
       padding: 0;
@@ -113,7 +112,7 @@
   }
   &.card > .content,
   &.cards > .card > .content {
-    bottom: 0;
+    bottom: 0rem;
     position: absolute;
     color: white;
     -webkit-box-flex: 1;
@@ -123,11 +122,11 @@
     border-top: 1px solid rgba(34, 36, 38, 0.1);
     background: 0 0;
     margin: 0;
-    padding: 1em 1em;
+    padding: 1rem 1rem;
     -webkit-box-shadow: none;
     box-shadow: none;
-    height: 25.3em;
-    font-size: 1em;
+    height: 25.3rem;
+    font-size: 1rem;
     border-radius: 0;
   }
 }
@@ -146,8 +145,8 @@
   text-align: justify;
   color: rgba(0, 0, 0, 0.4);
   box-shadow: none;
-  margin: 0;
-  border-width: 0 !important;
+  margin: 0rem;
+  border-width: 0rem !important;
 }
 
 .Main {
@@ -158,10 +157,11 @@
   &.vertically.divided.grid.side {
     width: 27%;
     margin-top: 0.2rem;
-    margin-left: 2em;
+    margin-left: 2rem;
   }
   &.divided.two.column.grid .row {
-    padding-top: 0;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
   }
   &.container.two.column.grid.reveal .column {
     padding: 2px !important;
@@ -227,18 +227,19 @@ p.articleDescription {
 .ui {
   &.list {
     .list > .item a.header,
-    > .item a.header {
+    > fragment .item a.header {
       font-family: Roboto;
       font-style: normal;
       font-weight: 500;
       line-height: normal;
+      font-size: 13px;
       color: rgba(0, 0, 0, 0.4) !important;
       cursor: pointer;
     }
   }
   &.container.two.column.grid.reveal {
     width: 97% !important;
-    margin: 0 auto;
+    margin: 0rem auto;
   }
   &.modal {
     padding-top: 15%;
@@ -249,7 +250,7 @@ p.articleDescription {
     > .content {
       display: block;
       width: 70%;
-      font-size: 1em;
+      font-size: 1rem;
       line-height: 1.4;
       padding: 1.5rem;
       background: #fff;
@@ -268,46 +269,13 @@ p.articleDescription {
   > .actions {
     padding: 1rem 1rem;
     text-align: right;
-    border-top-width: 0;
+    border-top-width: 0rem;
     background-color: #fff;
-    padding-top: 0;
-
-    p {
-      background-color: transparent;
-      color: #464343;
-      text-align: right;
-      margin: 0 0 0 auto;
-      padding-top: 0;
-      margin-right: 5em;
-    }
   }
-
   input {
-    width: 20em;
-    border-width: 0;
-    font-size: 1.5em;
+    width: 20rem;
+    border-width: 0rem;
   }
-}
-
-.ui.modal > .close {
-  cursor: pointer;
-  position: absolute;
-  top: 2.5rem;
-  right: -10rem;
-  z-index: 1;
-  opacity: 0.8;
-  font-size: 1.25em;
-  color: black;
-  width: 20rem;
-  margin: 0 0 0 auto;
-  text-align: left;
-  height: 2.25rem;
-  padding: 0.625rem 0 0;
-}
-
-i.icon.close::before {
-  content: "\f00d";
-  font-size: 1.5em;
 }
 
 .dimmed.dimmable > .ui {
@@ -328,19 +296,65 @@ i.icon.close::before {
   }
 }
 
-.ui.divided.grid:not([class*="vertically divided"]) > .column:not(.row),
-.ui.divided.grid:not([class*="vertically divided"]) > .row > .column {
+.ui.divided.grid:not([class*='vertically divided']) > .column:not(.row),
+.ui.divided.grid:not([class*='vertically divided']) > .row > .column {
   box-shadow: none;
 }
-.ui[class*="vertically divided"].grid > .row:first-child > .column {
-  margin-top: 1.1em;
+.ui[class*='vertically divided'].grid > .row:first-child > .column {
+  margin-top: 0.65rem;
 }
 
-.ui[class*="vertically divided"].grid > .row:first-child > .column.second_grid {
-  margin-top: -6.8em;
+a.header {
+  color: grey !important;
 }
 
-.ui[class*="vertically divided"].grid > .row {
-  padding-top: 0;
-  position: relative;
+.ui.divided.list.tags > .category .item {
+  width: fit-content;
+  display: inline-flex;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 7px;
+  margin: 3px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.one.column.row {
+  &.label {
+    text-align: center;
+  }
+  &.content {
+    margin: 0rem;
+  }
+}
+
+.ui.vertically.divided.grid.side {
+  .date {
+    font-size: 0.8rem;
+  }
+  .ui.feed > .event > .label img {
+    width: 80%;
+  }
+
+  .ui.feed > .event > .label + .content {
+    margin: 0rem;
+  }
+}
+
+.NewsLetter button.ui.black.basic.button {
+  margin: 1rem;
+  margin-right: 0rem;
+}
+
+.Categories .item {
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+.item.morelink {
+  border-bottom: 0rem;
+  border-top: 0rem;
 }

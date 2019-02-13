@@ -1,15 +1,15 @@
-import React from "react";
-import { Grid, Card } from "semantic-ui-react";
-import "./HomeContainer.scss";
-import business from "./images/business.png";
-import Title from "../../components/titleheader/header";
-import FeaturedWidget from "../../components/widgets/featuredwidget";
-import ArticlesIcons from "../../components/widgets/articleswidgets/reactionWidgets";
-import { items } from "../../constants";
+import React from 'react';
+import { Grid, Card } from 'semantic-ui-react';
+import './HomeContainer.scss';
+import business from './images/business.png';
+import Title from '../../components/sectionHeader';
+import FeaturedWidget from '../../components/Widgets/Articlewidgets/ArticlesFeedContainer';
+import ArticlesIcons from '../../components/Widgets/Icons';
+import { items } from '../../constants';
 
-export default function featuredArticles() {
+export default function FeaturedArticles() {
   return (
-    <fragment>
+    <div>
       <Title text="featured" />
       <Grid columns={2} divided>
         <Grid.Row>
@@ -17,7 +17,7 @@ export default function featuredArticles() {
             <Card image={business} header="Elliot Baker" items={items} />
             <Card className="description">
               {items[0].description}
-              <ArticlesIcons />
+              <ArticlesIcons ratingIcon={null} />
             </Card>
           </Grid.Column>
           <Grid.Column>
@@ -29,6 +29,6 @@ export default function featuredArticles() {
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </fragment>
+    </div>
   );
 }
