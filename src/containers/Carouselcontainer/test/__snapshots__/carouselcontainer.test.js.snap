@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`carousel test should test for the carousel container 1`] = `
+<div>
+  <index
+    author="Placeholder author name"
+    featuredImage="https://res.cloudinary.com/ah-krypton/image/upload/v1550007680/MainImage.png"
+    title="Placeholder Article Title"
+  />
+</div>
+`;
