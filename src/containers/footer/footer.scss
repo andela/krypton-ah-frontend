@@ -1,0 +1,66 @@
+.social {
+  text-align: center;
+  border-radius: 0em;
+  position: relative;
+  width: 100%;
+  height: 4.33em;
+  left: 0em;
+  bottom: 0%;
+  margin-top: 3.28em;
+  padding: 0.28em;
+  background-color: black;
+  label {
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 0.75em;
+    top: 3.67em;
+    color: white;
+  }
+  .ui.socialContainer.menu {
+    margin: 0 auto;
+    max-height: inherit;
+    border-radius: 0em;
+    background-color: transparent;
+    .Icons {
+      margin: 0 auto;
+      max-height: inherit;
+      i {
+        &.icon {
+          width: 4em;
+        }
+        &.small.icon {
+          line-height: 1;
+          font-size: 1.8em;
+        }
+      }
+    }
+  }
+}
+
+i.small.icons {
+  line-height: 1;
+  font-size: 1.8em;
+}
+
+.social .ui.socialContainer.menu .Icons i.icon {
+  &.twitter:before {
+    border-right-style: solid;
+    padding-right: 1.28em;
+    border-width: 0.056em;
+  }
+  &.facebook:before {
+    border-right-style: solid;
+    padding-right: 1.28em;
+    border-width: 0.056em;
+  }
+  &.google:before {
+    /* content: "\F099"; */
+    content: "\F16D";
+    border-right-style: solid;
+    padding-right: 1.28em;
+    border-width: 0.056em;
+  }
+}

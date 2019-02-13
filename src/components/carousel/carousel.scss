@@ -1,0 +1,70 @@
+.carousel {
+  .slider-wrapper {
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    -webkit-transition: height 0.15s ease-in;
+    -moz-transition: height 0.15s ease-in;
+    -ms-transition: height 0.15s ease-in;
+    -o-transition: height 0.15s ease-in;
+    transition: height 0.15s ease-in;
+    padding: 0em;
+    margin: 0em;
+    height: fit-content;
+  }
+  .slide .legend.text .title {
+    width: 48%;
+    opacity: 1;
+    margin: 0 0 0 auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    text-align: right;
+    background-color: transparent;
+    font-size: 2em;
+    bottom: 1.3em;
+    border-bottom-style: solid;
+    border-bottom-width: 0.08em;
+    text-shadow: 0.056em 0 0 #000, -0.056em 0 0 #000, 0 0.056em 0 #000,
+      0 -0.056em 0 #000, 0.056em 0.056em 0 #000, -0.056em -0.056em 0 #000,
+      0.056em -0.056em 0 #000, -0.056em 0.056em 0 #000,
+      0.056em 0.056em 0.28em #000;
+    /* padding-bottom: 0em; */
+  }
+}
+
+p.author {
+  margin: 0 0 0 auto;
+  width: 50%;
+  text-align: left;
+  background-color: transparent;
+  padding-top: 0.3em;
+  padding-bottom: 0em;
+  font-size: 0.9em;
+}
+
+.carousel .slide .legend.text {
+  width: 94%;
+  padding-bottom: 0em;
+  opacity: 1;
+  background-color: transparent;
+  font-size: 1em;
+  bottom: 0.7em;
+  border-bottom-width: 0.083;
+  text-shadow: 0.056em 0 0 #000, -0.056em 0 0 #000, 0 0.056em 0 #000,
+    0 -0.056em 0 #000, 0.056em 0.056em 0 #000, -0.056em -0.056em 0 #000,
+    0.056em -0.056em 0 #000, -0.056em 0.056em 0 #000,
+    0.056em 0.056em 0.28em #000;
+}
+
+.legend.text .ui.widgetContainer.menu {
+  margin-left: -0.9em;
+  background-color: transparent;
+  color: white;
+  text-align: right;
+  .Icons {
+    width: 100%;
+    margin-right: 24%;
+  }
+}
