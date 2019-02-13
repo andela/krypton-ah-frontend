@@ -7,8 +7,9 @@ module.exports = {
     app: './src/index.jsx'
   },
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, '../dist')
+    filename: 'app.bundle.js',
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -24,11 +25,16 @@ module.exports = {
         use: [
           {
             loader: 'html-loader',
-            options: { minimize: true }
+            options: {
+              minimize: true
+            }
           }
         ]
       },
-      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader' },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader'
+      },
       {
         test: /\.(css|scss)$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
