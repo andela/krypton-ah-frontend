@@ -7,9 +7,8 @@ describe('button test', () => {
   it('should test for the button component', () => {
     const descriptionProps = 'this is a test description';
     const contentProps = 'placeholder title';
-    const wrapper = shallow(
-      <ArticlesFeeds description={descriptionProps} content={contentProps} />
-    );
+    const props = <ArticlesFeeds description={descriptionProps} content={contentProps} />;
+    const wrapper = shallow(props);
     expect(wrapper.find('FeedEvent')).toBeDefined();
     expect(wrapper.find('FeedContent')).toBeDefined();
     expect(wrapper.find('FeedSummary')).toBeDefined();
