@@ -1,0 +1,21 @@
+.footer.ui {
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  height: 5rem;
+  padding-bottom: 1em;
+
+  .ui.menu {
+    background-color: transparent;
+  }
+
+  .centered.row {
+    line-height: 1em;
+    padding: 0;
+  }
+
+  .centered.row.footerText {
+    font-size: 0.9em;
+  }
+}

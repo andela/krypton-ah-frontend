@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should match snapshot 1`] = `
+<Grid
+  className="footer"
+  verticalAlign="middle"
+>
+  <GridRow
+    centered={true}
+  >
+    <Menu
+      position="relative"
+    >
+      <SocialMediaIcons
+        iconSize="large"
+        position={null}
+      />
+    </Menu>
+  </GridRow>
+  <GridRow
+    centered={true}
+    className="footerText"
+  >
+    @copyright 2018 - Andela Simulations Project (Krypton)
+  </GridRow>
+</Grid>
+`;
