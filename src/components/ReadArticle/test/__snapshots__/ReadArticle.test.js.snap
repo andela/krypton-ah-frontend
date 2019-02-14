@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReadArticle should match snapshot 1`] = `
+<Container
+  className="readArticleContainer"
+>
+  <Image
+    as="img"
+    size="massive"
+    src="test-file-stub"
+    ui={true}
+  />
+  <Header
+    as="h1"
+    className="articleTitle"
+  >
+    How to learn nodejs in 2 minutes
+  </Header>
+  <CommentGroup
+    className="articleInfo"
+  >
+    <Image
+      as="a"
+      avatar={true}
+      src="test-file-stub"
+      ui={true}
+    />
+    <Comment
+      className="infoContainer"
+    >
+      <CommentContent>
+        <CommentAuthor
+          className="articleAuthor"
+        >
+          By Mark Adeniran
+        </CommentAuthor>
+        <CommentText
+          className="articleDate"
+        >
+          <Image
+            as="img"
+            src="test-file-stub"
+            ui={true}
+          />
+          <span>
+            January 02, 2019
+          </span>
+        </CommentText>
+        <CommentText
+          className="articleReadTime"
+        >
+          <Image
+            as="img"
+            src="test-file-stub"
+            ui={true}
+          />
+          <span>
+            3 Mins read
+          </span>
+        </CommentText>
+      </CommentContent>
+    </Comment>
+  </CommentGroup>
+  <Divider
+    className="articleDivider"
+  />
+  <Container
+    textAlign="justified"
+  >
+    <div
+      className="icon-bar"
+    >
+      <a
+        className="facebook"
+        href="#"
+      >
+        <Image
+          as="img"
+          src="test-file-stub"
+          ui={true}
+        />
+      </a>
+      <a
+        className="twitter"
+        href="#"
+      >
+        <Image
+          as="img"
+          src="test-file-stub"
+          ui={true}
+        />
+      </a>
+      <a
+        className="google"
+        href="#"
+      >
+        <Image
+          as="img"
+          src="test-file-stub"
+          ui={true}
+        />
+      </a>
+      <a
+        className="linkedin"
+        href="#"
+      >
+        <Image
+          as="img"
+          src="test-file-stub"
+          ui={true}
+        />
+      </a>
+    </div>
+    <div
+      className="articleContent"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+dolor.Aenean massa strong.Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus.Donec quam felis, ultricies nec, pellentesque eu,
+   pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo, fringilla vel,
+      aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet a, venenatis
+vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer tincidunt.Cras
+dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo
+ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus
+   in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.
+Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel augue.Curabitur
+ullamcorper ultricies nisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aenean commodo ligula eget dolor.Aenean massa strong.Cum sociis natoque penatibus et
+magnis dis parturient montes, nascetur ridiculus mus.Donec quam felis, ultricies nec,
+   pellentesque eu, pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo,
+      fringilla vel, aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet
+a, venenatis vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer
+tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend
+tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam
+lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut
+metus varius laoreet.Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel
+augue.Curabitur ullamcorper ultricies nisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget
+dolor.Aenean massa strong.Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus.Donec quam felis, ultricies nec, pellentesque eu,
+   pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo, fringilla vel,
+      aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet a, venenatis
+vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer tincidunt.Cras
+dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo
+ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus
+   in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.
+Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel augue.Curabitur
+ullamcorper ultricies nisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aenean commodo ligula eget dolor.Aenean massa strong.Cum sociis natoque penatibus et
+magnis dis parturient montes, nascetur ridiculus mus.Donec quam felis, ultricies nec,
+   pellentesque eu, pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo,
+      fringilla vel, aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet
+a, venenatis vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer
+tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend
+tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam
+lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut
+metus varius laoreet.Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel
+augue.Curabitur ullamcorper ultricies nisi.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+dolor.Aenean massa strong.Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus.Donec quam felis, ultricies nec, pellentesque eu,
+   pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo, fringilla vel,
+      aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet a, venenatis
+vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer tincidunt.Cras
+dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo
+ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus
+   in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.
+Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel augue.Curabitur
+ullamcorper ultricies nisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aenean commodo ligula eget dolor.Aenean massa strong.Cum sociis natoque penatibus et
+magnis dis parturient montes, nascetur ridiculus mus.Donec quam felis, ultricies nec,
+   pellentesque eu, pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo,
+      fringilla vel, aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet
+a, venenatis vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer
+tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend
+tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam
+lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut
+metus varius laoreet.Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel
+augue.Curabitur ullamcorper ultricies nisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget
+dolor.Aenean massa strong.Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus.Donec quam felis, ultricies nec, pellentesque eu,
+   pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo, fringilla vel,
+      aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet a, venenatis
+vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer tincidunt.Cras
+dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo
+ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus
+   in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.
+Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel augue.Curabitur
+ullamcorper ultricies nisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aenean commodo ligula eget dolor.Aenean massa strong.Cum sociis natoque penatibus et
+magnis dis parturient montes, nascetur ridiculus mus.Donec quam felis, ultricies nec,
+   pellentesque eu, pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo,
+      fringilla vel, aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet
+a, venenatis vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer
+tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend
+tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam
+lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut
+metus varius laoreet.Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel
+augue.Curabitur ullamcorper ultricies nisi.
+      </p>
+    </div>
+  </Container>
+  <Divider
+    className="articleDivider"
+  />
+</Container>
+`;

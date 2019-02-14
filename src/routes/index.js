@@ -1,6 +1,7 @@
 import Home from '../pages/Home';
 import Login from '../pages/Login';
 import NotFound from '../pages/NotFound';
+import ViewArticle from '../pages/ViewArticle';
 
 export default [
   {
@@ -14,6 +15,12 @@ export default [
     component: Login,
     exact: true,
     path: '/login'
+  },
+  {
+    name: 'viewArticle',
+    component: ViewArticle,
+    exact: true,
+    path: '/article/:title'
   },
   {
     name: '404',

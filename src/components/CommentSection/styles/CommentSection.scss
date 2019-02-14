@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700');
+
+.ui.header {
+  font-family: 'Roboto', sans-serif;
+}
+.ui.header .commentsHeader {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.commentsContainer {
+  width: 50%;
+  margin: 2% 7% 10% 6%;
+  font-weight: 100;
+  font-size: 0.7rem;
+}
+.commentDivider {
+  width: 80%;
+}
+.showThreads {
+  display: inline;
+}
+.ui.comments {
+  .comment {
+    .actions {
+      a {
+        &:last-child {
+          margin-left: 20%;
+          font-size: 0.7rem;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .text {
+      font-size: 0.9rem;
+    }
+  }
+}
+.moreComments {
+  float: right;
+  margin-top: -3%;
+  margin-right: 20%;
+  cursor: pointer;
+}
+
+.replyButton {
+  font-size: 0.7rem;
+  padding-left: 3%;
+}
