@@ -43,21 +43,3 @@ a {
 a:hover {
   color: $black;
 }
-
-/**** PROFILE PAGE *****/
-.profileName {
-  color: $white;
-  text-align: center;
-  font-size: 3rem;
-}
-
-.profileBioDescription {
-  color: $white;
-  text-align: center;
-  line-height: 2.188rem;
-}
-
-.profileIcon {
-  color: $profileIconColor;
-  font-size: 0.813rem;
-}
