@@ -1,0 +1,45 @@
+@import './colors';
+@import './fonts';
+
+body {
+  font: {
+    family: Roboto;
+    weight: 100
+  }
+}
+
+.articleTitle {
+  font-size: 2.25rem;
+  color: $black;
+}
+
+.articleAuthorName {
+  font-weight: 500
+}
+
+.articleText {
+  font-size: 0.75rem;
+  color: $primarycolor;
+}
+
+.articleReadText {
+  color: $black;
+  font-size: 0.813rem;
+  line-height: 2rem;
+  text-align: justify;
+}
+
+.comment {
+  font: {
+    size: 0.625rem;
+    weight: 100i;
+  }
+}
+
+a {
+  color: $primarycolor;
+}
+
+a:hover {
+  color: $black;
+}
