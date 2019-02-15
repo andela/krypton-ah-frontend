@@ -1,0 +1,28 @@
+@import '../../styles/partials/colors';
+@import '../../styles/partials/styles';
+
+.ui.block.header {
+  background: $SectionTitleebackground;
+  border-radius: 0;
+  border-width: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 0.78rem;
+  padding: 0;
+}
+
+p {
+  background-color: $black;
+  color: $white;
+  font-family: Roboto;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 500;
+  height: inherit;
+  justify-content: center;
+  line-height: normal;
+  margin: 0;
+  padding: 0.78571429rem 1rem;
+  text-transform: uppercase;
+  width: fit-content;
+}

@@ -1,9 +1,11 @@
 import React from 'react';
+import './Home.scss';
+import Homecontainer from '../../containers/Homecontainer/MainContainer';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Welcome to Authors Havens</h1>
+    <div className="home">
+      <Homecontainer />
     </div>
   );
 }

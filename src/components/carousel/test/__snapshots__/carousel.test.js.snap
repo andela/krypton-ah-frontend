@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`carousel conatiner test should test for the carousel component 1`] = `
+<Carousel
+  autoPlay={true}
+  axis="horizontal"
+  centerMode={false}
+  centerSlidePercentage={80}
+  dynamicHeight={false}
+  emulateTouch={false}
+  infiniteLoop={true}
+  interval={3000}
+  onChange={[Function]}
+  onClickItem={[Function]}
+  onClickThumb={[Function]}
+  selectedItem={0}
+  showArrows={true}
+  showIndicators={true}
+  showStatus={false}
+  showThumbs={false}
+  statusFormatter={[Function]}
+  stopOnHover={true}
+  swipeScrollTolerance={5}
+  swipeable={true}
+  transitionTime={350}
+  useKeyboardArrows={false}
+  verticalSwipe="standard"
+  width="100%"
+>
+  <div>
+    <Image
+      as="img"
+      size="massive"
+      src="https://res.cloudinary.com/ah-krypton/image/upload/v1550007680/MainImage.png"
+      ui={true}
+    />
+    <p
+      className="legend text"
+    >
+      <p
+        className="title"
+      >
+        Placeholder Article Title
+      </p>
+      <p
+        className="author"
+      >
+        Placeholder author name
+      </p>
+      <Icons
+        numberofcomments={23}
+        ratingIcon="rating-class"
+      />
+    </p>
+  </div>
+</Carousel>
+`;

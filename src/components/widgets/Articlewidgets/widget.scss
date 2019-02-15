@@ -1,0 +1,92 @@
+@import '../../../styles/partials/colors';
+@import '../../../styles/partials/styles';
+
+.ui {
+  &.feed > .event {
+    > .label {
+      display: block;
+      flex: 0 0 auto;
+      width: 6.5rem;
+      height: auto;
+      -ms-flex-itrem-align: stretch;
+      align-self: stretch;
+      text-align: left;
+      img {
+        border-radius: 0;
+      }
+    }
+    width: 100%;
+  }
+  &.grid > {
+    .column:not(.row),
+    .row > .column.featured-widget {
+      position: relative;
+      display: inline-block;
+      width: 38%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      vertical-align: top;
+    }
+  }
+}
+
+.card > .content.featured-widget {
+  height: fit-content;
+  bottom: 0;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  height: 25.9rem;
+  margin-bottom: 2.1rem;
+}
+
+.ui {
+  &.feed > .event > {
+    .content {
+      .summary {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 0.75rem;
+        text-align: justify;
+        color: $articleText;
+      }
+      .date {
+        color: $black;
+        padding: 0.3846rem;
+        font-size: 1rem;
+        padding: 0;
+        padding-bottom: 0.1769rem;
+        line-height: 1.2308rem;
+      }
+      .dates {
+        color: $datecolor;
+        padding: 0.3846rem;
+        font-size: 0.7692rem;
+        padding: 0;
+        padding-bottom: 0.0769rem;
+        line-height: 1.2308rem;
+      }
+    }
+    .label + .content {
+      margin: -0 0 0.35714286rem 1.14285714rem;
+    }
+  }
+  &.widgetContainer.menu {
+    color: $black;
+    font-size: 0.75rem;
+    position: relative;
+    border-style: none;
+    box-shadow: none;
+    margin-top: 0;
+    .Icons {
+      margin-right: 0;
+    }
+    i.icon {
+      padding: 0.7692rem;
+      padding-right: 0.3846rem;
+      padding-left: 1.2308rem;
+    }
+  }
+}

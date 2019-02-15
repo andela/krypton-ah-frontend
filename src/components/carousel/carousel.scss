@@ -1,0 +1,84 @@
+@import '../../styles/partials/colors';
+@import '../../styles/partials/styles';
+
+.carousel {
+  .slider-wrapper {
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    transition: height 0.15s ease-in;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+  }
+  .slide .legend.text .title {
+    width: 48%;
+    opacity: 1;
+    margin: 0 0 0 auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    text-align: right;
+    background-color: transparent;
+    font-size: 2rem;
+    bottom: 1.3rem;
+    border-bottom-style: solid;
+    border-bottom-width: 0.08rem;
+    text-shadow: -1.2px -1.2px 0 $black, 1px -1px 0 $black, -1px 1px 0 $black,
+      1px 1px 0 $black;
+  }
+}
+
+p.author {
+  margin: 0 0 0 auto;
+  width: 50%;
+  text-align: left;
+  background-color: transparent;
+  padding-top: 0.3rem;
+  padding-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.carousel .slide .legend.text {
+  width: 94%;
+  padding-bottom: 0;
+  opacity: 1;
+  background-color: transparent;
+  font-size: 1rem;
+  bottom: 0.7rem;
+  border-bottom-width: 0.083;
+  text-shadow: -1.2px -1.2px 0 $black, 1px -1px 0 $black, -1px 1px 0 $black,
+    1px 1px 0 $black;
+}
+
+.legend.text .ui.widgetContainer.menu {
+  margin-left: -0.9rem;
+  background-color: transparent;
+  color: $white;
+  text-align: right;
+  .Icons {
+    width: 48%;
+    margin: 0 0 0 auto;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .carousel .slide .legend.text .title {
+    font-size: 0.5em;
+  }
+
+  p.author {
+    font-size: 0.5em;
+  }
+
+  .legend.text .ui.widgetContainer.menu {
+    font-size: 0.8rem;
+  }
+
+  .ui.widgetContainer.menu i.icon {
+    padding: 0;
+    padding-left: 0;
+  }
+}

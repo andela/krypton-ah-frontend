@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Menu, Icon } from 'semantic-ui-react';
-import socialMediaElements from '../../constants';
+import { socialMediaElements } from '../../constants';
 import './SocialMediaIcons.scss';
 
 export default function SocialMediaIcons({ position, iconSize }) {
