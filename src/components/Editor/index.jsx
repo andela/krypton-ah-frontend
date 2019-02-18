@@ -112,7 +112,7 @@ class Editor extends Component {
         <TextArea
           id="description"
           name="description"
-          maxLength="255"
+          maxlength="255"
           value={article.description}
           onChange={this.handleChange}
         />
@@ -133,9 +133,6 @@ class Editor extends Component {
           onChange={this.handleSelection}
           placeholder="Select article category"
         >
-          <option value="" disabled>
-            Select Category
-          </option>
           {newCategories.map(category => (
             <option key={category.key} value={category.name}>
               {category.name}

@@ -107,7 +107,7 @@ exports[`button test should test for the button component 3`] = `
       <ListHeader
         as="a"
       >
-        #Politics
+        #[object Object]
       </ListHeader>
     </ListContent>
   </ListItem>
@@ -116,7 +116,7 @@ exports[`button test should test for the button component 3`] = `
       <ListHeader
         as="a"
       >
-        #Family
+        #[object Object]
       </ListHeader>
     </ListContent>
   </ListItem>

@@ -16,15 +16,8 @@ const items = [
 ];
 
 const categories = {
-  data:
-  ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing']
+  data: ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing']
 };
-
-const newCategories = [
-  { key: 1, name: 'Politics' },
-  { key: 2, name: 'Family' },
-  { key: 3, name: 'Techonology' }
-];
 
 const newCategories = [
   { key: 1, name: 'Politics' },
