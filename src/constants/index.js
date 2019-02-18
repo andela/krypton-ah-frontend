@@ -38,7 +38,8 @@ const socialMediaLoginIcons = [
     iconName: 'google plus square',
     key: 2,
     url: process.env.GOOGLE_URL
-  }, {
+  },
+  {
     text: 'Linkedin',
     iconName: 'linkedin',
     key: 3,

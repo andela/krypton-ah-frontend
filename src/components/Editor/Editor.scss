@@ -1,0 +1,176 @@
+@import "../../styles/partials/colors";
+
+$color_1: #eee;
+$border_color_1: none;
+
+.ui.form {
+  .field {
+    .ui.input {
+      input {
+        width: auto;
+        border: none;
+        border-bottom: 1px solid #22242626;
+        border-radius: 0;
+        padding-left: 0;
+        color: $textInput;
+      }
+      input[type="file"] {
+        display: none;
+      }
+    }
+    > .titleInput {
+      font-size: 3rem;
+      color: $titleInput;
+    }
+    &:focus {
+      .ui.input {
+        input {
+          &:focus {
+            border-bottom: rgb(105, 105, 105);
+          }
+        }
+      }
+    }
+    clear: both;
+    margin: 5em 0 1em;
+    > label {
+      color: $label;
+      font-size: 1.2em;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    > .selection.dropdown {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+      border-radius: 0;
+    }
+    &:last-child {
+      margin: 0;
+    }
+    > .categoryLabel {
+      margin-top: 5rem;
+    }
+    .featuredPreviewImage {
+      min-width: 10rem;
+      width: 90%;
+      max-height: 15rem;
+      background-size: cover;
+      cursor: pointer;
+    }
+  }
+  .fields {
+    .field {
+      .ui.input {
+        input {
+          width: auto;
+          border: none;
+          border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+          border-radius: 0;
+          padding-left: 0;
+          color: $textInput;
+          &:focus {
+            border-bottom: rgb(105, 105, 105);
+          }
+        }
+      }
+    }
+    &:last-child {
+      .field {
+        margin: 0;
+      }
+    }
+  }
+  textarea {
+    border: none;
+    border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+    border-radius: 0;
+    font-size: 1.8rem;
+    color: $textInput;
+    &:focus {
+      color: $textInput;
+      border-color: none;
+      border-radius: 0;
+    }
+  }
+}
+.ui.secondary.menu {
+  margin-left: 1rem;
+  margin-top: 2rem;
+  .item {
+    padding: 1em 2em;
+    margin: 0;
+    color: $profileIconColor;
+    text-transform: uppercase;
+    border-radius: 0;
+  }
+  .active.item {
+    box-shadow: none;
+    background: #000;
+    color: $color_1;
+    border-radius: 0;
+    padding: 1rem 2rem;
+    &:hover {
+      box-shadow: none;
+      background: #000;
+      color: $white;
+      padding: 1rem 2rem;
+    }
+  }
+}
+.ui.segment {
+  background: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+}
+.previewImage {
+  width: 100%;
+  color: $profileIconColor;
+  text-align: center;
+  padding: 2rem 0;
+}
+.formButton {
+  margin: 5rem 0 10rem;
+}
+.ui.basic.button {
+  border-radius: 0;
+  &:hover {
+    color: $white !important;
+    background-color: $black !important;
+  }
+}
+.ui.button {
+  border-radius: 0;
+  &:hover {
+    color: $white !important;
+    background-color: $black !important;
+  }
+}
+.medium-editor-element {
+  margin-top: 1em;
+  min-height: 10rem !important;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15) !important;
+  padding-left: 10px !important;
+  font-size: 1.5rem;
+  &:focus {
+    outline: none;
+  }
+}
+
+.ui.form select {
+  border: none;
+  border-radius: 0;
+  margin-top: 4rem;
+  color: $textInput;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline-offset: 0;
+  outline: none;
+}
+
+.categoryLine {
+  border: 0.5px solid rgba(34, 36, 38, 0.15);
+}

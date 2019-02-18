@@ -5,6 +5,7 @@ import NotFound from '../pages/NotFound';
 import ViewArticle from '../pages/ViewArticle';
 import Verification from '../pages/Verification';
 import socialAuth from '../components/socialAuth/socialAuth';
+import CreateArticles from '../pages/CreateArticles';
 
 export default [
   {
@@ -43,6 +44,12 @@ export default [
     component: Verification,
     exact: true,
     path: '/verification'
+  },
+  {
+    name: 'createarticle',
+    component: CreateArticles,
+    exact: true,
+    path: '/createarticle'
   },
   {
     name: '404',
