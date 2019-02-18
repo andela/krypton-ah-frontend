@@ -1,0 +1,89 @@
+@import "../../styles/partials/colors";
+@import "../../styles/partials/fonts";
+
+body {
+  font: {
+    family: roboto;
+    weight: 100;
+  }
+
+}
+
+.ui {
+  &.modal {
+    border: 2px solid $black;
+    border-radius: 0.938rem;
+
+    &.authModal {
+      margin: 1rem auto;
+      padding: 1.25rem;
+    }
+
+    form {
+      border-radius: 0;
+    }
+  }
+}
+
+.ui.basic.button {
+  border-radius: 0;
+
+  margin: {
+    bottom: 3.125rem;
+    top: 1.875rem;
+  }
+
+  &:hover {
+    background: $primarycolor !important;
+    color: $white !important;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.headerTitle {
+    border-bottom: 0;
+    color: lighten($primarycolor, 53%);
+
+    font: {
+      size: 1.5rem;
+      weight: 300;
+    }
+
+    margin-top: 1.25rem;
+    text-transform: uppercase;
+    
+  }
+
+.headerBotton {
+  border: 0.125rem solid $black;
+
+  margin: {
+    bottom: 3.875rem;
+    left: 0;
+    top: -0.437rem;
+  }
+
+  width: 3.3rem;
+}
+
+h5.baseText {
+  font: {
+    size: 0.813rem;
+    weight: 200;
+  }
+
+  margin: {
+    bottom: 1.875rem;
+    top: 3.125rem;
+  }
+
+  text-align: center;
+
+  a {
+    color: $red;
+  }
+
+  :hover {
+    color: $primarycolor
+  }
+}
