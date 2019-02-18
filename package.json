@@ -18,13 +18,13 @@
     "setupFilesAfterEnv": [
       "./enzyme.setup.js"
     ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss)$": "<rootDir>/__mocks__/styleMock.js"
-    }
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "husky": {
     "hooks": {
@@ -42,6 +42,8 @@
   },
   "homepage": "https://github.com/andela/krypton-ah-frontend#readme",
   "dependencies": {
+    "@babel/runtime": "^7.3.1",
+    "enzyme": "^3.8.0",
     "express": "^4.16.4",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.6.2",
@@ -54,6 +56,7 @@
     "redux-thunk": "^2.3.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.85.0",
+    "validator": "^10.11.0",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14",
@@ -62,15 +65,16 @@
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.0.0",
     "babel-loader": "^8.0.5",
+    "check-prop-types": "^1.1.2",
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^2.1.0",
     "dotenv-webpack": "^1.7.0",
-    "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",
     "enzyme-to-json": "^3.3.5",
     "eslint": "^5.13.0",
@@ -87,7 +91,6 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "nyc": "^13.2.0",
-    "react-test-renderer": "^16.7.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2"

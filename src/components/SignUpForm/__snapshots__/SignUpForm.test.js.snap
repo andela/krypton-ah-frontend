@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp Form should matches the snapshot 1`] = `
+<Form
+  as="form"
+  onSubmit={[Function]}
+>
+  <FormGroup
+    className="name-fields"
+    widths="equal"
+  >
+    <div
+      className="formGroup"
+    >
+      <FormInput
+        handleChange={[Function]}
+        name="firstname"
+        placeholder="Firstname"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="formGroup"
+    >
+      <FormInput
+        handleChange={[Function]}
+        name="lastname"
+        placeholder="Lastname"
+        type="text"
+        value=""
+      />
+    </div>
+  </FormGroup>
+  <FormGroup
+    widths="equal"
+  >
+    <FormInput
+      error={false}
+      handleChange={[Function]}
+      name="email"
+      placeholder="Email Address"
+      type="email"
+      value=""
+    />
+  </FormGroup>
+  <FormGroup
+    widths="equal"
+  >
+    <FormInput
+      handleChange={[Function]}
+      name="password"
+      placeholder="Password"
+      type="password"
+      value=""
+    />
+  </FormGroup>
+  <Button
+    as="button"
+    basic={true}
+    fluid={true}
+    huge="true"
+    onClick={[Function]}
+    type="submit"
+  >
+    Sign Up
+  </Button>
+</Form>
+`;
