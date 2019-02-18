@@ -3,11 +3,11 @@ import { API_BASE_URL } from '../constants';
 const items = [
   {
     description:
-            'The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based on what you’re doing to show you relevant The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based',
+      'The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based on what you’re doing to show you relevant The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based',
     shortdescription:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach, while an optimist drains the barrel, fishes out all the apples and makes pie',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach, while an optimist drains the barrel, fishes out all the apples and makes pie',
     shorterdescription:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   }
@@ -15,28 +15,34 @@ const items = [
 
 const categories = ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing'];
 
+const newCategories = [
+  { key: 1, name: 'Politics' },
+  { key: 2, name: 'Family' },
+  { key: 3, name: 'Techonology' }
+];
+
 const popularArticles = [
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   }
@@ -46,31 +52,31 @@ const mockHeader = 'this is a placeholder header';
 const trendingArticles = [
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Trending Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Trending Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Trending Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   }
@@ -93,19 +99,20 @@ const signupOkResponse = {
   status: 201,
   success: true,
   data: {
-    message: 'Account successfully created, Kindly check your email to activate your account. In case you did not receive the activation link in your mail, kindly visit this link localhost:3000/api/v1/users/resend/activation/mail to resend the mail.',
+    message:
+      'Account successfully created, Kindly check your email to activate your account. In case you did not receive the activation link in your mail, kindly visit this link localhost:3000/api/v1/users/resend/activation/mail to resend the mail.'
   }
 };
 
 const mockResponse = {
-  message: 'Successfully logged in',
+  message: 'Successfully logged in'
 };
 const error = {
   response: {
     status: 400,
     success: false,
     data: {
-      message: 'Oops! something went wrong, kindly try again',
+      message: 'Oops! something went wrong, kindly try again'
     }
   }
 };
@@ -114,14 +121,14 @@ const loginOkResponse = {
   success: true,
   data: {
     token: 'sampleToken',
-    message: 'You have sccessfully login',
+    message: 'You have sccessfully login'
   }
 };
 const loginBadResponse = {
   status: 400,
   success: false,
   data: {
-    message: 'Incorrect credentials',
+    message: 'Incorrect credentials'
   }
 };
 
@@ -177,6 +184,7 @@ export {
   loginBadResponse,
   items,
   categories,
+  newCategories,
   popularArticles,
   trendingArticles,
   mockHeader,
