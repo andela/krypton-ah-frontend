@@ -5,7 +5,10 @@ import NotFound from '../pages/NotFound';
 import ViewArticle from '../pages/ViewArticle';
 import AccountVerification from '../components/AccountVerification';
 import socialAuth from '../components/socialAuth/socialAuth';
+<<<<<<< HEAD
 import Profile from '../pages/Profile';
+=======
+>>>>>>> [ft-#162414124] create component to write article
 import CreateArticles from '../pages/CreateArticles';
 
 export default [
