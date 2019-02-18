@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button test should test for the categories component 1`] = `
+<GridColumn
+  className="Categories"
+>
+  <sectionHeader
+    text="Categories"
+  />
+  <List
+    divided={true}
+    relaxed={true}
+  >
+    <Tags />
+    <ListItem>
+      <Label
+        as="a"
+      >
+        more
+      </Label>
+    </ListItem>
+  </List>
+</GridColumn>
+`;
+
+exports[`button test should test for the newsletter component 1`] = `
+<GridColumn
+  className="NewsLetter"
+>
+  <sectionHeader
+    text="NewsLetter"
+  />
+  <Input
+    placeholder="Search..."
+    type="text"
+  />
+  <Button
+    as="button"
+    basic={true}
+    color="black"
+  >
+    Submit
+  </Button>
+</GridColumn>
+`;
+
+exports[`button test should test for the sidewidget component 1`] = `
+<GridRow
+  columns={1}
+>
+  <GridColumn>
+    <sectionHeader
+      text="Trending"
+    />
+    <ArticlesFeedContainer
+      articles={
+        Array [
+          Object {
+            "content": "Apple's news at CES 2019 shows it's facing some hard truths",
+            "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ",
+            "title": "Trending Title",
+          },
+          Object {
+            "content": "Apple's news at CES 2019 shows it's facing some hard truths",
+            "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ",
+            "title": "Trending Title",
+          },
+          Object {
+            "content": "Apple's news at CES 2019 shows it's facing some hard truths",
+            "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ",
+            "title": "Trending Title",
+          },
+          Object {
+            "content": "Apple's news at CES 2019 shows it's facing some hard truths",
+            "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ",
+            "title": "Popular Title",
+          },
+          Object {
+            "content": "Apple's news at CES 2019 shows it's facing some hard truths",
+            "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ",
+            "title": "Popular Title",
+          },
+        ]
+      }
+      className="featured-widget"
+    />
+    <sectionHeader
+      text="Tags"
+    />
+    <List
+      className="tags"
+      divided={true}
+      relaxed={true}
+    >
+      <Tags />
+    </List>
+    <categories />
+  </GridColumn>
+  <index />
+  <NewsLetter />
+</GridRow>
+`;

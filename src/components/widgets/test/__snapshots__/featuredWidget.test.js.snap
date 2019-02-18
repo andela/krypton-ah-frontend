@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button test should test for the Icons component 1`] = `
+<div>
+  <i
+    className="dates"
+  >
+    28th february 2019
+  </i>
+  <Icon
+    as="i"
+    disabled={true}
+    fitted={true}
+    link={true}
+    name="thumbs up outline"
+    size="small"
+  />
+  23
+  <Icon
+    as="i"
+    disabled={true}
+    fitted={true}
+    link={true}
+    name="thumbs down outline"
+    size="small"
+  />
+  23
+  <Icon
+    as="i"
+    disabled={true}
+    fitted={true}
+    link={true}
+    name="comments outline"
+    size="small"
+  />
+  23
+</div>
+`;
+
+exports[`button test should test for the advert component 1`] = `
+<GridColumn
+  className="Advert"
+>
+  <Image
+    as="img"
+    src="https://res.cloudinary.com/ah-krypton/image/upload/v1548328425/mm17kbfqf7sjrw2w45rq.png"
+    ui={true}
+  />
+</GridColumn>
+`;
+
+exports[`button test should test for the button component 1`] = `
+<Card>
+  <CardContent
+    className="className"
+  >
+    <Feed>
+      <MainFeaturedArticle
+        description="placeholder descritption"
+        image="https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png"
+        title="placeholder title"
+      />
+    </Feed>
+  </CardContent>
+</Card>
+`;

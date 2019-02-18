@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button test should test for the button component 1`] = `
+<FeedEvent>
+  <FeedLabel
+    image="https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png"
+  />
+  <FeedContent>
+    <FeedDate
+      content="placeholder title"
+    />
+    <FeedSummary>
+      this is a test description
+    </FeedSummary>
+    <Icons
+      numberofcomments={23}
+      ratingIcon="rating-class"
+    />
+  </FeedContent>
+</FeedEvent>
+`;
+
+exports[`button test should test for the button component 2`] = `
+<Menu
+  className="widgetContainer"
+>
+  <div
+    className="Icons"
+  >
+    <ReactionIcons
+      date="28th february 2019"
+      numberofcomments={23}
+      numberofdislikes={23}
+      numberoflikes={23}
+    />
+  </div>
+</Menu>
+`;

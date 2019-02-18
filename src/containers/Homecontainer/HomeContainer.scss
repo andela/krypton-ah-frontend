@@ -1,0 +1,417 @@
+@import '../../styles/partials/colors';
+@import '../../styles/partials/styles';
+
+.content {
+  width: 75%;
+  padding-top: 1%;
+}
+
+.ui {
+  &.grid {
+    margin-bottom: 6px;
+    margin-top: 0;
+  }
+  &.divided.grid:not([class*='vertically divided']) > {
+    .column:first-child,
+    .row > .column:first-child {
+      padding: 0;
+      width: 60%;
+      box-shadow: none;
+      margin-left: 15px;
+    }
+  }
+  &[class*='vertically divided'].grid
+    > .row:first-child
+    > .column.tagContainer {
+    margin-top: -35.5rem;
+  }
+}
+
+.column {
+  &.tagContainer {
+    height: 30.5rem;
+  }
+  &.trending {
+    height: 20.5rem;
+  }
+}
+
+.ui {
+  &.divided.list.tags {
+    height: 13rem;
+    > .item {
+      width: fit-content;
+      display: inline-flex;
+      border-style: solid;
+      border-radius: 5px;
+      border-width: 1px;
+      padding: 7px;
+      margin: 3px;
+      border: 1px solid #c4c4c4;
+      box-sizing: border-box;
+      border-top: 1px solid rgba(34, 36, 38, 0.15);
+    }
+  }
+  &[class*='two column'].grid > {
+    .column:not(.row),
+    .row > .column {
+      width: 38%;
+    }
+  }
+  &.input {
+    width: 100%;
+  }
+}
+
+.column.Advert {
+  margin: 0;
+  width: 20rem;
+}
+
+.rightGrid .content {
+  position: absolute !important;
+  height: fit-content !important;
+}
+
+.Categories .itrem a.header {
+  padding-top: 0.7rem;
+}
+
+.column.Advert img.ui.image {
+  margin: 0 auto;
+  width: 70%;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 8.8rem;
+}
+
+.ui {
+  &.basic.black {
+    &.button,
+    &.buttons .button {
+      float: right;
+      width: 45%;
+      margin-right: 0;
+      border-radius: 0;
+    }
+  }
+  &.input > input {
+    border-color: black;
+    border-radius: 0;
+  }
+  &.card,
+  &.cards > .card {
+    border-radius: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+  &[class*='vertically divided'].grid > {
+    .column:not(.row),
+    .row > .column {
+      padding: 0;
+    }
+  }
+  &.label {
+    background-color: transparent;
+    float: right;
+  }
+  &.card > .content,
+  &.cards > .card > .content {
+    bottom: 0;
+    position: absolute;
+    color: white;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, 0.1);
+    background: 0 0;
+    margin: 0;
+    padding: 1rem 1rem;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 25.3rem;
+    font-size: 1rem;
+    border-radius: 0;
+  }
+}
+
+.title,
+.header {
+  color: white !important;
+}
+
+.ui.card.description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 21px;
+  font-size: 12px;
+  text-align: justify;
+  color: $articleText;
+  box-shadow: none;
+  margin: 0;
+  border-width: 0 !important;
+}
+
+.Main {
+  display: flex;
+}
+
+.ui {
+  &.vertically.divided.grid.side {
+    width: 27%;
+    margin-top: 0.2rem;
+    margin-left: 2rem;
+  }
+  &.divided.two.column.grid .row {
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+  }
+  &.container.two.column.grid.reveal .column {
+    padding: 2px !important;
+    width: 50%;
+    padding: 5px;
+    overflow: hidden;
+    .ui.card.description {
+      &:hover {
+        top: 0%;
+      }
+      position: absolute;
+      z-index: 3;
+      background-color: transparent;
+      color: white;
+      overflow: hidden;
+      top: 75%;
+      height: 100%;
+      padding: 5%;
+      background: rgba(0, 0, 0, 0.5);
+      transition: top 0.5s;
+    }
+  }
+  &.fade.reveal > .visible.content {
+    top: 80% !important;
+    width: 100%;
+    color: white;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+p.Popular.title {
+  background-color: transparent;
+  text-align: center;
+  width: 100%;
+  height: 20%;
+  padding: 2px;
+}
+
+.ui {
+  &.reveal > .hidden.content {
+    width: 100%;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+  &.fade.reveal > .visible.content#hide:hover {
+    top: 80% !important;
+    width: 100%;
+    color: white;
+    opacity: 1;
+  }
+}
+
+p.articleDescription {
+  background: transparent;
+  height: 100%;
+  position: inherit;
+  top: -2.6rem;
+}
+
+.ui {
+  &.list {
+    .list > .item a.header,
+    > .item a.header {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      font-size: 13px;
+      color: $articleText !important;
+      cursor: pointer;
+    }
+  }
+  &.container.two.column.grid.reveal {
+    width: 97% !important;
+    margin: 0 auto;
+  }
+  &.modal {
+    padding-top: 15%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-shadow: none;
+    > .content {
+      display: block;
+      width: 70%;
+      font-size: 1rem;
+      line-height: 1.4;
+      padding: 1.5rem;
+      background: #fff;
+      margin: 0 auto;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.actions {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.ui.modal {
+  > .actions {
+    padding: 1rem 1rem;
+    text-align: right;
+    border-top-width: 0;
+    background-color: #fff;
+  }
+  input {
+    width: 20rem;
+    border-width: 0;
+  }
+}
+
+.dimmed.dimmable > .ui {
+  &.animating.dimmer,
+  &.visible.dimmer {
+    padding-top: 14.7%;
+    background-color: transparent;
+  }
+}
+
+.ui {
+  &.active.dimmer {
+    padding-top: 14.7%;
+    background-color: transparent;
+  }
+  &.modal button {
+    width: 15% !important;
+  }
+}
+
+.ui.divided.grid:not([class*='vertically divided']) > .column:not(.row),
+.ui.divided.grid:not([class*='vertically divided']) > .row > .column {
+  box-shadow: none;
+}
+.ui[class*='vertically divided'].grid > .row:first-child > .column {
+  margin-top: 0.65rem;
+}
+
+a.header {
+  color: grey !important;
+}
+
+.ui.divided.list.tags > .category .item {
+  width: fit-content;
+  display: inline-flex;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 7px;
+  margin: 3px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 13px;
+  color: $articleText;
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.one.column.row {
+  &.label {
+    text-align: center;
+  }
+  &.content {
+    margin: 0;
+  }
+}
+
+.ui.vertically.divided.grid.side {
+  .date {
+    font-size: 0.8rem;
+  }
+  .ui.feed > .event > .label img {
+    width: 80%;
+  }
+
+  .ui.feed > .event > .label + .content {
+    margin: 0;
+  }
+}
+
+.NewsLetter button.ui.black.basic.button {
+  margin: 1rem;
+  margin-right: 0;
+}
+
+.Categories .item {
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 13px;
+  color: $articleText;
+}
+
+.item.morelink {
+  border-bottom: 0;
+  border-top: 0;
+}
+
+.Categories .ui.relaxed.list:not(.horizontal) > .item:not(:first-child) {
+  border-style: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .Main {
+    display: block;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .ui.vertically.divided.grid.side {
+    width: 100%;
+    margin-top: 0.2rem;
+    margin-left: 0rem;
+  }
+
+  .ui[class*='two column'].grid > .column:not(.row),
+  .ui[class*='two column'].grid > .row > .column {
+    width: 100%;
+  }
+
+  .ui.divided.grid:not([class*='vertically divided'])
+    > .row
+    > .column:first-child {
+    padding: 5%;
+    width: 100%;
+    box-shadow: none;
+    margin-left: 15px;
+  }
+
+  .column.Advert img.ui.image {
+    margin: 0 auto;
+    width: 70%;
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 2.8rem;
+  }
+}

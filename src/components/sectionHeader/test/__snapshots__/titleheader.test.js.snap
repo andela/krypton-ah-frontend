@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`titleHeader test should test for the titleheader component 1`] = `
+<Header
+  as="h3"
+  block={true}
+>
+  <p
+    className="titletext"
+  />
+</Header>
+`;
