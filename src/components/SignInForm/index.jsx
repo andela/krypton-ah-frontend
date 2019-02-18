@@ -45,21 +45,40 @@ class SignIn extends React.Component {
   render() {
     const { user, errors } = this.state;
 
-    if (this.props.auth.isAuthenticated) { return <Redirect to="/createarticle" />; }
+    if (this.props.auth.isAuthenticated) {
+      return <Redirect to="/createarticle" />;
+    }
     return (
       <Form onSubmit={this.handleSubmit}>
         <Form.Group widths="equal">
-          <Form.Input type="email" className="email" fluid placeholder="Email Address" name="email" value={user.email} onChange={this.handleChange} required />
+          <Form.Input
+            type="email"
+            className="email"
+            fluid
+            placeholder="Email Address"
+            name="email"
+            value={user.email}
+            onChange={this.handleChange}
+            required
+          />
         </Form.Group>
         {errors.email && <InlineError text={errors.email} />}
         <Form.Group widths="equal">
-          <Form.Input fluid type="password" placeholder="Password" value={user.password} name="password" onChange={this.handleChange} required />
+          <Form.Input
+            fluid
+            type="password"
+            placeholder="Password"
+            value={user.password}
+            name="password"
+            onChange={this.handleChange}
+            required
+          />
         </Form.Group>
         {errors.password && <InlineError text={errors.password} />}
         <Form.Field>
           <Checkbox label="Remember me" />
         </Form.Field>
-        {this.props.auth.authIsLoading ? (<Loading size="tiny" />) : null}
+        {this.props.auth.authIsLoading ? <Loading size="tiny" /> : null}
         <Button type="submit" basic fluid huge="true" onClick={this.handleSubmit}>
           Sign In
         </Button>
