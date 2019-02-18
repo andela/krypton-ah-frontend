@@ -17,7 +17,6 @@ const socialMediaElements = [
   }
 ];
 
-
 const articleDetails = {
   className: 'description',
   description: 'placeholder descritption',
@@ -27,9 +26,32 @@ const articleDetails = {
 
 const advertimage = 'https://res.cloudinary.com/ah-krypton/image/upload/v1548328425/mm17kbfqf7sjrw2w45rq.png';
 
+const socialMediaLoginIcons = [
+  {
+    text: 'Facebook',
+    iconName: 'facebook official',
+    key: 1
+  },
+  {
+    text: 'Google',
+    iconName: 'google plus square',
+    key: 2
+  }, {
+    text: 'Linkedin',
+    iconName: 'linkedin',
+    key: 3
+  },
+  {
+    text: 'Twitter',
+    iconName: 'twitter square',
+    key: 4
+  }
+];
 
 module.exports = {
   socialMediaElements,
   articleDetails,
   advertimage,
+  socialMediaLoginIcons
 };
+
