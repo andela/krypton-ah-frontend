@@ -5,86 +5,44 @@ exports[`button test should test for the button component 1`] = `
   className="category"
 >
   <ListItem
-    key="Politics"
+    key="[object Object]"
   >
     <ListContent
-      key="Politics"
+      key="[object Object]"
     >
       <ListHeader
         as="a"
-        key="Politics"
+        key="[object Object]"
       >
-        #Politics
+        #[object Object]
       </ListHeader>
     </ListContent>
   </ListItem>
   <ListItem
-    key="Family"
+    key="[object Object]"
   >
     <ListContent
-      key="Family"
+      key="[object Object]"
     >
       <ListHeader
         as="a"
-        key="Family"
+        key="[object Object]"
       >
-        #Family
+        #[object Object]
       </ListHeader>
     </ListContent>
   </ListItem>
   <ListItem
-    key="Techonology"
+    key="[object Object]"
   >
     <ListContent
-      key="Techonology"
+      key="[object Object]"
     >
       <ListHeader
         as="a"
-        key="Techonology"
+        key="[object Object]"
       >
-        #Techonology
-      </ListHeader>
-    </ListContent>
-  </ListItem>
-  <ListItem
-    key="Health"
-  >
-    <ListContent
-      key="Health"
-    >
-      <ListHeader
-        as="a"
-        key="Health"
-      >
-        #Health
-      </ListHeader>
-    </ListContent>
-  </ListItem>
-  <ListItem
-    key="Sports"
-  >
-    <ListContent
-      key="Sports"
-    >
-      <ListHeader
-        as="a"
-        key="Sports"
-      >
-        #Sports
-      </ListHeader>
-    </ListContent>
-  </ListItem>
-  <ListItem
-    key="Wellbeing"
-  >
-    <ListContent
-      key="Wellbeing"
-    >
-      <ListHeader
-        as="a"
-        key="Wellbeing"
-      >
-        #Wellbeing
+        #[object Object]
       </ListHeader>
     </ListContent>
   </ListItem>
