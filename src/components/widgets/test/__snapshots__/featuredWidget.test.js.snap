@@ -43,6 +43,7 @@ exports[`button test should test for the advert component 1`] = `
 >
   <Image
     as="img"
+    className="AdvertImg"
     src="https://res.cloudinary.com/ah-krypton/image/upload/v1548328425/mm17kbfqf7sjrw2w45rq.png"
     ui={true}
   />

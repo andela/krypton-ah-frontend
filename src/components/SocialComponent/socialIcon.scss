@@ -1,20 +1,6 @@
 @import "../../styles/partials/colors";
 @import "../../styles/partials/fonts";
 
-.ui {
-  &.image {
-    cursor: pointer;
-    width: 2.8rem;
-  }
-
-  &.ui.tiny.images {
-    width: 2.5rem;
-    margin-top: 1.875rem;
-    height: auto;
-    font-size: .85714286rem;
-    text-align: center;
-  }
-}
 
 .socialIconsHolder {
   text-align: center;

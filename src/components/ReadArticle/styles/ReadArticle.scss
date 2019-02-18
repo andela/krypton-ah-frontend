@@ -1,102 +1,101 @@
+@import '../../../styles/partials/colors';
 @import '../../../styles/partials/fonts';
 
 .ui.header {
-  font-family: 'Roboto', sans-serif;
-}
+  font-family: 'Roboto'}
+
 .ui.header.articleTitle {
   font-size: 2.25rem;
+  color: $black !important;
   text-transform: uppercase;
-  padding-left: 3%;
+  padding-left: 3%; 
 }
-.ui.comments {
-  .comment {
-    .author.articleAuthor {
-      font-size: 0.75rem;
-      font-weight: 700;
-      line-height: 2;
-      text-transform: uppercase;
-    }
-    .text.articleDate {
-      span {
-        padding-left: 5%;
-      }
-      font-size: 0.75rem;
-      font-weight: 100;
-      font-style: italic;
-      margin-bottom: 0;
-      padding-left: 2%;
-    }
-    .text.articleReadTime {
-      span {
-        padding-left: 5%;
-      }
-      font-size: 0.5625rem;
-      font-weight: 100;
-      margin-top: 0;
-      padding-left: 2%;
-    }
-  }
-  .comment.infoContainer {
-    margin: -1% 1%;
-    padding: 0%;
-    width: 20%;
-  }
+
+
+.ui.comments .comment .author.articleAuthor {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 2;
+  text-transform: uppercase;
 }
+
+.ui.comments .comment .text.articleDate {
+  font-size: 0.75rem;
+  font-weight: 100;
+  font-style: italic;
+  margin-bottom: 0;
+  padding-left: 2%; }
+  .ui.comments .comment .text.articleDate span {
+    padding-left: 5%; }
+
+.ui.comments .comment .text.articleReadTime {
+  font-size: 0.5625rem;
+  font-weight: 100;
+  margin-top: 0;
+  padding-left: 2%; }
+  .ui.comments .comment .text.articleReadTime span {
+    padding-left: 5%; }
+
+.ui.comments .comment.infoContainer {
+  margin: -1% 1%;
+  padding: 0%;
+  width: 20%; }
+
 img.ui.image {
-  display: inline;
-}
+  display: inline; }
+
 .ui.comments.articleInfo {
   padding-left: 3%;
-  display: flex;
-}
+  display: flex; }
+
 .ui.divider.articleDivider {
   margin: 0.5rem 0 0 2.7rem;
-  width: 90%;
-}
+  width: 90%; }
+
 .articleContent {
-  margin: 2% 7% 10% 6%;
-}
+  margin: 2% 7% 10% 6%; }
+
 .articleContent p {
   font-size: 0.9rem;
   line-height: 2rem;
   font-weight: 400;
+  background-color: transparent;
+color: black
 }
 
 .icon-bar {
   position: fixed;
   top: 50%;
-  left: 3%;
-  a {
+  left: 3%; }
+  .icon-bar a {
     display: block;
     padding: 15%;
     text-align: center;
-    font-size: 1.25rem;
-  }
-}
+    font-size: 1.25rem; }
+
 .readArticleContainer {
   margin-top: 0.5%;
-  padding: 0 5%;
+  padding: 0 5%; }
+
+.ui.comments .comment > .content{
+  padding-top: 0;
+  width: 100%
 }
 
 @media only screen and (max-width: 991px) {
   .ui.container.readArticleContainer {
     width: 100vw !important;
     padding: 0;
-    margin: 0 !important;
-  }
+    margin: 0 !important; }
   .ui.justified.container {
     position: relative;
-    width: 100%;
-  }
+    width: 100%; }
   .icon-bar {
     width: 50%;
     position: absolute;
     top: unset;
     bottom: -2rem;
-    left: 5%;
-    a {
+    left: 5%; }
+    .icon-bar a {
       display: inline;
-      padding: 5%;
-    }
-  }
-}
+      padding: 5%; } }

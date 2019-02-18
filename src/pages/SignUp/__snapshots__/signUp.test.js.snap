@@ -3,7 +3,7 @@
 exports[`App should match snapshot 1`] = `
 <ModalComponent
   baseText="Already have an account?"
-  formLink="signin"
+  formLink="login"
   link="Sign In"
   title="sign up"
 >

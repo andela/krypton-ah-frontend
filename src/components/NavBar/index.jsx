@@ -1,7 +1,7 @@
 import React from 'react';
 import TinyBlackBar from './TinyBlackBar';
 import WhiteBar from './WhiteNavBar';
-import './navBar.scss';
+import './NavBar.scss';
 
 export default class NavBar extends React.Component {
   constructor(props) {
