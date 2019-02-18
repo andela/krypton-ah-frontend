@@ -105,7 +105,6 @@ $border_color_1: none;
     border-radius: 0;
   }
   .active.item {
-    box-shadow: none;
     background: #000;
     color: $color_1;
     border-radius: 0;
@@ -115,15 +114,6 @@ $border_color_1: none;
       background: #000;
       color: $white;
       padding: 1rem 2rem;
-    }
-  }
-}
-.ui.segment {
-  background: none;
-  box-shadow: none;
-  border-radius: none;
-  border: none;
-}
 .previewImage {
   width: 100%;
   color: $profileIconColor;

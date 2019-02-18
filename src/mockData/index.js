@@ -16,15 +16,8 @@ const items = [
 ];
 
 const categories = {
-  data:
-  ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing']
+  data: ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing']
 };
-
-const newCategories = [
-  { key: 1, name: 'Politics' },
-  { key: 2, name: 'Family' },
-  { key: 3, name: 'Techonology' }
-];
 
 const newCategories = [
   { key: 1, name: 'Politics' },
@@ -206,7 +199,6 @@ const autoLoginResponse = {
     message: 'Your account has been successfully activated! You can begin spreaing your ideas now.'
   }
 };
-
 
 const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjp7ImlkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1Iiwicm9sZSI6W119LCJpYXQiOjE1NTEzNDg0NjEsImV4cCI6MTU1MTQzNDg2MX0.W-Q3vDCP1b4iKMOm_cBSMTzmRqvU9kpzcP-E2ka2n4U';
 
