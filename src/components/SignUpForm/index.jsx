@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Form, Button } from 'semantic-ui-react';
 import FormInput from '../FormInputGroup';
 import InlineError from '../../helpers/InlineError';
-import { validate } from '../../helpers/validateUser';
+import { validate } from '../../helpers/validate';
 import './SignUpForm.scss';
 import { userSignUp } from '../../actions/authAction/authActions';
 import { callbackUrl } from '../../constants';
@@ -71,7 +71,9 @@ class SignUpForm extends React.Component {
           <FormInput type="password" name="password" placeholder="Password" value={user.password} handleChange={this.handleChange} />
         </Form.Group>
         {errors.password && <InlineError text={errors.password} />}
-        <Button type="submit" basic fluid huge="true" onClick={this.handleSubmit}>Sign Up</Button>
+        <Button type="submit" basic fluid huge="true" onClick={this.handleSubmit}>
+          Sign Up
+        </Button>
       </Form>
     );
   }

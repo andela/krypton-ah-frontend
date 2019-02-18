@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { Form, Checkbox, Button } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
 import InlineError from '../../helpers/InlineError';
-import { signInValidator } from '../../helpers/validateUser';
 import { userLogin } from '../../actions/authAction/authActions';
 import RedirectLoader from '../Loader';
+import { signInValidator } from '../../helpers/validate';
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -43,30 +43,47 @@ class SignIn extends React.Component {
   }
 
   render() {
-    const {
-      user, errors
-    } = this.state;
+    const { user, errors } = this.state;
 
-    if (this.props.auth.authIsLoading) { return <RedirectLoader />; }
-    if (this.props.auth.isAuthenticated) { return <Redirect to="/writearticle" />; }
+    if (this.props.auth.authIsLoading) {
+      return <RedirectLoader />;
+    }
+    if (this.props.auth.isAuthenticated) {
+      return <Redirect to="/writearticle" />;
+    }
     return (
       <Form onSubmit={this.handleSubmit}>
         <Form.Group widths="equal">
           <Form.Input
-            type="email" className="email" fluid placeholder="Email Address" name="email" value={user.email} onChange={this.handleChange} required
+            type="email"
+            className="email"
+            fluid
+            placeholder="Email Address"
+            name="email"
+            value={user.email}
+            onChange={this.handleChange}
+            required
           />
         </Form.Group>
         {errors.email && <InlineError text={errors.email} />}
         <Form.Group widths="equal">
           <Form.Input
-            fluid type="password" placeholder="Password" value={user.password} name="password" onChange={this.handleChange} required
+            fluid
+            type="password"
+            placeholder="Password"
+            value={user.password}
+            name="password"
+            onChange={this.handleChange}
+            required
           />
         </Form.Group>
-        { errors.password && <InlineError text={errors.password} />}
+        {errors.password && <InlineError text={errors.password} />}
         <Form.Field>
           <Checkbox label="Remember me" />
         </Form.Field>
-        <Button type="submit" basic fluid huge="true" onClick={this.handleSubmit}>Sign In</Button>
+        <Button type="submit" basic fluid huge="true" onClick={this.handleSubmit}>
+          Sign In
+        </Button>
       </Form>
     );
   }
