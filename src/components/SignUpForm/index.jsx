@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Button } from 'semantic-ui-react';
 import FormInput from '../FormInputGroup';
 import InlineError from '../../helpers/InlineError';
-import { validate } from '../../helpers/validateUser';
+import { validate } from '../../helpers/validate';
 import './SignUpForm.scss';
 
 class SignUpForm extends React.Component {
@@ -61,7 +61,9 @@ class SignUpForm extends React.Component {
           <FormInput type="password" name="password" placeholder="Password" value={user.password} handleChange={this.handleChange} />
         </Form.Group>
         {errors.password && <InlineError text={errors.password} />}
-        <Button type="submit" basic fluid huge="true" onClick={this.handleSubmit}>Sign Up</Button>
+        <Button type="submit" basic fluid huge="true" onClick={this.handleSubmit}>
+          Sign Up
+        </Button>
       </Form>
     );
   }
@@ -69,9 +71,7 @@ class SignUpForm extends React.Component {
   render() {
     const { user, errors } = this.state;
 
-    return (
-      this.userSignUpForm(user, errors)
-    );
+    return this.userSignUpForm(user, errors);
   }
 }
 
