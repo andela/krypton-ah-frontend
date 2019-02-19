@@ -4,6 +4,7 @@ import Login from '../pages/Login';
 import NotFound from '../pages/NotFound';
 import ViewArticle from '../pages/ViewArticle';
 import Verification from '../pages/Verification';
+import socialAuth from '../components/socialAuth/socialAuth';
 
 export default [
   {
@@ -11,6 +12,13 @@ export default [
     component: Home,
     exact: true,
     path: '/'
+  },
+  {
+    name: 'auth',
+    component: socialAuth,
+    path: '/auth/*/callback',
+    exact: false,
+    strict: false
   },
   {
     name: 'login',
