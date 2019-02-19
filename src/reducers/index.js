@@ -6,7 +6,8 @@ import readArticle from './readArticleReducer';
 const rootReducer = combineReducers({
   authReducer,
   socialLogin,
-  readArticle
+  readArticle,
+  articles: articlesReducers,
 });
 
 export default rootReducer;
