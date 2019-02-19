@@ -5,7 +5,7 @@ import { advertimage } from '../../../constants';
 export default function index() {
   return (
     <Grid.Column className="Advert">
-      <Image src={advertimage} />
+      <Image src={advertimage} className="AdvertImg" />
     </Grid.Column>
   );
 }

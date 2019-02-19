@@ -8,7 +8,7 @@ function SignUp() {
       title="sign up"
       baseText="Already have an account?"
       link="Sign In"
-      formLink="signin">
+      formLink="login">
       <SignUpForm />
     </ModalComponent>
   );
