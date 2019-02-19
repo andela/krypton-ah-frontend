@@ -1,35 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import { Image } from 'semantic-ui-react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import ArticlesIcons from '../widgets/Icons';
 import './carousel.scss';
+import { items } from '../../mockData';
+import Loader from '../../containers/HOC/comonentLoader';
 
-export default function carousel(props) {
-  const { title, author, featuredImage } = props;
+function carousel(props) {
+  const { featured } = props;
+  if (!featured) {
+    return <Loader />;
+  }
   return (
     <Carousel autoPlay showThumbs={false} infiniteLoop showStatus={false}>
-      <div>
-        <Image src={featuredImage} size="massive" />
-        <p className="legend text">
-          <p className="title">{title}</p>
-          <p className="author">{author}</p>
-          <ArticlesIcons />
-        </p>
-      </div>
+      {featured.data.map(article => (
+        <div key={article.id} className="carousel-container">
+          <Image src={article.featuredImageUrl} size="massive" />
+          <p className="legend text">
+            <Link replace={false} to={`/articles/${article.id}`}>
+              <p className="title">{article.title}</p>
+            </Link>
+            <p className="author">
+              {`${article.articleAuthor.firstname} ${article.articleAuthor.lastname}`}
+            </p>
+            <ArticlesIcons />
+          </p>
+        </div>
+      ))}
     </Carousel>
   );
 }
 
+export default carousel;
+
 carousel.defaultProps = {
-  title: 'Placeholder Article Title',
-  author: 'Placeholder author name',
-  featuredImage: 'https://res.cloudinary.com/ah-krypton/image/upload/v1550007680/MainImage.png'
+  featured: items
 };
 
 carousel.propTypes = {
-  title: PropTypes.string,
-  author: PropTypes.string,
-  featuredImage: PropTypes.string
+  featured: PropTypes.array
 };

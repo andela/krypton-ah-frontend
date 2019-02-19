@@ -30,14 +30,29 @@
   }
 }
 
-p.author {
-  margin: 0 0 0 auto;
-  width: 50%;
-  text-align: left;
-  background-color: transparent;
-  padding-top: 0.3rem;
-  padding-bottom: 0;
-  font-size: 0.9rem;
+.carousel-container {
+  p.author {
+    margin: 0 0 0 auto;
+    width: 48%;
+    text-align: left;
+    background-color: transparent;
+    padding-top: 0.3rem;
+    padding-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: Roboto;
+  }
+  .legend.text .ui.widgetContainer.menu {
+    margin-left: -0.9rem;
+    background-color: transparent;
+    color: $white;
+    text-align: right;
+    .Icons {
+      width: 48%;
+      margin: 0 0 0 auto;
+      text-align: left;
+    }
+  }
 }
 
 .carousel .slide .legend.text {
@@ -52,33 +67,22 @@ p.author {
     1px 1px 0 $black;
 }
 
-.legend.text .ui.widgetContainer.menu {
-  margin-left: -0.9rem;
-  background-color: transparent;
-  color: $white;
-  text-align: right;
-  .Icons {
-    width: 48%;
-    margin: 0 0 0 auto;
-    text-align: left;
-  }
-}
-
 @media only screen and (max-width: 800px) {
   .carousel .slide .legend.text .title {
     font-size: 0.5em;
   }
+  .carousel-container {
+    p.author {
+      font-size: 0.5em;
+    }
 
-  p.author {
-    font-size: 0.5em;
-  }
+    .legend.text .ui.widgetContainer.menu {
+      font-size: 0.8rem;
+    }
 
-  .legend.text .ui.widgetContainer.menu {
-    font-size: 0.8rem;
-  }
-
-  .ui.widgetContainer.menu i.icon {
-    padding: 0;
-    padding-left: 0;
+    .ui.widgetContainer.menu i.icon {
+      padding: 0;
+      padding-left: 0;
+    }
   }
 }

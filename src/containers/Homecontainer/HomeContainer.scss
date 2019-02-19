@@ -15,7 +15,9 @@
     .column:first-child,
     .row > .column:first-child {
       padding: 0;
-      width: 60%;
+      padding-left: 0;
+      margin: 0;
+      width: 58%;
       box-shadow: none;
       margin-left: 15px;
     }
@@ -55,7 +57,9 @@
   &[class*='two column'].grid > {
     .column:not(.row),
     .row > .column {
-      width: 38%;
+      width: 40%;
+      margin: 0 auto;
+      margin-right: 0;
     }
   }
   &.input {
@@ -68,24 +72,40 @@
   width: 20rem;
 }
 
-.rightGrid .content {
-  position: absolute !important;
-  height: fit-content !important;
+.rightGrid {
+  .content {
+    position: absolute !important;
+    height: fit-content !important;
+  }
+}
+
+.ui.divided.two.column.grid
+  .column
+  .ui.card.widgetIcons
+  .content
+  .ui.feed
+  > .event
+  > .content
+  .summary {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .Categories .itrem a.header {
   padding-top: 0.7rem;
 }
 
-.column.Advert img.ui.image {
+img.ui.image.AdvertImg {
   margin: 0 auto;
   width: 70%;
   margin: 0 auto;
   width: 50%;
   margin-top: 8.8rem;
+  display: block;
 }
 
-.ui {
+.main .ui {
   &.basic.black {
     &.button,
     &.buttons .button {
@@ -104,6 +124,7 @@
     border-radius: 0;
     width: 100%;
     box-shadow: none;
+    margin: 0;
   }
   &[class*='vertically divided'].grid > {
     .column:not(.row),
@@ -117,28 +138,41 @@
   }
   &.card > .content,
   &.cards > .card > .content {
+    position: inherit;
+    width: 95%;
     bottom: 0;
-    position: absolute;
     color: white;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
     border: none;
     border-top: 1px solid rgba(34, 36, 38, 0.1);
     background: 0 0;
     margin: 0;
     padding: 1rem 1rem;
-    -webkit-box-shadow: none;
+    padding-left: 0.5rem;
+    padding-top: 0;
     box-shadow: none;
-    height: 25.3rem;
     font-size: 1rem;
     border-radius: 0;
+    padding-bottom: 0;
+  }
+
+  .column .rightGrid {
+    .header {
+      color: white;
+      padding: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .description {
+      padding: 0.8em;
+      color: black;
+    }
   }
 }
 
 .title,
 .header {
-  color: white !important;
+  color: white;
 }
 
 .ui.card.description {
@@ -154,7 +188,7 @@
   border-width: 0 !important;
 }
 
-.Main {
+.main {
   display: flex;
 }
 
@@ -166,13 +200,17 @@
   }
   &.divided.two.column.grid .row {
     padding-top: 1.5em;
-    padding-bottom: 2em;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
   }
   &.container.two.column.grid.reveal .column {
     padding: 2px !important;
     width: 50%;
     padding: 5px;
     overflow: hidden;
+    img.ui.image {
+      width: 100%;
+    }
     .ui.card.description {
       &:hover {
         top: 0%;
@@ -183,10 +221,14 @@
       color: white;
       overflow: hidden;
       top: 75%;
-      height: 100%;
+      height: 98%;
+      border-style: none;
       padding: 5%;
+      overflow: hidden;
       background: rgba(0, 0, 0, 0.5);
       transition: top 0.5s;
+      width: 98%;
+      margin-left: 0.5%;
     }
   }
   &.fade.reveal > .visible.content {
@@ -196,13 +238,19 @@
     visibility: visible;
     opacity: 1;
   }
+  .ui.feed > .event > .content .summary {
+    height: auto;
+  }
 }
 
-p.Popular.title {
+p.popular.title {
   background-color: transparent;
   text-align: center;
   width: 100%;
   height: 20%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
   padding: 2px;
 }
 
@@ -215,7 +263,7 @@ p.Popular.title {
   &.fade.reveal > .visible.content#hide:hover {
     top: 80% !important;
     width: 100%;
-    color: white;
+    color: $white;
     opacity: 1;
   }
 }
@@ -244,23 +292,6 @@ p.articleDescription {
     width: 97% !important;
     margin: 0 auto;
   }
-  &.modal {
-    padding-top: 15%;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    box-shadow: none;
-    > .content {
-      display: block;
-      width: 70%;
-      font-size: 1rem;
-      line-height: 1.4;
-      padding: 1.5rem;
-      background: #fff;
-      margin: 0 auto;
-      padding-bottom: 0;
-    }
-  }
 }
 
 .actions {
@@ -268,43 +299,14 @@ p.articleDescription {
   margin: 0 auto;
 }
 
-.ui.modal {
-  > .actions {
-    padding: 1rem 1rem;
-    text-align: right;
-    border-top-width: 0;
-    background-color: #fff;
-  }
-  input {
-    width: 20rem;
-    border-width: 0;
-  }
-}
-
-.dimmed.dimmable > .ui {
-  &.animating.dimmer,
-  &.visible.dimmer {
-    padding-top: 14.7%;
-    background-color: transparent;
-  }
-}
-
-.ui {
-  &.active.dimmer {
-    padding-top: 14.7%;
-    background-color: transparent;
-  }
-  &.modal button {
-    width: 15% !important;
-  }
-}
-
 .ui.divided.grid:not([class*='vertically divided']) > .column:not(.row),
 .ui.divided.grid:not([class*='vertically divided']) > .row > .column {
   box-shadow: none;
+  padding-left: 0;
 }
 .ui[class*='vertically divided'].grid > .row:first-child > .column {
-  margin-top: 0.65rem;
+  margin-top: 0.95rem;
+  margin-bottom: 0.7rem;
 }
 
 a.header {
@@ -347,6 +349,10 @@ a.header {
     width: 80%;
   }
 
+  .ui.feed > .event {
+    height: 5.52em;
+  }
+
   .ui.feed > .event > .label + .content {
     margin: 0;
   }
@@ -378,8 +384,12 @@ a.header {
   border-style: none;
 }
 
+p.descriptionBody {
+  height: 8rem;
+}
+
 @media only screen and (max-width: 1200px) {
-  .Main {
+  .main {
     display: block;
   }
 
@@ -409,9 +419,17 @@ a.header {
 
   .column.Advert img.ui.image {
     margin: 0 auto;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     width: 30%;
     margin-top: 2.8rem;
+  }
+}
+
+.homeloader.ui.segment {
+  min-height: calc(80vh - 5rem);
+  margin-top: 1rem;
+  .img {
+    width: 70%;
   }
 }

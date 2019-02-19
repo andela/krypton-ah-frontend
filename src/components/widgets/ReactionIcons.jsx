@@ -2,19 +2,22 @@ import React from 'react';
 import { Icon } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-export default function ReactionIcons({
-  date, numberoflikes, numberofdislikes, numberofcomments
-}) {
+export default function ReactionIcons({ date, numberoflikes, numberofdislikes, numberofcomments }) {
   return (
-    <div>
+    <div className="reactionIcons">
       <React.Fragment>
-        <i className="dates">{date}</i>
-        <Icon disabled link size="small" fitted name="thumbs up outline" />
-        {numberoflikes}
-        <Icon disabled link size="small" fitted name="thumbs down outline" />
-        {numberofdislikes}
-        <Icon disabled link size="small" fitted name="comments outline" />
-        {numberofcomments}
+        <Icon disabled link size="small" fitted name="time">
+          {date}
+        </Icon>
+        <Icon disabled link size="small" fitted name="thumbs up outline">
+          <span>{numberoflikes}</span>
+        </Icon>
+        <Icon disabled link size="small" fitted name="thumbs down outline">
+          <span>{numberofdislikes}</span>
+        </Icon>
+        <Icon disabled link size="small" fitted name="comments outline">
+          <span>{numberofcomments}</span>
+        </Icon>
       </React.Fragment>
     </div>
   );

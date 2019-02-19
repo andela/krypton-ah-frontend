@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Widget from '..';
 import Newsletter from '../Newsletter';
-import Categories from '../CategoriesContainer/Categories';
+import Categories from '../categories/Categories';
 
 describe('button test', () => {
   it('should test for the sidewidget component', () => {

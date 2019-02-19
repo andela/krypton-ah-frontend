@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Menu } from 'semantic-ui-react';
 import SocialMediaIcons from '../SocialMediaIcons';
-import './footer.scss';
+import './Footer.scss';
 
 export default function Footer() {
   return (
