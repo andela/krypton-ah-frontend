@@ -3,14 +3,14 @@ import configureStore from 'redux-mock-store';
 import moxios from 'moxios';
 import * as actions from '../authActions';
 import actionTypes from '../actionTypes';
-import * as axios from '../../helpers/axiosHelper/auth';
+import * as axios from '../../../helpers/axiosHelper/auth';
 import {
   payload,
   signupOkResponse,
   loginOkResponse,
   mockResponse,
   fakeUser2
-} from '../../mockData';
+} from '../../../mockData';
 
 const mockStore = configureStore([thunk]);
 const store = mockStore({ auth: {} });

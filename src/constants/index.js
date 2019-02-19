@@ -30,25 +30,30 @@ const socialMediaLoginIcons = [
   {
     text: 'Facebook',
     iconName: 'facebook official',
-    key: 1
+    key: 1,
+    url: process.env.FACEBOOK_URL
   },
   {
     text: 'Google',
     iconName: 'google plus square',
-    key: 2
+    key: 2,
+    url: process.env.GOOGLE_URL
   }, {
     text: 'Linkedin',
     iconName: 'linkedin',
-    key: 3
+    key: 3,
+    url: process.env.LINKEDIN_URL
   },
   {
     text: 'Twitter',
     iconName: 'twitter square',
-    key: 4
+    key: 4,
+    url: process.env.TWITTER_URL
   }
 ];
-const API_BASE_URL = 'http://krypton-ah-stage.herokuapp.com';
+const API_BASE_URL = 'https://krypton-ah-stage.herokuapp.com';
 const authentication = 'authentication';
+const twitterPath = '/auth/twitter/callback';
 
 export {
   socialMediaElements,
@@ -57,4 +62,5 @@ export {
   socialMediaLoginIcons,
   API_BASE_URL,
   authentication,
+  twitterPath
 };
