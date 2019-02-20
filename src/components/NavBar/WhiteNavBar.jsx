@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Dropdown, Image, Menu, Icon, Button } from 'semantic-ui-react';
+import { Dropdown, Image, Menu, Icon, Button, Link } from 'semantic-ui-react';
 import AHIcon from '../../images/Logo.png';
 import avatarPlaceholder from '../../images/avatar.png';
 
@@ -20,7 +20,9 @@ export default function WhiteNavBar({ fixed, isAuthenticated, avatarUrl }) {
           <Icon fitted size="big" name="search" />
         </Menu.Item>
         <Menu.Item>
-          <Button secondary>Write an Article</Button>
+          <Link to="/login">
+            <Button secondary>Write an Article</Button>
+          </Link>
         </Menu.Item>
         {isAuthenticated ? (
           <Menu.Item>
