@@ -140,6 +140,10 @@ const signupFailureAction = [
   }
 ];
 
+const socialToken = 'hyakfhkdhiuashvk98924cxndusjdusnfixomj9';
+
+const mockPath = 'auth/facebook/';
+
 export {
   payload,
   fakeUser2,
@@ -158,4 +162,6 @@ export {
   popularArticles,
   trendingArticles,
   mockHeader,
+  socialToken,
+  mockPath
 };
