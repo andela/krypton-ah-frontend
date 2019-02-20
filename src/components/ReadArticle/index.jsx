@@ -1,31 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Image, Container, Header, Comment, Divider } from 'semantic-ui-react';
-import './styles/ReadArticle.scss';
+import ShareArticle from '../ShareArticle';
 import calendar from '../../images/calendar.svg';
 import time from '../../images/time.svg';
-import fbk from '../../images/fbk.svg';
-import linkd from '../../images/linkdn.svg';
-import gmail from '../../images/gmail.svg';
-import twitter from '../../images/twitter.svg';
+import './styles/ReadArticle.scss';
 
 export default class ReadArticle extends Component {
   getArticleContent = articleContent => (
     <Container textAlign="justified">
-      <div className="icon-bar">
-        <a href="#" className="facebook">
-          <Image src={fbk} />
-        </a>
-        <a href="#" className="twitter">
-          <Image src={twitter} />
-        </a>
-        <a href="#" className="google">
-          <Image src={gmail} />
-        </a>
-        <a href="#" className="linkedin">
-          <Image src={linkd} />
-        </a>
-      </div>
       <div className="articleContent">
         <p>{articleContent}</p>
         <p>{articleContent}</p>
@@ -50,14 +33,8 @@ export default class ReadArticle extends Component {
   );
 
   render() {
-    const {
-      articleTitle,
-      articleAuthor,
-      articleDate,
-      articleReadTime,
-      articleContent,
-      featuredImage,
-      author
+    const { articleTitle, articleAuthor, articleDate, articleReadTime, articleContent,
+      featuredImage, author, slug, description
     } = this.props;
     return (
       <Container className="readArticleContainer">
@@ -70,6 +47,9 @@ export default class ReadArticle extends Component {
           {this.getArticleInfo(articleAuthor, articleDate, articleReadTime)}
         </Comment.Group>
         <Divider className="articleDivider" />
+        <div className="icon-bar">
+          <ShareArticle title={articleTitle} slug={slug} description={description} />
+        </div>
         {this.getArticleContent(articleContent)}
         <Divider className="articleDivider" />
       </Container>
@@ -83,5 +63,7 @@ ReadArticle.propTypes = {
   articleReadTime: PropTypes.string.isRequired,
   articleContent: PropTypes.string.isRequired,
   featuredImage: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired
+  author: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
