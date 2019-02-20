@@ -64,3 +64,12 @@ export const userLogin = user => async (dispatch) => {
     }
   }
 };
+
+export const accountActivation = (response, token) => (dispatch) => {
+  if (token) {
+    setToken(token);
+    dispatch(loginSuccess(response));
+  } else {
+    dispatch(loginFailure(response));
+  }
+};

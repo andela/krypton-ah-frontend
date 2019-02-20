@@ -58,6 +58,18 @@ const { BASE_URL_CB } = process.env;
 const authentication = 'authentication';
 const twitterPath = '/auth/twitter/callback';
 const networkErrorResponse = 'Network error! kindly try again later';
+const callbackUrl = 'http://localhost:5000/verification';
+const activationResponse = {
+  data: {
+    message: 'Your account has been successfully activated! You can begin sharing your ideas.'
+  }
+};
+
+const alreadyActivatedResponse = {
+  data: {
+    message: 'Your account is already activated! kindly login to continue'
+  }
+};
 
 export {
   socialMediaElements,
@@ -69,4 +81,7 @@ export {
   authentication,
   twitterPath,
   networkErrorResponse,
+  callbackUrl,
+  activationResponse,
+  alreadyActivatedResponse
 };

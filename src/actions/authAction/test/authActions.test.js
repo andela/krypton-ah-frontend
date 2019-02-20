@@ -9,7 +9,9 @@ import {
   signupOkResponse,
   loginOkResponse,
   mockResponse,
-  fakeUser2
+  fakeUser2,
+  autoLoginResponse,
+
 } from '../../../mockData';
 
 const mockStore = configureStore([thunk]);
@@ -95,5 +97,58 @@ describe('user authentication actions login', () => {
     await actions.userLogin(fakeUser2)(dispatch);
     expect(dispatch).toBeCalledTimes(2);
     expect(dispatch).toBeCalledWith({ type: actionTypes.LOGIN_SUCCESS, payload: loginOkResponse });
+  });
+
+  it('should throw error', async () => {
+    axios.loginCall = jest.fn(() => {
+      // eslint-disable-next-line no-throw-literal
+      throw { response: mockResponse };
+    });
+    try {
+      await actions.userLogin(fakeUser2)(dispatch);
+    } catch (error) {
+      expect(error).toEqual({ response: mockResponse });
+      expect(dispatch).toBeCalledTimes(2);
+      expect(dispatch).toBeCalledWith({
+        type: actionTypes.LOGIN_FAILURE,
+        payload: mockResponse,
+      });
+    }
+    store.clearActions();
+  });
+
+  it('should throw error', async () => {
+    axios.loginCall = jest.fn(() => {
+      // eslint-disable-next-line no-throw-literal
+      throw {};
+    });
+    try {
+      await actions.userLogin(payload)(dispatch);
+    } catch (error) {
+      expect(dispatch).toBeCalledTimes(2);
+      expect(dispatch).toBeCalledWith({
+        type: NETWORK_ERROR,
+        payload: mockResponse,
+      });
+    }
+    store.clearActions();
+  });
+
+  it('should dispatch login success action after successful account verification', () => {
+    actions.accountActivation(autoLoginResponse, loginOkResponse.data.token)(dispatch);
+    expect(dispatch).toBeCalledTimes(1);
+    expect(dispatch).toBeCalledWith({
+      type: actionTypes.LOGIN_SUCCESS,
+      payload: autoLoginResponse
+    });
+  });
+
+  it('should dispatch login failure action if account is already verified', () => {
+    actions.accountActivation(autoLoginResponse)(dispatch);
+    expect(dispatch).toBeCalledTimes(1);
+    expect(dispatch).toBeCalledWith({
+      type: actionTypes.LOGIN_FAILURE,
+      payload: autoLoginResponse
+    });
   });
 });
