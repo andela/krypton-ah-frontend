@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Dropdown, Image, Menu, Icon, Button, Link } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { Dropdown, Image, Menu, Icon, Button } from 'semantic-ui-react';
 import AHIcon from '../../images/Logo.png';
 import avatarPlaceholder from '../../images/avatar.png';
 
