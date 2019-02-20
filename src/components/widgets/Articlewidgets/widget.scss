@@ -19,18 +19,18 @@
       width: 100%;
       height: 7rem;
     }
-    width: 100%;
-    height: 7rem;
-  }
-  &.grid > {
-    .column:not(.row),
-    .row > .column.featured-widget {
-      position: relative;
-      display: inline-block;
-      width: 38%;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      vertical-align: top;
+    &.grid > {
+      .column:not(.row),
+      .row > .column.featured-widget {
+        position: relative;
+        display: inline-block;
+        width: 38%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        vertical-align: top;
+      }
+      width: 100%;
+      height: 7.5rem;
     }
   }
 }
@@ -150,7 +150,7 @@
     }
   }
 
-  .ui.widgetContainer.menu .icons {
+  .ui.widgetContainer.menu .Icons {
     width: 98%;
   }
 }
