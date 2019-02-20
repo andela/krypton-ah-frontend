@@ -12,6 +12,12 @@ const initialState = {
     categoriesresponse: '',
     tagsresponse: '',
     featuredarticles: ''
+  },
+  readArticle: {
+    articleIsLoading: false,
+    success: false,
+    response: {}
   }
-};
-export default initialState;
+}
+
+export default {initialState};
