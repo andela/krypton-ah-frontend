@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux';
 import authReducer from './authReducer';
+import socialLogin from './socialLoginReducer';
+
 
 const rootReducer = combineReducers({
-  authReducer
+  authReducer,
+  socialLogin
 });
 
 export default rootReducer;

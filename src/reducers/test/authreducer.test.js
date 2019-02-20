@@ -1,12 +1,12 @@
-import actionTypes from '../actions/actionTypes';
-import initialState from './initialState';
-import authReducer from './authReducer';
+import actionTypes from '../../actions/authAction/actionTypes';
+import initialState from '../initialState';
+import authReducer from '../authReducer';
 import {
   loginOkResponse,
   loginBadResponse,
   signupOkResponse,
   error,
-} from '../mockData';
+} from '../../mockData';
 
 const {
   AUTH_LOADING,
