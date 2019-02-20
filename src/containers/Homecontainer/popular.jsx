@@ -15,7 +15,7 @@ export default function PopularArticles() {
             {popularArticles.map(popularArticle => (
               <Grid.Column key={popularArticle.title}>
                 <Card className="description">
-                  <p className="Popular title">{popularArticle.title}</p>
+                  <p className="popular title">{popularArticle.title}</p>
                   {popularArticle.description}
                 </Card>
                 <Image src={business} />

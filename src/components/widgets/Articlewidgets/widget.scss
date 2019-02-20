@@ -1,31 +1,36 @@
 @import '../../../styles/partials/colors';
 @import '../../../styles/partials/styles';
 
-.ui {
-  &.feed > .event {
-    > .label {
-      display: block;
-      flex: 0 0 auto;
-      width: 6.5rem;
-      height: auto;
-      -ms-flex-itrem-align: stretch;
-      align-self: stretch;
-      text-align: left;
-      img {
-        border-radius: 0;
+.widgetIcons {
+  .ui {
+    &.feed > .event {
+      > .label {
+        display: block;
+        flex: 0 0 auto;
+        width: 6.5rem;
+        height: auto;
+        -ms-flex-itrem-align: stretch;
+        align-self: stretch;
+        text-align: left;
+        img {
+          border-radius: 0;
+        }
       }
+      width: 100%;
+      height: 7rem;
     }
-    width: 100%;
-  }
-  &.grid > {
-    .column:not(.row),
-    .row > .column.featured-widget {
-      position: relative;
-      display: inline-block;
-      width: 38%;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      vertical-align: top;
+    &.grid > {
+      .column:not(.row),
+      .row > .column.featured-widget {
+        position: relative;
+        display: inline-block;
+        width: 38%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        vertical-align: top;
+      }
+      width: 100%;
+      height: 7.5rem;
     }
   }
 }
@@ -44,20 +49,22 @@
   &.feed > .event > {
     .content {
       .summary {
+        height: 55%;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
         line-height: normal;
         font-size: 0.75rem;
         text-align: justify;
-        color: $articleText;
+        color: rgba(0, 0, 0, 0.4);
       }
       .date {
         color: $black;
         padding: 0.3846rem;
         font-size: 1rem;
         padding: 0;
-        padding-bottom: 0.1769rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2769rem;
         line-height: 1.2308rem;
       }
       .dates {
@@ -75,18 +82,80 @@
   }
   &.widgetContainer.menu {
     color: $black;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     position: relative;
     border-style: none;
     box-shadow: none;
     margin-top: 0;
     .Icons {
       margin-right: 0;
+      width: 100%;
+      display: flex;
     }
     i.icon {
       padding: 0.7692rem;
       padding-right: 0.3846rem;
-      padding-left: 1.2308rem;
+      padding-left: 0.308rem;
+      font-size: 0.9em;
     }
   }
+}
+
+.Icons span {
+  padding: 0.2rem;
+  font-family: Roboto;
+}
+
+.rating {
+  width: 25%;
+  text-align: right;
+  margin-top: -0.3rem;
+}
+
+.ui.star.rating .active.icon {
+  padding-right: 1rem;
+}
+
+.rightGrid {
+  .rating {
+    width: 50%;
+    padding-top: 0.15rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .ui.star.rating .active.icon {
+    padding-right: 1rem;
+  }
+
+  .reactionIcons {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    font-size: 0.95rem;
+  }
+
+  .ui.small.rating {
+    font-size: 0.92857143rem;
+    width: 5%;
+    margin: 0 auto;
+  }
+
+  .rating {
+    span {
+      width: fit-content;
+      margin-top: 0.2em;
+      text-align: left;
+      text-decoration: underline;
+    }
+  }
+
+  .ui.widgetContainer.menu .Icons {
+    width: 98%;
+  }
+}
+
+i.icon.time:before {
+  content: '\f017';
+  padding-right: 0.1rem;
 }
