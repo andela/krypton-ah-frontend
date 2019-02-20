@@ -78,12 +78,17 @@ exports[`WhiteNavBar should match snapshot 1`] = `
       />
     </MenuItem>
     <MenuItem>
-      <Button
-        as="button"
-        secondary={true}
+      <Link
+        replace={false}
+        to="/login"
       >
-        Write an Article
-      </Button>
+        <Button
+          as="button"
+          secondary={true}
+        >
+          Write an Article
+        </Button>
+      </Link>
     </MenuItem>
   </MenuMenu>
 </Menu>
@@ -126,12 +131,17 @@ exports[`WhiteNavBar with props should match snapshot 1`] = `
       />
     </MenuItem>
     <MenuItem>
-      <Button
-        as="button"
-        secondary={true}
+      <Link
+        replace={false}
+        to="/login"
       >
-        Write an Article
-      </Button>
+        <Button
+          as="button"
+          secondary={true}
+        >
+          Write an Article
+        </Button>
+      </Link>
     </MenuItem>
     <MenuItem>
       <Dropdown

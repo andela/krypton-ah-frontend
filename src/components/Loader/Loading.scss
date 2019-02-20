@@ -1,0 +1,5 @@
+@import '../../styles/partials/colors';
+.ui.dimmer .ui.loader:after {
+  border-color: $black transparent transparent;
+}
+

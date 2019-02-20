@@ -11,7 +11,9 @@ import {
   signupOkResponse,
   loginOkResponse,
   mockResponse,
-  fakeUser2
+  fakeUser2,
+  autoLoginResponse,
+
 } from '../../../mockData';
 
 const mockStore = configureStore([thunk]);
@@ -163,5 +165,23 @@ describe('user authentication actions login', () => {
       });
     }
     store.clearActions();
+  });
+
+  it('should dispatch login success action after successful account verification', () => {
+    actions.accountActivation(autoLoginResponse, loginOkResponse.data.token)(dispatch);
+    expect(dispatch).toBeCalledTimes(1);
+    expect(dispatch).toBeCalledWith({
+      type: actionTypes.LOGIN_SUCCESS,
+      payload: autoLoginResponse
+    });
+  });
+
+  it('should dispatch login failure action if account is already verified', () => {
+    actions.accountActivation(autoLoginResponse)(dispatch);
+    expect(dispatch).toBeCalledTimes(1);
+    expect(dispatch).toBeCalledWith({
+      type: actionTypes.LOGIN_FAILURE,
+      payload: autoLoginResponse
+    });
   });
 });

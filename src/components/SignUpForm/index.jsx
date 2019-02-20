@@ -1,9 +1,15 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Form, Button } from 'semantic-ui-react';
 import FormInput from '../FormInputGroup';
 import InlineError from '../../helpers/InlineError';
 import { validate } from '../../helpers/validateUser';
 import './SignUpForm.scss';
+import { userSignUp } from '../../actions/authAction/authActions';
+import { callbackUrl } from '../../constants';
+import Loading from '../Loader/Loading';
 
 class SignUpForm extends React.Component {
   constructor(props) {
@@ -13,7 +19,8 @@ class SignUpForm extends React.Component {
         firstname: '',
         lastname: '',
         email: '',
-        password: ''
+        password: '',
+        callbackUrl
       },
       errors: {}
     };
@@ -25,6 +32,8 @@ class SignUpForm extends React.Component {
     event.preventDefault();
     const { user } = this.state;
     const errors = validate(user);
+    const { signup } = this.props;
+    signup(user);
 
     if (errors) {
       this.setState({ errors });
@@ -61,6 +70,7 @@ class SignUpForm extends React.Component {
           <FormInput type="password" name="password" placeholder="Password" value={user.password} handleChange={this.handleChange} />
         </Form.Group>
         {errors.password && <InlineError text={errors.password} />}
+        {this.props.auth.authIsLoading ? (<Loading size="tiny" />) : null}
         <Button type="submit" basic fluid huge="true" onClick={this.handleSubmit}>Sign Up</Button>
       </Form>
     );
@@ -69,10 +79,38 @@ class SignUpForm extends React.Component {
   render() {
     const { user, errors } = this.state;
 
-    return (
-      this.userSignUpForm(user, errors)
-    );
+    return this.userSignUpForm(user, errors);
   }
 }
 
-export default SignUpForm;
+const mapDispatchToProps = dispatch => ({
+  signup: user => dispatch(userSignUp(user))
+});
+
+const mapStateToProps = state => ({
+  auth: state.authReducer
+});
+
+export { SignUpForm as SignUp };
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SignUpForm);
+
+SignUpForm.propTypes = {
+  signup: PropTypes.func,
+  auth: PropTypes.object
+};
+
+SignUpForm.defaultProps = {
+  signup: null,
+  auth: {}
+};
+
+FormInput.propTypes = {
+  handleChange: PropTypes.func
+};
+
+FormInput.defaultProps = {
+  handleChange: null
+};
