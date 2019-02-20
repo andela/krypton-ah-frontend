@@ -169,3 +169,17 @@ i.icon.time:before {
     height: 10rem;
   }
 }
+
+.Icons span {
+  padding: 0.2rem;
+}
+
+.rating {
+  width: 25%;
+  text-align: right;
+  margin-top: -0.3rem;
+}
+
+.ui.star.rating .active.icon {
+  padding-right: 1rem;
+}
