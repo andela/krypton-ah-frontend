@@ -12,4 +12,5 @@ const initialState = {
     failureResponse: {}
   }
 };
-export default initialState;
+
+export default { initialState };
