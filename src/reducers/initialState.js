@@ -3,7 +3,15 @@ const initialState = {
     authIsLoading: false,
     success: false,
     response: '',
-    isAuthenticated: null,
+    isAuthenticated: null
   },
+  Articles: {
+    success: false,
+    trendingresponse: '',
+    popularresponse: '',
+    categoriesresponse: '',
+    tagsresponse: '',
+    featuredarticles: ''
+  }
 };
 export default initialState;

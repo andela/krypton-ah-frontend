@@ -1,0 +1,132 @@
+import '@babel/polyfill';
+import {
+  fetchPopularArticles,
+  fetchTrendingArticles,
+  fetchCategories,
+  fetchTags,
+  fetchFeaturedArticles
+} from '../../helpers/axiosHelper/articlesAxiosCalls';
+import actionTypes from './actionTypes';
+
+const {
+  FETCH_POPULAR_ARTICLES,
+  FETCH_POPULAR_ARTICLES_FAILURE,
+  FETCH_TRENDING_ARTICLES,
+  FETCH_TRENDING_ARTICLES_FAILURE,
+  FETCH_CATEGORIES,
+  FETCH_CATEGORIES_FAILURE,
+  FETCH_TAGS,
+  FETCH_TAGS_FAILURE,
+  FETCH_FEATURED_ARTICLES,
+  FETCH_FEATURED_ARTICLES_FAILURE
+} = actionTypes;
+
+export const fetchpopularSuccess = payload => ({
+  type: FETCH_POPULAR_ARTICLES,
+  payload
+});
+
+export const fetchfeaturedSuccess = payload => ({
+  type: FETCH_FEATURED_ARTICLES,
+  payload
+});
+
+export const fetchtrendingSuccess = payload => ({
+  type: FETCH_TRENDING_ARTICLES,
+  payload
+});
+
+export const fetchTagsSuccess = payload => ({
+  type: FETCH_TAGS,
+  payload
+});
+
+export const fetchCategoriesSuccess = payload => ({
+  type: FETCH_CATEGORIES,
+  payload
+});
+
+export const fetchPopularFailure = payload => ({
+  type: FETCH_POPULAR_ARTICLES_FAILURE,
+  payload
+});
+
+export const fetchFeaturedFailure = payload => ({
+  type: FETCH_FEATURED_ARTICLES_FAILURE,
+  payload
+});
+
+export const fetchTrendingFailure = payload => ({
+  type: FETCH_TRENDING_ARTICLES_FAILURE,
+  payload
+});
+
+export const fetchTagsFailure = payload => ({
+  type: FETCH_TAGS_FAILURE,
+  payload
+});
+
+export const fetchCategoriesFailure = payload => ({
+  type: FETCH_CATEGORIES_FAILURE,
+  payload
+});
+
+export const fetchpopular = () => async (dispatch) => {
+  try {
+    const response = await fetchPopularArticles();
+    dispatch(fetchpopularSuccess(response));
+  } catch (error) {
+    if (error.response) {
+      dispatch(fetchPopularFailure(error.response));
+    }
+    return error;
+  }
+};
+
+export const fetchfeatured = () => async (dispatch) => {
+  try {
+    const response = await fetchFeaturedArticles();
+    dispatch(fetchfeaturedSuccess(response));
+  } catch (error) {
+    if (error.response) {
+      dispatch(fetchFeaturedFailure(error.response));
+    }
+    return error;
+  }
+};
+
+export const fetchtrending = () => async (dispatch) => {
+  try {
+    const response = await fetchTrendingArticles();
+    dispatch(fetchtrendingSuccess(response));
+  } catch (error) {
+    if (error.response) {
+      dispatch(fetchTrendingFailure(error.response));
+    }
+    return error;
+  }
+};
+
+export const fetchcategories = () => async (dispatch) => {
+  try {
+    const response = await fetchCategories();
+    dispatch(fetchCategoriesSuccess(response));
+  } catch (error) {
+    if (error.response) {
+      dispatch(fetchCategoriesFailure(error.response));
+    }
+    return error;
+  }
+};
+
+export const fetchtags = () => async (dispatch) => {
+  try {
+    const response = await fetchTags();
+    dispatch(fetchTagsSuccess(response));
+  } catch (error) {
+    if (error.response) {
+      dispatch(fetchTagsFailure(error.response));
+    }
+    return error;
+  }
+};
