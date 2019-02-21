@@ -51,7 +51,7 @@ const socialMediaLoginIcons = [
     url: process.env.TWITTER_URL
   }
 ];
-
+const API_BASE_URL = 'https://krypton-ah-stage.herokuapp.com';
 const authentication = 'authentication';
 const twitterPath = '/auth/twitter/callback';
 
@@ -60,6 +60,7 @@ export {
   articleDetails,
   advertimage,
   socialMediaLoginIcons,
+  API_BASE_URL,
   authentication,
   twitterPath
 };
