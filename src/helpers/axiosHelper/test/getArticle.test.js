@@ -1,6 +1,6 @@
 import axios from 'axios';
 import verify from '../getArticle';
-import { articleId, payload } from '../../../../__mocks__';
+import { articleId, payload } from '../../../mockData/readArticle';
 
 describe('Test for get article function', () => {
   it('should return a response object', async () => {

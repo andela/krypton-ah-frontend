@@ -14,15 +14,17 @@ export default (state = readArticle, action) => {
       };
     case READ_ARTICLE_SUCCESS:
       return {
+        ...state,
         articleIsLoading: false,
         success: true,
-        response: action.payload.data
+        successResponse: action.payload.data
       };
     case READ_ARTICLE_FAILURE:
       return {
+        ...state,
         articleIsLoading: false,
         success: false,
-        response: action.payload.data
+        failureResponse: action.payload.data
       };
 
     default:

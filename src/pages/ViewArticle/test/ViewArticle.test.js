@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ViewArticle from '../index';
-import { props } from '../../../../__mocks__';
+import { props } from '../../../mockData/readArticle';
 
 describe('ViewArticle', () => {
   it('should match snapshot', () => {
