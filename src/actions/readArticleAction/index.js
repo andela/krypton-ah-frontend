@@ -1,6 +1,6 @@
 import actionTypes from './actionTypes';
-import getAnArticle from '../helpers/axiosHelper/getArticle';
-import triggerLoading from './loading';
+import axiosHelper from '../../helpers/axiosHelper/getArticle';
+import triggerLoading from '../authAction/loading';
 
 const { READ_ARTICLE_LOADING, READ_ARTICLE_SUCCESS, READ_ARTICLE_FAILURE } = actionTypes;
 
@@ -11,17 +11,17 @@ const getArticleSuccess = payload => ({
 
 const getArticleFailure = payload => ({
   type: READ_ARTICLE_FAILURE,
-  payload: payload.data
+  payload: payload.response
 });
 
 const getArticle = articleId => async (dispatch) => {
   try {
     dispatch(triggerLoading(READ_ARTICLE_LOADING));
-    const response = await getAnArticle(articleId);
+    const response = await axiosHelper.getAnArticle(articleId);
     dispatch(getArticleSuccess(response));
   } catch (error) {
-    dispatch(getArticleFailure(error.response));
+    dispatch(getArticleFailure(error));
   }
 };
 
-export default getArticle;
+export { getArticle, getArticleSuccess, getArticleFailure };
