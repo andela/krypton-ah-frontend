@@ -1,13 +1,4 @@
-@import "../../styles/partials/colors";
-@import "../../styles/partials/fonts";
-
-body {
-  font: {
-    family: roboto;
-    weight: 100;
-  }
-
-}
+@import "../../styles/partials/styles";
 
 .ui {
   &.modal {
@@ -17,6 +8,7 @@ body {
     &.authModal {
       margin: 1rem auto;
       padding: 1.25rem;
+      width:25%;
     }
 
     form {
@@ -86,4 +78,24 @@ h5.baseText {
   :hover {
     color: $primarycolor
   }
+}
+@media (min-width: 768px) and (max-width: 767px) {
+  .ui {
+    &.modal {
+
+      &.authModal {
+        width:80%;
+      }
+    }
+  }   
+}
+@media (max-width: 340px) {
+  .ui {
+    &.modal {
+      
+      &.authModal {
+        width:100%;
+      }
+    }
+  }   
 }
