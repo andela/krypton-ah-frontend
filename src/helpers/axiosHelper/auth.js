@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const { API_BASE_URL } = process.env;
+import { API_BASE_URL } from '../../constants';
 
 const hostURL = `${API_BASE_URL}/api/v1`;
 
