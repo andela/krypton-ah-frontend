@@ -8,7 +8,7 @@ import time from '../../images/time.svg';
 import './styles/ReadArticle.scss';
 
 import author from '../../images/avatar.png';
-import getArticle from '../../actions/readArticleAction';
+import { getArticle } from '../../actions/readArticleAction';
 import { dateFormatter, readTimeFormatter } from '../../helpers/articleInfoFormatter';
 
 class ReadArticle extends Component {
@@ -110,7 +110,7 @@ ReadArticle.defaultProps = {
 const mapStateToProps = state => ({
   retrievedArticle: state.readArticle
 });
-
+export { ReadArticle as ReadArticlePage };
 export default connect(
   mapStateToProps,
   { getArticle }

@@ -5,4 +5,4 @@ const getAnArticle = (articleId) => {
   return response;
 };
 
-export default getAnArticle;
+export default { getAnArticle };

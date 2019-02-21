@@ -1,4 +1,4 @@
-import actionTypes from '../actions/actionTypes';
+import actionTypes from '../actions/readArticleAction/actionTypes';
 import initialState from './initialState';
 
 const { READ_ARTICLE_LOADING, READ_ARTICLE_SUCCESS, READ_ARTICLE_FAILURE } = actionTypes;
@@ -22,7 +22,7 @@ export default (state = readArticle, action) => {
       return {
         articleIsLoading: false,
         success: false,
-        response: action.payload
+        response: action.payload.data
       };
 
     default:
