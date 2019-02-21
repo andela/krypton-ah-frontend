@@ -1,0 +1,30 @@
+.profileMenu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  .profileMenuIcon {
+    height: 1.3em;
+    align-self: center;
+  }
+}
+
+.profileMenu :hover {
+  cursor: pointer;
+}
+
+.count {
+  background-color: black;
+  color: white;
+  margin-left: 0.3rem;
+}
+
+.profileMenuText {
+  margin-top: 0.2rem;
+}
+
+.hidden {
+  display: none;
+}

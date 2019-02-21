@@ -1,0 +1,54 @@
+.ui.form.profileForm {
+  .fields {
+    margin: 0;
+    margin-top: 1.2em;
+    .field {
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 1em;
+    }
+  }
+
+  .fields .input input,
+  textarea,
+  .dropdown {
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-radius: 0;
+    padding-left: 0;
+    font-size: 1.3rem;
+    margin-top: -0.5rem;
+  }
+  .field .input,
+  .fields .field .dropdown.ui.selection {
+    width: 90% !important;
+  }
+
+  .ui.dropdown > .text {
+    font-weight: 400;
+  }
+
+  .btnRight {
+    margin-top: 1rem;
+  }
+  .bioField {
+    margin-top: 2rem;
+  }
+  .bio {
+    textarea {
+      width: 100%;
+      max-height: 4rem;
+      height: 5rem;
+    }
+  }
+  .field.btnRight {
+    float: right;
+    button {
+      width: 18rem;
+      height: 4rem;
+      font-size: 1.4rem;
+      margin-top: 1rem;
+    }
+  }
+}
