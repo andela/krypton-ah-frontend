@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
-import Editor from '.';
+import Editor from './index';
 
 describe('Editor Component', () => {
   it('should rendered Editor component without crashing', () => {

@@ -49,6 +49,11 @@ const initialState = {
     userId: '',
     articles: [],
     userprofile: {}
+  },
+  createArticle: {
+    loading: false,
+    success: false,
+    response: ''
   }
 };
 
