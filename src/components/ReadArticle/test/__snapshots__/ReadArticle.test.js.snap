@@ -64,53 +64,16 @@ exports[`ReadArticle should match snapshot 1`] = `
   <Divider
     className="articleDivider"
   />
+  <div
+    className="icon-bar"
+  >
+    <ShareArticle
+      title="How to learn nodejs in 2 minutes"
+    />
+  </div>
   <Container
     textAlign="justified"
   >
-    <div
-      className="icon-bar"
-    >
-      <a
-        className="facebook"
-        href="#"
-      >
-        <Image
-          as="img"
-          src="test-file-stub"
-          ui={true}
-        />
-      </a>
-      <a
-        className="twitter"
-        href="#"
-      >
-        <Image
-          as="img"
-          src="test-file-stub"
-          ui={true}
-        />
-      </a>
-      <a
-        className="google"
-        href="#"
-      >
-        <Image
-          as="img"
-          src="test-file-stub"
-          ui={true}
-        />
-      </a>
-      <a
-        className="linkedin"
-        href="#"
-      >
-        <Image
-          as="img"
-          src="test-file-stub"
-          ui={true}
-        />
-      </a>
-    </div>
     <div
       className="articleContent"
     >
