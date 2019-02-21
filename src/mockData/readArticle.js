@@ -46,7 +46,9 @@ const retrievedArticle = {
       firstname: 'Michael',
       lastname: 'James',
       userprofile: null
-    }
+    },
+    description: 'this is a valid description wooooooooot toooooooooooooooooooot',
+    slug: 'this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74'
   }
 };
 const articleId = '65719288-0395-445e-b587-2b98b70bdec9';

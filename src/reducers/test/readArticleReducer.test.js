@@ -1,7 +1,7 @@
 import actionTypes from '../../actions/readArticleAction/actionTypes';
 import initialState from '../initialState';
 import readArticleReducer from '../readArticleReducer';
-import { payload, error } from '../../../__mocks__';
+import { payload, error } from '../../mockData/readArticle';
 
 const { READ_ARTICLE_FAILURE, READ_ARTICLE_LOADING, READ_ARTICLE_SUCCESS } = actionTypes;
 
@@ -16,7 +16,8 @@ describe('read article reducer', () => {
       {
         articleIsLoading: true,
         success: false,
-        response: {}
+        successResponse: {},
+        failureResponse: {}
       })
     );
   });
@@ -33,7 +34,8 @@ it('should update state when the READ_ARTICLE_SUCCESS action is dispatched', () 
     {
       articleIsLoading: false,
       success: true,
-      response: payload.data
+      successResponse: payload.data,
+      failureResponse: {}
     })
   );
 });
@@ -49,7 +51,8 @@ it('should update state when the READ_ARTICLE_FAILURE action is dispatched', () 
     {
       articleIsLoading: false,
       success: false,
-      response: error.data
+      failureResponse: error.data,
+      successResponse: {}
     })
   );
 });

@@ -4,7 +4,7 @@ import moxios from 'moxios';
 import * as actions from './index';
 import actionTypes from './actionTypes';
 import axios from '../../helpers/axiosHelper/getArticle';
-import { payload, articleId, error } from '../../../__mocks__';
+import { payload, articleId, error } from '../../mockData/readArticle';
 
 const { READ_ARTICLE_FAILURE, READ_ARTICLE_LOADING, READ_ARTICLE_SUCCESS } = actionTypes;
 

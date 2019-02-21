@@ -16,7 +16,8 @@ const initialState = {
   readArticle: {
     articleIsLoading: false,
     success: false,
-    response: {}
+    successResponse: {},
+    failureResponse: {}
   }
 }
 
