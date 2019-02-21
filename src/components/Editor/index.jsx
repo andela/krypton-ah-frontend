@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import MediumEditor from 'react-medium-editor';
+import PropTypes from 'prop-types';
 import { Form, Input, Button, TextArea } from 'semantic-ui-react';
 import 'medium-editor/dist/css/medium-editor.css';
 import 'medium-editor/dist/css/themes/default.css';
@@ -8,19 +10,11 @@ import placeholder from '../../asset/images/previewImage.png';
 import { articleValidator } from '../../helpers/validate';
 import InlineError from '../../helpers/InlineError';
 import { newCategories } from '../../mockData/index';
+import { publishArticle } from '../../actions/writeArticleAction/writeArticleActions';
 
 const mediumEditorOptions = {
   toolbar: {
-    buttons: [
-      'bold',
-      'italic',
-      'quote',
-      'underline',
-      'anchor',
-      'strikethrough',
-      'subscript',
-      'superscript'
-    ]
+    buttons: ['bold', 'italic', 'underline', 'anchor', 'strikethrough', 'subscript', 'superscript']
   },
   placeholder: { text: 'Write your article here...' }
 };
@@ -35,7 +29,8 @@ class Editor extends Component {
         category: '',
         content: '',
         tags: '',
-        featuredImage: placeholder
+        featuredImage: placeholder,
+        ispublished: false
       },
       errors: {}
     };
@@ -49,10 +44,20 @@ class Editor extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const { article } = this.state;
+    const { publish } = this.props;
+    article.ispublished = true;
     const errors = articleValidator(article);
     if (errors) {
       this.setState({ errors });
     }
+    // const formData = new FormData();
+    // formData.append('title', article.title);
+    // formData.append('description', article.description);
+    // formData.append('category', article.category);
+    // formData.append('content', article.content);
+    // formData.append('tags', article.tags);
+    // formData.append('featuredImage', article.featuredImage);
+    publish(article);
   }
 
   handleChange(event) {
@@ -112,7 +117,7 @@ class Editor extends Component {
         <TextArea
           id="description"
           name="description"
-          maxlength="255"
+          maxLength="250"
           value={article.description}
           onChange={this.handleChange}
         />
@@ -133,6 +138,9 @@ class Editor extends Component {
           onChange={this.handleSelection}
           placeholder="Select article category"
         >
+          <option value="" disabled>
+            Select Category
+          </option>
           {newCategories.map(category => (
             <option key={category.key} value={category.name}>
               {category.name}
@@ -191,15 +199,15 @@ class Editor extends Component {
     const { article, errors } = this.state;
     return (
       <Form onSubmit={this.handleSubmit}>
-        {this.renderTitle(article)}
+        {this.renderTitle(article, errors)}
         {errors.title && <InlineError text={errors.title} />}
-        {this.renderDescription(article)}
+        {this.renderDescription(article, errors)}
         {errors.description && <InlineError text={errors.description} />}
-        {this.renderCategory(article)}
+        {this.renderCategory(article, errors)}
         {errors.category && <InlineError text={errors.category} />}
-        {this.renderContent(article)}
+        {this.renderContent(article, errors)}
         {errors.content && <InlineError text={errors.content} />}
-        {this.renderTags(article)}
+        {this.renderTags(article, errors)}
         {errors.tags && <InlineError text={errors.tags} />}
         {this.renderFeaturedImage(article)}
         <div className="formButton">
@@ -211,4 +219,24 @@ class Editor extends Component {
   }
 }
 
-export default Editor;
+const mapDispatchToProps = dispatch => ({
+  publish: article => dispatch(publishArticle(article))
+});
+
+const mapStateToProps = state => ({
+  createArticle: state.createArticleReducer
+});
+
+export { Editor as editor };
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Editor);
+
+Editor.propTypes = {
+  publish: PropTypes.func
+};
+
+Editor.defaultProps = {
+  publish: null
+};
