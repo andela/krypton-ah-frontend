@@ -148,6 +148,19 @@ const fetchArticlesresponse = {
 const socialToken = 'hyakfhkdhiuashvk98924cxndusjdusnfixomj9';
 
 const mockPath = 'auth/facebook/';
+const profileData = {
+  firstname: 'Isaiah',
+  lastname: 'Afolayan',
+  profileImage: '',
+  bio: 'Software developer at Andela',
+  id: 'd1564aa6-e81d-41ab-8469-0aa573f4a6c5',
+  country: 'Nigeria',
+  phonenumber: '+2348145692034',
+  gender: 'male',
+  username: 'Isaiah'
+};
+
+const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1IiwiaWF0IjoxNTUwNDY1MjY0LCJleHAiOjE1NTA1NTE2NjR9.kFe-uZW0XSQCV_gb1WVV3Z3oCxZffJAOOaKXSj0w0m0';
 
 export {
   payload,
@@ -169,5 +182,7 @@ export {
   mockHeader,
   socialToken,
   mockPath,
-  fetchArticlesresponse
+  fetchArticlesresponse,
+  profileData,
+  jwtToken
 };
