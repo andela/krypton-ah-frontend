@@ -4,61 +4,73 @@ exports[`Modal Social it should matches the snapshot 1`] = `
 <div
   className="socialIconsHolder"
 >
-  <div
-    className="groupIcon"
+  <a
     key="1"
   >
-    <Icon
-      as="i"
-      className="socialIcon"
-      name="facebook official"
-      size="big"
-    />
-    <span>
-      Facebook
-    </span>
-  </div>
-  <div
-    className="groupIcon"
+    <div
+      className="groupIcon"
+    >
+      <Icon
+        as="i"
+        className="socialIcon"
+        name="facebook official"
+        size="big"
+      />
+      <span>
+        Facebook
+      </span>
+    </div>
+  </a>
+  <a
     key="2"
   >
-    <Icon
-      as="i"
-      className="socialIcon"
-      name="google plus square"
-      size="big"
-    />
-    <span>
-      Google
-    </span>
-  </div>
-  <div
-    className="groupIcon"
+    <div
+      className="groupIcon"
+    >
+      <Icon
+        as="i"
+        className="socialIcon"
+        name="google plus square"
+        size="big"
+      />
+      <span>
+        Google
+      </span>
+    </div>
+  </a>
+  <a
     key="3"
   >
-    <Icon
-      as="i"
-      className="socialIcon"
-      name="linkedin"
-      size="big"
-    />
-    <span>
-      Linkedin
-    </span>
-  </div>
-  <div
-    className="groupIcon"
+    <div
+      className="groupIcon"
+    >
+      <Icon
+        as="i"
+        className="socialIcon"
+        name="linkedin"
+        size="big"
+      />
+      <span>
+        Linkedin
+      </span>
+    </div>
+  </a>
+  <a
     key="4"
   >
-    <Icon
-      as="i"
-      className="socialIcon"
-      name="twitter square"
-      size="big"
-    />
-    <span>
-      Twitter
-    </span>
-  </div>
+    <div
+      className="groupIcon"
+    >
+      <Icon
+        as="i"
+        className="socialIcon"
+        name="twitter square"
+        size="big"
+      />
+      <span>
+        Twitter
+      </span>
+    </div>
+  </a>
 </div>
 `;
