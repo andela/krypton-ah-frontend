@@ -1,4 +1,4 @@
-import { API_BASE_URL } from '../constants';
+const { API_BASE_URL } = process.env;
 
 const items = [
   {

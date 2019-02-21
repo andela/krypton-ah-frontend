@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
@@ -54,7 +53,6 @@ module.exports = {
     historyApiFallback: true
   },
   plugins: [
-    new Dotenv(),
     new HtmlWebpackPlugin({
       title: 'Authors Haven',
       template: './index.html'
