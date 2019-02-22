@@ -90,3 +90,72 @@
     }
   }
 }
+
+.Icons span {
+  padding: 0.2rem;
+  font-family: Roboto;
+}
+
+.rating {
+  width: 25%;
+  text-align: right;
+  margin-top: -0.3rem;
+}
+
+.ui.star.rating .active.icon {
+  padding-right: 1rem;
+}
+
+.rightGrid {
+  .rating {
+    width: 50%;
+    padding-top: 0.15rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .ui.star.rating .active.icon {
+    padding-right: 1rem;
+  }
+
+  .reactionIcons {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    font-size: 0.95rem;
+  }
+
+  .ui.small.rating {
+    font-size: 0.92857143rem;
+    width: 5%;
+    margin: 0 auto;
+  }
+
+  .rating {
+    span {
+      width: fit-content;
+      margin-top: 0.2em;
+      text-align: left;
+      text-decoration: underline;
+    }
+  }
+
+  .ui.widgetContainer.menu .Icons {
+    width: 98%;
+  }
+}
+
+i.icon.time:before {
+  content: '\f017';
+  padding-right: 0.1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .widgetIcons .ui.feed > .event {
+    padding-top: 2em;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 10rem;
+  }
+}

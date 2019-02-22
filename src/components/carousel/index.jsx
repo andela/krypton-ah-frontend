@@ -5,6 +5,7 @@ import { Image } from 'semantic-ui-react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import ArticlesIcons from '../widgets/Icons';
 import './carousel.scss';
+import Loader from '../../containers/loaders/componentLoader';
 
 export default function carousel(props) {
   const { title, author, featuredImage } = props;
@@ -23,13 +24,9 @@ export default function carousel(props) {
 }
 
 carousel.defaultProps = {
-  title: 'Placeholder Article Title',
-  author: 'Placeholder author name',
-  featuredImage: 'https://res.cloudinary.com/ah-krypton/image/upload/v1550007680/MainImage.png'
+  featured: ''
 };
 
 carousel.propTypes = {
-  title: PropTypes.string,
-  author: PropTypes.string,
-  featuredImage: PropTypes.string
+  featured: PropTypes.string
 };

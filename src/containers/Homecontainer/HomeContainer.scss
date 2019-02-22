@@ -134,6 +134,24 @@ img.ui.image.AdvertImg{
     height: 25.3rem;
     font-size: 1rem;
     border-radius: 0;
+    padding-bottom: 0;
+  }
+
+  .column .rightGrid {
+    .header {
+      color: white;
+      padding: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .description {
+      padding: 0.8em;
+      color: black;
+    }
+
+    img.ui.image {
+      height: 18rem;
+    }
   }
 }
 
@@ -164,6 +182,13 @@ img.ui.image.AdvertImg{
     width: 27%;
     margin-top: 0.2rem;
     margin-left: 2rem;
+
+    .ui.feed > .event > .content .summary {
+      height: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
   &.divided.two.column.grid .row {
     padding-top: 1.5em;
@@ -174,6 +199,10 @@ img.ui.image.AdvertImg{
     width: 50%;
     padding: 5px;
     overflow: hidden;
+    img.ui.image {
+      width: 100%;
+      height: 18rem;
+    }
     .ui.card.description {
       &:hover {
         top: 0%;
@@ -207,6 +236,10 @@ p.Popular.title {
   padding: 2px;
 }
 
+p.revealDescription {
+  margin-top: 8%;
+  text-align: center;
+}
 .ui {
   &.reveal > .hidden.content {
     width: 100%;
@@ -257,7 +290,12 @@ p.articleDescription {
   box-shadow: none;
 }
 .ui[class*='vertically divided'].grid > .row:first-child > .column {
+<<<<<<< HEAD
   margin-top: 0.65rem;
+=======
+  margin-top: 0.5rem;
+  margin-bottom: 0.7rem;
+>>>>>>> conflict-fix
 }
 
 a.header {
@@ -349,6 +387,10 @@ a.header {
   .ui[class*='two column'].grid > .column:not(.row),
   .ui[class*='two column'].grid > .row > .column {
     width: 100%;
+    box-shadow: none;
+    padding-left: 0;
+    width: 70%;
+    margin: 0 auto;
   }
 
   .ui.divided.grid:not([class*='vertically divided'])

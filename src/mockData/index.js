@@ -140,6 +140,11 @@ const signupFailureAction = [
   }
 ];
 
+const fetchArticlesresponse = {
+  data: {
+
+  }
+};
 const socialToken = 'hyakfhkdhiuashvk98924cxndusjdusnfixomj9';
 
 const mockPath = 'auth/facebook/';
@@ -163,5 +168,6 @@ export {
   trendingArticles,
   mockHeader,
   socialToken,
-  mockPath
+  mockPath,
+  fetchArticlesresponse
 };

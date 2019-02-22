@@ -6,14 +6,18 @@ exports[`button test should test for the button component 1`] = `
     image="https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png"
   />
   <FeedContent>
-    <FeedDate
-      content="placeholder title"
-    />
+    <Link
+      replace={false}
+      to="/articles/sample-slug"
+    >
+      <FeedDate
+        content="placeholder title"
+      />
+    </Link>
     <FeedSummary>
       this is a test description
     </FeedSummary>
     <Icons
-      numberofcomments={23}
       ratingIcon="rating-class"
     />
   </FeedContent>
