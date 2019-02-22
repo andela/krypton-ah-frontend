@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewArticle should match snapshot 1`] = `
+<Fragment>
+  <Connect(ReadArticle)
+    selectedArticle="65719288-0395-445e-b587-2b98b70bdec9"
+  />
+</Fragment>
+`;
