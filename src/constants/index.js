@@ -49,8 +49,8 @@ const socialMediaLoginIcons = [
   }
 ];
 
-const { API_BASE_URL } = process.env;
 const { BASE_URL_CB } = process.env;
+const { API_BASE_URL } = process.env;
 const authentication = 'authentication';
 const twitterPath = '/auth/twitter/callback';
 const networkErrorResponse = 'Network error! kindly try again later';
@@ -67,6 +67,12 @@ const alreadyActivatedResponse = {
   }
 };
 
+const options = {
+  headers: {
+    authorization: localStorage.getItem(authentication)
+  }
+};
+
 export {
   socialMediaElements,
   articleDetails,
@@ -79,5 +85,6 @@ export {
   networkErrorResponse,
   callbackUrl,
   activationResponse,
-  alreadyActivatedResponse
+  alreadyActivatedResponse,
+  options
 };
