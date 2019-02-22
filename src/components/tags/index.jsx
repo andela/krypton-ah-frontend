@@ -1,6 +1,8 @@
 import React from 'react';
 import { List } from 'semantic-ui-react';
-import Loader from '../../containers/HOC/comonentLoader';
+import PropTypes from 'prop-types';
+import Loader from '../../containers/loaders/componentLoader';
+import { categories } from '../../mockData';
 
 export default function Tags({ tags, type }) {
   if (!tags) {
@@ -9,7 +11,7 @@ export default function Tags({ tags, type }) {
   if (type) {
     return (
       <div className="category">
-        {tags.data.map(category => (
+        {categories.map(category => (
           <List.Item key={category.id}>
             <List.Content>
               <List.Header as="a">{`#${category}`}</List.Header>
@@ -31,3 +33,13 @@ export default function Tags({ tags, type }) {
     </div>
   );
 }
+
+Tags.defaultProps = {
+  tags: categories,
+  type: null
+};
+
+Tags.propTypes = {
+  tags: PropTypes.object,
+  type: PropTypes.string
+};

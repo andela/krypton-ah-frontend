@@ -21,7 +21,8 @@ const articleDetails = {
   className: 'description',
   description: 'placeholder descritption',
   title: 'placeholder title',
-  image: 'https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png'
+  image: 'https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png',
+  slug: 'sample-slug'
 };
 
 const advertimage = 'https://res.cloudinary.com/ah-krypton/image/upload/v1548328425/mm17kbfqf7sjrw2w45rq.png';

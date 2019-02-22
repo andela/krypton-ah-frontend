@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import React, { Component } from 'react';
 import { Grid } from 'semantic-ui-react';
 import { connect } from 'react-redux';
@@ -7,12 +8,16 @@ import Sidewidget from '../sideWidgetContainer';
 import FeaturedArticles from './featuredArticles';
 import PopularArticles from './popular';
 import './HomeContainer.scss';
-import { fetchpopular, fetchtrending, fetchfeatured } from '../../actions/fetchArticlesActions';
-import HomeloaderHOC from '../HOC/loaderHoc';
+import {
+  fetchpopular,
+  fetchtrending,
+  fetchfeatured
+} from '../../actions/fetchArticlesAction/fetchArticlesActions';
+import Title from '../../components/sectionHeader';
+import loader from '../loaders/responsechecker';
 
 class MainContainer extends Component {
   componentWillMount() {
-    // eslint-disable-next-line no-shadow
     const { fetchpopular, fetchtrending, fetchfeatured } = this.props;
     fetchpopular();
     fetchtrending();
@@ -26,11 +31,22 @@ class MainContainer extends Component {
         <Grid className="content" divided="vertically">
           <Grid.Row columns={1}>
             <Grid.Column>
-              <Carousel featured={articles.trendingresponse} />
+              {loader(
+                articles.featuredArticlesResponsefailure,
+                <Carousel featured={articles.featuredArticlesResponse} />
+              )}
             </Grid.Column>
             <Grid.Column className="second_grid">
-              <FeaturedArticles articles={articles.featuredarticles.data} />
-              <PopularArticles popular={articles.popularresponse} />
+              <Title text="featured" />
+              {loader(
+                articles.featuredArticlesResponsefailure,
+                <FeaturedArticles articles={articles.featuredArticlesResponse} />
+              )}
+              <Title text="Popular" />
+              {loader(
+                articles.popularArticlesResponsefailure,
+                <PopularArticles popular={articles.popularArticlesResponse} />
+              )}
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -49,7 +65,7 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { fetchpopular, fetchtrending, fetchfeatured }
-)(HomeloaderHOC(MainContainer));
+)(MainContainer);
 
 MainContainer.defaultProps = {
   articles: [],
@@ -59,8 +75,8 @@ MainContainer.defaultProps = {
 };
 
 MainContainer.propTypes = {
-  articles: PropTypes.array,
-  fetchpopular: PropTypes.array,
-  fetchfeatured: PropTypes.array,
-  fetchtrending: PropTypes.array
+  articles: PropTypes.func,
+  fetchpopular: PropTypes.func,
+  fetchfeatured: PropTypes.func,
+  fetchtrending: PropTypes.func
 };

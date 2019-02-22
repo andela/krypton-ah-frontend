@@ -6,8 +6,7 @@ import { Image } from 'semantic-ui-react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import ArticlesIcons from '../widgets/Icons';
 import './carousel.scss';
-import { items } from '../../mockData';
-import Loader from '../../containers/HOC/comonentLoader';
+import Loader from '../../containers/loaders/componentLoader';
 
 function carousel(props) {
   const { featured } = props;
@@ -37,9 +36,9 @@ function carousel(props) {
 export default carousel;
 
 carousel.defaultProps = {
-  featured: items
+  featured: ''
 };
 
 carousel.propTypes = {
-  featured: PropTypes.array
+  featured: PropTypes.string
 };

@@ -7,11 +7,16 @@ const initialState = {
   },
   Articles: {
     success: false,
-    trendingresponse: '',
-    popularresponse: '',
-    categoriesresponse: '',
-    tagsresponse: '',
-    featuredarticles: ''
+    trendingArticlesResponse: '',
+    popularArticlesResponse: '',
+    categoriesResponse: '',
+    tagsResponse: '',
+    featuredArticlesResponse: '',
+    trendingArticlesResponsefailure: false,
+    popularArticlesResponsefailure: false,
+    categoriesResponsefailure: false,
+    tagsResponsefailure: false,
+    featuredArticlesfailure: false
   },
   readArticle: {
     articleIsLoading: false,
@@ -19,6 +24,6 @@ const initialState = {
     successResponse: {},
     failureResponse: {}
   }
-}
+};
 
-export default {initialState};
+export default initialState;

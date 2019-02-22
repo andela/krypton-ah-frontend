@@ -5,44 +5,44 @@ import {
   fetchCategories,
   fetchTags,
   fetchFeaturedArticles
-} from '../helpers/axiosHelper/articlesAxiosCalls';
+} from '../../helpers/axiosHelper/articlesAxiosCalls';
 import actionTypes from './actionTypes';
 
 const {
-  FETCH_POPULAR_ARTICLES,
+  FETCH_POPULAR_ARTICLES_SUCCESS,
   FETCH_POPULAR_ARTICLES_FAILURE,
-  FETCH_TRENDING_ARTICLES,
+  FETCH_TRENDING_ARTICLES_SUCCESS,
   FETCH_TRENDING_ARTICLES_FAILURE,
-  FETCH_CATEGORIES,
+  FETCH_CATEGORIES_SUCCESS,
   FETCH_CATEGORIES_FAILURE,
-  FETCH_TAGS,
+  FETCH_TAGS_SUCCESS,
   FETCH_TAGS_FAILURE,
-  FETCH_FEATURED_ARTICLES,
+  FETCH_FEATURED_ARTICLES_SUCCESS,
   FETCH_FEATURED_ARTICLES_FAILURE
 } = actionTypes;
 
 export const fetchpopularSuccess = payload => ({
-  type: FETCH_POPULAR_ARTICLES,
+  type: FETCH_POPULAR_ARTICLES_SUCCESS,
   payload
 });
 
 export const fetchfeaturedSuccess = payload => ({
-  type: FETCH_FEATURED_ARTICLES,
+  type: FETCH_FEATURED_ARTICLES_SUCCESS,
   payload
 });
 
 export const fetchtrendingSuccess = payload => ({
-  type: FETCH_TRENDING_ARTICLES,
+  type: FETCH_TRENDING_ARTICLES_SUCCESS,
   payload
 });
 
 export const fetchTagsSuccess = payload => ({
-  type: FETCH_TAGS,
+  type: FETCH_TAGS_SUCCESS,
   payload
 });
 
 export const fetchCategoriesSuccess = payload => ({
-  type: FETCH_CATEGORIES,
+  type: FETCH_CATEGORIES_SUCCESS,
   payload
 });
 

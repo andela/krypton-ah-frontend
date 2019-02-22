@@ -1,35 +1,36 @@
 import axios from 'axios';
 import '@babel/polyfill';
+import { API_BASE_URL } from '../../constants';
 
 const fetchTags = async () => {
-  const response = await axios.get('http://localhost:3000/api/v1/tags');
+  const response = await axios.get(`${API_BASE_URL}/api/v1/tags`);
   return response;
 };
 
 const fetchPopularArticles = async () => {
-  const response = await axios.get('http://localhost:3000/api/v1/articles/popular');
+  const response = await axios.get(`${API_BASE_URL}/api/v1/articles/?limit=4&offset=4`);
   return response;
 };
 
 const fetchTrendingArticles = async () => {
-  const response = await axios.get('http://localhost:3000/api/v1/articles/trending');
+  const response = await axios.get(`${API_BASE_URL}/api/v1/articles/?limit=4`);
   return response;
 };
 
 const fetchFeaturedArticles = async () => {
-  const response = await axios.get('http://localhost:3000/api/v1/articles/?:limmit=5');
+  const response = await axios.get(`${API_BASE_URL}/api/v1/articles/?limit=4`);
   return response;
 };
 
 const fetchCategories = async () => {
-  const response = await axios.get('http://localhost:3000/api/v1/categories');
+  const response = await axios.get(`${API_BASE_URL}/api/v1/categories`);
   return response;
 };
 
 export {
+  fetchTrendingArticles,
   fetchPopularArticles,
   fetchFeaturedArticles,
-  fetchTrendingArticles,
   fetchCategories,
   fetchTags
 };

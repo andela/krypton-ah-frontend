@@ -10,7 +10,8 @@ import Categories from './categories/Categories';
 import Tags from '../../components/tags';
 import NewsLetter from './Newsletter';
 import Advert from '../../components/widgets/Advert';
-import { fetchpopular, fetchtrending, fetchcategories, fetchtags, fetchfeatured } from '../../actions/fetchArticlesActions';
+import loader from '../loaders/responsechecker';
+import { fetchcategories, fetchtags } from '../../actions/fetchArticlesAction/fetchArticlesActions';
 
 class WidgetContainer extends Component {
   componentWillMount() {
@@ -25,15 +26,19 @@ class WidgetContainer extends Component {
       <Grid.Row columns={1}>
         <Grid.Column>
           <Title text="Trending" />
-          <FeaturedWidget
+          {loader(articles.trendingArticlesResponsefailure, <FeaturedWidget
             className="featured-widget"
-            articles={articles.trendingresponse.data}
-          />
+            articles={articles.trendingArticlesResponse.data}
+          />)}
           <Title text="Tags" />
           <List className="tags" divided relaxed>
-            <Tags tags={articles.tagsresponse} type="tags" />
+            {loader(articles.trendingArticlesResponsefailure, <Tags type="tags" />)}
           </List>
-          <Categories category={articles.categoriesresponse} />
+          <Title text="Categories" />
+          {loader(
+            articles.categoriesResponseFailure,
+            <Categories category={articles.categoriesResponse} />
+          )}
         </Grid.Column>
         <Advert />
         <NewsLetter />
@@ -49,7 +54,7 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { fetchpopular, fetchtrending, fetchcategories, fetchtags, fetchfeatured }
+  { fetchcategories, fetchtags }
 )(WidgetContainer);
 
 WidgetContainer.defaultProps = {
@@ -60,6 +65,6 @@ WidgetContainer.defaultProps = {
 
 WidgetContainer.propTypes = {
   articles: PropTypes.array,
-  fetchcategories: PropTypes.array,
-  fetchtags: PropTypes.array,
+  fetchcategories: PropTypes.func,
+  fetchtags: PropTypes.string,
 };

@@ -3,8 +3,7 @@ import { Card, Feed } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import Feeds from './Feeds';
 import './widget.scss';
-import { items } from '../../../mockData';
-import Loader from '../../../containers/HOC/comonentLoader';
+import Loader from '../../../containers/loaders/componentLoader';
 
 export default function ArticlesFeedContainer({ articles }) {
   if (!articles) {
@@ -19,7 +18,9 @@ export default function ArticlesFeedContainer({ articles }) {
               key={article.id}
               description={article.description}
               title={article.title}
-              id={article.id}
+              slug={article.slug}
+              image={article.featuredImageUrl}
+              date={article.createdAt}
             />
           ))}
         </Feed>
@@ -29,7 +30,7 @@ export default function ArticlesFeedContainer({ articles }) {
 }
 
 ArticlesFeedContainer.defaultProps = {
-  articles: [items]
+  articles: []
 };
 
 ArticlesFeedContainer.propTypes = {

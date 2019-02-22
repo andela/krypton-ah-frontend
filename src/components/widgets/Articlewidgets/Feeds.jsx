@@ -6,7 +6,7 @@ import ArticlesIcons from '../Icons';
 import { articleDetails } from '../../../constants';
 
 export default function MainFeaturedArticle(props) {
-  const { description, title, image, id } = props;
+  const { description, title, image, id, date } = props;
   return (
     <Feed.Event>
       <Feed.Label image={image} />
@@ -15,7 +15,7 @@ export default function MainFeaturedArticle(props) {
           <Feed.Date content={title} />
         </Link>
         <Feed.Summary>{description}</Feed.Summary>
-        <ArticlesIcons />
+        <ArticlesIcons date={date} />
       </Feed.Content>
     </Feed.Event>
   );
@@ -24,11 +24,13 @@ export default function MainFeaturedArticle(props) {
 MainFeaturedArticle.defaultProps = {
   description: articleDetails.description,
   title: articleDetails.title,
-  image: articleDetails.image
+  image: articleDetails.image,
+  slug: articleDetails.slug
 };
 
 MainFeaturedArticle.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
-  image: PropTypes.string
+  image: PropTypes.string,
+  slug: PropTypes.string
 };
