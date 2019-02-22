@@ -50,24 +50,19 @@ class ReadArticle extends Component {
   };
 
   render() {
-    const {
-      title,
+    const { title,
       content,
       createdAt,
       slug,
       description,
       featuredImageUrl,
       readTime,
-      articleAuthor
-    } = this.props.retrievedArticle.response;
+      articleAuthor } = this.props.retrievedArticle.response;
     const authorDetails = this.getAuthorDetails(articleAuthor);
-
     return (
       <Container className="readArticleContainer">
         <Image src={featuredImageUrl} size="massive" />
-        <Header as="h1" className="articleTitle">
-          {title}
-        </Header>
+        <Header as="h1" className="articleTitle">{title}</Header>
         <Comment.Group className="articleInfo">
           <Image avatar as="a" src={author} />
           {this.getArticleInfo(authorDetails.authorName, createdAt, readTime)}
@@ -76,7 +71,6 @@ class ReadArticle extends Component {
         <div className="icon-bar">
           <ShareArticle title={title} slug={slug} description={description} />
         </div>
-
         {this.getArticleContent(content)}
         <Divider className="articleDivider" />
       </Container>
