@@ -1,5 +1,6 @@
 import actionTypes from '../actions/authAction/actionTypes';
 import initialState from './initialState';
+import NETWORK_ERROR from '../actions/networkError/actionType';
 
 const {
   AUTH_LOADING,
@@ -44,6 +45,13 @@ export default (state = auth, action) => {
         authIsLoading: false,
         success: false,
         response: action.payload.data.message,
+        isAuthenticated: false
+      };
+    case NETWORK_ERROR:
+      return {
+        authIsLoading: false,
+        success: false,
+        response: action.payload,
         isAuthenticated: false
       };
     default:
