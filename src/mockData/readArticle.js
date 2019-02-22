@@ -36,7 +36,7 @@ const props = {
   match: { params: { title: '65719288-0395-445e-b587-2b98b70bdec9' } }
 };
 const retrievedArticle = {
-  response: {
+  successResponse: {
     title: 'this is a valid articles 2',
     content: 'this is a good content wooooooooooooooooooot tooooooooooooooooooooooooot',
     createdAt: '2019-02-20T16:53:37.716Z',

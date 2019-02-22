@@ -10,7 +10,7 @@ exports[`Read article component should matches the snapshot 1`] = `
   readTime={0}
   retrievedArticle={
     Object {
-      "response": Object {
+      "successResponse": Object {
         "articleAuthor": Object {
           "firstname": "Michael",
           "lastname": "James",
