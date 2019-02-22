@@ -373,6 +373,7 @@ exports[`UserProfile should match snapshot 2`] = `
       basic={true}
       className="btnRight"
       control={[Function]}
+      disabled={false}
       size="massive"
     >
       UPDATE

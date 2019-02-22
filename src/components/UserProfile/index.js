@@ -23,24 +23,34 @@ class UserProfile extends React.Component {
     this.renderTextArea = this.renderTextArea.bind(this);
     this.renderUpdateButton = this.renderUpdateButton.bind(this);
     this.getUpdatedField = this.getUpdatedField.bind(this);
+    this.filterNullFields = this.filterNullFields.bind(this);
   }
 
   componentWillMount() {
     const { profileData } = this.props;
-    this.setState({ ...profileData });
+    this.setState({ ...this.filterNullFields(profileData) });
   }
 
   componentWillReceiveProps(nextProps) {
     const { profileData } = nextProps;
-    this.setState({ ...profileData });
+    this.setState({ ...this.filterNullFields(profileData) });
   }
 
   getUpdatedField(stateObject, propsObject) {
     return Object.keys(stateObject).reduce((updateObject, key) => {
-      if (stateObject[key] !== propsObject[key]) {
+      if (stateObject[key] !== propsObject[key] && stateObject[key]) {
         updateObject[key] = stateObject[key];
       }
       return updateObject;
+    }, {});
+  }
+
+  filterNullFields(object) {
+    return Object.keys(object).reduce((updatedObject, key) => {
+      if (object[key]) {
+        updatedObject[key] = object[key];
+      }
+      return updatedObject;
     }, {});
   }
 
@@ -68,8 +78,7 @@ class UserProfile extends React.Component {
     if (Object.keys(update).length === 0) {
       return;
     }
-    const res = state.username ? updateUser(update) : updateUser(update, true);
-    return res;
+    updateUser(update, profileData.noProfile);
   }
 
   renderFormElement(formElement, disabled) {
@@ -137,10 +146,18 @@ class UserProfile extends React.Component {
   }
 
   renderUpdateButton(user) {
+    let buttonText, disabled;
     const { updateIsLoading } = this.props;
+    if (updateIsLoading) {
+      buttonText = 'UPDATING';
+      disabled = true;
+    } else {
+      buttonText = 'UPDATE';
+      disabled = false;
+    }
     const updateButton = user === 'owner' ? (
-      <Form.Button size="massive" className="btnRight" basic>
-        {updateIsLoading ? 'UPDATING' : 'UPDATE'}
+      <Form.Button disabled={disabled} size="massive" className="btnRight" basic>
+        {buttonText}
       </Form.Button>
     ) : null;
     return updateButton;
