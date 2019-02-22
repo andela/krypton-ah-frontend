@@ -3,11 +3,11 @@ import { API_BASE_URL } from '../constants';
 const items = [
   {
     description:
-            'The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based on what you’re doing to show you relevant The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based',
+      'The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based on what you’re doing to show you relevant The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based',
     shortdescription:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach, while an optimist drains the barrel, fishes out all the apples and makes pie',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach, while an optimist drains the barrel, fishes out all the apples and makes pie',
     shorterdescription:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   }
@@ -18,25 +18,25 @@ const categories = ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'We
 const popularArticles = [
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   }
@@ -46,31 +46,31 @@ const mockHeader = 'this is a placeholder header';
 const trendingArticles = [
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Trending Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Trending Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Trending Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   }
@@ -93,19 +93,20 @@ const signupOkResponse = {
   status: 201,
   success: true,
   data: {
-    message: 'Account successfully created, Kindly check your email to activate your account. In case you did not receive the activation link in your mail, kindly visit this link localhost:3000/api/v1/users/resend/activation/mail to resend the mail.',
+    message:
+      'Account successfully created, Kindly check your email to activate your account. In case you did not receive the activation link in your mail, kindly visit this link localhost:3000/api/v1/users/resend/activation/mail to resend the mail.'
   }
 };
 
 const mockResponse = {
-  message: 'Successfully logged in',
+  message: 'Successfully logged in'
 };
 const error = {
   response: {
     status: 400,
     success: false,
     data: {
-      message: 'Oops! something went wrong, kindly try again',
+      message: 'Oops! something went wrong, kindly try again'
     }
   }
 };
@@ -114,14 +115,14 @@ const loginOkResponse = {
   success: true,
   data: {
     token: 'sampleToken',
-    message: 'You have sccessfully login',
+    message: 'You have sccessfully login'
   }
 };
 const loginBadResponse = {
   status: 400,
   success: false,
   data: {
-    message: 'Incorrect credentials',
+    message: 'Incorrect credentials'
   }
 };
 
@@ -155,6 +156,52 @@ const profileData = {
   username: 'Isaiah'
 };
 
+const getUserFailureResponse = {
+  data: {
+    success: false,
+    message: 'error retieving user'
+  }
+};
+
+const getUserSuccessResponse = {
+  data: {
+    success: true,
+    message: 'users retrieved succesfully',
+    data: {
+      id: 'd1564aa6-e81d-41ab-8469-0aa573f4a6c5',
+      email: '1skyboat1@gmail.com',
+      password: '$2b$08$Q5LSk9wYgQeuxtSTGeq/0eBMclMVg1B7wE/hfWRCjsUb9YHkgx4h.',
+      firstname: 'firstname',
+      lastname: 'lastname',
+      isverified: true,
+      createdAt: '2019-02-08T09:58:13.163Z',
+      updatedAt: '2019-02-08T09:58:13.163Z',
+      userprofile: {
+        id: 1,
+        avatar: null,
+        bio: 'A world-class software developer',
+        UserId: 'd1564aa6-e81d-41ab-8469-0aa573f4a6c5',
+        username: 'eltneg',
+        phonenumber: '+2348137457862',
+        country: 'Nigeria',
+        gender: 'male',
+        emailnotification: false,
+        createdAt: '2019-02-14T16:54:58.292Z',
+        updatedAt: '2019-02-18T08:41:31.199Z'
+      },
+      articles: [
+        {
+          title: 'Article title6',
+          description: 'valid article description',
+          isPublished: false,
+          createdAt: '2019-02-14T17:53:01.904Z',
+          id: 'a76d2040-7510-43d8-b58b-a32aba67ab48'
+        }
+      ]
+    }
+  }
+};
+
 const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1IiwiaWF0IjoxNTUwNDY1MjY0LCJleHAiOjE1NTA1NTE2NjR9.kFe-uZW0XSQCV_gb1WVV3Z3oCxZffJAOOaKXSj0w0m0';
 
 export {
@@ -178,5 +225,7 @@ export {
   socialToken,
   mockPath,
   profileData,
-  jwtToken
+  jwtToken,
+  getUserSuccessResponse,
+  getUserFailureResponse
 };

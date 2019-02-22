@@ -29,6 +29,11 @@ class UserProfile extends React.Component {
     this.setState({ ...profileData });
   }
 
+  componentWillReceiveProps(nextProps) {
+    const { profileData } = nextProps;
+    this.setState({ ...profileData });
+  }
+
   handleChange(event) {
     const { name, value } = event.target;
     this.setState(state => ({
@@ -47,8 +52,19 @@ class UserProfile extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { updateUser } = this.props;
-    updateUser(this.state);
+    const { updateUser, profileData } = this.props;
+    const { state } = this;
+    const update = Object.keys(state).reduce((prev, key) => {
+      if (state[key] !== profileData[key]) {
+        prev[key] = state[key];
+      }
+      return prev;
+    }, {});
+    if (Object.keys(update).length === 0) {
+      return;
+    }
+    const res = state.username ? updateUser(update) : updateUser(update, true);
+    return res;
   }
 
   renderFormElement(formElement, disabled) {
@@ -118,9 +134,10 @@ class UserProfile extends React.Component {
   }
 
   renderUpdateButton(user) {
+    const { updateIsLoading } = this.props;
     const updateButton = user === 'owner' ? (
       <Form.Button size="massive" className="btnRight" basic>
-          UPDATE
+        {updateIsLoading ? 'UPDATING' : 'UPDATE'}
       </Form.Button>
     ) : null;
     return updateButton;
@@ -150,13 +167,15 @@ class UserProfile extends React.Component {
 
 UserProfile.defaultProps = {
   updateUser: () => {},
-  user: ''
+  user: '',
+  updateIsLoading: false
 };
 
 UserProfile.propTypes = {
   profileData: PropTypes.object.isRequired,
   updateUser: PropTypes.func,
-  user: PropTypes.string
+  user: PropTypes.string,
+  updateIsLoading: PropTypes.bool
 };
 
 export default UserProfile;

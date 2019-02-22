@@ -49,7 +49,7 @@ export default [
     name: 'profile',
     component: Profile,
     exact: true,
-    path: '/profile'
+    path: '/profile/:userId'
   },
   {
     name: '404',

@@ -37,6 +37,16 @@ export default class ProfileNavBar extends React.Component {
     this.setState({ active: !active });
   }
 
+  appendUserId(to) {
+    const { userId } = this.props;
+    switch (to) {
+      case '/profile':
+        return `${to}/${userId}`;
+      default:
+        return to;
+    }
+  }
+
   renderMenuItems(menuItems, screen) {
     return menuItems.map((menu) => {
       const menuItem = menu.icon === 'button' ? (
@@ -45,8 +55,13 @@ export default class ProfileNavBar extends React.Component {
         <Image className="profileMenuIcon" src={menu.icon} />
       );
       return (
-        <Grid.Column className={screen} key={menu.text}>
-          <ProfileMenu to={menu.to} menuItem={menuItem} text={menu.text} count={menu.count} />
+        <Grid.Column className={screen} key={menu.text || menu.icon}>
+          <ProfileMenu
+            to={this.appendUserId(menu.to)}
+            menuItem={menuItem}
+            text={menu.text}
+            count={menu.count}
+          />
         </Grid.Column>
       );
     });
@@ -81,5 +96,6 @@ ProfileNavBar.defaultProps = {
 };
 
 ProfileNavBar.propTypes = {
-  user: PropTypes.oneOf(['owner', 'authenticated', 'unauthenticated'])
+  user: PropTypes.oneOf(['owner', 'authenticated', 'unauthenticated']),
+  userId: PropTypes.string.isRequired
 };
