@@ -23,7 +23,7 @@ describe('button test', () => {
     expect(wrapper.find('Menu')).toBeDefined();
     expect(wrapper.find('Icon')).toBeDefined();
     expect(wrapper.find('.widgetContainer')).toBeDefined();
-    expect(wrapper.find('.Icons')).toBeDefined();
+    expect(wrapper.find('.icons')).toBeDefined();
     expect(wrapper.find('.dates')).toBeDefined();
     expect(wrapper).toMatchSnapshot();
   });

@@ -87,7 +87,7 @@
     border-style: none;
     box-shadow: none;
     margin-top: 0;
-    .Icons {
+    .icons {
       margin-right: 0;
       width: 100%;
       display: flex;
@@ -101,7 +101,7 @@
   }
 }
 
-.Icons span {
+.icons span {
   padding: 0.2rem;
   font-family: Roboto;
 }
@@ -150,7 +150,7 @@
     }
   }
 
-  .ui.widgetContainer.menu .Icons {
+  .ui.widgetContainer.menu .icons {
     width: 98%;
   }
 }

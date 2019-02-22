@@ -7,7 +7,7 @@ export default function Icons(props) {
   const { ratingIcon, numberofcomments } = props;
   return (
     <Menu className="widgetContainer">
-      <div className="Icons">
+      <div className="icons">
         {ratingIcon ? (
           <React.Fragment>
             <Reactions />

@@ -25,7 +25,7 @@ exports[`button test should test for the button component 2`] = `
   className="widgetContainer"
 >
   <div
-    className="Icons"
+    className="icons"
   >
     <ReactionIcons
       date="28th february 2019"
