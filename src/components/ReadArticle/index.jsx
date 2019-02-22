@@ -57,7 +57,7 @@ class ReadArticle extends Component {
       description,
       featuredImageUrl,
       readTime,
-      articleAuthor } = this.props.retrievedArticle.response;
+      articleAuthor } = this.props.retrievedArticle.successResponse;
     const authorDetails = this.getAuthorDetails(articleAuthor);
     return (
       <Container className="readArticleContainer">
