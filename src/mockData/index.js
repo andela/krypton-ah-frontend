@@ -3,40 +3,40 @@ import { API_BASE_URL } from '../constants';
 const items = [
   {
     description:
-      'The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based on what you’re doing to show you relevant The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based',
+            'The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based on what you’re doing to show you relevant The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based',
     shortdescription:
-      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach, while an optimist drains the barrel, fishes out all the apples and makes pie',
+            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach, while an optimist drains the barrel, fishes out all the apples and makes pie',
     shorterdescription:
-      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   }
 ];
 
-const categories = [{ key: 1, name: 'Politics' }, { key: 2, name: 'Family' }, { key: 3, name: 'Techonology' }];
+const categories = ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing'];
 
 const popularArticles = [
   {
     description:
-      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
+            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   }
@@ -46,31 +46,31 @@ const mockHeader = 'this is a placeholder header';
 const trendingArticles = [
   {
     description:
-      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Trending Title'
   },
   {
     description:
-      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Trending Title'
   },
   {
     description:
-      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Trending Title'
   },
   {
     description:
-      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   },
   {
     description:
-      'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
+            'When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ',
     content: "Apple's news at CES 2019 shows it's facing some hard truths",
     title: 'Popular Title'
   }
