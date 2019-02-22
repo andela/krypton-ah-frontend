@@ -1,5 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 exports[`Profile should match snapshot when an authenticated user view user profile 1`] = `
 <MemoryRouter
   initialEntries={
@@ -3945,10 +3946,775 @@ exports[`Profile should match snapshot when current user view own profile 1`] = 
                           <Image
                             as="img"
                             className="profileMenuIcon"
+=======
+exports[`Profile should match snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Route
+        path="/profile"
+      >
+        <Connect(ProfileContainer)
+          userId="d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+        >
+          <ProfileContainer
+            fetchIsLoading={false}
+            getUser={[Function]}
+            profileData={
+              Object {
+                "bio": "Software developer at Andela",
+                "country": "Nigeria",
+                "firstname": "Isaiah",
+                "gender": "male",
+                "id": "d1564aa6-e81d-41ab-8469-0aa573f4a6c5",
+                "lastname": "Afolayan",
+                "phonenumber": "+2348145692034",
+                "profileImage": "",
+                "username": "Isaiah",
+              }
+            }
+            updateIsLoading={false}
+            updateProfile={[Function]}
+            userId="d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+          >
+            <Grid
+              className="userProfilePage"
+            >
+              <div
+                className="ui grid userProfilePage"
+              >
+                <GridRow
+                  centered={true}
+                  className="userProfile"
+                >
+                  <div
+                    className="centered row userProfile"
+                  >
+                    <Grid>
+                      <div
+                        className="ui grid"
+                      >
+                        <GridRow
+                          centered={true}
+                        >
+                          <div
+                            className="centered row"
+                          >
+                            <Image
+                              as="img"
+                              circular={true}
+                              src="test-file-stub"
+                              ui={true}
+                            >
+                              <img
+                                className="ui circular image"
+                                src="test-file-stub"
+                              />
+                            </Image>
+                          </div>
+                        </GridRow>
+                        <GridRow
+                          centered={true}
+                        >
+                          <div
+                            className="centered row"
+                          >
+                            <div>
+                              <div
+                                className="userName"
+                              >
+                                Afolayan Isaiah
+                              </div>
+                              <div
+                                className="userDescription"
+                              >
+                                Software developer at Andela
+                              </div>
+                            </div>
+                          </div>
+                        </GridRow>
+                      </div>
+                    </Grid>
+                  </div>
+                </GridRow>
+                <ProfileNavBar
+                  user="unauthenticated"
+                  userId="d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                >
+                  <GridRow
+                    centered={true}
+                    className="profileNavBar"
+                    columns={4}
+                    verticalAlign="middle"
+                  >
+                    <div
+                      className="centered middle aligned four column row profileNavBar"
+                    >
+                      <Accordion
+                        className="profileNavBarBars"
+                      >
+                        <AccordionAccordion
+                          className="ui profileNavBarBars"
+                          exclusive={true}
+                        >
+                          <div
+                            className="accordion ui profileNavBarBars"
+                          >
+                            <AccordionTitle
+                              active={false}
+                              onClick={[Function]}
+                            >
+                              <div
+                                className="title"
+                                onClick={[Function]}
+                              >
+                                <Icon
+                                  as="i"
+                                  name="bars"
+                                  size="big"
+                                >
+                                  <i
+                                    aria-hidden="true"
+                                    className="bars big icon"
+                                    onClick={[Function]}
+                                  />
+                                </Icon>
+                              </div>
+                            </AccordionTitle>
+                            <AccordionContent
+                              active={false}
+                              className="accordionContent"
+                            >
+                              <div
+                                className="content accordionContent"
+                              >
+                                <GridColumn
+                                  className="mobile"
+                                  key="PROFILE"
+                                >
+                                  <div
+                                    className="column mobile"
+                                  >
+                                    <ProfileMenu
+                                      count={null}
+                                      menuItem={
+                                        <Image
+                                          as="img"
+                                          className="profileMenuIcon"
+                                          src="test-file-stub"
+                                          ui={true}
+                                        />
+                                      }
+                                      text="PROFILE"
+                                      to="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                                    >
+                                      <Link
+                                        className="menu-item profileMenu"
+                                        replace={false}
+                                        to="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                                      >
+                                        <a
+                                          className="menu-item profileMenu"
+                                          href="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                                          onClick={[Function]}
+                                        >
+                                          <Image
+                                            as="img"
+                                            className="profileMenuIcon"
+                                            src="test-file-stub"
+                                            ui={true}
+                                          >
+                                            <img
+                                              className="ui image profileMenuIcon"
+                                              src="test-file-stub"
+                                            />
+                                          </Image>
+                                          <div
+                                            className="profileMenuText"
+                                          >
+                                            PROFILE
+                                            <span
+                                              className="hidden"
+                                            />
+                                          </div>
+                                        </a>
+                                      </Link>
+                                    </ProfileMenu>
+                                  </div>
+                                </GridColumn>
+                                <GridColumn
+                                  className="mobile"
+                                  key="ARTICLES"
+                                >
+                                  <div
+                                    className="column mobile"
+                                  >
+                                    <ProfileMenu
+                                      count=""
+                                      menuItem={
+                                        <Image
+                                          as="img"
+                                          className="profileMenuIcon"
+                                          src="test-file-stub"
+                                          ui={true}
+                                        />
+                                      }
+                                      text="ARTICLES"
+                                      to="/user-articles"
+                                    >
+                                      <Link
+                                        className="menu-item profileMenu"
+                                        replace={false}
+                                        to="/user-articles"
+                                      >
+                                        <a
+                                          className="menu-item profileMenu"
+                                          href="/user-articles"
+                                          onClick={[Function]}
+                                        >
+                                          <Image
+                                            as="img"
+                                            className="profileMenuIcon"
+                                            src="test-file-stub"
+                                            ui={true}
+                                          >
+                                            <img
+                                              className="ui image profileMenuIcon"
+                                              src="test-file-stub"
+                                            />
+                                          </Image>
+                                          <div
+                                            className="profileMenuText"
+                                          >
+                                            ARTICLES
+                                            <span
+                                              className="hidden"
+                                            />
+                                          </div>
+                                        </a>
+                                      </Link>
+                                    </ProfileMenu>
+                                  </div>
+                                </GridColumn>
+                                <GridColumn
+                                  className="mobile"
+                                  key="FOLLOWERS"
+                                >
+                                  <div
+                                    className="column mobile"
+                                  >
+                                    <ProfileMenu
+                                      count=""
+                                      menuItem={
+                                        <Image
+                                          as="img"
+                                          className="profileMenuIcon"
+                                          src="test-file-stub"
+                                          ui={true}
+                                        />
+                                      }
+                                      text="FOLLOWERS"
+                                      to="/followers"
+                                    >
+                                      <Link
+                                        className="menu-item profileMenu"
+                                        replace={false}
+                                        to="/followers"
+                                      >
+                                        <a
+                                          className="menu-item profileMenu"
+                                          href="/followers"
+                                          onClick={[Function]}
+                                        >
+                                          <Image
+                                            as="img"
+                                            className="profileMenuIcon"
+                                            src="test-file-stub"
+                                            ui={true}
+                                          >
+                                            <img
+                                              className="ui image profileMenuIcon"
+                                              src="test-file-stub"
+                                            />
+                                          </Image>
+                                          <div
+                                            className="profileMenuText"
+                                          >
+                                            FOLLOWERS
+                                            <span
+                                              className="hidden"
+                                            />
+                                          </div>
+                                        </a>
+                                      </Link>
+                                    </ProfileMenu>
+                                  </div>
+                                </GridColumn>
+                                <GridColumn
+                                  className="mobile"
+                                  key="FOLLOWING"
+                                >
+                                  <div
+                                    className="column mobile"
+                                  >
+                                    <ProfileMenu
+                                      count=""
+                                      menuItem={
+                                        <Image
+                                          as="img"
+                                          className="profileMenuIcon"
+                                          src="test-file-stub"
+                                          ui={true}
+                                        />
+                                      }
+                                      text="FOLLOWING"
+                                      to="/following"
+                                    >
+                                      <Link
+                                        className="menu-item profileMenu"
+                                        replace={false}
+                                        to="/following"
+                                      >
+                                        <a
+                                          className="menu-item profileMenu"
+                                          href="/following"
+                                          onClick={[Function]}
+                                        >
+                                          <Image
+                                            as="img"
+                                            className="profileMenuIcon"
+                                            src="test-file-stub"
+                                            ui={true}
+                                          >
+                                            <img
+                                              className="ui image profileMenuIcon"
+                                              src="test-file-stub"
+                                            />
+                                          </Image>
+                                          <div
+                                            className="profileMenuText"
+                                          >
+                                            FOLLOWING
+                                            <span
+                                              className="hidden"
+                                            />
+                                          </div>
+                                        </a>
+                                      </Link>
+                                    </ProfileMenu>
+                                  </div>
+                                </GridColumn>
+                              </div>
+                            </AccordionContent>
+                          </div>
+                        </AccordionAccordion>
+                      </Accordion>
+                      <GridColumn
+                        className="desktop"
+                        key="PROFILE"
+                      >
+                        <div
+                          className="column desktop"
+                        >
+                          <ProfileMenu
+                            count={null}
+                            menuItem={
+                              <Image
+                                as="img"
+                                className="profileMenuIcon"
+                                src="test-file-stub"
+                                ui={true}
+                              />
+                            }
+                            text="PROFILE"
+                            to="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                          >
+                            <Link
+                              className="menu-item profileMenu"
+                              replace={false}
+                              to="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                            >
+                              <a
+                                className="menu-item profileMenu"
+                                href="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                                onClick={[Function]}
+                              >
+                                <Image
+                                  as="img"
+                                  className="profileMenuIcon"
+                                  src="test-file-stub"
+                                  ui={true}
+                                >
+                                  <img
+                                    className="ui image profileMenuIcon"
+                                    src="test-file-stub"
+                                  />
+                                </Image>
+                                <div
+                                  className="profileMenuText"
+                                >
+                                  PROFILE
+                                  <span
+                                    className="hidden"
+                                  />
+                                </div>
+                              </a>
+                            </Link>
+                          </ProfileMenu>
+                        </div>
+                      </GridColumn>
+                      <GridColumn
+                        className="desktop"
+                        key="ARTICLES"
+                      >
+                        <div
+                          className="column desktop"
+                        >
+                          <ProfileMenu
+                            count=""
+                            menuItem={
+                              <Image
+                                as="img"
+                                className="profileMenuIcon"
+                                src="test-file-stub"
+                                ui={true}
+                              />
+                            }
+                            text="ARTICLES"
+                            to="/user-articles"
+                          >
+                            <Link
+                              className="menu-item profileMenu"
+                              replace={false}
+                              to="/user-articles"
+                            >
+                              <a
+                                className="menu-item profileMenu"
+                                href="/user-articles"
+                                onClick={[Function]}
+                              >
+                                <Image
+                                  as="img"
+                                  className="profileMenuIcon"
+                                  src="test-file-stub"
+                                  ui={true}
+                                >
+                                  <img
+                                    className="ui image profileMenuIcon"
+                                    src="test-file-stub"
+                                  />
+                                </Image>
+                                <div
+                                  className="profileMenuText"
+                                >
+                                  ARTICLES
+                                  <span
+                                    className="hidden"
+                                  />
+                                </div>
+                              </a>
+                            </Link>
+                          </ProfileMenu>
+                        </div>
+                      </GridColumn>
+                      <GridColumn
+                        className="desktop"
+                        key="FOLLOWERS"
+                      >
+                        <div
+                          className="column desktop"
+                        >
+                          <ProfileMenu
+                            count=""
+                            menuItem={
+                              <Image
+                                as="img"
+                                className="profileMenuIcon"
+                                src="test-file-stub"
+                                ui={true}
+                              />
+                            }
+                            text="FOLLOWERS"
+                            to="/followers"
+                          >
+                            <Link
+                              className="menu-item profileMenu"
+                              replace={false}
+                              to="/followers"
+                            >
+                              <a
+                                className="menu-item profileMenu"
+                                href="/followers"
+                                onClick={[Function]}
+                              >
+                                <Image
+                                  as="img"
+                                  className="profileMenuIcon"
+                                  src="test-file-stub"
+                                  ui={true}
+                                >
+                                  <img
+                                    className="ui image profileMenuIcon"
+                                    src="test-file-stub"
+                                  />
+                                </Image>
+                                <div
+                                  className="profileMenuText"
+                                >
+                                  FOLLOWERS
+                                  <span
+                                    className="hidden"
+                                  />
+                                </div>
+                              </a>
+                            </Link>
+                          </ProfileMenu>
+                        </div>
+                      </GridColumn>
+                      <GridColumn
+                        className="desktop"
+                        key="FOLLOWING"
+                      >
+                        <div
+                          className="column desktop"
+                        >
+                          <ProfileMenu
+                            count=""
+                            menuItem={
+                              <Image
+                                as="img"
+                                className="profileMenuIcon"
+                                src="test-file-stub"
+                                ui={true}
+                              />
+                            }
+                            text="FOLLOWING"
+                            to="/following"
+                          >
+                            <Link
+                              className="menu-item profileMenu"
+                              replace={false}
+                              to="/following"
+                            >
+                              <a
+                                className="menu-item profileMenu"
+                                href="/following"
+                                onClick={[Function]}
+                              >
+                                <Image
+                                  as="img"
+                                  className="profileMenuIcon"
+                                  src="test-file-stub"
+                                  ui={true}
+                                >
+                                  <img
+                                    className="ui image profileMenuIcon"
+                                    src="test-file-stub"
+                                  />
+                                </Image>
+                                <div
+                                  className="profileMenuText"
+                                >
+                                  FOLLOWING
+                                  <span
+                                    className="hidden"
+                                  />
+                                </div>
+                              </a>
+                            </Link>
+                          </ProfileMenu>
+                        </div>
+                      </GridColumn>
+                    </div>
+                  </GridRow>
+                </ProfileNavBar>
+                <GridRow
+                  centered={true}
+                >
+                  <div
+                    className="centered row"
+                  >
+                    <Grid
+                      centered={true}
+                      columns={2}
+                    >
+                      <div
+                        className="ui centered two column grid"
+                      >
+                        <BrowserRouter>
+                          <Router
+                            history={
+                              Object {
+                                "action": "POP",
+                                "block": [Function],
+                                "createHref": [Function],
+                                "go": [Function],
+                                "goBack": [Function],
+                                "goForward": [Function],
+                                "length": 1,
+                                "listen": [Function],
+                                "location": Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                                "push": [Function],
+                                "replace": [Function],
+                              }
+                            }
+                          >
+                            <Switch />
+                          </Router>
+                        </BrowserRouter>
+                      </div>
+                    </Grid>
+                  </div>
+                </GridRow>
+                <GridRow>
+                  <div
+                    className="row"
+                  />
+                </GridRow>
+              </div>
+            </Grid>
+          </ProfileContainer>
+        </Connect(ProfileContainer)>
+      </Route>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
+
+exports[`Profile should match snapshot 2`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <StaticRouter
+    basename=""
+    context={Object {}}
+    location={
+      Object {
+        "pathname": "/profile",
+      }
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/profile",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(ProfileContainer)
+        userId="d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+      >
+        <ProfileContainer
+          fetchIsLoading={false}
+          getUser={[Function]}
+          profileData={
+            Object {
+              "bio": "Software developer at Andela",
+              "country": "Nigeria",
+              "firstname": "Isaiah",
+              "gender": "male",
+              "id": "d1564aa6-e81d-41ab-8469-0aa573f4a6c5",
+              "lastname": "Afolayan",
+              "phonenumber": "+2348145692034",
+              "profileImage": "",
+              "username": "Isaiah",
+            }
+          }
+          updateIsLoading={false}
+          updateProfile={[Function]}
+          userId="d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+        >
+          <Grid
+            className="userProfilePage"
+          >
+            <div
+              className="ui grid userProfilePage"
+            >
+              <GridRow
+                centered={true}
+                className="userProfile"
+              >
+                <div
+                  className="centered row userProfile"
+                >
+                  <Grid>
+                    <div
+                      className="ui grid"
+                    >
+                      <GridRow
+                        centered={true}
+                      >
+                        <div
+                          className="centered row"
+                        >
+                          <Image
+                            as="img"
+                            circular={true}
+>>>>>>> [fix-#162414123] Implement actions and reducers for profile page
                             src="test-file-stub"
                             ui={true}
                           >
                             <img
+<<<<<<< HEAD
                               className="ui image profileMenuIcon"
                               src="test-file-stub"
                             />
@@ -4913,6 +5679,670 @@ exports[`Profile should match snapshot when current user view own profile 1`] = 
 `;
 
 exports[`Profile should match snapshot when updateIsLoading is false 1`] = `
+=======
+                              className="ui circular image"
+                              src="test-file-stub"
+                            />
+                          </Image>
+                        </div>
+                      </GridRow>
+                      <GridRow
+                        centered={true}
+                      >
+                        <div
+                          className="centered row"
+                        >
+                          <div>
+                            <div
+                              className="userName"
+                            >
+                              Afolayan Isaiah
+                            </div>
+                            <div
+                              className="userDescription"
+                            >
+                              Software developer at Andela
+                            </div>
+                          </div>
+                        </div>
+                      </GridRow>
+                    </div>
+                  </Grid>
+                </div>
+              </GridRow>
+              <ProfileNavBar
+                user="unauthenticated"
+                userId="d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+              >
+                <GridRow
+                  centered={true}
+                  className="profileNavBar"
+                  columns={4}
+                  verticalAlign="middle"
+                >
+                  <div
+                    className="centered middle aligned four column row profileNavBar"
+                  >
+                    <Accordion
+                      className="profileNavBarBars"
+                    >
+                      <AccordionAccordion
+                        className="ui profileNavBarBars"
+                        exclusive={true}
+                      >
+                        <div
+                          className="accordion ui profileNavBarBars"
+                        >
+                          <AccordionTitle
+                            active={false}
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="title"
+                              onClick={[Function]}
+                            >
+                              <Icon
+                                as="i"
+                                name="bars"
+                                size="big"
+                              >
+                                <i
+                                  aria-hidden="true"
+                                  className="bars big icon"
+                                  onClick={[Function]}
+                                />
+                              </Icon>
+                            </div>
+                          </AccordionTitle>
+                          <AccordionContent
+                            active={false}
+                            className="accordionContent"
+                          >
+                            <div
+                              className="content accordionContent"
+                            >
+                              <GridColumn
+                                className="mobile"
+                                key="PROFILE"
+                              >
+                                <div
+                                  className="column mobile"
+                                >
+                                  <ProfileMenu
+                                    count={null}
+                                    menuItem={
+                                      <Image
+                                        as="img"
+                                        className="profileMenuIcon"
+                                        src="test-file-stub"
+                                        ui={true}
+                                      />
+                                    }
+                                    text="PROFILE"
+                                    to="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                                  >
+                                    <Link
+                                      className="menu-item profileMenu"
+                                      replace={false}
+                                      to="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                                    >
+                                      <a
+                                        className="menu-item profileMenu"
+                                        href="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                                        onClick={[Function]}
+                                      >
+                                        <Image
+                                          as="img"
+                                          className="profileMenuIcon"
+                                          src="test-file-stub"
+                                          ui={true}
+                                        >
+                                          <img
+                                            className="ui image profileMenuIcon"
+                                            src="test-file-stub"
+                                          />
+                                        </Image>
+                                        <div
+                                          className="profileMenuText"
+                                        >
+                                          PROFILE
+                                          <span
+                                            className="hidden"
+                                          />
+                                        </div>
+                                      </a>
+                                    </Link>
+                                  </ProfileMenu>
+                                </div>
+                              </GridColumn>
+                              <GridColumn
+                                className="mobile"
+                                key="ARTICLES"
+                              >
+                                <div
+                                  className="column mobile"
+                                >
+                                  <ProfileMenu
+                                    count=""
+                                    menuItem={
+                                      <Image
+                                        as="img"
+                                        className="profileMenuIcon"
+                                        src="test-file-stub"
+                                        ui={true}
+                                      />
+                                    }
+                                    text="ARTICLES"
+                                    to="/user-articles"
+                                  >
+                                    <Link
+                                      className="menu-item profileMenu"
+                                      replace={false}
+                                      to="/user-articles"
+                                    >
+                                      <a
+                                        className="menu-item profileMenu"
+                                        href="/user-articles"
+                                        onClick={[Function]}
+                                      >
+                                        <Image
+                                          as="img"
+                                          className="profileMenuIcon"
+                                          src="test-file-stub"
+                                          ui={true}
+                                        >
+                                          <img
+                                            className="ui image profileMenuIcon"
+                                            src="test-file-stub"
+                                          />
+                                        </Image>
+                                        <div
+                                          className="profileMenuText"
+                                        >
+                                          ARTICLES
+                                          <span
+                                            className="hidden"
+                                          />
+                                        </div>
+                                      </a>
+                                    </Link>
+                                  </ProfileMenu>
+                                </div>
+                              </GridColumn>
+                              <GridColumn
+                                className="mobile"
+                                key="FOLLOWERS"
+                              >
+                                <div
+                                  className="column mobile"
+                                >
+                                  <ProfileMenu
+                                    count=""
+                                    menuItem={
+                                      <Image
+                                        as="img"
+                                        className="profileMenuIcon"
+                                        src="test-file-stub"
+                                        ui={true}
+                                      />
+                                    }
+                                    text="FOLLOWERS"
+                                    to="/followers"
+                                  >
+                                    <Link
+                                      className="menu-item profileMenu"
+                                      replace={false}
+                                      to="/followers"
+                                    >
+                                      <a
+                                        className="menu-item profileMenu"
+                                        href="/followers"
+                                        onClick={[Function]}
+                                      >
+                                        <Image
+                                          as="img"
+                                          className="profileMenuIcon"
+                                          src="test-file-stub"
+                                          ui={true}
+                                        >
+                                          <img
+                                            className="ui image profileMenuIcon"
+                                            src="test-file-stub"
+                                          />
+                                        </Image>
+                                        <div
+                                          className="profileMenuText"
+                                        >
+                                          FOLLOWERS
+                                          <span
+                                            className="hidden"
+                                          />
+                                        </div>
+                                      </a>
+                                    </Link>
+                                  </ProfileMenu>
+                                </div>
+                              </GridColumn>
+                              <GridColumn
+                                className="mobile"
+                                key="FOLLOWING"
+                              >
+                                <div
+                                  className="column mobile"
+                                >
+                                  <ProfileMenu
+                                    count=""
+                                    menuItem={
+                                      <Image
+                                        as="img"
+                                        className="profileMenuIcon"
+                                        src="test-file-stub"
+                                        ui={true}
+                                      />
+                                    }
+                                    text="FOLLOWING"
+                                    to="/following"
+                                  >
+                                    <Link
+                                      className="menu-item profileMenu"
+                                      replace={false}
+                                      to="/following"
+                                    >
+                                      <a
+                                        className="menu-item profileMenu"
+                                        href="/following"
+                                        onClick={[Function]}
+                                      >
+                                        <Image
+                                          as="img"
+                                          className="profileMenuIcon"
+                                          src="test-file-stub"
+                                          ui={true}
+                                        >
+                                          <img
+                                            className="ui image profileMenuIcon"
+                                            src="test-file-stub"
+                                          />
+                                        </Image>
+                                        <div
+                                          className="profileMenuText"
+                                        >
+                                          FOLLOWING
+                                          <span
+                                            className="hidden"
+                                          />
+                                        </div>
+                                      </a>
+                                    </Link>
+                                  </ProfileMenu>
+                                </div>
+                              </GridColumn>
+                            </div>
+                          </AccordionContent>
+                        </div>
+                      </AccordionAccordion>
+                    </Accordion>
+                    <GridColumn
+                      className="desktop"
+                      key="PROFILE"
+                    >
+                      <div
+                        className="column desktop"
+                      >
+                        <ProfileMenu
+                          count={null}
+                          menuItem={
+                            <Image
+                              as="img"
+                              className="profileMenuIcon"
+                              src="test-file-stub"
+                              ui={true}
+                            />
+                          }
+                          text="PROFILE"
+                          to="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                        >
+                          <Link
+                            className="menu-item profileMenu"
+                            replace={false}
+                            to="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                          >
+                            <a
+                              className="menu-item profileMenu"
+                              href="/profile/d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+                              onClick={[Function]}
+                            >
+                              <Image
+                                as="img"
+                                className="profileMenuIcon"
+                                src="test-file-stub"
+                                ui={true}
+                              >
+                                <img
+                                  className="ui image profileMenuIcon"
+                                  src="test-file-stub"
+                                />
+                              </Image>
+                              <div
+                                className="profileMenuText"
+                              >
+                                PROFILE
+                                <span
+                                  className="hidden"
+                                />
+                              </div>
+                            </a>
+                          </Link>
+                        </ProfileMenu>
+                      </div>
+                    </GridColumn>
+                    <GridColumn
+                      className="desktop"
+                      key="ARTICLES"
+                    >
+                      <div
+                        className="column desktop"
+                      >
+                        <ProfileMenu
+                          count=""
+                          menuItem={
+                            <Image
+                              as="img"
+                              className="profileMenuIcon"
+                              src="test-file-stub"
+                              ui={true}
+                            />
+                          }
+                          text="ARTICLES"
+                          to="/user-articles"
+                        >
+                          <Link
+                            className="menu-item profileMenu"
+                            replace={false}
+                            to="/user-articles"
+                          >
+                            <a
+                              className="menu-item profileMenu"
+                              href="/user-articles"
+                              onClick={[Function]}
+                            >
+                              <Image
+                                as="img"
+                                className="profileMenuIcon"
+                                src="test-file-stub"
+                                ui={true}
+                              >
+                                <img
+                                  className="ui image profileMenuIcon"
+                                  src="test-file-stub"
+                                />
+                              </Image>
+                              <div
+                                className="profileMenuText"
+                              >
+                                ARTICLES
+                                <span
+                                  className="hidden"
+                                />
+                              </div>
+                            </a>
+                          </Link>
+                        </ProfileMenu>
+                      </div>
+                    </GridColumn>
+                    <GridColumn
+                      className="desktop"
+                      key="FOLLOWERS"
+                    >
+                      <div
+                        className="column desktop"
+                      >
+                        <ProfileMenu
+                          count=""
+                          menuItem={
+                            <Image
+                              as="img"
+                              className="profileMenuIcon"
+                              src="test-file-stub"
+                              ui={true}
+                            />
+                          }
+                          text="FOLLOWERS"
+                          to="/followers"
+                        >
+                          <Link
+                            className="menu-item profileMenu"
+                            replace={false}
+                            to="/followers"
+                          >
+                            <a
+                              className="menu-item profileMenu"
+                              href="/followers"
+                              onClick={[Function]}
+                            >
+                              <Image
+                                as="img"
+                                className="profileMenuIcon"
+                                src="test-file-stub"
+                                ui={true}
+                              >
+                                <img
+                                  className="ui image profileMenuIcon"
+                                  src="test-file-stub"
+                                />
+                              </Image>
+                              <div
+                                className="profileMenuText"
+                              >
+                                FOLLOWERS
+                                <span
+                                  className="hidden"
+                                />
+                              </div>
+                            </a>
+                          </Link>
+                        </ProfileMenu>
+                      </div>
+                    </GridColumn>
+                    <GridColumn
+                      className="desktop"
+                      key="FOLLOWING"
+                    >
+                      <div
+                        className="column desktop"
+                      >
+                        <ProfileMenu
+                          count=""
+                          menuItem={
+                            <Image
+                              as="img"
+                              className="profileMenuIcon"
+                              src="test-file-stub"
+                              ui={true}
+                            />
+                          }
+                          text="FOLLOWING"
+                          to="/following"
+                        >
+                          <Link
+                            className="menu-item profileMenu"
+                            replace={false}
+                            to="/following"
+                          >
+                            <a
+                              className="menu-item profileMenu"
+                              href="/following"
+                              onClick={[Function]}
+                            >
+                              <Image
+                                as="img"
+                                className="profileMenuIcon"
+                                src="test-file-stub"
+                                ui={true}
+                              >
+                                <img
+                                  className="ui image profileMenuIcon"
+                                  src="test-file-stub"
+                                />
+                              </Image>
+                              <div
+                                className="profileMenuText"
+                              >
+                                FOLLOWING
+                                <span
+                                  className="hidden"
+                                />
+                              </div>
+                            </a>
+                          </Link>
+                        </ProfileMenu>
+                      </div>
+                    </GridColumn>
+                  </div>
+                </GridRow>
+              </ProfileNavBar>
+              <GridRow
+                centered={true}
+              >
+                <div
+                  className="centered row"
+                >
+                  <Grid
+                    centered={true}
+                    columns={2}
+                  >
+                    <div
+                      className="ui centered two column grid"
+                    >
+                      <BrowserRouter>
+                        <Router
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "createHref": [Function],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                        >
+                          <Switch />
+                        </Router>
+                      </BrowserRouter>
+                    </div>
+                  </Grid>
+                </div>
+              </GridRow>
+              <GridRow>
+                <div
+                  className="row"
+                />
+              </GridRow>
+            </div>
+          </Grid>
+        </ProfileContainer>
+      </Connect(ProfileContainer)>
+    </Router>
+  </StaticRouter>
+</Provider>
+`;
+
+exports[`Profile should match snapshot 3`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(ProfileContainer)
+        userId="d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+      >
+        <ProfileContainer
+          fetchIsLoading={true}
+          getUser={[Function]}
+          profileData={
+            Object {
+              "bio": "Software developer at Andela",
+              "country": "Nigeria",
+              "firstname": "Isaiah",
+              "gender": "male",
+              "id": "d1564aa6-e81d-41ab-8469-0aa573f4a6c5",
+              "lastname": "Afolayan",
+              "phonenumber": "+2348145692034",
+              "profileImage": "",
+              "username": "Isaiah",
+            }
+          }
+          updateIsLoading={true}
+          updateProfile={[Function]}
+          userId="d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
+        >
+          <RedirectLoader>
+            <div
+              className="redirectLoginLoader"
+            >
+              <Loader
+                active={true}
+                inline="centered"
+                size="massive"
+              >
+                <div
+                  className="ui massive active text centered inline loader"
+                >
+                  Loading...
+                </div>
+              </Loader>
+            </div>
+          </RedirectLoader>
+        </ProfileContainer>
+      </Connect(ProfileContainer)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
+
+exports[`Profile should match snapshot 4`] = `
+>>>>>>> [fix-#162414123] Implement actions and reducers for profile page
 <Grid
   className="userProfilePage"
 >
@@ -4963,7 +6393,11 @@ exports[`Profile should match snapshot when updateIsLoading is false 1`] = `
       <BrowserRouter>
         <Switch>
           <Route
+<<<<<<< HEAD
             path="/"
+=======
+            path="/profile"
+>>>>>>> [fix-#162414123] Implement actions and reducers for profile page
             render={[Function]}
           />
         </Switch>
@@ -4973,5 +6407,8 @@ exports[`Profile should match snapshot when updateIsLoading is false 1`] = `
   <GridRow />
 </Grid>
 `;
+<<<<<<< HEAD
 
 exports[`Profile should match snapshot when updateIsLoading is true 1`] = `<RedirectLoader />`;
+=======
+>>>>>>> [fix-#162414123] Implement actions and reducers for profile page
