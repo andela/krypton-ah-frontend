@@ -74,7 +74,7 @@ exports[`home container test should test for the featuredarticles component 1`] 
 
 exports[`home container test should test for the home component 1`] = `
 <div
-  className="Main"
+  className="main"
 >
   <Grid
     className="content"
@@ -129,7 +129,7 @@ exports[`home container test should test for the popular articles component 1`] 
             className="description"
           >
             <p
-              className="Popular title"
+              className="popular title"
             >
               Popular Title
             </p>
@@ -148,7 +148,7 @@ exports[`home container test should test for the popular articles component 1`] 
             className="description"
           >
             <p
-              className="Popular title"
+              className="popular title"
             >
               Popular Title
             </p>
@@ -167,7 +167,7 @@ exports[`home container test should test for the popular articles component 1`] 
             className="description"
           >
             <p
-              className="Popular title"
+              className="popular title"
             >
               Popular Title
             </p>
@@ -186,7 +186,7 @@ exports[`home container test should test for the popular articles component 1`] 
             className="description"
           >
             <p
-              className="Popular title"
+              className="popular title"
             >
               Popular Title
             </p>
