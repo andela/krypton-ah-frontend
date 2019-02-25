@@ -51,9 +51,10 @@ const socialMediaLoginIcons = [
     url: process.env.TWITTER_URL
   }
 ];
-const API_BASE_URL = 'https://krypton-ah-stage.herokuapp.com';
+const { API_BASE_URL } = process.env;
 const authentication = 'authentication';
 const twitterPath = '/auth/twitter/callback';
+const networkErrorResponse = 'Network error! kindly try again later';
 
 export {
   socialMediaElements,
@@ -62,5 +63,6 @@ export {
   socialMediaLoginIcons,
   API_BASE_URL,
   authentication,
-  twitterPath
+  twitterPath,
+  networkErrorResponse,
 };

@@ -1,9 +1,11 @@
+/* eslint-disable no-throw-literal */
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import moxios from 'moxios';
 import * as actions from '../authActions';
 import actionTypes from '../actionTypes';
 import * as axios from '../../../helpers/axiosHelper/auth';
+import NETWORK_ERROR from '../../networkError/actionType';
 import {
   payload,
   signupOkResponse,
@@ -57,6 +59,39 @@ describe('user authentication actions Signup', () => {
     });
     store.clearActions();
   });
+
+  it('should dispatch signup failure when error occurs', async () => {
+    axios.signupCall = jest.fn(() => {
+      throw { response: mockResponse };
+    });
+    try {
+      await actions.userSignUp(payload)(dispatch);
+    } catch (error) {
+      expect(error).toEqual({ response: mockResponse });
+      expect(dispatch).toBeCalledTimes(2);
+      expect(dispatch).toBeCalledWith({
+        type: actionTypes.SIGNUP_FAILURE,
+        payload: mockResponse,
+      });
+    }
+    store.clearActions();
+  });
+
+  it('should throw error', async () => {
+    axios.signupCall = jest.fn(() => {
+      throw {};
+    });
+    try {
+      await actions.userSignUp(payload)(dispatch);
+    } catch (error) {
+      expect(dispatch).toBeCalledTimes(2);
+      expect(dispatch).toBeCalledWith({
+        type: NETWORK_ERROR,
+        payload: mockResponse,
+      });
+    }
+    store.clearActions();
+  });
 });
 
 describe('user authentication actions login', () => {
@@ -72,7 +107,7 @@ describe('user authentication actions login', () => {
   it(`should return an action object once ${actionTypes.LOGIN_SUCCESS} is fired`, () => {
     expect(actions.loginSuccess(payload)).toEqual({
       type: actionTypes.LOGIN_SUCCESS,
-      payload
+      payload,
     });
   });
 
@@ -95,5 +130,38 @@ describe('user authentication actions login', () => {
     await actions.userLogin(fakeUser2)(dispatch);
     expect(dispatch).toBeCalledTimes(2);
     expect(dispatch).toBeCalledWith({ type: actionTypes.LOGIN_SUCCESS, payload: loginOkResponse });
+  });
+
+  it('should throw error', async () => {
+    axios.loginCall = jest.fn(() => {
+      throw { response: mockResponse };
+    });
+    try {
+      await actions.userLogin(fakeUser2)(dispatch);
+    } catch (error) {
+      expect(error).toEqual({ response: mockResponse });
+      expect(dispatch).toBeCalledTimes(2);
+      expect(dispatch).toBeCalledWith({
+        type: actionTypes.LOGIN_FAILURE,
+        payload: mockResponse,
+      });
+    }
+    store.clearActions();
+  });
+
+  it('should throw error', async () => {
+    axios.loginCall = jest.fn(() => {
+      throw {};
+    });
+    try {
+      await actions.userLogin(payload)(dispatch);
+    } catch (error) {
+      expect(dispatch).toBeCalledTimes(2);
+      expect(dispatch).toBeCalledWith({
+        type: NETWORK_ERROR,
+        payload: mockResponse,
+      });
+    }
+    store.clearActions();
   });
 });

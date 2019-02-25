@@ -1,4 +1,5 @@
 import actionTypes from '../../actions/authAction/actionTypes';
+import NETWORK_ERROR from '../../actions/networkError/actionType';
 import initialState from '../initialState';
 import authReducer from '../authReducer';
 import {
@@ -79,6 +80,19 @@ describe('user authentication reducer', () => {
       authIsLoading: false,
       success: false,
       response: payload.data.message,
+      isAuthenticated: false,
+    }));
+  });
+
+  it('should update state when the NETWORK_ERROR action is dispatched', () => {
+    const payload = error.response;
+    expect(authReducer(initialState.auth, {
+      type: NETWORK_ERROR,
+      payload
+    })).toEqual((initialState, {
+      authIsLoading: false,
+      success: false,
+      response: payload,
       isAuthenticated: false,
     }));
   });

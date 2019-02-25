@@ -3,7 +3,13 @@ const initialState = {
     authIsLoading: false,
     success: false,
     response: '',
-    isAuthenticated: null,
+    isAuthenticated: null
   },
+  readArticle: {
+    articleIsLoading: false,
+    success: false,
+    successResponse: {},
+    failureResponse: {}
+  }
 };
 export default initialState;
