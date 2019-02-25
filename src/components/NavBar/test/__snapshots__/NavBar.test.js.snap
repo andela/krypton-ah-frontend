@@ -42,141 +42,193 @@ exports[`TinyBlackBar should match snapshot 1`] = `
 `;
 
 exports[`WhiteNavBar should match snapshot 1`] = `
-<Menu
-  borderless={true}
-  className="whiteNavBar"
-  fixed={null}
->
-  <MenuMenu
-    className="whiteBarMenu"
-    position="left"
-  >
-    <MenuItem>
-      <Image
-        alt="AH-logo"
-        as="img"
-        className="ahIcon"
-        src="test-file-stub"
-        ui={true}
+<Fragment>
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
       />
-    </MenuItem>
-    <MenuItem>
-      <h1>
-        Authors Haven
-      </h1>
-    </MenuItem>
-  </MenuMenu>
-  <MenuMenu
-    position="right"
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
+  />
+  <Menu
+    borderless={true}
+    className="whiteNavBar"
+    fixed={null}
   >
-    <MenuItem>
-      <Icon
-        as="i"
-        fitted={true}
-        name="search"
-        size="big"
-      />
-    </MenuItem>
-    <MenuItem>
-      <Button
-        as="button"
-        secondary={true}
-      >
-        Write an Article
-      </Button>
-    </MenuItem>
-  </MenuMenu>
-</Menu>
+    <MenuMenu
+      className="whiteBarMenu"
+      position="left"
+    >
+      <MenuItem>
+        <Image
+          alt="AH-logo"
+          as="img"
+          className="ahIcon"
+          src="test-file-stub"
+          ui={true}
+        />
+      </MenuItem>
+      <MenuItem>
+        <h1>
+          Authors Haven
+        </h1>
+      </MenuItem>
+    </MenuMenu>
+    <MenuMenu
+      position="right"
+    >
+      <MenuItem>
+        <Icon
+          as="i"
+          fitted={true}
+          name="search"
+          size="big"
+        />
+      </MenuItem>
+      <MenuItem>
+        <Button
+          as="button"
+          secondary={true}
+        >
+          Write an Article
+        </Button>
+      </MenuItem>
+    </MenuMenu>
+  </Menu>
+</Fragment>
 `;
 
 exports[`WhiteNavBar with props should match snapshot 1`] = `
-<Menu
-  borderless={true}
-  className="whiteNavBar"
-  fixed="top"
->
-  <MenuMenu
-    className="whiteBarMenu"
-    position="left"
-  >
-    <MenuItem>
-      <Image
-        alt="AH-logo"
-        as="img"
-        className="ahIcon"
-        src="test-file-stub"
-        ui={true}
+<Fragment>
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
       />
-    </MenuItem>
-    <MenuItem>
-      <h1>
-        Authors Haven
-      </h1>
-    </MenuItem>
-  </MenuMenu>
-  <MenuMenu
-    position="right"
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
+  />
+  <Menu
+    borderless={true}
+    className="whiteNavBar"
+    fixed="top"
   >
-    <MenuItem>
-      <Icon
-        as="i"
-        fitted={true}
-        name="search"
-        size="big"
-      />
-    </MenuItem>
-    <MenuItem>
-      <Button
-        as="button"
-        secondary={true}
-      >
-        Write an Article
-      </Button>
-    </MenuItem>
-    <MenuItem>
-      <Dropdown
-        additionLabel="Add "
-        additionPosition="top"
-        className="link item"
-        closeOnBlur={true}
-        deburr={false}
-        icon="dropdown"
-        item={true}
-        minCharacters={1}
-        noResultsMessage="No results found."
-        openOnFocus={true}
-        pointing={true}
-        renderLabel={[Function]}
-        searchInput="text"
-        selectOnBlur={true}
-        selectOnNavigation={true}
-        simple={true}
-        trigger={
-          <Image
-            as="img"
-            avatar={true}
-            className="avatarImg"
-            src="https://fakeAvatar.com"
-            ui={true}
-          />
-        }
-        wrapSelection={true}
-      >
-        <DropdownMenu
-          className="right"
+    <MenuMenu
+      className="whiteBarMenu"
+      position="left"
+    >
+      <MenuItem>
+        <Image
+          alt="AH-logo"
+          as="img"
+          className="ahIcon"
+          src="test-file-stub"
+          ui={true}
+        />
+      </MenuItem>
+      <MenuItem>
+        <h1>
+          Authors Haven
+        </h1>
+      </MenuItem>
+    </MenuMenu>
+    <MenuMenu
+      position="right"
+    >
+      <MenuItem>
+        <Icon
+          as="i"
+          fitted={true}
+          name="search"
+          size="big"
+        />
+      </MenuItem>
+      <MenuItem>
+        <Button
+          as="button"
+          secondary={true}
         >
-          <DropdownItem>
-            PROFILE
-          </DropdownItem>
-          <DropdownItem>
-            BOOKMARKS
-          </DropdownItem>
-          <DropdownItem>
-            LOG OUT
-          </DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-    </MenuItem>
-  </MenuMenu>
-</Menu>
+          Write an Article
+        </Button>
+      </MenuItem>
+      <MenuItem>
+        <Dropdown
+          additionLabel="Add "
+          additionPosition="top"
+          className="link item"
+          closeOnBlur={true}
+          deburr={false}
+          icon="dropdown"
+          item={true}
+          minCharacters={1}
+          noResultsMessage="No results found."
+          openOnFocus={true}
+          pointing={true}
+          renderLabel={[Function]}
+          searchInput="text"
+          selectOnBlur={true}
+          selectOnNavigation={true}
+          simple={true}
+          trigger={
+            <Image
+              as="img"
+              avatar={true}
+              className="avatarImg"
+              src="https://fakeAvatar.com"
+              ui={true}
+            />
+          }
+          wrapSelection={true}
+        >
+          <DropdownMenu
+            className="right"
+          >
+            <DropdownItem>
+              PROFILE
+            </DropdownItem>
+            <DropdownItem>
+              BOOKMARKS
+            </DropdownItem>
+            <DropdownItem>
+              LOG OUT
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+      </MenuItem>
+    </MenuMenu>
+  </Menu>
+</Fragment>
 `;

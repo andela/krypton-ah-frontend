@@ -25,12 +25,14 @@ MainFeaturedArticle.defaultProps = {
   description: articleDetails.description,
   title: articleDetails.title,
   image: articleDetails.image,
-  id: articleDetails.slug
+  id: articleDetails.slug,
+  date: ''
 };
 
 MainFeaturedArticle.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   image: PropTypes.string,
-  id: PropTypes.string
+  id: PropTypes.string,
+  date: PropTypes.string
 };

@@ -1,7 +1,10 @@
+import { toast } from 'react-toastify';
 import { signupCall, loginCall } from '../../helpers/axiosHelper/auth';
 import setToken from '../../helpers/jwt';
 import actionTypes from './actionTypes';
 import triggerLoading from './loading';
+import networkError from '../networkError/networkErrorAction';
+import { networkErrorResponse } from '../../constants';
 
 const {
   AUTH_LOADING,
@@ -50,9 +53,14 @@ export const userLogin = user => async (dispatch) => {
     const response = await loginCall(user);
     setToken(response.data.loginToken);
     dispatch(loginSuccess(response));
+    toast.success(response.data.message);
   } catch (error) {
     if (error.response) {
       dispatch(loginFailure(error.response));
+      toast.error(error.response.data.message);
+    } else {
+      dispatch(networkError(networkErrorResponse));
+      toast.success(networkErrorResponse);
     }
   }
 };

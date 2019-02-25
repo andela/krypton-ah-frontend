@@ -1,7 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Form, Checkbox, Button } from 'semantic-ui-react';
+import { Redirect } from 'react-router-dom';
 import InlineError from '../../helpers/InlineError';
 import { signInValidator } from '../../helpers/validateUser';
+import { userLogin } from '../../actions/authAction/authActions';
+import RedirectLoader from '../Loader';
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -24,6 +29,8 @@ class SignIn extends React.Component {
     if (errors) {
       this.setState({ errors });
     }
+    const { login } = this.props;
+    login(user);
   }
 
   handleChange(event) {
@@ -40,6 +47,8 @@ class SignIn extends React.Component {
       user, errors
     } = this.state;
 
+    if (this.props.auth.authIsLoading) { return <RedirectLoader />; }
+    if (this.props.auth.isAuthenticated) { return <Redirect to="/writearticle" />; }
     return (
       <Form onSubmit={this.handleSubmit}>
         <Form.Group widths="equal">
@@ -63,4 +72,26 @@ class SignIn extends React.Component {
   }
 }
 
-export default SignIn;
+const mapDispatchToProps = dispatch => ({
+  login: user => dispatch(userLogin(user))
+});
+
+const mapStateToProps = state => ({
+  auth: state.authReducer
+});
+
+export { SignIn as Login };
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SignIn);
+
+SignIn.propTypes = {
+  login: PropTypes.func,
+  auth: PropTypes.object
+};
+
+SignIn.defaultProps = {
+  login: null,
+  auth: {}
+};
