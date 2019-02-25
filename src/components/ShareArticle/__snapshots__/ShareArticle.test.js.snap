@@ -14,7 +14,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
       iconBgStyle={Object {}}
       logoFillColor="white"
       round={true}
-      size="25"
+      size={25}
     />
   </CreatedButton>
   <CreatedButton
@@ -34,8 +34,6 @@ exports[`Share Article Component should rendered share Article Icons without cra
     hashtags={
       Array [
         "ah-Krypton",
-        "Andela",
-        "Readers",
       ]
     }
     url="undefined/undefined"
@@ -79,6 +77,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
     />
   </CreatedButton>
   <CreatedButton
+    body=" "
     onClick={[Function]}
     openWindow={false}
     url="undefined/undefined"

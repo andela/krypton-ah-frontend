@@ -10,7 +10,7 @@ InlineError.propTypes = {
 };
 
 InlineError.defaultPros = {
-  text: 'Message'
+  text: ''
 };
 
 export default InlineError;

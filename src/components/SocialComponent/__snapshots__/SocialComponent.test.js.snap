@@ -5,6 +5,7 @@ exports[`Modal Social it should matches the snapshot 1`] = `
   className="socialIconsHolder"
 >
   <a
+    href="https://krypton-ah-stage.herokuapp.com/api/v1/auth/facebook"
     key="1"
   >
     <div
@@ -22,6 +23,7 @@ exports[`Modal Social it should matches the snapshot 1`] = `
     </div>
   </a>
   <a
+    href="https://krypton-ah-stage.herokuapp.com/api/v1/auth/google"
     key="2"
   >
     <div
@@ -39,6 +41,7 @@ exports[`Modal Social it should matches the snapshot 1`] = `
     </div>
   </a>
   <a
+    href="https://krypton-ah-stage.herokuapp.com/api/v1/auth/linkedin"
     key="3"
   >
     <div
@@ -56,6 +59,7 @@ exports[`Modal Social it should matches the snapshot 1`] = `
     </div>
   </a>
   <a
+    href="https://krypton-ah-stage.herokuapp.com/api/v1/auth/"
     key="4"
   >
     <div
