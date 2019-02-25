@@ -5,7 +5,8 @@ exports[`Share Article Component should rendered share Article Icons without cra
   className="shareArticleIcons"
 >
   <CreatedButton
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    quote=" "
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
     windowHeight={400}
     windowWidth={550}
   >
@@ -14,11 +15,12 @@ exports[`Share Article Component should rendered share Article Icons without cra
       iconBgStyle={Object {}}
       logoFillColor="white"
       round={true}
-      size="25"
+      size={25}
     />
   </CreatedButton>
   <CreatedButton
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    quote=" "
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
     windowHeight={400}
     windowWidth={550}
   >
@@ -34,12 +36,10 @@ exports[`Share Article Component should rendered share Article Icons without cra
     hashtags={
       Array [
         "ah-Krypton",
-        "Andela",
-        "Readers",
       ]
     }
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
-    via="Andela"
+    title=" "
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
     windowHeight={400}
     windowWidth={550}
   >
@@ -52,7 +52,9 @@ exports[`Share Article Component should rendered share Article Icons without cra
     />
   </CreatedButton>
   <CreatedButton
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    description=" "
+    title=" "
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
     windowHeight={600}
     windowWidth={750}
   >
@@ -66,7 +68,8 @@ exports[`Share Article Component should rendered share Article Icons without cra
   </CreatedButton>
   <CreatedButton
     separator=" "
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    title=" "
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
     windowHeight={400}
     windowWidth={550}
   >
@@ -79,9 +82,11 @@ exports[`Share Article Component should rendered share Article Icons without cra
     />
   </CreatedButton>
   <CreatedButton
+    body=" "
     onClick={[Function]}
     openWindow={false}
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    subject=" "
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
   >
     <Icon
       className=""

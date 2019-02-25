@@ -51,7 +51,9 @@ const socialMediaLoginIcons = [
     url: process.env.TWITTER_URL
   }
 ];
+
 const { API_BASE_URL } = process.env;
+const { BASE_URL_CB } = process.env;
 const authentication = 'authentication';
 const twitterPath = '/auth/twitter/callback';
 const networkErrorResponse = 'Network error! kindly try again later';
@@ -62,6 +64,7 @@ export {
   advertimage,
   socialMediaLoginIcons,
   API_BASE_URL,
+  BASE_URL_CB,
   authentication,
   twitterPath,
   networkErrorResponse,

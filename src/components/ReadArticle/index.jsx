@@ -53,7 +53,7 @@ class ReadArticle extends Component {
     const { title,
       content,
       createdAt,
-      slug,
+      id,
       description,
       featuredImageUrl,
       readTime,
@@ -69,7 +69,7 @@ class ReadArticle extends Component {
         </Comment.Group>
         <Divider className="articleDivider" />
         <div className="icon-bar">
-          <ShareArticle title={title} slug={slug} description={description} />
+          <ShareArticle title={title} id={id} description={description} />
         </div>
         {this.getArticleContent(content)}
         <Divider className="articleDivider" />
@@ -78,8 +78,8 @@ class ReadArticle extends Component {
   }
 }
 ReadArticle.propTypes = {
-  slug: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  description: PropTypes.string,
   title: PropTypes.string,
   content: PropTypes.string,
   createdAt: PropTypes.string,
@@ -92,6 +92,8 @@ ReadArticle.propTypes = {
 };
 
 ReadArticle.defaultProps = {
+  id: '',
+  description: '',
   title: '',
   content: '',
   createdAt: '',

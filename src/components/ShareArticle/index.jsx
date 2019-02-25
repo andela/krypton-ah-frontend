@@ -13,7 +13,7 @@ import {
   LinkedinIcon,
   WhatsappIcon,
   EmailIcon } from 'react-share';
-import { API_BASE_URL } from '../../constants';
+import { BASE_URL_CB } from '../../constants';
 import './ShareArticle.scss';
 
 class ShareArticle extends React.Component {
@@ -23,18 +23,18 @@ class ShareArticle extends React.Component {
   }
 
   render() {
-    const { title, slug, description } = this.props;
-    const url = `${API_BASE_URL}/${slug}`;
-    const hashtags = ['ah-Krypton', 'Andela', 'Readers'];
+    const { id, title, description } = this.props;
+    const url = `${BASE_URL_CB}/article/${id}`;
+    const hashtags = ['ah-Krypton'];
     return (
       <div className="shareArticleIcons">
         <FacebookShareButton quote={description} url={url}>
-          <FacebookIcon size="25" round />
+          <FacebookIcon size={25} round />
         </FacebookShareButton>
         <GooglePlusShareButton quote={description} url={url}>
           <GooglePlusIcon size={25} round />
         </GooglePlusShareButton>
-        <TwitterShareButton title={title} via="Andela" hashtags={hashtags} url={url}>
+        <TwitterShareButton title={title} hashtags={hashtags} url={url}>
           <TwitterIcon size={25} round />
         </TwitterShareButton>
         <LinkedinShareButton title={title} description={description} url={url}>
@@ -53,9 +53,15 @@ class ShareArticle extends React.Component {
 }
 
 ShareArticle.propTypes = {
-  title: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  id: PropTypes.string,
+  description: PropTypes.string,
+};
+
+ShareArticle.defaultProps = {
+  title: ' ',
+  id: ' ',
+  description: ' '
 };
 
 export default ShareArticle;
