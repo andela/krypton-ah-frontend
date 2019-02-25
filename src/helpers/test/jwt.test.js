@@ -1,5 +1,5 @@
 import 'jest-localstorage-mock';
-import setToken, { getUserIdFromLocalStorage } from '../jwt';
+import { setToken, getUserIdFromLocalStorage } from '../jwt';
 import { jwtToken } from '../../mockData';
 import { authentication } from '../../constants';
 

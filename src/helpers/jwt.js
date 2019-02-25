@@ -3,7 +3,7 @@ import { authentication } from '../constants';
 
 const setToken = token => localStorage.setItem(authentication, token);
 
-export const getUserIdFromLocalStorage = () => {
+const getUserIdFromLocalStorage = () => {
   const token = localStorage.getItem(authentication);
   try {
     const { payLoad } = jwtDecode(token);
@@ -13,4 +13,10 @@ export const getUserIdFromLocalStorage = () => {
   }
 };
 
-export default setToken;
+const getToken = localStorage.getItem(authentication);
+
+const config = {
+  headers: { Authorization: getToken }
+};
+
+export { setToken, getToken, config, getUserIdFromLocalStorage };

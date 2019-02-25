@@ -1,5 +1,5 @@
 import { signupCall, loginCall } from '../../helpers/axiosHelper/auth';
-import setToken from '../../helpers/jwt';
+import { setToken } from '../../helpers/jwt';
 import actionTypes from './actionTypes';
 import triggerLoading from './loading';
 import networkError from '../networkError/networkErrorAction';
