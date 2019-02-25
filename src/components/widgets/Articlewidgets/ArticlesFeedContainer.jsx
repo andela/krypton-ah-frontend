@@ -7,7 +7,7 @@ import { items } from '../../../mockData';
 
 export default function ArticlesFeedContainer({ articles, className }) {
   return (
-    <Card>
+    <Card className="widgetIcons">
       <Card.Content className={className}>
         <Feed>
           {articles.map(article => (

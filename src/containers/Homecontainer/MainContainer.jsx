@@ -8,7 +8,7 @@ import './HomeContainer.scss';
 
 export default function MainContainer() {
   return (
-    <div className="Main">
+    <div className="main">
       <Grid className="content" divided="vertically">
         <Grid.Row columns={1}>
           <Grid.Column>

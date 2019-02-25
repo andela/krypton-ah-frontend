@@ -51,7 +51,9 @@ exports[`button test should test for the advert component 1`] = `
 `;
 
 exports[`button test should test for the button component 1`] = `
-<Card>
+<Card
+  className="widgetIcons"
+>
   <CardContent
     className="className"
   >
