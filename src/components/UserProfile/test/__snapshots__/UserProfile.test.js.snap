@@ -1,0 +1,382 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProfile should match snapshot 1`] = `
+<Fragment>
+  <h3>
+    PROFILE
+  </h3>
+  <Form
+    as="form"
+    className="profileForm"
+    onSubmit={[Function]}
+  >
+    <FormGroup
+      key="firstname"
+      widths="equal"
+    >
+      <FormField>
+        <label
+          htmlFor="firstname"
+        >
+          FIRSTNAME
+        </label>
+        <FormInput
+          as={[Function]}
+          control={[Function]}
+          disabled={true}
+          id="firstname"
+          name="firstname"
+          onChange={[Function]}
+          placeholder="FIRSTNAME"
+          size="massive"
+          type="text"
+          value="Fistname"
+        />
+      </FormField>
+      <FormField>
+        <label
+          htmlFor="lastname"
+        >
+          LASTNAME
+        </label>
+        <FormInput
+          as={[Function]}
+          control={[Function]}
+          disabled={true}
+          id="lastname"
+          name="lastname"
+          onChange={[Function]}
+          placeholder="LASTNAME"
+          size="massive"
+          type="text"
+          value=""
+        />
+      </FormField>
+    </FormGroup>
+    <FormGroup
+      key="username"
+      widths="equal"
+    >
+      <FormField>
+        <label
+          htmlFor="username"
+        >
+          USERNAME
+        </label>
+        <FormInput
+          as={[Function]}
+          control={[Function]}
+          disabled={true}
+          id="username"
+          name="username"
+          onChange={[Function]}
+          placeholder="USERNAME"
+          size="massive"
+          type="text"
+          value=""
+        />
+      </FormField>
+      <FormField>
+        <label
+          htmlFor="gender"
+        >
+          GENDER
+        </label>
+        <FormSelect
+          as={[Function]}
+          control={[Function]}
+          disabled={true}
+          id="gender"
+          name="gender"
+          onChange={[Function]}
+          options={
+            Array [
+              Object {
+                "text": "male",
+                "value": "male",
+              },
+              Object {
+                "text": "female",
+                "value": "female",
+              },
+            ]
+          }
+          placeholder="GENDER"
+          size="massive"
+          value=""
+        />
+      </FormField>
+    </FormGroup>
+    <FormGroup
+      key="country"
+      widths="equal"
+    >
+      <FormField>
+        <label
+          htmlFor="country"
+        >
+          COUNTRY
+        </label>
+        <FormSelect
+          as={[Function]}
+          control={[Function]}
+          disabled={true}
+          id="country"
+          name="country"
+          onChange={[Function]}
+          options={
+            Array [
+              Object {
+                "text": "Nigeria",
+                "value": "Nigeria",
+              },
+              Object {
+                "text": "Ghana",
+                "value": "Ghana",
+              },
+            ]
+          }
+          placeholder="COUNTRY"
+          size="massive"
+          value=""
+        />
+      </FormField>
+      <FormField>
+        <label
+          htmlFor="phone number"
+        >
+          PHONE NUMBER
+        </label>
+        <FormInput
+          as={[Function]}
+          control={[Function]}
+          disabled={true}
+          id="phone number"
+          name="phone number"
+          onChange={[Function]}
+          placeholder="PHONE NUMBER"
+          size="massive"
+          type="tel"
+          value=""
+        />
+      </FormField>
+    </FormGroup>
+    <FormField
+      className="bioField"
+    >
+      <label
+        htmlFor="bio"
+      >
+        BIO
+      </label>
+      <FormTextArea
+        as={[Function]}
+        autoHeight={true}
+        className="bio"
+        control={[Function]}
+        disabled={true}
+        id=""
+        name="bio"
+        onChange={[Function]}
+        placeholder="Bio"
+        value=""
+      />
+    </FormField>
+  </Form>
+</Fragment>
+`;
+
+exports[`UserProfile should match snapshot 2`] = `
+<Fragment>
+  <h3>
+    EDIT PROFILE
+  </h3>
+  <Form
+    as="form"
+    className="profileForm"
+    onSubmit={[Function]}
+  >
+    <FormGroup
+      key="firstname"
+      widths="equal"
+    >
+      <FormField>
+        <label
+          htmlFor="firstname"
+        >
+          FIRSTNAME
+        </label>
+        <FormInput
+          as={[Function]}
+          control={[Function]}
+          disabled={false}
+          id="firstname"
+          name="firstname"
+          onChange={[Function]}
+          placeholder="FIRSTNAME"
+          size="massive"
+          type="text"
+          value="Fistname"
+        />
+      </FormField>
+      <FormField>
+        <label
+          htmlFor="lastname"
+        >
+          LASTNAME
+        </label>
+        <FormInput
+          as={[Function]}
+          control={[Function]}
+          disabled={false}
+          id="lastname"
+          name="lastname"
+          onChange={[Function]}
+          placeholder="LASTNAME"
+          size="massive"
+          type="text"
+          value=""
+        />
+      </FormField>
+    </FormGroup>
+    <FormGroup
+      key="username"
+      widths="equal"
+    >
+      <FormField>
+        <label
+          htmlFor="username"
+        >
+          USERNAME
+        </label>
+        <FormInput
+          as={[Function]}
+          control={[Function]}
+          disabled={false}
+          id="username"
+          name="username"
+          onChange={[Function]}
+          placeholder="USERNAME"
+          size="massive"
+          type="text"
+          value=""
+        />
+      </FormField>
+      <FormField>
+        <label
+          htmlFor="gender"
+        >
+          GENDER
+        </label>
+        <FormSelect
+          as={[Function]}
+          control={[Function]}
+          disabled={false}
+          id="gender"
+          name="gender"
+          onChange={[Function]}
+          options={
+            Array [
+              Object {
+                "text": "male",
+                "value": "male",
+              },
+              Object {
+                "text": "female",
+                "value": "female",
+              },
+            ]
+          }
+          placeholder="GENDER"
+          size="massive"
+          value=""
+        />
+      </FormField>
+    </FormGroup>
+    <FormGroup
+      key="country"
+      widths="equal"
+    >
+      <FormField>
+        <label
+          htmlFor="country"
+        >
+          COUNTRY
+        </label>
+        <FormSelect
+          as={[Function]}
+          control={[Function]}
+          disabled={false}
+          id="country"
+          name="country"
+          onChange={[Function]}
+          options={
+            Array [
+              Object {
+                "text": "Nigeria",
+                "value": "Nigeria",
+              },
+              Object {
+                "text": "Ghana",
+                "value": "Ghana",
+              },
+            ]
+          }
+          placeholder="COUNTRY"
+          size="massive"
+          value=""
+        />
+      </FormField>
+      <FormField>
+        <label
+          htmlFor="phone number"
+        >
+          PHONE NUMBER
+        </label>
+        <FormInput
+          as={[Function]}
+          control={[Function]}
+          disabled={false}
+          id="phone number"
+          name="phone number"
+          onChange={[Function]}
+          placeholder="PHONE NUMBER"
+          size="massive"
+          type="tel"
+          value=""
+        />
+      </FormField>
+    </FormGroup>
+    <FormField
+      className="bioField"
+    >
+      <label
+        htmlFor="bio"
+      >
+        BIO
+      </label>
+      <FormTextArea
+        as={[Function]}
+        autoHeight={true}
+        className="bio"
+        control={[Function]}
+        disabled={false}
+        id=""
+        name="bio"
+        onChange={[Function]}
+        placeholder="Bio"
+        value=""
+      />
+    </FormField>
+    <FormButton
+      as={[Function]}
+      basic={true}
+      className="btnRight"
+      control={[Function]}
+      size="massive"
+    >
+      UPDATE
+    </FormButton>
+  </Form>
+</Fragment>
+`;
