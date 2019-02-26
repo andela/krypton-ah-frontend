@@ -10,6 +10,7 @@ import './styles/ReadArticle.scss';
 import author from '../../images/avatar.png';
 import { getArticle } from '../../actions/readArticleAction';
 import { dateFormatter, readTimeFormatter } from '../../helpers/articleInfoFormatter';
+import CommentSection from '../CommentSection/index';
 
 class ReadArticle extends Component {
   componentDidMount = () => {
@@ -73,6 +74,7 @@ class ReadArticle extends Component {
         </div>
         {this.getArticleContent(content)}
         <Divider className="articleDivider" />
+        <CommentSection articleId={this.props.selectedArticle} />
       </Container>
     );
   }

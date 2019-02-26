@@ -10,6 +10,11 @@ const initialState = {
     success: false,
     successResponse: {},
     failureResponse: {}
+  },
+  comment: {
+    commentIsLoading: false,
+    success: false,
+    commentsArray: []
   }
 };
 export default initialState;

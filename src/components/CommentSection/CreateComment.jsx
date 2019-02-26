@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Button, Form } from 'semantic-ui-react';
 
-import createComment from '../../helpers/axiosHelper/commentRequests';
+import { createComment } from '../../helpers/axiosHelper/commentRequests';
 
 class CreateComment extends Component {
   constructor(props) {
