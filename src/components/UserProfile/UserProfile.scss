@@ -25,6 +25,7 @@
     padding-left: 0;
     font-size: 1.3rem;
     margin-top: -0.5rem;
+    opacity: 1;
   }
   .field .input,
   .fields .field .dropdown.ui.selection {
@@ -57,4 +58,15 @@
       margin-top: 1rem;
     }
   }
+}
+
+.ui.form .disabled.field,
+.ui.form .disabled.fields .field,
+.ui.form .field :disabled {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.ui.disabled.input, .ui.input:not(.disabled) input[disabled]{
+  opacity: 1;
 }

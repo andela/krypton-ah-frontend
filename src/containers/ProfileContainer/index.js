@@ -70,7 +70,11 @@ class ProfileContainer extends React.Component {
       <Grid centered columns={2}>
         <Router>
           <Switch>
+<<<<<<< HEAD
             <Route render={this.renderProfileView} path="/" />
+=======
+            <Route render={this.renderProfileView} path="/profile" />
+>>>>>>> [fix-#1624141852] Implement authentication for routes
           </Switch>
         </Router>
       </Grid>
@@ -79,7 +83,8 @@ class ProfileContainer extends React.Component {
 
   render() {
     const { profileData, fetchIsLoading, userId } = this.props;
-    const { firstname, lastname, profileImage, bio } = profileData;
+    const { firstname, lastname, avatar, bio } = profileData;
+    const profileImage = avatar;
     const user = this.getUserType(userId);
     if (fetchIsLoading) {
       return <Loader />;
