@@ -4,7 +4,7 @@ import '../Homecontainer/HomeContainer.scss';
 import Title from '../../components/sectionHeader';
 import FeaturedWidget from '../../components/widgets/Articlewidgets/ArticlesFeedContainer';
 import { trendingArticles } from '../../mockData';
-import Categories from './CategoriesContainer/Categories';
+import Categories from './categoriesContainer/Categories';
 import Tags from '../../components/tags';
 import NewsLetter from './Newsletter';
 import Advert from '../../components/widgets/Advert';

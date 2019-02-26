@@ -19,20 +19,6 @@ exports[`Share Article Component should rendered share Article Icons without cra
     />
   </CreatedButton>
   <CreatedButton
-    quote=" "
-    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
-    windowHeight={400}
-    windowWidth={550}
-  >
-    <Icon
-      className=""
-      iconBgStyle={Object {}}
-      logoFillColor="white"
-      round={true}
-      size={25}
-    />
-  </CreatedButton>
-  <CreatedButton
     hashtags={
       Array [
         "ah-Krypton",

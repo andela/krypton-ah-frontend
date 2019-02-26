@@ -2,14 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   FacebookShareButton,
-  GooglePlusShareButton,
   LinkedinShareButton,
   TwitterShareButton,
   WhatsappShareButton,
   EmailShareButton,
   FacebookIcon,
   TwitterIcon,
-  GooglePlusIcon,
   LinkedinIcon,
   WhatsappIcon,
   EmailIcon } from 'react-share';
@@ -31,9 +29,6 @@ class ShareArticle extends React.Component {
         <FacebookShareButton quote={description} url={url}>
           <FacebookIcon size={25} round />
         </FacebookShareButton>
-        <GooglePlusShareButton quote={description} url={url}>
-          <GooglePlusIcon size={25} round />
-        </GooglePlusShareButton>
         <TwitterShareButton title={title} hashtags={hashtags} url={url}>
           <TwitterIcon size={25} round />
         </TwitterShareButton>
