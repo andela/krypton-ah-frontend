@@ -19,7 +19,7 @@ function carousel(props) {
         <div key={article.id} className="carousel-container">
           <Image src={article.featuredImageUrl} size="massive" />
           <p className="legend text">
-            <Link replace={false} to={`/articles/${article.id}`}>
+            <Link replace={false} to={`/article/${article.id}`}>
               <p className="title">{article.title}</p>
             </Link>
             <p className="author">

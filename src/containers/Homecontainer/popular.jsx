@@ -18,7 +18,7 @@ export default function PopularArticles({ popular }) {
             {popular.map(popularArticle => (
               <Grid.Column key={popularArticle.id}>
                 <Card className="description">
-                  <Link replace={false} to={`/articles/${popularArticle.id}`}>
+                  <Link replace={false} to={`/article/${popularArticle.id}`}>
                     <p className="popular title">{popularArticle.title}</p>
                   </Link>
                   <p className="revealDescription">{popularArticle.description}</p>
