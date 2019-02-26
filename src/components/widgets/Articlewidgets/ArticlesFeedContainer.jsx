@@ -18,7 +18,7 @@ export default function ArticlesFeedContainer({ articles }) {
               key={article.id}
               description={article.description}
               title={article.title}
-              slug={article.slug}
+              id={article.id}
               image={article.featuredImageUrl}
               date={article.createdAt}
             />

@@ -2,14 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   FacebookShareButton,
-  GooglePlusShareButton,
   LinkedinShareButton,
   TwitterShareButton,
   WhatsappShareButton,
   EmailShareButton,
   FacebookIcon,
   TwitterIcon,
-  GooglePlusIcon,
   LinkedinIcon,
   WhatsappIcon,
   EmailIcon } from 'react-share';
