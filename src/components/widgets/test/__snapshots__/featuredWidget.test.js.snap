@@ -7,32 +7,44 @@ exports[`button test should test for the Icons component 1`] = `
   >
     28th february 2019
   </i>
-  <Icon
-    as="i"
-    disabled={true}
-    fitted={true}
-    link={true}
-    name="thumbs up outline"
-    size="small"
-  />
+  <i
+    onClick={[Function]}
+    role="presentation"
+  >
+    <Icon
+      as="i"
+      disabled={true}
+      fitted={true}
+      link={true}
+      name="thumbs up thumbs up outline"
+      size="small"
+    />
+  </i>
   23
-  <Icon
-    as="i"
-    disabled={true}
-    fitted={true}
-    link={true}
-    name="thumbs down outline"
-    size="small"
-  />
+  <i
+    onClick={[Function]}
+    role="presentation"
+  >
+    <Icon
+      as="i"
+      disabled={true}
+      fitted={true}
+      link={true}
+      name="thumbs down thumbs down outline"
+      size="small"
+    />
+  </i>
   23
-  <Icon
-    as="i"
-    disabled={true}
-    fitted={true}
-    link={true}
-    name="comments outline"
-    size="small"
-  />
+  <i>
+    <Icon
+      as="i"
+      disabled={true}
+      fitted={true}
+      link={true}
+      name="comments outline"
+      size="small"
+    />
+  </i>
   23
 </div>
 `;

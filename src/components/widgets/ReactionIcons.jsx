@@ -3,38 +3,64 @@ import { Icon } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 export default class ReactionIcons extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    like: false,
+    dislike: false
+  };
 
-    this.state = {
-      likeActive: true,
-      dislikeActive: true
-    };
-  }
+  checkPreviousState = previousState => (previousState ? false : previousState);
+
+  handleLikeAction = () => {
+    const { like, dislike } = this.state;
+    const returnedState = this.checkPreviousState(dislike);
+    this.setState({
+      like: !like,
+      dislike: returnedState
+    });
+  };
+
+  handleDislikeAction = () => {
+    const { like, dislike } = this.state;
+    const returnedState = this.checkPreviousState(like);
+    this.setState({
+      dislike: !dislike,
+      like: returnedState
+    });
+  };
 
   likeArticle = (outline = 'outline') => {
     const name = outline.length === 0 ? 'thumbs up' : `thumbs up ${outline}`;
-    return <Icon disabled link size="small" fitted name={name} />;
+    return (
+      <i onClick={this.handleLikeAction} role="presentation">
+        <Icon disabled link size="small" fitted name={`thumbs up ${name}`} />
+      </i>
+    );
   };
 
   dislikeArticle = (outline = 'outline') => {
     const name = outline.length === 0 ? 'thumbs down' : `thumbs down ${outline}`;
-    return <Icon disabled link size="small" fitted name={`thumbs down ${name}`} />;
+    return (
+      <i onClick={this.handleDislikeAction} role="presentation">
+        <Icon disabled link size="small" fitted name={`thumbs down ${name}`} />
+      </i>
+    );
   };
 
   render() {
     const { date, numberoflikes, numberofdislikes, numberofcomments } = this.props;
-    const { likeActive, dislikeActive } = this.state;
+    const { like, dislike } = this.state;
     const outline = '';
     return (
       <div>
         <React.Fragment>
           <i className="dates">{date}</i>
-          {likeActive ? this.likeArticle(outline) : this.likeArticle()}
+          {like ? this.likeArticle(outline) : this.likeArticle()}
           {numberoflikes}
-          {dislikeActive ? this.dislikeArticle(outline) : this.dislikeArticle()}
+          {dislike ? this.dislikeArticle(outline) : this.dislikeArticle()}
           {numberofdislikes}
-          <Icon disabled link size="small" fitted name="comments outline" />
+          <i>
+            <Icon disabled link size="small" fitted name="comments outline" />
+          </i>
           {numberofcomments}
         </React.Fragment>
       </div>
