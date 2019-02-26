@@ -8,10 +8,6 @@ const socialMediaElements = [
     key: 'twitter'
   },
   {
-    name: 'google plus g',
-    key: 'google plus g'
-  },
-  {
     name: 'instagram',
     key: 'instagram'
   }
@@ -21,8 +17,7 @@ const articleDetails = {
   className: 'description',
   description: 'placeholder descritption',
   title: 'placeholder title',
-  image: 'https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png',
-  slug: 'sample-slug'
+  image: 'https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png'
 };
 
 const advertimage = 'https://res.cloudinary.com/ah-krypton/image/upload/v1548328425/mm17kbfqf7sjrw2w45rq.png';
@@ -52,7 +47,9 @@ const socialMediaLoginIcons = [
     url: process.env.TWITTER_URL
   }
 ];
+
 const { API_BASE_URL } = process.env;
+const { BASE_URL_CB } = process.env;
 const authentication = 'authentication';
 const twitterPath = '/auth/twitter/callback';
 const networkErrorResponse = 'Network error! kindly try again later';
@@ -63,6 +60,7 @@ export {
   advertimage,
   socialMediaLoginIcons,
   API_BASE_URL,
+  BASE_URL_CB,
   authentication,
   twitterPath,
   networkErrorResponse,
