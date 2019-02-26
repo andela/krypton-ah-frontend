@@ -89,8 +89,21 @@
   .content
   .ui.feed
   > .event
-  > .content
+  > .content {
   .summary {
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.4em;
+    line-height: 1.8em;
+  }
+}
+
+.ui.card.widgetIcons .content .ui.feed > .event > .content .date {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
   display: block;
   text-overflow: ellipsis;
   word-wrap: break-word;
