@@ -29,9 +29,11 @@ export const userSignUp = user => async (dispatch) => {
     dispatch(triggerLoading(AUTH_LOADING));
     const response = await signupCall(user);
     dispatch(signUpSuccess(response));
+    toast.success(response.data.message);
   } catch (error) {
     if (error.response) {
       dispatch(signUpFailure(error.response));
+      toast.error(error.response.data.message);
     }
   }
 };
@@ -62,5 +64,14 @@ export const userLogin = user => async (dispatch) => {
       dispatch(networkError(networkErrorResponse));
       toast.success(networkErrorResponse);
     }
+  }
+};
+
+export const accountActivation = (response, token) => (dispatch) => {
+  if (token) {
+    setToken(token);
+    dispatch(loginSuccess(response));
+  } else {
+    dispatch(loginFailure(response));
   }
 };

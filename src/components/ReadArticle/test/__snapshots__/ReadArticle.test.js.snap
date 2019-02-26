@@ -5,8 +5,10 @@ exports[`Read article component should matches the snapshot 1`] = `
   articleAuthor={Object {}}
   content=""
   createdAt=""
+  description=""
   featuredImageUrl=""
   getArticle={[Function]}
+  id=""
   readTime={0}
   retrievedArticle={
     Object {
@@ -155,7 +157,7 @@ exports[`Read article component should matches the snapshot 1`] = `
       >
         <ShareArticle
           description="this is a valid description wooooooooot toooooooooooooooooooot"
-          slug="this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+          id=" "
           title="this is a valid articles 2"
         >
           <div
@@ -202,21 +204,21 @@ exports[`Read article component should matches the snapshot 1`] = `
                     iconBgStyle={Object {}}
                     logoFillColor="white"
                     round={true}
-                    size="25"
+                    size={25}
                   >
                     <div
                       style={
                         Object {
-                          "height": "25",
-                          "width": "25",
+                          "height": 25,
+                          "width": 25,
                         }
                       }
                     >
                       <svg
                         className="social-icon social-icon--facebook "
-                        height="25"
+                        height={25}
                         viewBox="0 0 64 64"
-                        width="25"
+                        width={25}
                       >
                         <g>
                           <circle
@@ -316,8 +318,6 @@ exports[`Read article component should matches the snapshot 1`] = `
               hashtags={
                 Array [
                   "ah-Krypton",
-                  "Andela",
-                  "Readers",
                 ]
               }
               title="this is a valid articles 2"
@@ -335,8 +335,6 @@ exports[`Read article component should matches the snapshot 1`] = `
                 hashtags={
                   Array [
                     "ah-Krypton",
-                    "Andela",
-                    "Readers",
                   ]
                 }
                 network="twitter"
@@ -346,11 +344,9 @@ exports[`Read article component should matches the snapshot 1`] = `
                   Object {
                     "hashtags": Array [
                       "ah-Krypton",
-                      "Andela",
-                      "Readers",
                     ],
                     "title": "this is a valid articles 2",
-                    "via": "Andela",
+                    "via": undefined,
                   }
                 }
                 role="button"

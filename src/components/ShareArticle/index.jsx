@@ -29,6 +29,9 @@ class ShareArticle extends React.Component {
         <FacebookShareButton quote={description} url={url}>
           <FacebookIcon size={25} round />
         </FacebookShareButton>
+        <GooglePlusShareButton quote={description} url={url}>
+          <GooglePlusIcon size={25} round />
+        </GooglePlusShareButton>
         <TwitterShareButton title={title} hashtags={hashtags} url={url}>
           <TwitterIcon size={25} round />
         </TwitterShareButton>

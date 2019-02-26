@@ -3,8 +3,9 @@ import SignUp from '../pages/SignUp';
 import Login from '../pages/Login';
 import NotFound from '../pages/NotFound';
 import ViewArticle from '../pages/ViewArticle';
-import Verification from '../pages/Verification';
+import AccountVerification from '../components/AccountVerification';
 import socialAuth from '../components/socialAuth/socialAuth';
+import Profile from '../pages/Profile';
 
 export default [
   {
@@ -40,9 +41,15 @@ export default [
   },
   {
     name: 'verification',
-    component: Verification,
+    component: AccountVerification,
     exact: true,
     path: '/verification'
+  },
+  {
+    name: 'profile',
+    component: Profile,
+    exact: true,
+    path: '/profile'
   },
   {
     name: '404',

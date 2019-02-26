@@ -1,0 +1,47 @@
+.centered.middle.aligned.column.row.profileNavBar {
+  padding: 1rem 10rem;
+  background-color: #c4c4c4;
+  &.five {
+    padding: 1em 8rem;
+  }
+  .profileNavBarBars {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .centered.middle.aligned.column.row.profileNavBar {
+    padding: 1.2rem 0rem;
+    & .desktop {
+      display: none;
+    }
+    .profileNavBarBars {
+      display: block;
+      position: relative;
+
+      i.big.icon {
+        float: left;
+        margin-left: 5%;
+      }
+    }
+    .accordionContent {
+      position: absolute;
+      background-color: rgb(236, 235, 235);
+      z-index: 1;
+      top: 3.7em;
+    }
+    .profileMenu {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 4% 6%;
+      .profileMenuIcon {
+        font-size: 1rem;
+        width: 1.7em;
+      }
+      .profileMenuText {
+        display: inline;
+        font-size: 1rem;
+        margin-left: 3em;
+      }
+    }
+  }
+}

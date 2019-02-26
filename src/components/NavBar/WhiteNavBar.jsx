@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import { Dropdown, Image, Menu, Icon, Button } from 'semantic-ui-react';
@@ -25,7 +26,9 @@ function WhiteNavBar({ fixed, isAuthenticated, avatarUrl }) {
             <Icon fitted size="big" name="search" />
           </Menu.Item>
           <Menu.Item>
-            <Button secondary>Write an Article</Button>
+            <Link to="/login">
+              <Button secondary>Write an Article</Button>
+            </Link>
           </Menu.Item>
           {isAuthenticated ? (
             <Menu.Item>
