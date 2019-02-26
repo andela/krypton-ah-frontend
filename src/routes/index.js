@@ -25,7 +25,9 @@ export default [
     name: 'login',
     component: Login,
     exact: true,
-    path: '/login'
+    path: '/login',
+    routeType: 'unAuthenticated',
+    redirect: '/'
   },
   {
     name: 'viewArticle',
@@ -37,13 +39,17 @@ export default [
     name: 'signup',
     component: SignUp,
     exact: true,
-    path: '/signup'
+    path: '/signup',
+    routeType: 'unAuthenticated',
+    redirect: '/'
   },
   {
     name: 'verification',
     component: Verification,
     exact: true,
-    path: '/verification'
+    path: '/verification',
+    routeType: 'unAuthenticated',
+    redirect: '/'
   },
   {
     name: 'profile',

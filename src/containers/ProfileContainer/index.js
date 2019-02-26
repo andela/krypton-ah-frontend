@@ -70,10 +70,7 @@ class ProfileContainer extends React.Component {
       <Grid centered columns={2}>
         <Router>
           <Switch>
-            <Route
-              render={this.renderProfileView}
-              path="/profile"
-            />
+            <Route render={this.renderProfileView} path="/profile" />
           </Switch>
         </Router>
       </Grid>
@@ -82,7 +79,8 @@ class ProfileContainer extends React.Component {
 
   render() {
     const { profileData, fetchIsLoading, userId } = this.props;
-    const { firstname, lastname, profileImage, bio } = profileData;
+    const { firstname, lastname, avatar, bio } = profileData;
+    const profileImage = avatar;
     const user = this.getUserType(userId);
     if (fetchIsLoading) {
       return <Loader />;

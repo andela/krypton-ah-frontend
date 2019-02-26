@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Dropdown, Image, Menu, Icon, Button } from 'semantic-ui-react';
+import { connect } from 'react-redux';
 import AHIcon from '../../images/Logo.png';
 import avatarPlaceholder from '../../images/avatar.png';
 
-export default function WhiteNavBar({ fixed, isAuthenticated, avatarUrl }) {
+function WhiteNavBar({ fixed, isAuthenticated, avatarUrl, userId }) {
   return (
     <Menu fixed={fixed ? 'top' : null} borderless className="whiteNavBar">
       <Menu.Menu position="left" className="whiteBarMenu">
@@ -29,9 +30,10 @@ export default function WhiteNavBar({ fixed, isAuthenticated, avatarUrl }) {
               simple
               item
               className="link item"
-              trigger={<Image src={avatarUrl} avatar className="avatarImg" />}>
+              trigger={<Image src={avatarUrl} avatar className="avatarImg" />}
+            >
               <Dropdown.Menu className="right">
-                <Dropdown.Item>PROFILE</Dropdown.Item>
+                <Dropdown.Item as="a" href={`/profile/${userId}`}>PROFILE</Dropdown.Item>
                 <Dropdown.Item>BOOKMARKS</Dropdown.Item>
                 <Dropdown.Item>LOG OUT</Dropdown.Item>
               </Dropdown.Menu>
@@ -52,5 +54,19 @@ WhiteNavBar.defaultProps = {
 WhiteNavBar.propTypes = {
   fixed: PropTypes.bool,
   isAuthenticated: PropTypes.bool,
-  avatarUrl: PropTypes.string
+  avatarUrl: PropTypes.string,
+  userId: PropTypes.string.isRequired
 };
+
+const mapStateToProps = (state) => {
+  const { userReducer, authReducer } = state;
+  const { profileImage, userId } = userReducer;
+  const { isAuthenticated } = authReducer;
+  return {
+    avatarUrl: profileImage,
+    isAuthenticated,
+    userId
+  };
+};
+
+export default connect(mapStateToProps)(WhiteNavBar);

@@ -7,9 +7,26 @@ export const getUserIdFromLocalStorage = () => {
   const token = localStorage.getItem(authentication);
   try {
     const { payLoad } = jwtDecode(token);
-    return payLoad;
+    return payLoad.id;
   } catch (error) {
     return null;
+  }
+};
+
+export const isUserAuthenticated = () => {
+  const token = localStorage.getItem(authentication);
+  if (!token) {
+    return false;
+  }
+  try {
+    const decodedToken = jwtDecode(token);
+    const dateNow = new Date();
+    if (decodedToken.exp > (dateNow.getTime() / 1000)) {
+      return true;
+    }
+    return false;
+  } catch (error) {
+    return false;
   }
 };
 

@@ -8,7 +8,10 @@ const {
   FETCH_USER_SUCCESS,
   FETCH_USER_FAILURE,
   UPDATE_USER_SUCCESS,
-  UPDATE_USER_FAILURE
+  UPDATE_USER_FAILURE,
+  IS_AUTHENTICATED,
+  FETCH_OWNER_SUCCESS,
+  FETCH_OWNER_FAILURE
 } = actionTypes;
 
 export const fetchUserSuccess = userData => ({
@@ -23,6 +26,15 @@ export const fetchUserFailure = () => ({
 export const updateUserSuccess = userData => ({
   type: UPDATE_USER_SUCCESS,
   payload: userData
+});
+
+export const fetchOwnerSuccess = userData => ({
+  type: FETCH_OWNER_SUCCESS,
+  payload: { profileImage: userData.userprofile.avatar, userId: userData.id }
+});
+
+export const fetchOwnerFailure = () => ({
+  type: FETCH_OWNER_FAILURE
 });
 
 export const updateUserFailure = () => ({
@@ -40,6 +52,18 @@ export const fetchUser = userId => async (dispatch) => {
     }
   } catch (error) {
     dispatch(fetchUserFailure());
+  }
+};
+
+export const fetchOwner = userId => async (dispatch) => {
+  try {
+    const response = await getUser(userId);
+    if (response.data.success) {
+      dispatch({ type: IS_AUTHENTICATED });
+      dispatch(fetchOwnerSuccess(response.data.data));
+    }
+  } catch (error) {
+    dispatch(fetchOwnerFailure());
   }
 };
 
