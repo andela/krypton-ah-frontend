@@ -3,7 +3,7 @@ node_js:
   - 'node'
 env:
   global:
-    - CC_TEST_REPORTER_ID=$TEST_REPORTER_ID API_BASE_URL=https://krypton-ah-stage.herokuapp.com
+    - CC_TEST_REPORTER_ID=$TEST_REPORTER_ID API_BASE_URL=https://krypton-ah-stage.herokuapp.com BASE_URL_CB=https://krypton-ah-fe-stage.herokuapp.com
 cache:
   directories:
     - node_modules
@@ -12,6 +12,6 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
-  - npm test
+  - npm test -- -u
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
