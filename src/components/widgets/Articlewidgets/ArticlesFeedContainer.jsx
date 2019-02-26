@@ -5,10 +5,13 @@ import Feeds from './Feeds';
 import './widget.scss';
 import Loader from '../../../containers/loaders/componentLoader';
 
-export default function ArticlesFeedContainer({ articles, className }) {
+export default function ArticlesFeedContainer({ articles }) {
+  if (!articles) {
+    return <Loader />;
+  }
   return (
-    <Card>
-      <Card.Content className={className}>
+    <Card className="widgetIcons">
+      <Card.Content className>
         <Feed>
           {articles.map(article => (
             <Feeds
@@ -31,6 +34,5 @@ ArticlesFeedContainer.defaultProps = {
 };
 
 ArticlesFeedContainer.propTypes = {
-  articles: PropTypes.array,
-  className: PropTypes.string
+  articles: PropTypes.array
 };

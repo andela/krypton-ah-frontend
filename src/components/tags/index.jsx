@@ -23,12 +23,10 @@ export default function Tags({ tags, type }) {
   }
   return (
     <div className="category">
-      {categories.map(category => (
-        <List.Item key={category}>
-          <List.Content key={category}>
-            <List.Header as="a" key={category}>
-              {`#${category}`}
-            </List.Header>
+      {tags.data.map(category => (
+        <List.Item key={category.id}>
+          <List.Content>
+            <List.Header as="a">{category.category}</List.Header>
           </List.Content>
         </List.Item>
       ))}

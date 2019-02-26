@@ -1,98 +1,56 @@
-import author from './assets/author.png';
-import featuredImage from './assets/featuredImage.png';
-import user1 from './assets/man2.png';
-import user2 from './assets/man3.png';
-
-const ARTICLE_TITLE = 'How to learn nodejs in 2 minutes',
-  ARTICLE_AUTHOR = 'By Mark Adeniran',
-  ARTICLE_DATE = 'January 02, 2019',
-  ARTICLE_READ_TIME = '3 Mins read';
-const ARTICLE_CONTENT = `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-dolor.Aenean massa strong.Cum sociis natoque penatibus et magnis dis parturient
-montes, nascetur ridiculus mus.Donec quam felis, ultricies nec, pellentesque eu,
-   pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo, fringilla vel,
-      aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet a, venenatis
-vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer tincidunt.Cras
-dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo
-ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus
-   in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.
-Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel augue.Curabitur
-ullamcorper ultricies nisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-Aenean commodo ligula eget dolor.Aenean massa strong.Cum sociis natoque penatibus et
-magnis dis parturient montes, nascetur ridiculus mus.Donec quam felis, ultricies nec,
-   pellentesque eu, pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo,
-      fringilla vel, aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet
-a, venenatis vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer
-tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend
-tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam
-lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut
-metus varius laoreet.Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel
-augue.Curabitur ullamcorper ultricies nisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget
-dolor.Aenean massa strong.Cum sociis natoque penatibus et magnis dis parturient
-montes, nascetur ridiculus mus.Donec quam felis, ultricies nec, pellentesque eu,
-   pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo, fringilla vel,
-      aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet a, venenatis
-vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer tincidunt.Cras
-dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo
-ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus
-   in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.
-Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel augue.Curabitur
-ullamcorper ultricies nisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-Aenean commodo ligula eget dolor.Aenean massa strong.Cum sociis natoque penatibus et
-magnis dis parturient montes, nascetur ridiculus mus.Donec quam felis, ultricies nec,
-   pellentesque eu, pretium quis, sem.Nulla consequat massa quis enim.Donec pede justo,
-      fringilla vel, aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet
-a, venenatis vitae, justo.Nullam dictum felis eu pede link mollis pretium.Integer
-tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend
-tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam
-lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut
-metus varius laoreet.Quisque rutrum.Aenean imperdiet.Etiam ultricies nisi vel
-augue.Curabitur ullamcorper ultricies nisi.`;
-const COMMENT_TEXT = 'This will be great for business reports. I will definitely download this.',
-  NUMBER_OF_LIKES = '23',
-  NUMBER_OF_DISLIKES = '12',
-  COMMENT_TIME = '3 days ago',
-  NUMBER_OF_THREADS = '20 threads';
-
-const commentsArray = [
-  {
-    id: 1,
-    commentText: COMMENT_TEXT,
-    numberOfLikes: NUMBER_OF_LIKES,
-    numberOfDisikes: NUMBER_OF_DISLIKES,
-    commentTime: COMMENT_TIME,
-    numberOfThreads: NUMBER_OF_THREADS,
-    avatar: user1
-  },
-  {
-    id: 2,
-    commentText: COMMENT_TEXT,
-    numberOfLikes: NUMBER_OF_LIKES,
-    numberOfDisikes: NUMBER_OF_DISLIKES,
-    commentTime: COMMENT_TIME,
-    numberOfThreads: NUMBER_OF_THREADS,
-    avatar: user2
-  },
-  {
-    id: 3,
-    commentText: COMMENT_TEXT,
-    numberOfLikes: NUMBER_OF_LIKES,
-    numberOfDisikes: NUMBER_OF_DISLIKES,
-    commentTime: COMMENT_TIME,
-    numberOfThreads: NUMBER_OF_THREADS,
-    avatar: user1
+const payload = {
+  articleAuthor: { firstname: 'hakeem', lastname: 'ibrahim', userprofile: null },
+  authorId: '65719288-0395-445e-b587-2b98b70bdec9',
+  averageRating: 3,
+  content:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+  createdAt: '2019-01-23T07:09:10.447Z',
+  description: 'Descriptive title',
+  featuredImageUrl: 'https://farm4.staticflickr.com/3894/15008518202_c265dfa55f_h.jpg',
+  id: '65719288-0395-445e-b587-2b98b70bdec9',
+  isPublished: true,
+  numberOfReviews: null,
+  readTime: 5,
+  slug: 'this-is-a-post-title-l78hgybf',
+  tags: [],
+  title: 'This is a post title',
+  updatedAt: '2019-01-23T07:09:10.447Z',
+  data: {
+    message: {
+      id: ['id must be a valid uuid']
+    },
+    success: true
   }
-];
-
-export {
-  author,
-  commentsArray,
-  featuredImage,
-  user1,
-  user2,
-  ARTICLE_TITLE,
-  ARTICLE_AUTHOR,
-  ARTICLE_DATE,
-  ARTICLE_READ_TIME,
-  ARTICLE_CONTENT,
 };
+
+const error = {
+  response: {
+    status: 500,
+    success: false,
+    data: {
+      message: 'Oops! something went wrong, kindly try again'
+    }
+  }
+};
+const props = {
+  match: { params: { title: '65719288-0395-445e-b587-2b98b70bdec9' } }
+};
+const retrievedArticle = {
+  response: {
+    title: 'this is a valid articles 2',
+    content: 'this is a good content wooooooooooooooooooot tooooooooooooooooooooooooot',
+    createdAt: '2019-02-20T16:53:37.716Z',
+    featuredImageUrl: 'https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png',
+    readTime: 1,
+    articleAuthor: {
+      firstname: 'Michael',
+      lastname: 'James',
+      userprofile: null
+    },
+    description: 'this is a valid description wooooooooot toooooooooooooooooooot',
+    slug: 'this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74'
+  }
+};
+const articleId = '65719288-0395-445e-b587-2b98b70bdec9';
+const invalidId = '65719288-0395-445e';
+export { payload, error, articleId, invalidId, props, retrievedArticle };

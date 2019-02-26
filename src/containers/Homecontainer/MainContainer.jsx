@@ -1,6 +1,8 @@
 /* eslint-disable no-shadow */
 import React, { Component } from 'react';
 import { Grid } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Carousel from '../../components/carousel/index';
 import Sidewidget from '../sideWidgetContainer';
 import FeaturedArticles from './featuredArticles';

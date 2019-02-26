@@ -23,7 +23,7 @@ export default function PopularArticles({ popular }) {
                   </Link>
                   <p className="revealDescription">{popularArticle.description}</p>
                 </Card>
-                <Image src={business} />
+                <Image src={popularArticle.featuredImageUrl} />
               </Grid.Column>
             ))}
           </Grid>

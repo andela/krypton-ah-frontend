@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Card } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './HomeContainer.scss';
 import FeaturedWidget from '../../components/widgets/Articlewidgets/ArticlesFeedContainer';

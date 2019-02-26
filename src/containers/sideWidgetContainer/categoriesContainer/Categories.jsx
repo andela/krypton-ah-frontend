@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { Grid, List, Label } from 'semantic-ui-react';
 import Tags from '../../../components/tags';
 
-export default function categories() {
+export default function categories({ category }) {
   return (
     <Grid.Column className="Categories">
       <List divided relaxed>
-        <Tags />
+        <Tags tags={category} />
         <List.Item>
           <Label as="a">more</Label>
         </List.Item>

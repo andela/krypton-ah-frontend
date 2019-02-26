@@ -1,6 +1,6 @@
-import actionTypes from './actionTypes';
+import actionTypes from './readArticleAction/actionTypes';
 import getAnArticle from '../helpers/axiosHelper/getArticle';
-import triggerLoading from './loading';
+import triggerLoading from './authAction/loading';
 
 const { READ_ARTICLE_LOADING, READ_ARTICLE_SUCCESS, READ_ARTICLE_FAILURE } = actionTypes;
 

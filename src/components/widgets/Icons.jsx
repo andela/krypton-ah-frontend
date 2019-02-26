@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Menu, Icon, Rating } from 'semantic-ui-react';
+import { Menu, Rating } from 'semantic-ui-react';
 import Reactions from './ReactionIcons';
 
 export default function Icons(props) {
@@ -27,9 +27,9 @@ export default function Icons(props) {
 }
 Icons.defaultProps = {
   ratingIcon: 'rating-class',
-  numberofcomments: 23
+  date: 23
 };
 Icons.propTypes = {
   ratingIcon: PropTypes.string,
-  numberofcomments: PropTypes.number
+  date: PropTypes.number
 };

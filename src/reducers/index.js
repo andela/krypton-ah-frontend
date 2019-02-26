@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import authReducer from './authReducer';
 import socialLogin from './socialLoginReducer';
 import readArticle from './readArticleReducer';
+import articlesReducers from './articlesReducers/fetchArticlesReducers';
 
 const rootReducer = combineReducers({
   authReducer,
