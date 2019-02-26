@@ -163,7 +163,7 @@ exports[`Read article component should matches the snapshot 1`] = `
           >
             <CreatedButton
               quote="this is a valid description wooooooooot toooooooooooooooooooot"
-              url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+              url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
               windowHeight={400}
               windowWidth={550}
             >
@@ -185,7 +185,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 quote="this is a valid description wooooooooot toooooooooooooooooooot"
                 role="button"
                 tabIndex="0"
-                url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+                url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
                 windowHeight={400}
                 windowWidth={550}
               >
@@ -241,7 +241,7 @@ exports[`Read article component should matches the snapshot 1`] = `
             </CreatedButton>
             <CreatedButton
               quote="this is a valid description wooooooooot toooooooooooooooooooot"
-              url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+              url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
               windowHeight={400}
               windowWidth={550}
             >
@@ -258,7 +258,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 quote="this is a valid description wooooooooot toooooooooooooooooooot"
                 role="button"
                 tabIndex="0"
-                url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+                url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
                 windowHeight={400}
                 windowWidth={550}
               >
@@ -321,7 +321,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 ]
               }
               title="this is a valid articles 2"
-              url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+              url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
               via="Andela"
               windowHeight={400}
               windowWidth={550}
@@ -356,7 +356,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 role="button"
                 tabIndex="0"
                 title="this is a valid articles 2"
-                url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+                url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
                 via="Andela"
                 windowHeight={400}
                 windowWidth={550}
@@ -414,7 +414,7 @@ exports[`Read article component should matches the snapshot 1`] = `
             <CreatedButton
               description="this is a valid description wooooooooot toooooooooooooooooooot"
               title="this is a valid articles 2"
-              url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+              url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
               windowHeight={600}
               windowWidth={750}
             >
@@ -437,7 +437,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 role="button"
                 tabIndex="0"
                 title="this is a valid articles 2"
-                url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+                url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
                 windowHeight={600}
                 windowWidth={750}
               >
@@ -494,7 +494,7 @@ exports[`Read article component should matches the snapshot 1`] = `
             <CreatedButton
               separator=" "
               title="this is a valid articles 2"
-              url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+              url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
               windowHeight={400}
               windowWidth={550}
             >
@@ -517,7 +517,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 separator=" "
                 tabIndex="0"
                 title="this is a valid articles 2"
-                url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+                url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
                 windowHeight={400}
                 windowWidth={550}
               >
@@ -576,7 +576,7 @@ exports[`Read article component should matches the snapshot 1`] = `
               onClick={[Function]}
               openWindow={false}
               subject="this is a valid articles 2"
-              url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+              url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
             >
               <ShareButton
                 body="this is a valid description wooooooooot toooooooooooooooooooot"
@@ -598,7 +598,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 role="button"
                 subject="this is a valid articles 2"
                 tabIndex="0"
-                url="https://krypton-ah-stage.herokuapp.com/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
+                url="undefined/this-is-a-valid-articles-2f28b7eac-52e2-4e7d-8fe8-48d650bb6d74"
               >
                 <div
                   className="SocialMediaShareButton SocialMediaShareButton--email"

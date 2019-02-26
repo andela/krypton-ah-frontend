@@ -5,7 +5,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
   className="shareArticleIcons"
 >
   <CreatedButton
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    url="undefined/undefined"
     windowHeight={400}
     windowWidth={550}
   >
@@ -18,7 +18,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
     />
   </CreatedButton>
   <CreatedButton
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    url="undefined/undefined"
     windowHeight={400}
     windowWidth={550}
   >
@@ -38,7 +38,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
         "Readers",
       ]
     }
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    url="undefined/undefined"
     via="Andela"
     windowHeight={400}
     windowWidth={550}
@@ -52,7 +52,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
     />
   </CreatedButton>
   <CreatedButton
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    url="undefined/undefined"
     windowHeight={600}
     windowWidth={750}
   >
@@ -66,7 +66,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
   </CreatedButton>
   <CreatedButton
     separator=" "
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    url="undefined/undefined"
     windowHeight={400}
     windowWidth={550}
   >
@@ -81,7 +81,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
   <CreatedButton
     onClick={[Function]}
     openWindow={false}
-    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    url="undefined/undefined"
   >
     <Icon
       className=""
