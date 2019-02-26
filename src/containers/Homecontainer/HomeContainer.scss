@@ -91,9 +91,12 @@
   > .event
   > .content
   .summary {
-  word-break: break-all;
-  overflow: hidden;
+  display: block;
   text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.4em;
+  line-height: 1.8em;
 }
 
 .Categories .itrem a.header {
