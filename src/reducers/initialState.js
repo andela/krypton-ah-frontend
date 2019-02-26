@@ -14,7 +14,9 @@ const initialState = {
   comment: {
     commentIsLoading: false,
     success: false,
-    commentsArray: []
+    commentsArray: [],
+    threadsArray: [],
+    commentLike: 0
   }
 };
 export default initialState;

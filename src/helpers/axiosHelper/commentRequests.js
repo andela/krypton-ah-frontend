@@ -21,15 +21,23 @@ const createComment = async (articleId, commentMessage, mainCommentId) => {
 
 const fetchComment = async (articleId, mainCommentId) => {
   let url = `${API_BASE_URL}/api/v1/articles/${articleId}/comments`;
-  console.log(mainCommentId)
   if (mainCommentId) {
     url += `/${mainCommentId}`;
-    console.log(url);
   }
 
   response = await axios.get(url, config);
-  console.log(response.data.data.threads)
+  return response.data.data;
+};
+
+const commentLike = async () => {
+  // const url = `${API_BASE_URL}/api/v1/articles/reactions/${articleId}/?reaction=like`;
+  // response = await axios.get(url, config);
+  response = {
+    like: 10,
+    dislike: 4
+  };
+
   return response;
 };
 
-export { createComment, fetchComment };
+export { createComment, fetchComment, commentLike };

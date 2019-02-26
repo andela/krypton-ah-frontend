@@ -1,5 +1,5 @@
 /* eslint-disable react/destructuring-assignment */
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Button, Form } from 'semantic-ui-react';
 
@@ -21,7 +21,6 @@ class CreateComment extends Component {
     e.preventDefault();
 
     const { articleId, mainCommentId, commentMessage } = this.state;
-
     createComment(articleId, commentMessage, mainCommentId);
 
     this.setState(state => ({
@@ -40,16 +39,14 @@ class CreateComment extends Component {
 
   render() {
     return (
-      <Fragment>
-        <Form onSubmit={this.handleSubmit}>
-          <h1>ADD COMMENT</h1>
-          <Form.TextArea
-            name="commentMessage"
-            value={this.state.commentMessage}
-            onChange={this.handleChange} />
-          <Button content="Post" labelPosition="left" icon="edit" primary />
-        </Form>
-      </Fragment>
+      <Form onSubmit={this.handleSubmit}>
+        <h1>ADD COMMENT</h1>
+        <Form.TextArea
+          name="commentMessage"
+          value={this.state.commentMessage}
+          onChange={this.handleChange} />
+        <Button content="Post" labelPosition="left" icon="edit" primary />
+      </Form>
     );
   }
 }

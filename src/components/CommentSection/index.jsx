@@ -21,7 +21,7 @@ CommentSection.propTypes = {
 };
 
 CommentSection.defaultProps = {
-  mainCommentId: '6b0d7f98-4638-4e1e-8419-6deb2433a1a9'
+  mainCommentId: null
 };
 
 export default CommentSection;
