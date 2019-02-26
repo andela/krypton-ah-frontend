@@ -19,7 +19,7 @@ export default function FeaturedArticles({ articles }) {
       <Grid columns={2} divided>
         <Grid.Row>
           <Grid.Column className="rightGrid">
-            <Link replace={false} to={`/articles/${article.data[0].id}`}>
+            <Link replace={false} to={`/article/${article.data[0].id}`}>
               <Card image={article.data[0].featuredImageUrl} header={article.data[0].title} />
               <Card className="description">
                 <p className="descriptionBody">{article.data[0].description}</p>

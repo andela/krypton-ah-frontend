@@ -11,7 +11,7 @@ export default function MainFeaturedArticle(props) {
     <Feed.Event>
       <Feed.Label image={image} />
       <Feed.Content>
-        <Link replace={false} to={`/articles/${id}`}>
+        <Link replace={false} to={`/article/${id}`}>
           <Feed.Date content={title} />
         </Link>
         <Feed.Summary>{description}</Feed.Summary>
