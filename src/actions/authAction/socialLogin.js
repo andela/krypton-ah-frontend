@@ -1,6 +1,6 @@
 import { twitterPath } from '../../constants';
 import verify from '../../helpers/axiosHelper/verifySocialAuth';
-import setToken from '../../helpers/jwt';
+import { setToken } from '../../helpers/jwt';
 import actionTypes from './actionTypes';
 
 
