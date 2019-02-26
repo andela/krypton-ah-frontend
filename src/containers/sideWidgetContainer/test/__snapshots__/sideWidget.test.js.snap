@@ -4,14 +4,14 @@ exports[`button test should test for the categories component 1`] = `
 <GridColumn
   className="Categories"
 >
-  <sectionHeader
-    text="Categories"
-  />
   <List
     divided={true}
     relaxed={true}
   >
-    <Tags />
+    <Tags
+      tags={Array []}
+      type={null}
+    />
     <ListItem>
       <Label
         as="a"
@@ -45,58 +45,7 @@ exports[`button test should test for the newsletter component 1`] = `
 `;
 
 exports[`button test should test for the sidewidget component 1`] = `
-<GridRow
-  columns={1}
->
-  <GridColumn>
-    <sectionHeader
-      text="Trending"
-    />
-    <ArticlesFeedContainer
-      articles={
-        Array [
-          Object {
-            "content": "Apple's news at CES 2019 shows it's facing some hard truths",
-            "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ",
-            "title": "Trending Title",
-          },
-          Object {
-            "content": "Apple's news at CES 2019 shows it's facing some hard truths",
-            "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ",
-            "title": "Trending Title",
-          },
-          Object {
-            "content": "Apple's news at CES 2019 shows it's facing some hard truths",
-            "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ",
-            "title": "Trending Title",
-          },
-          Object {
-            "content": "Apple's news at CES 2019 shows it's facing some hard truths",
-            "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ",
-            "title": "Popular Title",
-          },
-          Object {
-            "content": "Apple's news at CES 2019 shows it's facing some hard truths",
-            "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ",
-            "title": "Popular Title",
-          },
-        ]
-      }
-      className="featured-widget"
-    />
-    <sectionHeader
-      text="Tags"
-    />
-    <List
-      className="tags"
-      divided={true}
-      relaxed={true}
-    >
-      <Tags />
-    </List>
-    <categories />
-  </GridColumn>
-  <index />
-  <NewsLetter />
-</GridRow>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

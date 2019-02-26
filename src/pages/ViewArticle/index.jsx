@@ -1,30 +1,21 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import ReadArticle from '../../components/ReadArticle';
-import CommentSection from '../../components/CommentSection';
-import {
-  author,
-  featuredImage,
-  ARTICLE_TITLE,
-  ARTICLE_AUTHOR,
-  ARTICLE_DATE,
-  ARTICLE_READ_TIME,
-  ARTICLE_CONTENT,
-  commentsArray
-} from '../../../__mocks__';
 
-export default function ViewArticle() {
+export default function ViewArticle(props) {
+  const { title } = props.match.params;
   return (
     <Fragment>
-      <ReadArticle
-        articleTitle={ARTICLE_TITLE}
-        articleAuthor={ARTICLE_AUTHOR}
-        articleDate={ARTICLE_DATE}
-        articleReadTime={ARTICLE_READ_TIME}
-        articleContent={ARTICLE_CONTENT}
-        featuredImage={featuredImage}
-        author={author}
-      />
-      <CommentSection commentsArray={commentsArray} />
+      <ReadArticle selectedArticle={title} />
     </Fragment>
   );
 }
+
+ViewArticle.propTypes = {
+  match: PropTypes.object.isRequired,
+  params: PropTypes.object
+};
+
+ViewArticle.defaultProps = {
+  params: {}
+};

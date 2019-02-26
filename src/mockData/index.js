@@ -1,4 +1,4 @@
-const { API_BASE_URL } = process.env;
+import { API_BASE_URL } from '../constants';
 
 const items = [
   {
@@ -140,6 +140,11 @@ const signupFailureAction = [
   }
 ];
 
+const fetchArticlesresponse = {
+  data: {
+
+  }
+};
 const socialToken = 'hyakfhkdhiuashvk98924cxndusjdusnfixomj9';
 
 const mockPath = 'auth/facebook/';
@@ -163,5 +168,6 @@ export {
   trendingArticles,
   mockHeader,
   socialToken,
-  mockPath
+  mockPath,
+  fetchArticlesresponse
 };

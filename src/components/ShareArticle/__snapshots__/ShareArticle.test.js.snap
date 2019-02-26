@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share Article Component should rendered share Article Icons without crashing 1`] = `
+<div
+  className="shareArticleIcons"
+>
+  <CreatedButton
+    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    windowHeight={400}
+    windowWidth={550}
+  >
+    <Icon
+      className=""
+      iconBgStyle={Object {}}
+      logoFillColor="white"
+      round={true}
+      size="25"
+    />
+  </CreatedButton>
+  <CreatedButton
+    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    windowHeight={400}
+    windowWidth={550}
+  >
+    <Icon
+      className=""
+      iconBgStyle={Object {}}
+      logoFillColor="white"
+      round={true}
+      size={25}
+    />
+  </CreatedButton>
+  <CreatedButton
+    hashtags={
+      Array [
+        "ah-Krypton",
+        "Andela",
+        "Readers",
+      ]
+    }
+    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    via="Andela"
+    windowHeight={400}
+    windowWidth={550}
+  >
+    <Icon
+      className=""
+      iconBgStyle={Object {}}
+      logoFillColor="white"
+      round={true}
+      size={25}
+    />
+  </CreatedButton>
+  <CreatedButton
+    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    windowHeight={600}
+    windowWidth={750}
+  >
+    <Icon
+      className=""
+      iconBgStyle={Object {}}
+      logoFillColor="white"
+      round={true}
+      size={25}
+    />
+  </CreatedButton>
+  <CreatedButton
+    separator=" "
+    url="https://krypton-ah-stage.herokuapp.com/undefined"
+    windowHeight={400}
+    windowWidth={550}
+  >
+    <Icon
+      className=""
+      iconBgStyle={Object {}}
+      logoFillColor="white"
+      round={true}
+      size={25}
+    />
+  </CreatedButton>
+  <CreatedButton
+    onClick={[Function]}
+    openWindow={false}
+    url="https://krypton-ah-stage.herokuapp.com/undefined"
+  >
+    <Icon
+      className=""
+      iconBgStyle={Object {}}
+      logoFillColor="white"
+      round={true}
+      size={25}
+    />
+  </CreatedButton>
+</div>
+`;

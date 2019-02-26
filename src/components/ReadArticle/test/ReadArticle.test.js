@@ -1,27 +1,16 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import ReadArticle from '../index';
-import {
-  author,
-  featuredImage,
-  ARTICLE_TITLE,
-  ARTICLE_AUTHOR,
-  ARTICLE_DATE,
-  ARTICLE_READ_TIME,
-  ARTICLE_CONTENT
-} from '../../../../__mocks__';
+import { mount } from 'enzyme';
+import { ReadArticlePage } from '../index';
+import { props, retrievedArticle } from '../../../mockData/readArticle';
+import { getArticle } from '../../../actions/readArticleAction/index';
 
-describe('ReadArticle', () => {
-  it('should match snapshot', () => {
-    const wrapper = shallow(
-      <ReadArticle
-        articleTitle={ARTICLE_TITLE}
-        articleAuthor={ARTICLE_AUTHOR}
-        articleDate={ARTICLE_DATE}
-        articleReadTime={ARTICLE_READ_TIME}
-        articleContent={ARTICLE_CONTENT}
-        featuredImage={featuredImage}
-        author={author}
+describe('Read article component', () => {
+  it('should matches the snapshot', () => {
+    const wrapper = mount(
+      <ReadArticlePage
+        selectedArticle={props.match.params.title}
+        retrievedArticle={retrievedArticle}
+        getArticle={getArticle}
       />
     );
     expect(wrapper).toMatchSnapshot();

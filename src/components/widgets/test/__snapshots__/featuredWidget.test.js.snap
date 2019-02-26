@@ -1,12 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button test should test for the Icons component 1`] = `
-<div>
-  <i
-    className="dates"
+<div
+  className="reactionIcons"
+>
+  <Icon
+    as="i"
+    disabled={true}
+    fitted={true}
+    link={true}
+    name="time"
+    size="small"
   >
     28th february 2019
-  </i>
+  </Icon>
   <Icon
     as="i"
     disabled={true}
@@ -14,8 +21,11 @@ exports[`button test should test for the Icons component 1`] = `
     link={true}
     name="thumbs up outline"
     size="small"
-  />
-  23
+  >
+    <span>
+      23
+    </span>
+  </Icon>
   <Icon
     as="i"
     disabled={true}
@@ -23,8 +33,11 @@ exports[`button test should test for the Icons component 1`] = `
     link={true}
     name="thumbs down outline"
     size="small"
-  />
-  23
+  >
+    <span>
+      23
+    </span>
+  </Icon>
   <Icon
     as="i"
     disabled={true}
@@ -32,8 +45,11 @@ exports[`button test should test for the Icons component 1`] = `
     link={true}
     name="comments outline"
     size="small"
-  />
-  23
+  >
+    <span>
+      23
+    </span>
+  </Icon>
 </div>
 `;
 
@@ -51,17 +67,13 @@ exports[`button test should test for the advert component 1`] = `
 `;
 
 exports[`button test should test for the button component 1`] = `
-<Card>
+<Card
+  className="widgetIcons"
+>
   <CardContent
-    className="className"
+    className={true}
   >
-    <Feed>
-      <MainFeaturedArticle
-        description="placeholder descritption"
-        image="https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png"
-        title="placeholder title"
-      />
-    </Feed>
+    <Feed />
   </CardContent>
 </Card>
 `;

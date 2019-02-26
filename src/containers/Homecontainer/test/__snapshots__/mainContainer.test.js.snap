@@ -1,117 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`home container test should test for the featuredarticles component 1`] = `
-<Fragment>
-  <sectionHeader
-    text="featured"
-  />
-  <Grid
-    columns={2}
-    divided={true}
-  >
-    <GridRow>
-      <GridColumn
-        className="rightGrid"
-      >
-        <Card
-          header="Elliot Baker"
-          image="test-file-stub"
-          items={
-            Array [
-              Object {
-                "content": "Apple's news at CES 2019 shows it's facing some hard truths",
-                "description": "The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based on what you’re doing to show you relevant The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based",
-                "shortdescription": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach, while an optimist drains the barrel, fishes out all the apples and makes pie",
-                "shorterdescription": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist ",
-                "title": "Popular Title",
-              },
-            ]
-          }
-        />
-        <Card
-          className="description"
-        >
-          The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based on what you’re doing to show you relevant The Touch Bar replaces the function keys that have long occupied the top of your keyboard with something much more versatile and capable.16 It changes automatically based
-          <Icons
-            numberofcomments={23}
-            ratingIcon={null}
-          />
-        </Card>
-      </GridColumn>
-      <GridColumn>
-        <ArticlesFeedContainer
-          articles={
-            Array [
-              Object {
-                "content": "Apple's news at CES 2019 shows it's facing some hard truths",
-                "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach",
-                "title": "Popular Title",
-              },
-              Object {
-                "content": "Apple's news at CES 2019 shows it's facing some hard truths",
-                "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach",
-                "title": "Popular Title",
-              },
-              Object {
-                "content": "Apple's news at CES 2019 shows it's facing some hard truths",
-                "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach",
-                "title": "Popular Title",
-              },
-              Object {
-                "content": "Apple's news at CES 2019 shows it's facing some hard truths",
-                "description": "When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach",
-                "title": "Popular Title",
-              },
-            ]
-          }
-          className="featured-widget"
-        />
-      </GridColumn>
-    </GridRow>
-  </Grid>
-</Fragment>
-`;
+exports[`home container test should test for the featuredarticles component 1`] = `<componentloaderHOC />`;
 
 exports[`home container test should test for the home component 1`] = `
-<div
-  className="Main"
->
-  <Grid
-    className="content"
-    divided="vertically"
-  >
-    <GridRow
-      columns={1}
-    >
-      <GridColumn>
-        <carousel
-          author="Placeholder author name"
-          featuredImage="https://res.cloudinary.com/ah-krypton/image/upload/v1550007680/MainImage.png"
-          title="Placeholder Article Title"
-        />
-      </GridColumn>
-      <GridColumn
-        className="second_grid"
-      >
-        <FeaturedArticles />
-        <PopularArticles />
-      </GridColumn>
-    </GridRow>
-  </Grid>
-  <Grid
-    className="side"
-    divided="vertically"
-  >
-    <WidgetContainer />
-  </Grid>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`home container test should test for the popular articles component 1`] = `
 <Fragment>
-  <sectionHeader
-    text="Popular"
-  />
   <Grid
     columns={2}
     divided={true}
@@ -121,84 +19,7 @@ exports[`home container test should test for the popular articles component 1`] 
         className="reveal"
         columns={2}
         container={true}
-      >
-        <GridColumn
-          key="Popular Title"
-        >
-          <Card
-            className="description"
-          >
-            <p
-              className="Popular title"
-            >
-              Popular Title
-            </p>
-            When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach
-          </Card>
-          <Image
-            as="img"
-            src="test-file-stub"
-            ui={true}
-          />
-        </GridColumn>
-        <GridColumn
-          key="Popular Title"
-        >
-          <Card
-            className="description"
-          >
-            <p
-              className="Popular title"
-            >
-              Popular Title
-            </p>
-            When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach
-          </Card>
-          <Image
-            as="img"
-            src="test-file-stub"
-            ui={true}
-          />
-        </GridColumn>
-        <GridColumn
-          key="Popular Title"
-        >
-          <Card
-            className="description"
-          >
-            <p
-              className="Popular title"
-            >
-              Popular Title
-            </p>
-            When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach
-          </Card>
-          <Image
-            as="img"
-            src="test-file-stub"
-            ui={true}
-          />
-        </GridColumn>
-        <GridColumn
-          key="Popular Title"
-        >
-          <Card
-            className="description"
-          >
-            <p
-              className="Popular title"
-            >
-              Popular Title
-            </p>
-            When bobbing for apples, an idealist endlessly reaches for the best apple, a pessimist settles for the first one within reach
-          </Card>
-          <Image
-            as="img"
-            src="test-file-stub"
-            ui={true}
-          />
-        </GridColumn>
-      </Grid>
+      />
     </GridRow>
   </Grid>
 </Fragment>

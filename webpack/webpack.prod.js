@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const webpack = require('webpack');
 
 dotenv.config();
+
 module.exports = merge(common, {
   mode: 'production',
   plugins: [

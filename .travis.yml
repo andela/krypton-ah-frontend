@@ -3,7 +3,7 @@ node_js:
   - 'node'
 env:
   global:
-    - CC_TEST_REPORTER_ID=$TEST_REPORTER_ID
+    - CC_TEST_REPORTER_ID=$TEST_REPORTER_ID API_BASE_URL=https://krypton-ah-stage.herokuapp.com
 cache:
   directories:
     - node_modules

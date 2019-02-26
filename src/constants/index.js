@@ -21,7 +21,8 @@ const articleDetails = {
   className: 'description',
   description: 'placeholder descritption',
   title: 'placeholder title',
-  image: 'https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png'
+  image: 'https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png',
+  slug: 'sample-slug'
 };
 
 const advertimage = 'https://res.cloudinary.com/ah-krypton/image/upload/v1548328425/mm17kbfqf7sjrw2w45rq.png';
@@ -51,15 +52,18 @@ const socialMediaLoginIcons = [
     url: process.env.TWITTER_URL
   }
 ];
-
+const { API_BASE_URL } = process.env;
 const authentication = 'authentication';
 const twitterPath = '/auth/twitter/callback';
+const networkErrorResponse = 'Network error! kindly try again later';
 
 export {
   socialMediaElements,
   articleDetails,
   advertimage,
   socialMediaLoginIcons,
+  API_BASE_URL,
   authentication,
-  twitterPath
+  twitterPath,
+  networkErrorResponse,
 };

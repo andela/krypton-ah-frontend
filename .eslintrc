@@ -42,6 +42,13 @@
         "allow": ["req", "res", "err"]
       }
     ],
+    "react/destructuring-assignment": [
+      0,
+      "always",
+      {
+        "ignoreClassFields": true
+      }
+    ],
     "quotes": 2,
     "no-console": 1,
     "no-debugger": 1,
