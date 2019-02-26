@@ -24,7 +24,7 @@ class ShareArticle extends React.Component {
     const { id, title, description } = this.props;
     const url = `${BASE_URL_CB}/article/${id}`;
     const hashtags = ['ah-Krypton'];
-    const emailURL = `${description}(<br />) ${url}`;
+    const emailURL = `${description}\n${url}`;
     return (
       <div className="shareArticleIcons">
         <FacebookShareButton quote={description} url={url}>

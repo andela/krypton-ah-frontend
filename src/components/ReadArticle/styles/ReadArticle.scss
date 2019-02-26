@@ -79,7 +79,6 @@ img.ui.image {
 }
 .shareArticleIcons {
   display: block;
-  padding: 15%;
   text-align: center;
   font-size: 1.25rem;
 }
@@ -94,7 +93,7 @@ img.ui.image {
   width: 100%;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 767px) {
   .ui.header.articleTitle {
     text-align: center;
   }
@@ -109,8 +108,7 @@ img.ui.image {
     width: 100%;
   }
   .icon-bar {
-    width: 90%;
-    top: 65%;
+    top: 35%;
     left: -4.5rem;
   }
 
@@ -118,7 +116,12 @@ img.ui.image {
     cursor: pointer;
   }
 }
-
 .ui.massive.image {
   height: 30rem;
+}
+@media only screen and (max-width: 991px) {
+  .icon-bar {
+    top: 50%;
+    left: -0.8rem;
+  }
 }
