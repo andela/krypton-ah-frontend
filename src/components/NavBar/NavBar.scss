@@ -1,51 +1,95 @@
 @import '../../styles/partials/colors';
 @import '../../styles/partials/styles';
 
-  
-  .ui.menu.tinyBlackNavBar {
-    min-height: 2rem;
-    height: 2rem;
-    background-color: $black;
-    border-radius: 0;
-    padding-right: 6rem;
-  
-    .item {
-      padding: 0.5rem;
-    }
+.ui.menu.tinyBlackNavBar {
+  min-height: 2rem;
+  height: 2rem;
+  background-color: $black;
+  border-radius: 0;
+  padding-right: 6rem;
+
+  .item {
+    padding: 0.5rem;
   }
-  
-  .ui.pointing.dropdown > .menu:after {
-    top: -0.25em;
-    left: 80%;
-    margin: 0 0 0 -0.25em;
-  }
-  
-  .ui.menu .pointing.dropdown.item .menu {
-    margin-top: 0.2em;
-    width: 14em;
+}
+
+.ui.pointing.dropdown > .menu:after {
+  top: -0.25em;
+  left: 80%;
+  margin: 0 0 0 -0.25em;
+}
+
+.ui.menu .pointing.dropdown.item .menu {
+  margin-top: 0.2em;
+  width: 14em;
+}
+
+.left.menu.whiteBarMenu .item {
+  padding-right: 0;
+  padding-left: 1rem;
+}
+
+.ui.borderless.whiteNavBar.menu {
+  margin: 0;
+  padding: 0 7.4375em;
+  border-radius: 0;
+  height: 5rem;
+
+  img.ui.image.ahIcon {
+    width: 3.2em;
+    font-size: 1rem;
   }
 
-  .left.menu.whiteBarMenu .item {
-    padding-right: 0;
-    padding-left: 1rem;
+  .whiteBarMenu h1 {
+    font-weight: bolder;
+    font-size: 2.3em;
+    margin-left: 0;
+    padding-left: 0;
   }
-  
+  .left.menu.whiteBarMenu {
+    .item {
+      padding-left: 0.25em;
+      padding-right: 0.25em;
+    }
+  }
+
+  .right.menu {
+    .item i {
+      font-size: 1rem;
+    }
+
+    .item {
+      .ui.avatar.image.avatarImg {
+        order: 2;
+        font-size: 1.5rem;
+      }
+      .dropdown.icon {
+        order: 1;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .ui.menu.tinyBlackNavBar {
+    padding-right: 1rem;
+  }
+
   .ui.borderless.whiteNavBar.menu {
     margin: 0;
-    padding: 0 7.4375em;
-    border-radius: 0;
-    height: 5rem;
-  
+    padding: 0 0.475em;
+
     img.ui.image.ahIcon {
       width: 3.2em;
       font-size: 1rem;
     }
-  
+
     .whiteBarMenu h1 {
       font-weight: bolder;
       font-size: 2.3em;
       margin-left: 0;
       padding-left: 0;
+      display: none;
     }
     .left.menu.whiteBarMenu {
       .item {
@@ -53,12 +97,12 @@
         padding-right: 0.25em;
       }
     }
-  
+
     .right.menu {
       .item i {
         font-size: 1rem;
       }
-  
+
       .item {
         .ui.avatar.image.avatarImg {
           order: 2;
@@ -71,52 +115,9 @@
       }
     }
   }
-  @media (max-width: 767px) {
-    .ui.menu.tinyBlackNavBar {
-      padding-right: 1rem;
-    }
+}
 
-    .ui.borderless.whiteNavBar.menu {
-      margin: 0;
-      padding: 0 0.475em;
-    
-      img.ui.image.ahIcon {
-        width: 3.2em;
-        font-size: 1rem;
-      }
-    
-      .whiteBarMenu h1 {
-        font-weight: bolder;
-        font-size: 2.3em;
-        margin-left: 0;
-        padding-left: 0;
-        display: none;
-      }
-      .left.menu.whiteBarMenu {
-        .item {
-          padding-left: 0.25em;
-          padding-right: 0.25em;
-        }
-      }
-    
-      .right.menu {
-        .item i {
-          font-size: 1rem;
-        }
-    
-        .item {
-          .ui.avatar.image.avatarImg {
-            order: 2;
-            font-size: 1.5rem;
-          }
-          .dropdown.icon {
-            order: 1;
-            margin-right: 0.5rem;
-          }
-        }
-      }
-    }
-
-   
-  }
-  
+.Toastify__toast--success {
+  background: #0d3d2c;
+  padding-left: 2rem;
+}

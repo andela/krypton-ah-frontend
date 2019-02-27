@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import { signupCall, loginCall } from '../../helpers/axiosHelper/auth';
 import { setToken } from '../../helpers/jwt';
 import actionTypes from './actionTypes';
@@ -20,7 +21,7 @@ export const signUpSuccess = payload => ({
 
 export const signUpFailure = payload => ({
   type: SIGNUP_FAILURE,
-  payload
+  payload,
 });
 
 export const userSignUp = user => async (dispatch) => {
@@ -28,11 +29,14 @@ export const userSignUp = user => async (dispatch) => {
     dispatch(triggerLoading(AUTH_LOADING));
     const response = await signupCall(user);
     dispatch(signUpSuccess(response));
+    toast.success(response.data.message);
   } catch (error) {
     if (error.response) {
       dispatch(signUpFailure(error.response));
+      toast.error(error.response.data.message);
     } else {
       dispatch(networkError(networkErrorResponse));
+      toast.warn(networkErrorResponse);
     }
   }
 };
@@ -54,11 +58,14 @@ export const userLogin = user => async (dispatch) => {
     const response = await loginCall(user);
     setToken(response.data.loginToken);
     dispatch(loginSuccess(response));
+    toast.success(response.data.message);
   } catch (error) {
     if (error.response) {
       dispatch(loginFailure(error.response));
+      toast.error(error.response.data.message);
     } else {
       dispatch(networkError(networkErrorResponse));
+      toast.warn(networkErrorResponse);
     }
   }
 };
