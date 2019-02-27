@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { getUserIdFromLocalStorage } from '../../helpers/jwt';
 import ProfileNavBar from '../../components/ProfileNavBar';
 import UserProfile from '../../components/UserProfile';
+import BookmarkView from '../../components/BookmarkView';
 import profileImagePlaceholder from '../../images/avatar.png';
 import { fetchUser, updateUserProfile } from '../../actions/userActions';
 import Loader from '../../components/Loader';
@@ -71,6 +72,7 @@ class ProfileContainer extends React.Component {
         <Router>
           <Switch>
             <Route render={this.renderProfileView} path="/profile" />
+            <Route component={BookmarkView} path="/bookmark" />
           </Switch>
         </Router>
       </Grid>

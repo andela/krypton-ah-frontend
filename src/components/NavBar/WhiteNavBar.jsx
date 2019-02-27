@@ -34,7 +34,7 @@ function WhiteNavBar({ fixed, isAuthenticated, avatarUrl, userId }) {
             >
               <Dropdown.Menu className="right">
                 <Dropdown.Item as="a" href={`/profile/${userId}`}>PROFILE</Dropdown.Item>
-                <Dropdown.Item>BOOKMARKS</Dropdown.Item>
+                <Dropdown.Item as="a" href={`/bookmarks/${userId}`}>BOOKMARKS</Dropdown.Item>
                 <Dropdown.Item>LOG OUT</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

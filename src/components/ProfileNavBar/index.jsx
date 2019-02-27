@@ -42,6 +42,8 @@ export default class ProfileNavBar extends React.Component {
     switch (to) {
       case '/profile':
         return `${to}/${userId}`;
+      case '/bookmarks':
+        return `${to}/${userId}`;
       default:
         return to;
     }
