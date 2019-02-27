@@ -36,3 +36,23 @@ export function signInValidator(user) {
   }
   return errors;
 }
+
+export function articleValidator(article) {
+  const errors = {};
+  if (Validator.isEmpty(article.title)) {
+    errors.title = 'Title field is required';
+  }
+  if (Validator.isEmpty(article.description)) {
+    errors.description = 'Description field is required';
+  }
+  if (Validator.isEmpty(article.category)) {
+    errors.category = 'A category must be selected';
+  }
+  if (Validator.isEmpty(article.content)) {
+    errors.content = 'Content is required';
+  }
+  if (Validator.isEmpty(article.tags)) {
+    errors.tags = 'Atleast one tag must be selected';
+  }
+  return errors;
+}

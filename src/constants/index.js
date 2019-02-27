@@ -8,10 +8,6 @@ const socialMediaElements = [
     key: 'twitter'
   },
   {
-    name: 'google plus g',
-    key: 'google plus g'
-  },
-  {
     name: 'instagram',
     key: 'instagram'
   }
@@ -38,7 +34,8 @@ const socialMediaLoginIcons = [
     iconName: 'google plus square',
     key: 2,
     url: process.env.GOOGLE_URL
-  }, {
+  },
+  {
     text: 'Linkedin',
     iconName: 'linkedin',
     key: 3,

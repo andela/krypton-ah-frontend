@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Form, Button } from 'semantic-ui-react';
 import FormInput from '../FormInputGroup';
 import InlineError from '../../helpers/InlineError';
-import { validate } from '../../helpers/validateUser';
+import { validate } from '../../helpers/validate';
 import './SignUpForm.scss';
 import { userSignUp } from '../../actions/authAction/authActions';
 import { callbackUrl } from '../../constants';

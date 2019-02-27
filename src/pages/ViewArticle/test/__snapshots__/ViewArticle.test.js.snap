@@ -5,5 +5,12 @@ exports[`ViewArticle should match snapshot 1`] = `
   <Connect(ReadArticle)
     selectedArticle="65719288-0395-445e-b587-2b98b70bdec9"
   />
+  <div
+    className=" articleReactions"
+  >
+    <Connect(ReactionIcons)
+      selectedArticleId="65719288-0395-445e-b587-2b98b70bdec9"
+    />
+  </div>
 </Fragment>
 `;
