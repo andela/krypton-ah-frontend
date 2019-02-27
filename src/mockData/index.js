@@ -147,6 +147,15 @@ const signupFailureAction = [
   }
 ];
 
+const fetchArticlesresponse = {
+  data: {
+
+  }
+};
+
+const fetchArticles = {
+  data: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+};
 const socialToken = 'hyakfhkdhiuashvk98924cxndusjdusnfixomj9';
 
 const mockPath = 'auth/facebook/';
@@ -170,6 +179,7 @@ const autoLoginResponse = {
 };
 
 export {
+  fetchArticles,
   payload,
   fakeUser2,
   signupEndpoint,
@@ -192,5 +202,6 @@ export {
   mockPath,
   profileData,
   jwtToken,
-  autoLoginResponse
+  autoLoginResponse,
+  fetchArticlesresponse
 };
