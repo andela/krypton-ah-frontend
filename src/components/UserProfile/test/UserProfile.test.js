@@ -1,4 +1,5 @@
 import React from 'react';
+import sinon from 'sinon';
 import { shallow } from 'enzyme';
 import UserProfile from '..';
 
@@ -17,7 +18,7 @@ describe('UserProfile', () => {
   const event = {
       target: {
         name: 'firstname',
-        value: 'Firstname',
+        value: 'Firstname'
       },
       preventDefault: () => {}
     },
@@ -49,9 +50,26 @@ describe('UserProfile', () => {
   describe('handleSubmit', () => {
     it('should call updateUser', () => {
       const updateUserMock = jest.fn();
-      const wrapper = shallow(<UserProfile updateUser={updateUserMock} profileData={{ firstname: 'Fistname' }} />);
+      const wrapper = shallow(
+        <UserProfile updateUser={updateUserMock} profileData={{ firstname: 'Fistname' }} />
+      );
       wrapper.instance().handleSubmit(event);
       expect(updateUserMock).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('componentWillReceiveProps', () => {
+    afterEach(sinon.restore);
+    it('should call setState method in componentWillReceiveProps', () => {
+      const setStateStub = sinon.stub(UserProfile.prototype, 'setState');
+      const updateUserMock = jest.fn();
+      const wrapper = shallow(
+        <UserProfile updateUser={updateUserMock} profileData={{ firstname: 'Fistname' }} />
+      );
+      setStateStub.reset();
+      const profileData = { lastname: 'Lastname' };
+      wrapper.setProps({ profileData });
+      expect(setStateStub.calledOnceWithExactly(profileData)).toBe(true);
     });
   });
 });

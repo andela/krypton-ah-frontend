@@ -171,12 +171,12 @@ const profileData = {
   username: 'Isaiah'
 };
 
-const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1IiwiaWF0IjoxNTUwNDY1MjY0LCJleHAiOjE1NTA1NTE2NjR9.kFe-uZW0XSQCV_gb1WVV3Z3oCxZffJAOOaKXSj0w0m0';
 const autoLoginResponse = {
   data: {
     message: 'Your account has been successfully activated! You can begin spreaing your ideas now.'
   }
 };
+const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjp7ImlkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1Iiwicm9sZSI6W119LCJpYXQiOjE1NTEyNDc5OTAsImV4cCI6MTU1MTMzNDM5MH0.UY_JMJtUnc3Z9ttWyP9F_flEIqTieaKn_2rfl7DOs_c';
 
 export {
   fetchArticles,
