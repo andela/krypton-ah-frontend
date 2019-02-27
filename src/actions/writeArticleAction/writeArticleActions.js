@@ -1,4 +1,4 @@
-import writeArticleCall from '../../helpers/axiosHelper/writeArticle';
+import { createArticleCall } from '../../helpers/axiosHelper/writeArticle';
 import actionTypes from './actionTypes';
 import triggerLoading from '../authAction/loading';
 
@@ -23,11 +23,10 @@ export const publishArticleFailure = payload => ({
 export const publishArticle = article => async (dispatch) => {
   try {
     dispatch(triggerLoading(ARTICLE_LOADING));
-    const response = await writeArticleCall(article);
+    const response = await createArticleCall(article);
     dispatch(publishArticleSuccess(response));
   } catch (error) {
     if (error.response) {
-      console.log(error.response);
       dispatch(publishArticleFailure(error.response));
     }
   }
@@ -46,7 +45,7 @@ export const draftArticleFailure = payload => ({
 export const draftArticle = article => async (dispatch) => {
   try {
     dispatch(triggerLoading(ARTICLE_LOADING));
-    const response = await writeArticleCall(article);
+    const response = await createArticleCall(article);
     dispatch(draftArticleSuccess(response));
   } catch (error) {
     if (error.response) {

@@ -8,9 +8,9 @@ const options = {
     authorization: localStorage.getItem('authentication')
   }
 };
-const createArticleCall = async (article) => {
+export const createArticleCall = async (article) => {
   const response = await axios.post(`${hostURL}/articles`, article, options);
   return response;
 };
 
-export default createArticleCall;
+export default { createArticleCall };
