@@ -13,6 +13,9 @@ const socialMediaElements = [
   }
 ];
 
+const cloudinaryCloudName = 'dx0nauane';
+const cloudinaryuploadPreset = 'b19rkup8';
+
 const articleDetails = {
   className: 'description',
   description: 'placeholder descritption',
@@ -87,5 +90,7 @@ export {
   callbackUrl,
   activationResponse,
   alreadyActivatedResponse,
-  options
+  options,
+  cloudinaryCloudName,
+  cloudinaryuploadPreset
 };
