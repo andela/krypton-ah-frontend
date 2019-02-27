@@ -6,6 +6,7 @@ import ViewArticle from '../pages/ViewArticle';
 import AccountVerification from '../components/AccountVerification';
 import socialAuth from '../components/socialAuth/socialAuth';
 import Profile from '../pages/Profile';
+import CreateArticles from '../pages/CreateArticles';
 
 export default [
   {
@@ -50,6 +51,12 @@ export default [
     component: Profile,
     exact: true,
     path: '/profile'
+  },
+  {
+    name: 'createarticle',
+    component: CreateArticles,
+    exact: true,
+    path: '/createarticle'
   },
   {
     name: '404',

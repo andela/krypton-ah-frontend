@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleTab Component should rendered ArticleTab component without crashing 1`] = `
+<Container>
+  <Tab
+    grid={
+      Object {
+        "paneWidth": 12,
+        "tabWidth": 4,
+      }
+    }
+    menu={
+      Object {
+        "secondary": true,
+      }
+    }
+    panes={
+      Array [
+        Object {
+          "menuItem": "Text Entry",
+          "render": [Function],
+        },
+      ]
+    }
+    renderActiveOnly={true}
+  />
+</Container>
+`;
