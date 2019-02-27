@@ -1,0 +1,26 @@
+.articleReactions {
+  margin: -10% 0 15% 14%;
+  width: 90%;
+}
+.articleReactions .dates,
+.articleReactions .articleComment {
+  display: none;
+}
+.articleReactions i:not(:nth-child(2)) {
+  margin-left: 10%;
+}
+.articleReactions i {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .articleReactions {
+    margin: -5% 0 10% 14%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .articleReactions {
+    margin: -5% 0 10% 20%;
+  }
+}

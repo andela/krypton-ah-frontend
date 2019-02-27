@@ -27,12 +27,7 @@ exports[`button test should test for the button component 2`] = `
   <div
     className="icons"
   >
-    <ReactionIcons
-      date="28th february 2019"
-      numberofcomments={23}
-      numberofdislikes={23}
-      numberoflikes={23}
-    />
+    <Connect(ReactionIcons) />
   </div>
 </Menu>
 `;
