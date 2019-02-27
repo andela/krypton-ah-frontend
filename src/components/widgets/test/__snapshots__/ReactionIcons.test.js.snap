@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test for reaction Icons should have initial state of false and change when clicked  1`] = `
-<div>
+<Fragment>
   <i
     className="dates"
   >
@@ -19,7 +19,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
-  23
+  2
   <i
     role="presentation"
   >
@@ -32,7 +32,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
-  23
+  1
   <i
     className="articleComment"
   >
@@ -46,11 +46,11 @@ exports[`Test for reaction Icons should have initial state of false and change w
     />
     23
   </i>
-</div>
+</Fragment>
 `;
 
 exports[`Test for reaction Icons should have initial state of false and change when clicked  2`] = `
-<div>
+<Fragment>
   <i
     className="dates"
   >
@@ -68,7 +68,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
-  23
+  2
   <i
     role="presentation"
   >
@@ -81,7 +81,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
-  23
+  1
   <i
     className="articleComment"
   >
@@ -95,5 +95,5 @@ exports[`Test for reaction Icons should have initial state of false and change w
     />
     23
   </i>
-</div>
+</Fragment>
 `;
