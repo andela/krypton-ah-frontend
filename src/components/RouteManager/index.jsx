@@ -5,6 +5,7 @@ import { AuthRoute, UnauthRoute } from 'react-router-auth';
 import { connect } from 'react-redux';
 import { isUserAuthenticated, getUserIdFromLocalStorage } from '../../helpers/jwt';
 import { fetchOwner } from '../../actions/userActions';
+import Loading from '../Loader';
 
 class RouteManager extends Component {
   constructor(props) {
@@ -18,11 +19,12 @@ class RouteManager extends Component {
 
   render() {
     const { exact, path, isAuthenticated, component, redirectTo, routeType, getOwner } = this.props;
-    if (isUserAuthenticated()) {
+    if (isUserAuthenticated() && !isAuthenticated) {
       const userId = getUserIdFromLocalStorage();
       if (getOwner) {
         getOwner(userId);
       }
+      return <Loading />;
     }
     let CurrentRoute;
     switch (routeType) {
@@ -80,9 +82,9 @@ RouteManager.propTypes = {
   getOwner: PropTypes.func,
   path: PropTypes.string.isRequired,
   isAuthenticated: PropTypes.bool,
-  component: PropTypes.node.isRequired,
+  component: PropTypes.func.isRequired,
   redirectTo: PropTypes.string,
-  routeType: PropTypes.oneOf(['authenticated, unauthenticated'])
+  routeType: PropTypes.oneOf(['authenticated', 'unauthenticated'])
 };
 
 export default connect(

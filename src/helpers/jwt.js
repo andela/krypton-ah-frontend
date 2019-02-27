@@ -13,15 +13,12 @@ const getUserIdFromLocalStorage = () => {
   }
 };
 
-<<<<<<< HEAD
 const getToken = localStorage.getItem(authentication);
 
 const config = {
   headers: { Authorization: getToken }
 };
 
-export { setToken, getToken, config, getUserIdFromLocalStorage };
-=======
 export const isUserAuthenticated = () => {
   const token = localStorage.getItem(authentication);
   if (!token) {
@@ -39,5 +36,6 @@ export const isUserAuthenticated = () => {
   }
 };
 
+export { getToken, config, getUserIdFromLocalStorage };
+
 export default setToken;
->>>>>>> [fix-#1624141852] Implement authentication for routes

@@ -27,7 +27,7 @@ export default [
     exact: true,
     path: '/login',
     routeType: 'unAuthenticated',
-    redirect: '/'
+    redirectTo: '/'
   },
   {
     name: 'viewArticle',
@@ -41,7 +41,7 @@ export default [
     exact: true,
     path: '/signup',
     routeType: 'unAuthenticated',
-    redirect: '/'
+    redirectTo: '/'
   },
   {
     name: 'verification',
@@ -49,13 +49,21 @@ export default [
     exact: true,
     path: '/verification',
     routeType: 'unAuthenticated',
-    redirect: '/'
+    redirectTo: '/'
   },
   {
     name: 'profile',
     component: Profile,
     exact: true,
     path: '/profile/:userId'
+  },
+  {
+    name: 'bookmarks',
+    component: Profile,
+    exact: true,
+    path: '/bookmarks/:userId',
+    routeType: 'authenticated',
+    redirectTo: '/login'
   },
   {
     name: '404',
