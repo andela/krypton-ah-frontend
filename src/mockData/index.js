@@ -156,6 +156,11 @@ const profileData = {
 };
 
 const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1IiwiaWF0IjoxNTUwNDY1MjY0LCJleHAiOjE1NTA1NTE2NjR9.kFe-uZW0XSQCV_gb1WVV3Z3oCxZffJAOOaKXSj0w0m0';
+const autoLoginResponse = {
+  data: {
+    message: 'Your account has been successfully activated! You can begin spreaing your ideas now.'
+  }
+};
 
 export {
   payload,
@@ -178,5 +183,6 @@ export {
   socialToken,
   mockPath,
   profileData,
-  jwtToken
+  jwtToken,
+  autoLoginResponse
 };

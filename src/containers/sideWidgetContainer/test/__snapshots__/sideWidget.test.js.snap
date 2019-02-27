@@ -4,14 +4,13 @@ exports[`button test should test for the categories component 1`] = `
 <GridColumn
   className="Categories"
 >
-  <sectionHeader
-    text="Categories"
-  />
   <List
     divided={true}
     relaxed={true}
   >
-    <Tags />
+    <Tags
+      tags={Array []}
+    />
     <ListItem>
       <Label
         as="a"
@@ -94,7 +93,9 @@ exports[`button test should test for the sidewidget component 1`] = `
     >
       <Tags />
     </List>
-    <categories />
+    <categories
+      category={Array []}
+    />
   </GridColumn>
   <index />
   <NewsLetter />
