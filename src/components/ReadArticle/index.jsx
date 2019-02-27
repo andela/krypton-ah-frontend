@@ -68,10 +68,10 @@ class ReadArticle extends Component {
           {this.getArticleInfo(authorDetails.authorName, createdAt, readTime)}
         </Comment.Group>
         <Divider className="articleDivider" />
+        {this.getArticleContent(content)}
         <div className="icon-bar">
           <ShareArticle title={title} id={id} description={description} />
         </div>
-        {this.getArticleContent(content)}
         <Divider className="articleDivider" />
       </Container>
     );

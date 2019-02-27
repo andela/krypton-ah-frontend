@@ -77,9 +77,8 @@ img.ui.image {
   top: 50%;
   left: 3%;
 }
-.icon-bar a {
+.shareArticleIcons {
   display: block;
-  padding: 15%;
   text-align: center;
   font-size: 1.25rem;
 }
@@ -94,7 +93,7 @@ img.ui.image {
   width: 100%;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 767px) {
   .ui.header.articleTitle {
     text-align: center;
   }
@@ -109,18 +108,20 @@ img.ui.image {
     width: 100%;
   }
   .icon-bar {
-    width: 50%;
-    position: absolute;
-    top: unset;
-    bottom: -2rem;
-    left: 5%;
+    top: 35%;
+    left: -4.5rem;
   }
-  .icon-bar a {
-    display: inline;
-    padding: 5%;
+
+  .shareArticleIcons {
+    cursor: pointer;
   }
 }
-
 .ui.massive.image {
   height: 30rem;
+}
+@media only screen and (max-width: 991px) {
+  .icon-bar {
+    top: 50%;
+    left: -0.8rem;
+  }
 }
