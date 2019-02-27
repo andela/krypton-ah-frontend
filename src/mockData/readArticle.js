@@ -53,4 +53,14 @@ const retrievedArticle = {
 };
 const articleId = '65719288-0395-445e-b587-2b98b70bdec9';
 const invalidId = '65719288-0395-445e';
-export { payload, error, articleId, invalidId, props, retrievedArticle };
+const totalReactions = {
+  data: {
+    success: true,
+    message: 'Total number of reactions',
+    data: {
+      dislikes: 1,
+      likes: 1
+    }
+  }
+};
+export { payload, error, articleId, invalidId, props, totalReactions, retrievedArticle };

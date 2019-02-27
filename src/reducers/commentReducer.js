@@ -2,7 +2,12 @@ import actionTypes from '../actions/commentAction/actionTypes';
 import initialState from './initialState';
 import NETWORK_ERROR from '../actions/networkError/actionType';
 
-const { COMMENT_LOADING, COMMENT_FETCHED, COMMENT_LIKED_FETCHED, THREADS_FETCHED } = actionTypes;
+const {
+  COMMENT_LOADING,
+  COMMENT_FETCHED,
+  THREADS_FETCHED,
+  COMMENT_LIKED_FETCHED
+} = actionTypes;
 
 const { comment } = initialState;
 
@@ -16,21 +21,20 @@ export default (state = comment, action) => {
     case COMMENT_FETCHED:
       return {
         ...state,
-        commentIsLoading: true,
+        commentIsLoading: false,
         success: true,
         commentsArray: action.payload
       };
     case THREADS_FETCHED:
       return {
         ...state,
-        commentIsLoading: true,
+        commentIsLoading: false,
         success: true,
         threadsArray: action.payload
       };
     case COMMENT_LIKED_FETCHED:
       return {
         ...state,
-        commentIsLoading: true,
         success: true,
         commentLike: action.payload
       };

@@ -1,15 +1,18 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import SignUpForm from '.';
+import { SignUp } from '.';
 
 describe('SignUp Form', () => {
+  const props = {
+    signup: () => {}
+  };
   test('should matches the snapshot', () => {
-    const wrapper = shallow(<SignUpForm />);
+    const wrapper = shallow(<SignUp />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('Simulate submit button ', () => {
-    const wrapper = mount(<SignUpForm />);
+    const wrapper = mount(<SignUp {...props} />);
     wrapper.find('form').simulate('submit', {
       preventDefault: jest.fn()
     });
@@ -18,7 +21,7 @@ describe('SignUp Form', () => {
 
   it('should change the state after change the input value', () => {
     const newValue = 'iolan@anla.com';
-    const wrapper = mount(<SignUpForm />);
+    const wrapper = mount(<SignUp />);
     wrapper.find('input[type="email"]').simulate('change', {
       target: {
         name: newValue

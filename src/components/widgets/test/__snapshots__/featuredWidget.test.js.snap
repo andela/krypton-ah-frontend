@@ -1,40 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button test should test for the Icons component 1`] = `
-<div>
-  <i
-    className="dates"
-  >
-    28th february 2019
-  </i>
-  <Icon
-    as="i"
-    disabled={true}
-    fitted={true}
-    link={true}
-    name="thumbs up outline"
-    size="small"
-  />
-  23
-  <Icon
-    as="i"
-    disabled={true}
-    fitted={true}
-    link={true}
-    name="thumbs down outline"
-    size="small"
-  />
-  23
-  <Icon
-    as="i"
-    disabled={true}
-    fitted={true}
-    link={true}
-    name="comments outline"
-    size="small"
-  />
-  23
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`button test should test for the advert component 1`] = `

@@ -8,4 +8,3 @@ coverage
 .vscode
 .env
 package-lock
-src/.DS_Store

@@ -5,6 +5,32 @@ const initialState = {
     response: '',
     isAuthenticated: null
   },
+  trendingArticles: {
+    trendingArticlesResponseSuccess: false,
+    trendingArticlesResponsefailure: false,
+    trendingArticlesResponse: []
+  },
+  popularArticles: {
+    popularArticlesResponseSuccess: false,
+    popularArticlesResponse: [],
+    popularArticlesResponsefailure: false
+  },
+  featuredArticles: {
+    featuredArticlesResponse: [],
+    featuredArticlesfailure: false,
+    featuredArticlesSuccess: false,
+  },
+  categories: {
+    categoriesResponseSuccess: false,
+    categoriesResponse: [],
+    categoriesResponsefailure: false,
+  },
+  tags: {
+    tagsResponseSuccess: false,
+    tagsResponse: [],
+    tagsResponsefailure: false,
+
+  },
   readArticle: {
     articleIsLoading: false,
     success: false,
@@ -19,4 +45,5 @@ const initialState = {
     commentLike: 0
   }
 };
+
 export default initialState;

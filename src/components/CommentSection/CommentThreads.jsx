@@ -9,6 +9,8 @@ import moment from 'moment';
 
 import * as actions from '../../actions/commentAction/commentActions';
 
+import Loading from '../Loader/Loading';
+
 import './styles/CommentSection.scss';
 import dislike from '../../images/dislike.svg';
 import like from '../../images/like.svg';
@@ -18,8 +20,7 @@ class CommentThreads extends Component {
     super(props);
     this.state = {
       articleId: this.props.articleId,
-      mainCommentId: this.props.mainCommentId,
-      count: this.props.count
+      mainCommentId: this.props.mainCommentId
     };
   }
 
@@ -44,7 +45,7 @@ class CommentThreads extends Component {
     </Comment.Actions>
   );
 
-  getComment = (comment, commentLike) => (
+  getComments = (comment, commentLike) => (
     <Comment>
       <Comment.Avatar as="a" src={comment.avatar} />
       <Comment.Content>
@@ -59,25 +60,22 @@ class CommentThreads extends Component {
   );
 
   render() {
-    const { threadsArray } = this.props.comment;
-    const { commentLike } = this.props.comment;
-    if (this.state.count > 0) {
-      return (
-        <Container>
-          <div className="commentsContainer">
-            <Comment.Group>
-              {threadsArray.map(comment => (
-                <Fragment key={comment.id}>
-                  {this.getComment(comment, commentLike)}
-                  <Divider className="commentDivider" />
-                </Fragment>
-              ))}
-            </Comment.Group>
-          </div>
-        </Container>
-      );
-    }
-    return null;
+    const { threadCount, comment: { threadsArray, commentLike, commentIsLoading } } = this.props;
+    return (
+      <Container>
+        {commentIsLoading === true && threadCount > 0 ? <Loading size="small" /> : null}
+        <div className="commentsContainer">
+          <Comment.Group>
+            {threadsArray.map(comment => (
+              <Fragment key={comment.id}>
+                {this.getComments(comment, commentLike)}
+                <Divider className="commentDivider" />
+              </Fragment>
+            ))}
+          </Comment.Group>
+        </div>
+      </Container>
+    );
   }
 }
 
@@ -96,12 +94,11 @@ CommentThreads.propTypes = {
   articleId: PropTypes.string.isRequired,
   mainCommentId: PropTypes.string,
   comment: PropTypes.object.isRequired,
-  threadsArray: PropTypes.array,
+  threadCount: PropTypes.number.isRequired,
   getComments: PropTypes.func.isRequired,
   getCommentLikes: PropTypes.func.isRequired
 };
 
 CommentThreads.defaultProps = {
-  threadsArray: [],
   mainCommentId: null
 };

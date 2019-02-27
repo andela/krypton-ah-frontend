@@ -8,10 +8,6 @@ const socialMediaElements = [
     key: 'twitter'
   },
   {
-    name: 'google plus g',
-    key: 'google plus g'
-  },
-  {
     name: 'instagram',
     key: 'instagram'
   }
@@ -38,7 +34,8 @@ const socialMediaLoginIcons = [
     iconName: 'google plus square',
     key: 2,
     url: process.env.GOOGLE_URL
-  }, {
+  },
+  {
     text: 'Linkedin',
     iconName: 'linkedin',
     key: 3,
@@ -57,6 +54,18 @@ const { BASE_URL_CB } = process.env;
 const authentication = 'authentication';
 const twitterPath = '/auth/twitter/callback';
 const networkErrorResponse = 'Network error! kindly try again later';
+const callbackUrl = 'https://krypton-ah-fe-stage.herokuapp.com/verification';
+const activationResponse = {
+  data: {
+    message: 'Your account has been successfully activated! You can begin sharing your ideas.'
+  }
+};
+
+const alreadyActivatedResponse = {
+  data: {
+    message: 'Your account is already activated! kindly login to continue'
+  }
+};
 
 export {
   socialMediaElements,
@@ -68,4 +77,7 @@ export {
   authentication,
   twitterPath,
   networkErrorResponse,
+  callbackUrl,
+  activationResponse,
+  alreadyActivatedResponse
 };

@@ -40,7 +40,6 @@ class CreateComment extends Component {
   render() {
     return (
       <Form onSubmit={this.handleSubmit}>
-        <h1>ADD COMMENT</h1>
         <Form.TextArea
           name="commentMessage"
           value={this.state.commentMessage}

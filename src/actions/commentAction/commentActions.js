@@ -11,6 +11,10 @@ const threads = payload => ({
   payload
 });
 
+const commentLoading = () => ({
+  type: actionTypes.COMMENT_LOADING
+});
+
 const failed = payload => ({
   type: actionTypes.COMMENT_LOADING,
   payload
@@ -22,6 +26,7 @@ const likeComment = payload => ({
 });
 const getComments = (articleId, mainCommentId) => async (dispatch) => {
   try {
+    dispatch(commentLoading());
     const res = await fetchComment(articleId, mainCommentId);
     if (res.threads) {
       dispatch(threads(res.threads));

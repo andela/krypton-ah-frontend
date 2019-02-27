@@ -10,7 +10,7 @@ let response = {};
   * @returns {object} response
   */
 const createComment = async (articleId, commentMessage, mainCommentId) => {
-  const url = `${API_BASE_URL}/api/v1/articles/${articleId}/comments`;
+  const url = `${API_BASE_URL}/articles/${articleId}/comments`;
   if (mainCommentId) {
     response = await axios.post(url, { comment: commentMessage, mainCommentId }, config);
   } else {
@@ -20,7 +20,7 @@ const createComment = async (articleId, commentMessage, mainCommentId) => {
 };
 
 const fetchComment = async (articleId, mainCommentId) => {
-  let url = `${API_BASE_URL}/api/v1/articles/${articleId}/comments`;
+  let url = `${API_BASE_URL}/articles/${articleId}/comments`;
   if (mainCommentId) {
     url += `/${mainCommentId}`;
   }
@@ -30,8 +30,6 @@ const fetchComment = async (articleId, mainCommentId) => {
 };
 
 const commentLike = async () => {
-  // const url = `${API_BASE_URL}/api/v1/articles/reactions/${articleId}/?reaction=like`;
-  // response = await axios.get(url, config);
   response = {
     like: 10,
     dislike: 4
