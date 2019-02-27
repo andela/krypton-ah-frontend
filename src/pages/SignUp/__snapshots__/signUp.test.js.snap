@@ -7,6 +7,6 @@ exports[`App should match snapshot 1`] = `
   link="Sign In"
   title="sign up"
 >
-  <SignUpForm />
+  <Connect(SignUpForm) />
 </ModalComponent>
 `;

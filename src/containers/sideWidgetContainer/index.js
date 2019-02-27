@@ -4,10 +4,10 @@ import '../Homecontainer/HomeContainer.scss';
 import Title from '../../components/sectionHeader';
 import FeaturedWidget from '../../components/widgets/Articlewidgets/ArticlesFeedContainer';
 import { trendingArticles } from '../../mockData';
-import Categories from './CategoriesContainer/Categories';
 import Tags from '../../components/tags';
 import NewsLetter from './Newsletter';
 import Advert from '../../components/widgets/Advert';
+import Categories from './categoriesContainer/Categories';
 
 export default function WidgetContainer() {
   return (
