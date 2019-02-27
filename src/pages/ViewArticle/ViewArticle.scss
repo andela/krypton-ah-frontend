@@ -2,7 +2,8 @@
   margin: -10% 0 15% 14%;
   width: 90%;
 }
-.articleReactions .dates {
+.articleReactions .dates,
+.articleReactions .articleComment {
   display: none;
 }
 .articleReactions i:not(:nth-child(2)) {

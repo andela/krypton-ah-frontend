@@ -1,37 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Icon } from 'semantic-ui-react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { getTotalReactions } from '../../actions/articleReactionsAction';
 
-export default class ReactionIcons extends Component {
+class ReactionIcons extends Component {
   state = {
     like: false,
     dislike: false
   };
 
-  checkPreviousState = previousState => (previousState ? false : previousState);
-
-  handleLikeAction = () => {
-    const { like, dislike } = this.state;
-    const returnedState = this.checkPreviousState(dislike);
-    this.setState({
-      like: !like,
-      dislike: returnedState
-    });
-  };
-
-  handleDislikeAction = () => {
-    const { like, dislike } = this.state;
-    const returnedState = this.checkPreviousState(like);
-    this.setState({
-      dislike: !dislike,
-      like: returnedState
-    });
+  componentDidMount = () => {
+    this.props.getTotalReactions(this.props.selectedArticleId);
   };
 
   likeArticle = (outline = 'outline') => {
     const name = outline.length === 0 ? 'thumbs up' : `thumbs up ${outline}`;
     return (
-      <i onClick={this.handleLikeAction} role="presentation">
+      <i role="presentation">
         <Icon disabled link size="small" fitted name={`thumbs up ${name}`} />
       </i>
     );
@@ -40,7 +26,7 @@ export default class ReactionIcons extends Component {
   dislikeArticle = (outline = 'outline') => {
     const name = outline.length === 0 ? 'thumbs down' : `thumbs down ${outline}`;
     return (
-      <i onClick={this.handleDislikeAction} role="presentation">
+      <i role="presentation">
         <Icon disabled link size="small" fitted name={`thumbs down ${name}`} />
       </i>
     );
@@ -51,19 +37,17 @@ export default class ReactionIcons extends Component {
     const { like, dislike } = this.state;
     const outline = '';
     return (
-      <div>
-        <React.Fragment>
-          <i className="dates">{date}</i>
-          {like ? this.likeArticle(outline) : this.likeArticle()}
-          {numberoflikes}
-          {dislike ? this.dislikeArticle(outline) : this.dislikeArticle()}
-          {numberofdislikes}
-          <i>
-            <Icon disabled link size="small" fitted name="comments outline" />
-          </i>
+      <Fragment>
+        <i className="dates">{date}</i>
+        {like ? this.likeArticle(outline) : this.likeArticle()}
+        {numberoflikes}
+        {dislike ? this.dislikeArticle(outline) : this.dislikeArticle()}
+        {numberofdislikes}
+        <i className="articleComment">
+          <Icon disabled link size="small" fitted name="comments outline" />
           {numberofcomments}
-        </React.Fragment>
-      </div>
+        </i>
+      </Fragment>
     );
   }
 }
@@ -78,5 +62,17 @@ ReactionIcons.propTypes = {
   date: PropTypes.string,
   numberoflikes: PropTypes.number,
   numberofdislikes: PropTypes.number,
-  numberofcomments: PropTypes.number
+  numberofcomments: PropTypes.number,
+  selectedArticleId: PropTypes.string.isRequired,
+  getTotalReactions: PropTypes.func.isRequired
 };
+
+const mapStateToProps = state => ({
+  state
+});
+
+export { ReactionIcons as ReactionIconsPage };
+export default connect(
+  mapStateToProps,
+  { getTotalReactions }
+)(ReactionIcons);

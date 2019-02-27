@@ -8,7 +8,6 @@ exports[`Test for reaction Icons should have initial state of false and change w
     28th february 2019
   </i>
   <i
-    onClick={[Function]}
     role="presentation"
   >
     <Icon
@@ -22,7 +21,6 @@ exports[`Test for reaction Icons should have initial state of false and change w
   </i>
   23
   <i
-    onClick={[Function]}
     role="presentation"
   >
     <Icon
@@ -35,7 +33,9 @@ exports[`Test for reaction Icons should have initial state of false and change w
     />
   </i>
   23
-  <i>
+  <i
+    className="articleComment"
+  >
     <Icon
       as="i"
       disabled={true}
@@ -44,8 +44,8 @@ exports[`Test for reaction Icons should have initial state of false and change w
       name="comments outline"
       size="small"
     />
+    23
   </i>
-  23
 </div>
 `;
 
@@ -57,7 +57,6 @@ exports[`Test for reaction Icons should have initial state of false and change w
     28th february 2019
   </i>
   <i
-    onClick={[Function]}
     role="presentation"
   >
     <Icon
@@ -71,7 +70,6 @@ exports[`Test for reaction Icons should have initial state of false and change w
   </i>
   23
   <i
-    onClick={[Function]}
     role="presentation"
   >
     <Icon
@@ -84,7 +82,9 @@ exports[`Test for reaction Icons should have initial state of false and change w
     />
   </i>
   23
-  <i>
+  <i
+    className="articleComment"
+  >
     <Icon
       as="i"
       disabled={true}
@@ -93,7 +93,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
       name="comments outline"
       size="small"
     />
+    23
   </i>
-  23
 </div>
 `;

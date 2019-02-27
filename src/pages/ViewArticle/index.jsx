@@ -10,7 +10,7 @@ export default function ViewArticle(props) {
     <Fragment>
       <ReadArticle selectedArticle={title} />
       <div className=" articleReactions">
-        <Widgets />
+        <Widgets selectedArticleId={title} />
       </div>
     </Fragment>
   );
