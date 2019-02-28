@@ -7,7 +7,7 @@ import { API_BASE_URL } from '../../constants';
   * @returns {object} response
   */
 const verifySocialAuth = async (urlPath) => {
-  const url = `${API_BASE_URL}/api/v1${urlPath}`;
+  const url = `${API_BASE_URL}${urlPath}`;
   const response = await axios.get(url);
   return response;
 };

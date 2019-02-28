@@ -11,7 +11,7 @@ import { fetchArticlesresponse } from '../../../mockData';
 describe('Test for get article function', () => {
   it('should return a response object', async () => {
     const axiosGet = axios.get;
-    const urlPath = `${API_BASE_URL}/api/v1/articles/popular?limit=5`;
+    const urlPath = `${API_BASE_URL}/articles/popular?limit=5`;
     axios.get = jest.fn(() => Promise.resolve(fetchArticlesresponse));
     const response = await fetchPopularArticles(urlPath);
     expect(response).toEqual(fetchArticlesresponse);
@@ -20,7 +20,7 @@ describe('Test for get article function', () => {
 
   it('should return a response object', async () => {
     const axiosGet = axios.get;
-    const urlPath = `${API_BASE_URL}/api/v1/articles/popular?limit=5`;
+    const urlPath = `${API_BASE_URL}/articles/popular?limit=5`;
     axios.get = jest.fn(() => Promise.resolve(fetchArticlesresponse));
     const response = await fetchFeaturedArticles(urlPath);
     expect(response).toEqual(fetchArticlesresponse);
@@ -29,7 +29,7 @@ describe('Test for get article function', () => {
 
   it('should return a response object', async () => {
     const axiosGet = axios.get;
-    const urlPath = `${API_BASE_URL}/api/v1/articles/popular?limit=5`;
+    const urlPath = `${API_BASE_URL}/articles/popular?limit=5`;
     axios.get = jest.fn(() => Promise.resolve(fetchArticlesresponse));
     const response = await fetchCategories(urlPath);
     expect(response).toEqual(fetchArticlesresponse);
