@@ -8,7 +8,9 @@ const {
   FETCH_USER_FAILURE,
   UPDATE_USER_SUCCESS,
   UPDATE_USER_FAILURE,
-  FETCH_OWNER_SUCCESS
+  FETCH_OWNER_SUCCESS,
+  FETCH_OWNER_LOADING,
+  FETCH_OWNER_FAILURE
 } = actionTypes;
 
 const { user } = initialState;
@@ -51,7 +53,18 @@ export default (state = user, action) => {
     case FETCH_OWNER_SUCCESS:
       return {
         ...state,
-        ...action.payload
+        ...action.payload,
+        fetchCurrentUserIsLoading: false
+      };
+    case FETCH_OWNER_FAILURE:
+      return {
+        ...state,
+        fetchCurrentUserIsLoading: false
+      };
+    case FETCH_OWNER_LOADING:
+      return {
+        ...state,
+        fetchedCurrentUser: true
       };
     default:
       return state;

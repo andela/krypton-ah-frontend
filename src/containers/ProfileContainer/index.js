@@ -119,14 +119,25 @@ const mapDispatchToProps = dispatch => ({
 const mapStateToProps = (state) => {
   const { userReducer } = state;
   const { firstname, lastname, userprofile, id, fetchIsLoading, updateIsLoading } = userReducer;
-  const { UserId, createdAt, emailnotification, updatedAt, ...neededData } = userprofile;
+  if (userprofile) {
+    const { UserId, createdAt, emailnotification, updatedAt, ...neededData } = userprofile;
+    return {
+      fetchIsLoading,
+      updateIsLoading,
+      profileData: {
+        firstname,
+        lastname,
+        ...neededData,
+        id
+      }
+    };
+  }
   return {
     fetchIsLoading,
     updateIsLoading,
     profileData: {
       firstname,
       lastname,
-      ...neededData,
       id
     }
   };

@@ -68,7 +68,7 @@ class UserProfile extends React.Component {
     if (Object.keys(update).length === 0) {
       return;
     }
-    const res = state.username ? updateUser(update) : updateUser(update, true);
+    const res = profileData.username ? updateUser(update) : updateUser(update, true);
     return res;
   }
 

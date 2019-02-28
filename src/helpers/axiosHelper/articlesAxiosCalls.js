@@ -2,7 +2,7 @@ import axios from 'axios';
 import { API_BASE_URL } from '../../constants';
 
 const fetchTags = async () => {
-  const response = await axios.get(`${API_BASE_URL}/tag`);
+  const response = await axios.get(`${API_BASE_URL}/tags`);
   return response;
 };
 

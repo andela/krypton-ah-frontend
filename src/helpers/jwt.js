@@ -1,7 +1,7 @@
 import jwtDecode from 'jwt-decode';
 import { authentication } from '../constants';
 
-const setToken = token => localStorage.setItem(authentication, token);
+export const setToken = token => localStorage.setItem(authentication, token);
 
 const getUserIdFromLocalStorage = () => {
   const token = localStorage.getItem(authentication);
@@ -37,5 +37,3 @@ export const isUserAuthenticated = () => {
 };
 
 export { getToken, config, getUserIdFromLocalStorage };
-
-export default setToken;

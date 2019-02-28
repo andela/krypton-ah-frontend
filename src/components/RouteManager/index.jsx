@@ -18,12 +18,25 @@ class RouteManager extends Component {
   }
 
   render() {
-    const { exact, path, isAuthenticated, component, redirectTo, routeType, getOwner } = this.props;
+    const {
+      exact,
+      path,
+      isAuthenticated,
+      component,
+      redirectTo,
+      routeType,
+      getOwner,
+      fetchedCurrentUser,
+      // isSocialAuth
+    } = this.props;
     if (isUserAuthenticated() && !isAuthenticated) {
       const userId = getUserIdFromLocalStorage();
-      if (getOwner) {
+      if (getOwner && !fetchedCurrentUser) {
         getOwner(userId);
       }
+      // if(!isAuthenticated || !isSocialAuth){
+
+      // }
       return <Loading />;
     }
     let CurrentRoute;
@@ -62,10 +75,14 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = (state) => {
-  const { authReducer } = state;
+  const { authReducer, userReducer, socialLogin } = state;
   const { isAuthenticated } = authReducer;
+  const { fetchedCurrentUser } = userReducer;
+  const isSocialAuth = socialLogin.isAuthenticated;
   return {
-    isAuthenticated
+    isAuthenticated,
+    fetchedCurrentUser,
+    isSocialAuth
   };
 };
 
@@ -84,7 +101,7 @@ RouteManager.propTypes = {
   isAuthenticated: PropTypes.bool,
   component: PropTypes.func.isRequired,
   redirectTo: PropTypes.string,
-  routeType: PropTypes.oneOf(['authenticated', 'unauthenticated'])
+  routeType: PropTypes.oneOf(['authenticated', 'unAuthenticated'])
 };
 
 export default connect(
