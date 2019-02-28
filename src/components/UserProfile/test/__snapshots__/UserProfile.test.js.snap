@@ -18,7 +18,7 @@ exports[`UserProfile should match snapshot 1`] = `
         <label
           htmlFor="firstname"
         >
-          FIRSTNAME
+          firstname
         </label>
         <FormInput
           as={[Function]}
@@ -27,7 +27,7 @@ exports[`UserProfile should match snapshot 1`] = `
           id="firstname"
           name="firstname"
           onChange={[Function]}
-          placeholder="FIRSTNAME"
+          placeholder="firstname"
           size="massive"
           type="text"
           value="Fistname"
@@ -37,7 +37,7 @@ exports[`UserProfile should match snapshot 1`] = `
         <label
           htmlFor="lastname"
         >
-          LASTNAME
+          lastname
         </label>
         <FormInput
           as={[Function]}
@@ -46,7 +46,7 @@ exports[`UserProfile should match snapshot 1`] = `
           id="lastname"
           name="lastname"
           onChange={[Function]}
-          placeholder="LASTNAME"
+          placeholder="lastname"
           size="massive"
           type="text"
           value=""
@@ -61,7 +61,7 @@ exports[`UserProfile should match snapshot 1`] = `
         <label
           htmlFor="username"
         >
-          USERNAME
+          username
         </label>
         <FormInput
           as={[Function]}
@@ -70,7 +70,7 @@ exports[`UserProfile should match snapshot 1`] = `
           id="username"
           name="username"
           onChange={[Function]}
-          placeholder="USERNAME"
+          placeholder="username"
           size="massive"
           type="text"
           value=""
@@ -80,7 +80,7 @@ exports[`UserProfile should match snapshot 1`] = `
         <label
           htmlFor="gender"
         >
-          GENDER
+          gender
         </label>
         <FormSelect
           as={[Function]}
@@ -101,7 +101,7 @@ exports[`UserProfile should match snapshot 1`] = `
               },
             ]
           }
-          placeholder="GENDER"
+          placeholder="gender"
           size="massive"
           value=""
         />
@@ -115,7 +115,7 @@ exports[`UserProfile should match snapshot 1`] = `
         <label
           htmlFor="country"
         >
-          COUNTRY
+          country
         </label>
         <FormSelect
           as={[Function]}
@@ -136,7 +136,7 @@ exports[`UserProfile should match snapshot 1`] = `
               },
             ]
           }
-          placeholder="COUNTRY"
+          placeholder="country"
           size="massive"
           value=""
         />
@@ -145,7 +145,7 @@ exports[`UserProfile should match snapshot 1`] = `
         <label
           htmlFor="phone number"
         >
-          PHONE NUMBER
+          phone number
         </label>
         <FormInput
           as={[Function]}
@@ -154,7 +154,7 @@ exports[`UserProfile should match snapshot 1`] = `
           id="phone number"
           name="phone number"
           onChange={[Function]}
-          placeholder="PHONE NUMBER"
+          placeholder="phone number"
           size="massive"
           type="tel"
           value=""
@@ -204,7 +204,7 @@ exports[`UserProfile should match snapshot 2`] = `
         <label
           htmlFor="firstname"
         >
-          FIRSTNAME
+          firstname
         </label>
         <FormInput
           as={[Function]}
@@ -213,7 +213,7 @@ exports[`UserProfile should match snapshot 2`] = `
           id="firstname"
           name="firstname"
           onChange={[Function]}
-          placeholder="FIRSTNAME"
+          placeholder="firstname"
           size="massive"
           type="text"
           value="Fistname"
@@ -223,7 +223,7 @@ exports[`UserProfile should match snapshot 2`] = `
         <label
           htmlFor="lastname"
         >
-          LASTNAME
+          lastname
         </label>
         <FormInput
           as={[Function]}
@@ -232,7 +232,7 @@ exports[`UserProfile should match snapshot 2`] = `
           id="lastname"
           name="lastname"
           onChange={[Function]}
-          placeholder="LASTNAME"
+          placeholder="lastname"
           size="massive"
           type="text"
           value=""
@@ -247,7 +247,7 @@ exports[`UserProfile should match snapshot 2`] = `
         <label
           htmlFor="username"
         >
-          USERNAME
+          username
         </label>
         <FormInput
           as={[Function]}
@@ -256,7 +256,7 @@ exports[`UserProfile should match snapshot 2`] = `
           id="username"
           name="username"
           onChange={[Function]}
-          placeholder="USERNAME"
+          placeholder="username"
           size="massive"
           type="text"
           value=""
@@ -266,7 +266,7 @@ exports[`UserProfile should match snapshot 2`] = `
         <label
           htmlFor="gender"
         >
-          GENDER
+          gender
         </label>
         <FormSelect
           as={[Function]}
@@ -287,7 +287,7 @@ exports[`UserProfile should match snapshot 2`] = `
               },
             ]
           }
-          placeholder="GENDER"
+          placeholder="gender"
           size="massive"
           value=""
         />
@@ -301,7 +301,7 @@ exports[`UserProfile should match snapshot 2`] = `
         <label
           htmlFor="country"
         >
-          COUNTRY
+          country
         </label>
         <FormSelect
           as={[Function]}
@@ -322,7 +322,7 @@ exports[`UserProfile should match snapshot 2`] = `
               },
             ]
           }
-          placeholder="COUNTRY"
+          placeholder="country"
           size="massive"
           value=""
         />
@@ -331,7 +331,7 @@ exports[`UserProfile should match snapshot 2`] = `
         <label
           htmlFor="phone number"
         >
-          PHONE NUMBER
+          phone number
         </label>
         <FormInput
           as={[Function]}
@@ -340,7 +340,7 @@ exports[`UserProfile should match snapshot 2`] = `
           id="phone number"
           name="phone number"
           onChange={[Function]}
-          placeholder="PHONE NUMBER"
+          placeholder="phone number"
           size="massive"
           type="tel"
           value=""

@@ -7,7 +7,7 @@ const getUserIdFromLocalStorage = () => {
   const token = localStorage.getItem(authentication);
   try {
     const { payLoad } = jwtDecode(token);
-    return payLoad;
+    return payLoad.id;
   } catch (error) {
     return null;
   }

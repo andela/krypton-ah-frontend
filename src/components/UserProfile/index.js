@@ -22,11 +22,26 @@ class UserProfile extends React.Component {
     this.renderFromGroups = this.renderFromGroups.bind(this);
     this.renderTextArea = this.renderTextArea.bind(this);
     this.renderUpdateButton = this.renderUpdateButton.bind(this);
+    this.getUpdatedField = this.getUpdatedField.bind(this);
   }
 
   componentWillMount() {
     const { profileData } = this.props;
     this.setState({ ...profileData });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { profileData } = nextProps;
+    this.setState({ ...profileData });
+  }
+
+  getUpdatedField(stateObject, propsObject) {
+    return Object.keys(stateObject).reduce((updateObject, key) => {
+      if (stateObject[key] !== propsObject[key]) {
+        updateObject[key] = stateObject[key];
+      }
+      return updateObject;
+    }, {});
   }
 
   handleChange(event) {
@@ -47,8 +62,14 @@ class UserProfile extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { updateUser } = this.props;
-    updateUser(this.state);
+    const { updateUser, profileData } = this.props;
+    const { state } = this;
+    const update = this.getUpdatedField(state, profileData);
+    if (Object.keys(update).length === 0) {
+      return;
+    }
+    const res = state.username ? updateUser(update) : updateUser(update, true);
+    return res;
   }
 
   renderFormElement(formElement, disabled) {
@@ -56,26 +77,26 @@ class UserProfile extends React.Component {
     const { state } = this;
     return element === 'input' ? (
       <Form.Input
-          disabled={disabled}
-          id={name}
-          size="massive"
-          name={name}
-          onChange={this.handleChange}
-          placeholder={name.toUpperCase()}
-          type={type}
-          value={state[name.replace(' ', '')]}
-        />
+        disabled={disabled}
+        id={name}
+        size="massive"
+        name={name}
+        onChange={this.handleChange}
+        placeholder={name}
+        type={type}
+        value={state[name.replace(' ', '')]}
+      />
     ) : (
       <Form.Select
-          disabled={disabled}
-          id={name}
-          name={name}
-          value={state[name]}
-          onChange={this.handleSelect}
-          options={formElement.options}
-          size="massive"
-          placeholder={name.toUpperCase()}
-        />
+        disabled={disabled}
+        id={name}
+        name={name}
+        value={state[name]}
+        onChange={this.handleSelect}
+        options={formElement.options}
+        size="massive"
+        placeholder={name}
+      />
     );
   }
 
@@ -85,13 +106,11 @@ class UserProfile extends React.Component {
       return (
         <Form.Group key={leftFormElement.name} widths="equal">
           <Form.Field>
-            <label htmlFor={leftFormElement.name}>{leftFormElement.name.toLocaleUpperCase()}</label>
+            <label htmlFor={leftFormElement.name}>{leftFormElement.name}</label>
             {this.renderFormElement(leftFormElement, disabled)}
           </Form.Field>
           <Form.Field>
-            <label htmlFor={rightFormElement.name}>
-              {rightFormElement.name.toLocaleUpperCase()}
-            </label>
+            <label htmlFor={rightFormElement.name}>{rightFormElement.name}</label>
             {this.renderFormElement(rightFormElement, disabled)}
           </Form.Field>
         </Form.Group>
@@ -118,9 +137,10 @@ class UserProfile extends React.Component {
   }
 
   renderUpdateButton(user) {
+    const { updateIsLoading } = this.props;
     const updateButton = user === 'owner' ? (
       <Form.Button size="massive" className="btnRight" basic>
-          UPDATE
+        {updateIsLoading ? 'UPDATING' : 'UPDATE'}
       </Form.Button>
     ) : null;
     return updateButton;
@@ -150,13 +170,15 @@ class UserProfile extends React.Component {
 
 UserProfile.defaultProps = {
   updateUser: () => {},
-  user: ''
+  user: '',
+  updateIsLoading: false
 };
 
 UserProfile.propTypes = {
   profileData: PropTypes.object.isRequired,
   updateUser: PropTypes.func,
-  user: PropTypes.string
+  user: PropTypes.string,
+  updateIsLoading: PropTypes.bool
 };
 
 export default UserProfile;
