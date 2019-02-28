@@ -1,5 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 exports[`carousel conatiner test should test for the carousel component 1`] = `
 <GridColumn>
   <Carousel
@@ -137,3 +138,6 @@ exports[`carousel conatiner test should test for the carousel component 2`] = `
   </Carousel>
 </GridColumn>
 `;
+=======
+exports[`carousel conatiner test should test for the carousel component 1`] = `<componentloaderHOC />`;
+>>>>>>> landing-page-logic

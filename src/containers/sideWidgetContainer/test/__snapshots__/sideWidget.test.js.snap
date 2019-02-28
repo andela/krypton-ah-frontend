@@ -11,6 +11,7 @@ exports[`button test should test for the categories component 1`] = `
     <Tags
       tags={Array []}
       type={null}
+<<<<<<< HEAD
     />
     <ListItem>
       <Label
@@ -34,6 +35,8 @@ exports[`button test should test for the categories component 2`] = `
     <Tags
       tags={Array []}
       type={null}
+=======
+>>>>>>> landing-page-logic
     />
     <ListItem>
       <Label
@@ -68,6 +71,7 @@ exports[`button test should test for the newsletter component 1`] = `
 `;
 
 exports[`button test should test for the sidewidget component 1`] = `
+<<<<<<< HEAD
 <Grid
   className="side"
   divided="vertically"
@@ -147,4 +151,9 @@ exports[`button test should test for the sidewidget component 1`] = `
     <NewsLetter />
   </GridRow>
 </Grid>
+=======
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+>>>>>>> landing-page-logic
 `;

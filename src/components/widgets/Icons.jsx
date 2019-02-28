@@ -13,14 +13,14 @@ export default function Icons({ id, ratingIcon, numberofcomments, date, name }) 
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <Reactions date={date} selectedArticleId={id} />
-            <Icon disabled link size="small" name="bookmark outline" />
-            <span>{numberofcomments}</span>
-            <div className="rating">
-              <Rating disabled maxRating={5} defaultRating={3} icon="star" size="small" />
-              <span>{name}</span>
-            </div>
-          </React.Fragment>
+              <Reactions date={date} selectedArticleId={id} />
+              <Icon disabled link size="small" name="bookmark outline" />
+              <span>{numberofcomments}</span>
+              <div className="rating">
+                <Rating disabled maxRating={5} defaultRating={3} icon="star" size="small" />
+                <span>{name}</span>
+              </div>
+            </React.Fragment>
         )}
       </div>
     </Menu>

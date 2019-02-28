@@ -19,7 +19,10 @@ exports[`button test should test for the button component 1`] = `
     </FeedSummary>
     <Icons
       date="current-date"
+<<<<<<< HEAD
       id={1}
+=======
+>>>>>>> landing-page-logic
       name="author-name"
       numberofcomments={23}
       ratingIcon="rating-class"
@@ -113,6 +116,7 @@ exports[`button test should test for the button component 4`] = `
   >
     <Connect(ReactionIcons)
       date="current-date"
+<<<<<<< HEAD
       selectedArticleId={1}
     />
   </div>
@@ -129,6 +133,8 @@ exports[`button test should test for the button component 5`] = `
     <Connect(ReactionIcons)
       date="current-date"
       selectedArticleId={1}
+=======
+>>>>>>> landing-page-logic
     />
   </div>
 </Menu>

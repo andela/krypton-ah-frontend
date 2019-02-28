@@ -37,5 +37,9 @@ PopularArticles.defaultProps = {
 };
 
 PopularArticles.propTypes = {
+<<<<<<< HEAD
   popular: PropTypes.array
+=======
+  popular: PropTypes.string
+>>>>>>> landing-page-logic
 };

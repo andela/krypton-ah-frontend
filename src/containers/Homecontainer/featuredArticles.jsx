@@ -30,7 +30,10 @@ export default function FeaturedArticles({ articles }) {
                 name={`${articles.data[0].articleAuthor.firstname} ${
                   articles.data[0].articleAuthor.lastname
                 }`}
+<<<<<<< HEAD
                 id={article.data[0].id}
+=======
+>>>>>>> landing-page-logic
               />
             </Card>
           </Grid.Column>

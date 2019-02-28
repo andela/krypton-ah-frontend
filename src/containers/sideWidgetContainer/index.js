@@ -56,7 +56,10 @@ const mapStateToProps = state => ({
   trendingArticles: state.trendingArticlesReducer
 });
 
+<<<<<<< HEAD
 export { WidgetContainer as Widget };
+=======
+>>>>>>> landing-page-logic
 export default connect(
   mapStateToProps,
   { fetchcategories, fetchtags }
