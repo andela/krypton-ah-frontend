@@ -6,8 +6,8 @@ import { getTotalReactions } from '../../actions/articleReactionsAction';
 
 class ReactionIcons extends Component {
   state = {
-    like: false,
-    dislike: false
+    likeClicked: false,
+    dislikeClicked: false
   };
 
   componentDidMount = () => {
@@ -33,16 +33,17 @@ class ReactionIcons extends Component {
   };
 
   render() {
-    const { date, numberoflikes, numberofdislikes, numberofcomments } = this.props;
-    const { like, dislike } = this.state;
+    const { date, numberofcomments, totalArticleReactions } = this.props;
+    const { likes, dislikes } = totalArticleReactions.successResponse;
+    const { likeClicked, dislikeClicked } = this.state;
     const outline = '';
     return (
       <Fragment>
         <i className="dates">{date}</i>
-        {like ? this.likeArticle(outline) : this.likeArticle()}
-        {numberoflikes}
-        {dislike ? this.dislikeArticle(outline) : this.dislikeArticle()}
-        {numberofdislikes}
+        {likeClicked ? this.likeArticle(outline) : this.likeArticle()}
+        {likes}
+        {dislikeClicked ? this.dislikeArticle(outline) : this.dislikeArticle()}
+        {dislikes}
         <i className="articleComment">
           <Icon disabled link size="small" fitted name="comments outline" />
           {numberofcomments}
@@ -53,22 +54,19 @@ class ReactionIcons extends Component {
 }
 ReactionIcons.defaultProps = {
   date: '28th february 2019',
-  numberoflikes: 23,
-  numberofdislikes: 23,
   numberofcomments: 23
 };
 
 ReactionIcons.propTypes = {
   date: PropTypes.string,
-  numberoflikes: PropTypes.number,
-  numberofdislikes: PropTypes.number,
   numberofcomments: PropTypes.number,
   selectedArticleId: PropTypes.string.isRequired,
-  getTotalReactions: PropTypes.func.isRequired
+  getTotalReactions: PropTypes.func.isRequired,
+  totalArticleReactions: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  state
+  totalArticleReactions: state.totalArticleReactions
 });
 
 export { ReactionIcons as ReactionIconsPage };
