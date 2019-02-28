@@ -39,10 +39,17 @@ const initialState = {
   },
   comment: {
     commentIsLoading: false,
+    updateComment: false,
     success: false,
     commentsArray: [],
     threadsArray: [],
     commentLike: 0
+  },
+  totalArticleReactions: {
+    totalReactionsLoading: false,
+    success: false,
+    successResponse: {},
+    failureResponse: {}
   }
 };
 

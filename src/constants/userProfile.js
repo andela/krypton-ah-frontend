@@ -72,19 +72,19 @@ const commonMenuItems = [
     to: '/user-articles',
     text: 'ARTICLES',
     icon: articleIcon,
-    count: '6'
+    count: ''
   },
   {
     to: '/followers',
     text: 'FOLLOWERS',
     icon: followersIcon,
-    count: '10'
+    count: ''
   },
   {
     to: '/following',
     text: 'FOLLOWING',
     icon: followingIcon,
-    count: '12'
+    count: ''
   }
 ];
 

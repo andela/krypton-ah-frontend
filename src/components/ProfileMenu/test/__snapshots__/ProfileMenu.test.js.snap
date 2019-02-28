@@ -3,5 +3,7 @@
 exports[`ProfileMenu should match snapshot 1`] = `
 <div
   className="menu-item profileMenu"
-/>
+>
+  <Component />
+</div>
 `;

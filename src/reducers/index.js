@@ -4,6 +4,7 @@ import authReducer from './authReducer';
 import socialLogin from './socialLoginReducer';
 import readArticle from './readArticleReducer';
 import commentReducer from './commentReducer';
+import totalArticleReactions from './totalArticleReactionReducer';
 
 const rootReducer = combineReducers({
   trendingArticlesReducer,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   authReducer,
   socialLogin,
   readArticle,
-  commentReducer
+  commentReducer,
+  totalArticleReactions
 });
 
 export default rootReducer;

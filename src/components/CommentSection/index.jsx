@@ -21,14 +21,29 @@ class FetchComment extends Component {
     this.state = {
       articleId: this.props.articleId,
       mainCommentId: this.props.mainCommentId,
-      fetchThreads: false
+      fetchThreads: false,
+      index: 0
     };
     this.handleOnClick = this.handleOnClick.bind(this);
+    this.commentOnClick = this.commentOnClick.bind(this);
+    this.createComment = this.createComment.bind(this);
   }
 
   componentDidMount() {
     this.props.getComments(this.state.articleId, this.state.mainCommentId);
     this.props.getCommentLikes();
+  }
+
+  componentDidUpdate(prevProps) {
+    const oldUpdateState = prevProps.comment.updateComment;
+
+    const { updateComment, mainCommentId } = this.props.comment;
+    if (oldUpdateState !== updateComment && updateComment === true) {
+      if (mainCommentId) {
+        this.props.comment.commentsArray[this.state.index].threads += 1;
+      }
+      return this.props.getComments(this.state.articleId, mainCommentId);
+    }
   }
 
   getComments = (commentsArray, commentLike) => (
@@ -39,15 +54,15 @@ class FetchComment extends Component {
           <Comment.Content>
             <Comment.Text>{comment.comment}</Comment.Text>
             {this.getCommentActions(comment, commentLike)}
-            {this.state.fetchThreads === true && this.state.mainCommentId === comment.id ? (
+            {this.state.fetchThreads && this.state.mainCommentId === comment.id ? (
               <Fragment>
                 <CommentThreads
                   articleId={this.state.articleId}
                   mainCommentId={comment.id}
                   threadCount={comment.threads} />
                 <CreateComment
-                  articleId={this.state.articleId}
-                 mainCommentId={this.state.mainCommentId} />
+                  articleId={this.state.articleId} mainCommentId={this.state.mainCommentId}
+                  setMainCommentId={this.commentOnClick} index={commentsArray.indexOf(comment)} />
               </Fragment>
             ) : null}
           </Comment.Content>
@@ -61,58 +76,82 @@ class FetchComment extends Component {
     <Comment.Actions>
       <Comment.Action>
         <Image src={like} />
-        {commentLike.like}
+        <span className="commentInfo">
+          {commentLike.like}
+        </span>
       </Comment.Action>
       <Comment.Action>
         <Image src={dislike} />
-        {commentLike.dislike}
+        <span className="commentInfo">
+          {commentLike.dislike}
+        </span>
       </Comment.Action>
       <Comment.Metadata>
-        <span>{moment.utc(comment.createdAt, 'YYYY-MM-DDTHH:mm:ss').fromNow()}</span>
+        <span className="commentInfo">{moment.utc(comment.createdAt, 'YYYY-MM-DDTHH:mm:ss').fromNow()}</span>
       </Comment.Metadata>
-      <Comment.Action className="replyButton">Reply</Comment.Action>
-      <Comment.Action className="showThreads" onClick={this.handleOnClick} id={comment.id}>
+      <Comment.Action className="replyButton">
         {comment.threads}
-        {' '}
-        Threads
+        {comment.threads > 1 ? ' Threads' : ' thread' }
       </Comment.Action>
+      <Comment.Action className="replyButton" onClick={this.handleOnClick} id={comment.id}>Reply</Comment.Action>
     </Comment.Actions>
   );
 
-  handleOnClick(e) {
-    const mainCommentId = e.target.id;
-    let { fetchThreads } = this.state;
-    this.props.comment.threadsArray = [];
-    if (mainCommentId === this.state.mainCommentId) {
-      fetchThreads = !fetchThreads;
-    } else {
-      fetchThreads = true;
-    }
-    this.setState(state => ({
-      ...state,
-      fetchThreads,
-      mainCommentId
-    }));
-  }
+ createComment = () => (
+   !this.state.fetchThreads ? (
+     <div className="addComment">
+       <h1 className="addCommentText">ADD COMMENT</h1>
+       <CreateComment
+        articleId={this.props.articleId}
+        mainCommentId={null} setMainCommentId={this.commentOnClick} />
+     </div>
+   ) : null
+ )
 
-  render() {
-    const { commentsArray, commentLike } = this.props.comment;
-    return (
-      <Container>
-        <div className="commentsContainer">
-          <Comment.Group>
-            <Header as="h3" className="commentsHeader">
-              Comments
-            </Header>
-            {commentsArray.length === 0 ? <Loading size="massive" /> : null}
-            { this.getComments(commentsArray, commentLike) }
-          </Comment.Group>
-          <p className="moreComments">More Comments</p>
-        </div>
-        <CreateComment articleId={this.props.articleId} />
-      </Container>
-    );
-  }
+ handleOnClick(e) {
+   const mainCommentId = e.target.id;
+   let { fetchThreads } = this.state;
+   this.props.comment.threadsArray = [];
+   if (mainCommentId === this.state.mainCommentId) {
+     fetchThreads = !fetchThreads;
+   } else {
+     fetchThreads = true;
+   }
+   this.setState(state => ({
+     ...state,
+     fetchThreads,
+     mainCommentId
+   }));
+ }
+
+ commentOnClick(mainCommentId, index) {
+   this.setState(state => ({
+     ...state,
+     mainCommentId,
+     index
+   }));
+ }
+
+ render() {
+   const { commentsArray, commentLike, success, commentIsLoading } = this.props.comment;
+   const { length } = commentsArray;
+   return (
+     <Container className="commentContainer">
+       <div className="commentList">
+         <Comment.Group>
+           <Header as="h3" className="commentsHeader"> Comments </Header>
+           {length === 0 && commentIsLoading ? <Loading size="massive" /> : null}
+           {length > 0 && commentIsLoading && this.state.mainCommentId === null ? <Loading size="small" /> : null}
+           { this.getComments(commentsArray, commentLike) }
+           {success && length === 0 && !commentIsLoading ? (
+             <h1> No comment yet, be the first! </h1>) : null}
+         </Comment.Group>
+         {length > 5 ? <p className="moreComments">More Comments</p> : null}
+       </div>
+       {this.createComment()}
+     </Container>
+   );
+ }
 }
 
 export const mapStateToProps = state => ({

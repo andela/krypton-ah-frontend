@@ -63,7 +63,7 @@ class CommentThreads extends Component {
     const { threadCount, comment: { threadsArray, commentLike, commentIsLoading } } = this.props;
     return (
       <Container>
-        {commentIsLoading === true && threadCount > 0 ? <Loading size="small" /> : null}
+        {commentIsLoading && threadCount > 0 ? <Loading size="small" /> : null}
         <div className="commentsContainer">
           <Comment.Group>
             {threadsArray.map(comment => (

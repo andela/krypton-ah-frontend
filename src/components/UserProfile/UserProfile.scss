@@ -9,6 +9,12 @@
     }
   }
 
+  .field {
+    label, .default.text, ::placeholder{
+      text-transform: uppercase;
+    }
+  }
+
   .fields .input input,
   textarea,
   .dropdown {

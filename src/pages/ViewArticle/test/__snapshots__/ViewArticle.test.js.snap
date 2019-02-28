@@ -12,5 +12,8 @@ exports[`ViewArticle should match snapshot 1`] = `
       selectedArticleId="65719288-0395-445e-b587-2b98b70bdec9"
     />
   </div>
+  <Connect(FetchComment)
+    articleId="65719288-0395-445e-b587-2b98b70bdec9"
+  />
 </Fragment>
 `;
