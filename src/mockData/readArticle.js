@@ -33,7 +33,10 @@ const error = {
   }
 };
 const props = {
-  match: { params: { title: '65719288-0395-445e-b587-2b98b70bdec9' } }
+  match: { params: { title: '65719288-0395-445e-b587-2b98b70bdec9' } },
+  totalArticleReactions: {
+    successResponse: { likes: 2, dislikes: 1 }
+  }
 };
 const retrievedArticle = {
   successResponse: {

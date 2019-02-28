@@ -36,6 +36,12 @@ const initialState = {
     success: false,
     successResponse: {},
     failureResponse: {}
+  },
+  totalArticleReactions: {
+    totalReactionsLoading: false,
+    success: false,
+    successResponse: {},
+    failureResponse: {}
   }
 };
 

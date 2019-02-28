@@ -10,12 +10,13 @@ describe('Test for reaction Icons', () => {
       <ReactionIconsPage
         getTotalReactions={getTotalReactions}
         selectedArticleId={props.match.params.title}
+        totalArticleReactions={props.totalArticleReactions}
       />
     );
 
     expect(wrapper).toMatchSnapshot();
 
-    expect(wrapper.state().like).toEqual(false);
+    expect(wrapper.state().likeClicked).toEqual(false);
   });
 
   it('should have initial state of false and change when clicked ', () => {
@@ -23,11 +24,12 @@ describe('Test for reaction Icons', () => {
       <ReactionIconsPage
         getTotalReactions={getTotalReactions}
         selectedArticleId={props.match.params.title}
+        totalArticleReactions={props.totalArticleReactions}
       />
     );
 
     expect(wrapper).toMatchSnapshot();
 
-    expect(wrapper.state().dislike).toEqual(false);
+    expect(wrapper.state().dislikeClicked).toEqual(false);
   });
 });
