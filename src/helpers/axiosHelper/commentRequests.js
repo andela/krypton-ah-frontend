@@ -9,7 +9,7 @@ import { config } from '../jwt';
   */
 const createComment = async (articleId, commentMessage, mainCommentId) => {
   let response = {};
-  const url = `${API_BASE_URL}/api/v1/articles/${articleId}/comments`;
+  const url = `${API_BASE_URL}/articles/${articleId}/comments`;
   if (mainCommentId) {
     response = await axios.post(url, { comment: commentMessage, mainCommentId }, config);
   } else {
