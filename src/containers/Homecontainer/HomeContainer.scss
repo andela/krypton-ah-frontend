@@ -65,6 +65,10 @@
   &.input {
     width: 100%;
   }
+
+  &.ui.block.header {
+    margin-top: 0.1rem;
+  }
 }
 
 .column.Advert {
@@ -85,9 +89,20 @@
   .content
   .ui.feed
   > .event
-  > .content
+  > .content {
   .summary {
-  word-break: break-all;
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.4em;
+    line-height: 1.8em;
+  }
+}
+
+.ui.card.widgetIcons .content .ui.feed > .event > .content .date {
+  font-size: 1rem;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -167,6 +182,10 @@ img.ui.image.AdvertImg {
       padding: 0.8em;
       color: black;
     }
+
+    img.ui.image {
+      height: 18rem;
+    }
   }
 }
 
@@ -197,6 +216,13 @@ img.ui.image.AdvertImg {
     width: 27%;
     margin-top: 0.2rem;
     margin-left: 2rem;
+
+    .ui.feed > .event > .content .summary {
+      height: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
   &.divided.two.column.grid .row {
     padding-top: 1.5em;
@@ -210,6 +236,7 @@ img.ui.image.AdvertImg {
     overflow: hidden;
     img.ui.image {
       width: 100%;
+      height: 18rem;
     }
     .ui.card.description {
       &:hover {
@@ -254,6 +281,10 @@ p.popular.title {
   padding: 2px;
 }
 
+p.revealDescription {
+  margin-top: 8%;
+  text-align: center;
+}
 .ui {
   &.reveal > .hidden.content {
     width: 100%;
@@ -305,7 +336,7 @@ p.articleDescription {
   padding-left: 0;
 }
 .ui[class*='vertically divided'].grid > .row:first-child > .column {
-  margin-top: 0.95rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.7rem;
 }
 
@@ -406,6 +437,10 @@ p.descriptionBody {
   .ui[class*='two column'].grid > .column:not(.row),
   .ui[class*='two column'].grid > .row > .column {
     width: 100%;
+    box-shadow: none;
+    padding-left: 0;
+    width: 70%;
+    margin: 0 auto;
   }
 
   .ui.divided.grid:not([class*='vertically divided'])
@@ -423,6 +458,43 @@ p.descriptionBody {
     margin: 0 auto;
     width: 30%;
     margin-top: 2.8rem;
+  }
+
+  .ui.vertically.divided.grid.side .ui.feed > .event {
+    width: 80%;
+    height: 10rem;
+  }
+
+  .ui {
+    &.container.two.column.grid.reveal .column {
+      padding: 5px !important;
+      width: 100%;
+      padding: 5px;
+      overflow: hidden;
+      img.ui.image {
+        width: 100%;
+        height: initial;
+      }
+      .ui.card.description {
+        &:hover {
+          top: 0%;
+        }
+        position: absolute;
+        z-index: 3;
+        background-color: transparent;
+        color: white;
+        overflow: hidden;
+        top: 75%;
+        height: 98%;
+        border-style: none;
+        padding: 5%;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.5);
+        transition: top 0.5s;
+        width: 98%;
+        margin-left: 0.5%;
+      }
+    }
   }
 }
 

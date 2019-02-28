@@ -48,7 +48,7 @@ describe('test fetch articles reducer', () => {
       (initialState,
       {
         popularArticlesResponseSuccess: true,
-        popularArticlesResponse: payload.data,
+        popularArticlesResponse: payload.data.data.slice(-5),
         popularArticlesResponsefailure: false,
 
       })
@@ -66,7 +66,7 @@ describe('test fetch articles reducer', () => {
       (initialState,
       {
         trendingArticlesResponseSuccess: true,
-        trendingArticlesResponse: payload.data,
+        trendingArticlesResponse: payload.data.data.slice(4),
         trendingArticlesResponsefailure: false,
       })
     );

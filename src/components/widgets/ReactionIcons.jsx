@@ -3,6 +3,7 @@ import { Icon } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getTotalReactions } from '../../actions/articleReactionsAction';
+import { dateFormatter } from '../../helpers/articleInfoFormatter';
 
 class ReactionIcons extends Component {
   state = {
@@ -39,14 +40,16 @@ class ReactionIcons extends Component {
     const outline = '';
     return (
       <Fragment>
-        <i className="dates">{date}</i>
+        <Icon disabled link size="small" fitted name="time">
+          <span>{dateFormatter(date)}</span>
+        </Icon>
         {likeClicked ? this.likeArticle(outline) : this.likeArticle()}
-        {likes}
+        <span>{likes}</span>
         {dislikeClicked ? this.dislikeArticle(outline) : this.dislikeArticle()}
-        {dislikes}
+        <span>{dislikes}</span>
         <i className="articleComment">
           <Icon disabled link size="small" fitted name="comments outline" />
-          {numberofcomments}
+          <span>{numberofcomments}</span>
         </i>
       </Fragment>
     );
