@@ -22,7 +22,7 @@ export const trendingArticlesReducer = (state = trendingArticles, action) => {
       return {
         trendingArticlesResponsefailure: false,
         trendingArticlesResponseSuccess: true,
-        trendingArticlesResponse: action.payload.data
+        trendingArticlesResponse: action.payload.data.data.slice(-5)
       };
     case FETCH_TRENDING_ARTICLES_FAILURE:
       return {
@@ -40,7 +40,7 @@ export const popularArticlesReducer = (state = popularArticles, action) => {
       return {
         popularArticlesResponsefailure: false,
         popularArticlesResponseSuccess: true,
-        popularArticlesResponse: action.payload.data
+        popularArticlesResponse: action.payload.data.data.slice(4)
       };
     case FETCH_POPULAR_ARTICLES_FAILURE:
       return {

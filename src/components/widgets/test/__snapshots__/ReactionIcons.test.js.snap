@@ -2,11 +2,18 @@
 
 exports[`Test for reaction Icons should have initial state of false and change when clicked  1`] = `
 <Fragment>
-  <i
-    className="dates"
+  <Icon
+    as="i"
+    disabled={true}
+    fitted={true}
+    link={true}
+    name="time"
+    size="small"
   >
-    28th february 2019
-  </i>
+    <span>
+      Invalid Date
+    </span>
+  </Icon>
   <i
     role="presentation"
   >
@@ -19,7 +26,13 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
+<<<<<<< HEAD
   2
+=======
+  <span>
+    2
+  </span>
+>>>>>>> demo
   <i
     role="presentation"
   >
@@ -32,7 +45,13 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
+<<<<<<< HEAD
   1
+=======
+  <span>
+    1
+  </span>
+>>>>>>> demo
   <i
     className="articleComment"
   >
@@ -44,18 +63,32 @@ exports[`Test for reaction Icons should have initial state of false and change w
       name="comments outline"
       size="small"
     />
-    23
+    <span>
+      23
+    </span>
   </i>
 </Fragment>
 `;
 
 exports[`Test for reaction Icons should have initial state of false and change when clicked  2`] = `
 <Fragment>
+<<<<<<< HEAD
   <i
     className="dates"
+=======
+  <Icon
+    as="i"
+    disabled={true}
+    fitted={true}
+    link={true}
+    name="time"
+    size="small"
+>>>>>>> demo
   >
-    28th february 2019
-  </i>
+    <span>
+      Invalid Date
+    </span>
+  </Icon>
   <i
     role="presentation"
   >
@@ -68,7 +101,13 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
+<<<<<<< HEAD
   2
+=======
+  <span>
+    2
+  </span>
+>>>>>>> demo
   <i
     role="presentation"
   >
@@ -81,7 +120,13 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
+<<<<<<< HEAD
   1
+=======
+  <span>
+    1
+  </span>
+>>>>>>> demo
   <i
     className="articleComment"
   >
@@ -93,7 +138,9 @@ exports[`Test for reaction Icons should have initial state of false and change w
       name="comments outline"
       size="small"
     />
-    23
+    <span>
+      23
+    </span>
   </i>
 </Fragment>
 `;

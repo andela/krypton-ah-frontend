@@ -6,13 +6,20 @@ exports[`button test should test for the button component 1`] = `
     image="https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png"
   />
   <FeedContent>
-    <FeedDate
-      content="placeholder title"
-    />
+    <Link
+      replace={false}
+      to="/article/undefined"
+    >
+      <FeedDate
+        content="placeholder title"
+      />
+    </Link>
     <FeedSummary>
       this is a test description
     </FeedSummary>
     <Icons
+      date="current-date"
+      name="author-name"
       numberofcomments={23}
       ratingIcon="rating-class"
     />
@@ -27,7 +34,9 @@ exports[`button test should test for the button component 2`] = `
   <div
     className="icons"
   >
-    <Connect(ReactionIcons) />
+    <Connect(ReactionIcons)
+      date="current-date"
+    />
   </div>
 </Menu>
 `;

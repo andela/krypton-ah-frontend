@@ -149,7 +149,8 @@ const signupFailureAction = [
 
 const fetchArticlesresponse = {
   data: {
-
+    data:
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}]
   }
 };
 
