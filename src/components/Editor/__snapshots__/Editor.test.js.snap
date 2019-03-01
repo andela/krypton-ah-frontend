@@ -135,18 +135,29 @@ exports[`Editor Component should rendered Editor component without crashing 1`] 
     />
   </FormField>
   <FormField>
-    <Button
-      as="button"
-      content="Upload Image"
-      onClick={[Function]}
-    />
+    <label
+      htmlFor="featuredImage"
+    >
+      Featured Image
+    </label>
     <div
       className="previewImage"
     >
-      <img
-        alt="featuredImage"
-        className="featuredPreviewImage"
-        src={null}
+      <label
+        htmlFor="fileUpload"
+      >
+        <img
+          alt="featuredImage"
+          className="featuredPreviewImage"
+          src="test-file-stub"
+        />
+      </label>
+      <Input
+        content="Browse"
+        id="fileUpload"
+        name="featuredImage"
+        onChange={[Function]}
+        type="file"
       />
     </div>
   </FormField>
@@ -156,17 +167,27 @@ exports[`Editor Component should rendered Editor component without crashing 1`] 
     <Button
       as="button"
       basic={true}
-      content="Save as Draft"
       floated="left"
       onClick={[Function]}
-    />
+    >
+      <span
+        className="publishBtn"
+      >
+        Save as Draft
+      </span>
+    </Button>
     <Button
       as="button"
       basic={true}
-      content="Publish"
       floated="right"
       onClick={[Function]}
-    />
+    >
+      <span
+        className="publishBtn"
+      >
+        Publish
+      </span>
+    </Button>
   </div>
 </Form>
 `;

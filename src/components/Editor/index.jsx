@@ -1,18 +1,21 @@
 /* eslint-disable no-undef */
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import MediumEditor from 'react-medium-editor';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import { Form, Input, Button, TextArea } from 'semantic-ui-react';
 import 'medium-editor/dist/css/medium-editor.css';
 import 'medium-editor/dist/css/themes/default.css';
 import './Editor.scss';
-// import placeholder from '../../asset/images/previewImage.png';
+import placeholder from '../../asset/images/previewImage.png';
 import { articleValidator } from '../../helpers/validate';
 import InlineError from '../../helpers/InlineError';
 import { newCategories } from '../../mockData/index';
-import { publishArticle } from '../../actions/writeArticleAction/writeArticleActions';
-import { cloudinaryCloudName, cloudinaryuploadPreset } from '../../constants/index';
+import { publishArticle, draftArticle } from '../../actions/writeArticleAction/writeArticleActions';
+import { CLOUDINARY_UPLOAD_URL, CLOUDINARY_UPLOAD_PRESET } from '../../constants/index';
+import Loading from '../Loader/Loading';
 
 const mediumEditorOptions = {
   toolbar: {
@@ -31,7 +34,7 @@ class Editor extends Component {
         category: '',
         content: '',
         tags: '',
-        featuredImageUrl: null,
+        featuredImageUrl: placeholder,
         ispublished: false
       },
       errors: {}
@@ -40,26 +43,50 @@ class Editor extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
     this.handleEditorChange = this.handleEditorChange.bind(this);
+    // this.onImageDrop = this.onImageDrop.bind(this);
+    this.handleImageUpload = this.handleImageUpload.bind(this);
+    this.handleDraft = this.handleDraft.bind(this);
   }
+  // handleselectedImage = (event) => {
+  //   const { article } = this.state;
+  //   article.selectedImage = event.target.files[0];
+  //   this.setState({
+  //     article
+  //   });
+  // };
 
-  /**
-   *
-   *
-   * @memberof Editor
-   */
-  cloudinaryWidget = (article) => {
-    const widget = cloudinary.createUploadWidget(
-      { cloudName: cloudinaryCloudName, uploadPreset: cloudinaryuploadPreset },
-      (error, result) => {
-        if (result.event === 'success') {
-          article.featuredImageUrl = result.info.secure_url;
-          this.setState({
-            article
-          });
-        }
-      }
-    );
-    widget.open();
+  // onImageDrop(files) {
+  //   const { article } = this.state;
+  //   article.uploadedFile = files[0];
+  //   this.setState({
+  //     article
+  //   });
+  //   console.log(article);
+
+  //   this.handleImageUpload(files[0]);
+  // }
+
+  handleImageUpload = async (event) => {
+    const { article } = this.state;
+    const file = event.target.files[0];
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+    axios({
+      url: CLOUDINARY_UPLOAD_URL,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data: formData
+    })
+      .then((res) => {
+        article.featuredImageUrl = res.data.secure_url.toString();
+        this.setState({
+          article
+        });
+      })
+      .catch(error => console.log(error));
   };
 
   handleDraft = (event) => {
@@ -67,23 +94,17 @@ class Editor extends Component {
     const { article } = this.state;
     const { saveAsDraft } = this.props;
     const errors = articleValidator(article);
+    if (article.featuredImageUrl === placeholder) {
+      article.featuredImageUrl = undefined;
+    }
     if (errors) {
       this.setState({ errors });
     }
     saveAsDraft(article);
-  };
-
-  handleSubmit(event) {
-    event.preventDefault();
-    const { article } = this.state;
-    const { publish } = this.props;
-    article.ispublished = true;
-    const errors = articleValidator(article);
-    if (errors) {
-      this.setState({ errors });
+    if (!article.featuredImageUrl) {
+      article.featuredImageUrl = placeholder;
     }
-    publish(article);
-  }
+  };
 
   handleChange(event) {
     const { article } = this.state;
@@ -100,6 +121,24 @@ class Editor extends Component {
     this.setState({
       article
     });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const { article } = this.state;
+    const { publish } = this.props;
+    article.ispublished = true;
+    const errors = articleValidator(article);
+    if (article.featuredImageUrl === placeholder) {
+      article.featuredImageUrl = undefined;
+    }
+    if (errors) {
+      this.setState({ errors });
+    }
+    publish(article);
+    if (!article.featuredImageUrl) {
+      article.featuredImageUrl = placeholder;
+    }
   }
 
   handleSelection(event) {
@@ -194,17 +233,22 @@ class Editor extends Component {
   renderFeaturedImage(article) {
     return (
       <Form.Field>
-        {/* <label htmlFor="featuredImage">Featured Image</label> */}
-        <Button content="Upload Image" onClick={this.cloudinaryWidget} />
+        <label htmlFor="featuredImage">Featured Image</label>
         <div className="previewImage">
-          {/* <label htmlFor="fileUpload"> */}
-          <img
-            className="featuredPreviewImage"
-            src={article.featuredImageUrl}
-            alt="featuredImage"
-            // onChange={this.handleImageUpload}
+          <label htmlFor="fileUpload">
+            <img
+              className="featuredPreviewImage"
+              src={article.featuredImageUrl}
+              alt="featuredImage"
+            />
+          </label>
+          <Input
+            id="fileUpload"
+            type="file"
+            content="Browse"
+            name="featuredImage"
+            onChange={this.handleImageUpload}
           />
-          {/* </label> */}
         </div>
       </Form.Field>
     );
@@ -212,6 +256,7 @@ class Editor extends Component {
 
   render() {
     const { article, errors } = this.state;
+    if (this.props.createArticle.success) { return <Redirect to={`/article/${this.props.createArticle.data.id}`} />; }
     return (
       <Form>
         {this.renderTitle(article, errors)}
@@ -226,8 +271,14 @@ class Editor extends Component {
         {errors.tags && <InlineError text={errors.tags} />}
         {this.renderFeaturedImage(article)}
         <div className="formButton">
-          <Button floated="left" content="Save as Draft" onClick={this.handleDraft} basic />
-          <Button floated="right" content="Publish" onClick={this.handleSubmit} basic />
+          <Button floated="left" onClick={this.handleDraft} basic>
+            <span className="publishBtn">Save as Draft</span>
+            {this.props.createArticle.draftIsLoading ? <Loading size="tiny" /> : null}
+          </Button>
+          <Button floated="right" onClick={this.handleSubmit} basic>
+            <span className="publishBtn">Publish</span>
+            {this.props.createArticle.articleIsLoading ? <Loading size="tiny" /> : null}
+          </Button>
         </div>
       </Form>
     );
@@ -235,7 +286,8 @@ class Editor extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  publish: article => dispatch(publishArticle(article))
+  publish: article => dispatch(publishArticle(article)),
+  saveAsDraft: article => dispatch(draftArticle(article))
 });
 
 const mapStateToProps = state => ({
@@ -250,10 +302,12 @@ export default connect(
 
 Editor.propTypes = {
   saveAsDraft: PropTypes.func,
-  publish: PropTypes.func
+  publish: PropTypes.func,
+  createArticle: PropTypes.object
 };
 
 Editor.defaultProps = {
-  saveAsDraft: PropTypes.func,
-  publish: null
+  saveAsDraft: null,
+  publish: null,
+  createArticle: {}
 };
