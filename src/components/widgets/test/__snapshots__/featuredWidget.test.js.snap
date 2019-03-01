@@ -24,15 +24,9 @@ exports[`button test should test for the button component 1`] = `
   className="widgetIcons"
 >
   <CardContent
-    className="className"
+    className={true}
   >
-    <Feed>
-      <MainFeaturedArticle
-        description="placeholder descritption"
-        image="https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png"
-        title="placeholder title"
-      />
-    </Feed>
+    <Feed />
   </CardContent>
 </Card>
 `;

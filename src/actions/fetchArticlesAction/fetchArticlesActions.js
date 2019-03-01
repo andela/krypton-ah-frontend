@@ -73,8 +73,8 @@ export const fetchCategoriesFailure = payload => ({
 export const fetchpopular = () => async (dispatch) => {
   try {
     const response = await fetchPopularArticles();
-    dispatch(fetchpopularSuccess(response.data.splice(4)));
-    dispatch(fetchtrendingSuccess(response.data.splice(-4)));
+    dispatch(fetchpopularSuccess(response));
+    dispatch(fetchtrendingSuccess(response));
   } catch (error) {
     if (error.response) {
       dispatch(fetchPopularFailure(error.response));
