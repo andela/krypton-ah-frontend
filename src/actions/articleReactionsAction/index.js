@@ -1,8 +1,15 @@
+import { toast } from 'react-toastify';
 import actionTypes from './actionTypes';
+import axios from '../../helpers/axiosHelper/updateArticleReaction';
 import axiosHelper from '../../helpers/axiosHelper/totalArticleReactions';
 import triggerLoading from '../authAction/loading';
 
-const { TOTAL_REACTIONS_FAILURE, TOTAL_REACTIONS_LOADING, TOTAL_REACTIONS_SUCCESS } = actionTypes;
+const {
+  TOTAL_REACTIONS_FAILURE,
+  TOTAL_REACTIONS_LOADING,
+  TOTAL_REACTIONS_SUCCESS,
+  ARTICLE_REACTION_SUCCESS
+} = actionTypes;
 
 const totalReactionsSuccess = payload => ({
   type: TOTAL_REACTIONS_SUCCESS,
@@ -24,4 +31,23 @@ const getTotalReactions = articleId => async (dispatch) => {
   }
 };
 
-export { getTotalReactions, totalReactionsFailure, totalReactionsSuccess };
+const articleReactionSuccess = reactionType => ({
+  type: ARTICLE_REACTION_SUCCESS,
+  payload: reactionType
+});
+
+const articleReaction = (articleId, reactionType) => async (dispatch) => {
+  try {
+    await axios.updateArticleReaction(articleId, reactionType);
+    dispatch(articleReactionSuccess(reactionType));
+  } catch (error) {
+    toast.error(error.response.data.message);
+  }
+};
+export {
+  getTotalReactions,
+  totalReactionsFailure,
+  totalReactionsSuccess,
+  articleReaction,
+  articleReactionSuccess
+};
