@@ -13,7 +13,6 @@ const socialMediaElements = [
   }
 ];
 
-// const cloudinaryCloudName = 'dx0nauane';
 const CLOUDINARY_UPLOAD_PRESET = 'b19rkup8';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dx0nauane/image/upload';
 
@@ -93,7 +92,5 @@ export {
   callbackUrl,
   activationResponse,
   alreadyActivatedResponse,
-  options,
-  cloudinaryCloudName,
-  cloudinaryuploadPreset
+  options
 };

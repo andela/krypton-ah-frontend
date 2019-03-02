@@ -27,11 +27,11 @@ export const publishArticle = article => async (dispatch) => {
     dispatch(triggerLoading(PUBLISH_LOADING));
     const response = await createArticleCall(article);
     dispatch(publishArticleSuccess(response));
-    toast.success(response.data.message)
+    toast.success(response.data.message);
   } catch (error) {
     if (error.response) {
       dispatch(publishArticleFailure(error.response));
-      toast.error(error.response.data.message)
+      toast.error(error.response.data.message);
     }
   }
 };
@@ -51,11 +51,11 @@ export const draftArticle = article => async (dispatch) => {
     dispatch(triggerLoading(DRAFT_LOADING));
     const response = await createArticleCall(article);
     dispatch(draftArticleSuccess(response));
-    toast.success(response.data.message)
+    toast.success(response.data.message);
   } catch (error) {
     if (error.response) {
       dispatch(draftArticleFailure(error.response));
-      toast.error(error.response.data.message)
+      toast.error(error.response.data.message);
     }
   }
 };

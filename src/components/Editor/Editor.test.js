@@ -46,13 +46,5 @@ describe('Editor Component', () => {
     wrapper.update();
     wrapper.find('ReactMediumEditor').simulate('change', event);
     expect(handleEditorChangeSpy.calledOnce).toBeDefined();
-    // });
-    // it('should change the state after changing the article featured image', () => {
-    //   const event = { target: { files: ['placeholder'] } };
-    //   const wrapper = shallow(<ArticleEditor />);
-    //   const handleImageUploadSpy = sinon.spy(wrapper.instance(), 'handleImageUpload');
-    //   wrapper.update();
-    //   wrapper.find('#fileUpload').simulate('change', event);
-    //   expect(handleImageUploadSpy.calledOnce).toBeDefined();
   });
 });

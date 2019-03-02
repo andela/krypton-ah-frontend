@@ -17,36 +17,36 @@ export default (state = createArticle, action) => {
     case PUBLISH_LOADING:
       return {
         ...state,
-        articleIsLoading: true,
+        articleIsLoading: true
       };
     case DRAFT_LOADING:
       return {
         ...state,
-        draftIsLoading: true,
+        draftIsLoading: true
       };
     case PUBLISH_SUCCESS:
       return {
         articleIsLoading: false,
         success: true,
-        response: action.payload
+        response: action.payload.data.message
       };
     case PUBLISH_FAILURE:
       return {
         articleIsLoading: false,
         success: false,
-        response: action.payload
+        response: action.payload.data.message
       };
     case SAVE_AS_DRAFT_SUCCESS:
       return {
         draftIsLoading: false,
         success: true,
-        response: action.payload
+        response: action.payload.data.message
       };
     case SAVE_AS_DRAFT_FAILURE:
       return {
         draftIsLoading: false,
         success: false,
-        response: action.payload
+        response: action.payload.data.message
       };
     default:
       return state;

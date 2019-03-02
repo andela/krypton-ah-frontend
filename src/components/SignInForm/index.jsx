@@ -51,28 +51,11 @@ class SignIn extends React.Component {
     return (
       <Form onSubmit={this.handleSubmit}>
         <Form.Group widths="equal">
-          <Form.Input
-            type="email"
-            className="email"
-            fluid
-            placeholder="Email Address"
-            name="email"
-            value={user.email}
-            onChange={this.handleChange}
-            required
-          />
+          <Form.Input type="email" className="email" fluid placeholder="Email Address" name="email" value={user.email} onChange={this.handleChange} required />
         </Form.Group>
         {errors.email && <InlineError text={errors.email} />}
         <Form.Group widths="equal">
-          <Form.Input
-            fluid
-            type="password"
-            placeholder="Password"
-            value={user.password}
-            name="password"
-            onChange={this.handleChange}
-            required
-          />
+          <Form.Input fluid type="password" placeholder="Password" value={user.password} name="password" onChange={this.handleChange} required />
         </Form.Group>
         {errors.password && <InlineError text={errors.password} />}
         <Form.Field>
