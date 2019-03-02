@@ -1,5 +1,6 @@
 import 'jest-localstorage-mock';
-import { setToken, getUserIdFromLocalStorage } from '../jwt';
+import sinon from 'sinon';
+import { setToken, getUserIdFromLocalStorage, isUserAuthenticated } from '../jwt';
 import { jwtToken } from '../../mockData';
 
 describe('save token to local storage', () => {
@@ -23,5 +24,29 @@ describe('getUserIdFromLocalStorage', () => {
   it('should return a userId', () => {
     setToken(jwtToken);
     expect(getUserIdFromLocalStorage()).toBe('d1564aa6-e81d-41ab-8469-0aa573f4a6c5');
+  });
+});
+
+describe('isUserAuthenticated', () => {
+  afterEach(() => {
+    localStorage.clear();
+    sinon.restore();
+  });
+  it('should return false when there is no token in the local storage', () => {
+    localStorage.clear();
+    expect(isUserAuthenticated()).toBe(false);
+  });
+  it('should return false when token cannot be deoded', () => {
+    setToken('bad_token');
+    expect(isUserAuthenticated()).toBe(false);
+  });
+  it('should return false when token has expired', () => {
+    setToken(jwtToken);
+    expect(isUserAuthenticated()).toBe(false);
+  });
+  it('should return true when token is decoded and has not expired', () => {
+    sinon.useFakeTimers({ now: 1551374324363 });
+    setToken(jwtToken);
+    expect(isUserAuthenticated()).toBe(true);
   });
 });
