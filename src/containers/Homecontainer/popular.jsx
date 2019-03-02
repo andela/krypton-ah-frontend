@@ -1,24 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { Grid, Image, Card } from 'semantic-ui-react';
 import './HomeContainer.scss';
-import business from './images/business.png';
-import Title from '../../components/sectionHeader';
-import { popularArticles } from '../../mockData';
+import Loader from '../loaders/componentLoader';
 
-export default function PopularArticles() {
+export default function PopularArticles({ popular }) {
+  if (!popular) {
+    return <Loader />;
+  }
   return (
     <React.Fragment>
-      <Title text="Popular" />
       <Grid columns={2} divided>
         <Grid.Row>
           <Grid container className="reveal" columns={2}>
-            {popularArticles.map(popularArticle => (
-              <Grid.Column key={popularArticle.title}>
+            {popular.map(popularArticle => (
+              <Grid.Column key={popularArticle.id}>
                 <Card className="description">
-                  <p className="popular title">{popularArticle.title}</p>
-                  {popularArticle.description}
+                  <Link replace={false} to={`/article/${popularArticle.id}`}>
+                    <p className="popular title">{popularArticle.title}</p>
+                  </Link>
+                  <p className="revealDescription">{popularArticle.description}</p>
                 </Card>
-                <Image src={business} />
+                <Image src={popularArticle.featuredImageUrl} />
               </Grid.Column>
             ))}
           </Grid>
@@ -27,3 +31,11 @@ export default function PopularArticles() {
     </React.Fragment>
   );
 }
+
+PopularArticles.defaultProps = {
+  popular: []
+};
+
+PopularArticles.propTypes = {
+  popular: PropTypes.array
+};

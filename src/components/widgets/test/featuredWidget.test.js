@@ -3,8 +3,20 @@ import { shallow } from 'enzyme';
 import Widget from '../Articlewidgets/ArticlesFeedContainer';
 import Advert from '../Advert';
 import Icons from '../ReactionIcons';
+import Icon from '../Icons';
+import { defaultprop } from '../../../mockData';
 
-describe('button test', () => {
+describe('widget test', () => {
+  it('should test for the article feed  component', () => {
+    const wrapper = shallow(<Widget articles={false} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should test for the button component', () => {
+    const wrapper = shallow(<Widget articles={defaultprop.data} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should test for the button component', () => {
     const descriptionProps = 'this is a test description';
     const classNameProps = 'className';
@@ -21,6 +33,12 @@ describe('button test', () => {
 
   it('should test for the Icons component', () => {
     const wrapper = shallow(<Icons />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should test for the Icons component', () => {
+    const prop = { ratingIcon: true };
+    const wrapper = shallow(<Icon prop={prop} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -1,35 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
-import { Image } from 'semantic-ui-react';
+import { Image, Grid } from 'semantic-ui-react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import ArticlesIcons from '../widgets/Icons';
 import './carousel.scss';
+import Loader from '../../containers/loaders/componentLoader';
+import { defaultprop } from '../../mockData';
 
-export default function carousel(props) {
-  const { title, author, featuredImage } = props;
+function carousel({ featured }) {
+  if (!featured.data) {
+    return <Loader />;
+  }
   return (
-    <Carousel autoPlay showThumbs={false} infiniteLoop showStatus={false}>
-      <div>
-        <Image src={featuredImage} size="massive" />
-        <p className="legend text">
-          <p className="title">{title}</p>
-          <p className="author">{author}</p>
-          <ArticlesIcons />
-        </p>
-      </div>
-    </Carousel>
+    <Grid.Column>
+      <Carousel autoPlay showThumbs={false} infiniteLoop showStatus={false}>
+        {featured.data.map(article => (
+          <div key={article.id} className="carousel-container">
+            <Image src={article.featuredImageUrl} size="massive" />
+            <p className="legend text">
+              <Link replace={false} to={`/article/${article.id}`}>
+                <p className="title">{article.title}</p>
+              </Link>
+              <p className="author">
+                {`${article.articleAuthor.firstname} ${article.articleAuthor.lastname}`}
+              </p>
+              <ArticlesIcons date={article.createdAt} />
+            </p>
+          </div>
+        ))}
+      </Carousel>
+    </Grid.Column>
   );
 }
 
+export default carousel;
+
 carousel.defaultProps = {
-  title: 'Placeholder Article Title',
-  author: 'Placeholder author name',
-  featuredImage: 'https://res.cloudinary.com/ah-krypton/image/upload/v1550007680/MainImage.png'
+  featured: defaultprop
 };
 
 carousel.propTypes = {
-  title: PropTypes.string,
-  author: PropTypes.string,
-  featuredImage: PropTypes.string
+  featured: PropTypes.array
 };

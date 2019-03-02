@@ -68,12 +68,8 @@
         line-height: 1.2308rem;
       }
       .dates {
+        padding-top: 2.1%;
         color: $datecolor;
-        padding: 0.3846rem;
-        font-size: 0.7692rem;
-        padding: 0;
-        padding-bottom: 0.0769rem;
-        line-height: 1.2308rem;
       }
     }
     .label + .content {
@@ -158,4 +154,14 @@
 i.icon.time:before {
   content: '\f017';
   padding-right: 0.1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .widgetIcons .ui.feed > .event {
+    padding-top: 2em;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 10rem;
+  }
 }
