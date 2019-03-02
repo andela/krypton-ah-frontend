@@ -38,8 +38,7 @@ class MainContainer extends Component {
                 <FeaturedArticles articles={featuredArticles.featuredArticlesResponse} />
               )}
               <Title text="Popular" />
-              {loader(
-                popularArticles.popularArticlesResponsefailure,
+              {loader(popularArticles.popularArticlesResponsefailure,
                 <PopularArticles popular={popularArticles.popularArticlesResponse} />
               )}
             </Grid.Column>

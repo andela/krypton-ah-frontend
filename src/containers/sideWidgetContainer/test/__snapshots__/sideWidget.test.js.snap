@@ -124,14 +124,16 @@ exports[`button test should test for the sidewidget component 1`] = `
       >
         <Tags
           tags={
-            Array [
-              "Politics",
-              "Family",
-              "Techonology",
-              "Health",
-              "Sports",
-              "Wellbeing",
-            ]
+            Object {
+              "data": Array [
+                "Politics",
+                "Family",
+                "Techonology",
+                "Health",
+                "Sports",
+                "Wellbeing",
+              ],
+            }
           }
           type="tags"
         />
