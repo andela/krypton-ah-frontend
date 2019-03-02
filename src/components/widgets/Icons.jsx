@@ -32,12 +32,14 @@ Icons.defaultProps = {
   name: 'author-name',
   date: 'current-date',
   ratingIcon: 'rating-class',
-  numberofcomments: 23
+  numberofcomments: 23,
+  rating: 0
 };
 Icons.propTypes = {
   id: PropTypes.number,
   name: PropTypes.string,
   date: PropTypes.string,
   ratingIcon: PropTypes.string,
-  numberofcomments: PropTypes.number
+  numberofcomments: PropTypes.number,
+  rating: PropTypes.number
 };
