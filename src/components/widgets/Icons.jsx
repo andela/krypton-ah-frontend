@@ -33,7 +33,8 @@ Icons.defaultProps = {
   date: 'current-date',
   ratingIcon: 'rating-class',
   numberofcomments: 23,
-  rating: 0
+  rating: 0,
+  disabled: false
 };
 Icons.propTypes = {
   id: PropTypes.number,
@@ -41,5 +42,6 @@ Icons.propTypes = {
   date: PropTypes.string,
   ratingIcon: PropTypes.string,
   numberofcomments: PropTypes.number,
-  rating: PropTypes.number
+  rating: PropTypes.number,
+  disabled: PropTypes.bool
 };

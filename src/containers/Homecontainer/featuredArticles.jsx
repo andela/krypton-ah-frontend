@@ -31,6 +31,8 @@ export default function FeaturedArticles({ articles }) {
                   articles.data[0].articleAuthor.lastname
                 }`}
                 id={article.data[0].id}
+                disabled
+                rating={article.data[0].averageRating}
               />
             </Card>
           </Grid.Column>

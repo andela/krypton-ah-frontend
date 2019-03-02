@@ -11,7 +11,7 @@ export default function ViewArticle(props) {
     <Fragment>
       <ReadArticle selectedArticle={title} />
       <div className=" articleReactions">
-        <Widgets disabled={false} name={false} bselectedArticleId={title} ratingIcon={false} />
+        <Widgets disabled={false} name={false} selectedArticleId={title} ratingIcon={false} />
       </div>
     </Fragment>
   );
