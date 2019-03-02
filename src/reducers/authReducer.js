@@ -7,7 +7,8 @@ const {
   SIGNUP_SUCCESS,
   SIGNUP_FAILURE,
   LOGIN_SUCCESS,
-  LOGIN_FAILURE
+  LOGIN_FAILURE,
+  IS_AUTHENTICATED
 } = actionTypes;
 
 const { auth } = initialState;
@@ -53,6 +54,10 @@ export default (state = auth, action) => {
         success: false,
         response: action.payload,
         isAuthenticated: false
+      };
+    case IS_AUTHENTICATED:
+      return {
+        isAuthenticated: true
       };
     default:
       return state;
