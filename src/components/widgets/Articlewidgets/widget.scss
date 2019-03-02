@@ -69,10 +69,7 @@
       }
       .dates {
         padding-top: 2.1%;
-<<<<<<< HEAD
         color: $datecolor;
-=======
->>>>>>> landing-page-logic
       }
     }
     .label + .content {
@@ -92,6 +89,7 @@
       display: flex;
     }
     i.icon {
+      outline: none;
       padding: 0.7692rem;
       padding-right: 0.3846rem;
       padding-left: 0.308rem;
@@ -138,13 +136,6 @@
     font-size: 0.92857143rem;
     width: 5%;
     margin: 0 auto;
-    padding: 0;
-    height: fit-content;
-    i.icon{
-      padding-bottom: 0;
-      height: fit-content;
-      outline:none;
-    }
   }
 
   .rating {
@@ -153,9 +144,6 @@
       margin-top: 0.2em;
       text-align: left;
       text-decoration: underline;
-    }
-    i.icon{
-      padding: 0
     }
   }
 

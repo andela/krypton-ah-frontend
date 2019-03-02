@@ -8,8 +8,14 @@ exports[`ViewArticle should match snapshot 1`] = `
   <div
     className=" articleReactions"
   >
-    <Connect(ReactionIcons)
-      selectedArticleId="65719288-0395-445e-b587-2b98b70bdec9"
+    <Icons
+      bselectedArticleId="65719288-0395-445e-b587-2b98b70bdec9"
+      date="current-date"
+      disabled={false}
+      id={1}
+      name={false}
+      numberofcomments={23}
+      ratingIcon={false}
     />
   </div>
 </Fragment>

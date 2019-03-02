@@ -30,15 +30,7 @@ export default function FeaturedArticles({ articles }) {
                 name={`${articles.data[0].articleAuthor.firstname} ${
                   articles.data[0].articleAuthor.lastname
                 }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 id={article.data[0].id}
-=======
->>>>>>> landing-page-logic
-=======
-                rating={article.data[0].averageRating}
-                disabled
->>>>>>> setup-reducer-and-action
               />
             </Card>
           </Grid.Column>

@@ -34,7 +34,8 @@ class MainContainer extends Component {
             )}
             <Grid.Column className="second_grid">
               <Title text="featured" />
-              {loader(featuredArticles.featuredArticlesfailure,
+              {loader(
+                featuredArticles.featuredArticlesfailure,
                 <FeaturedArticles articles={featuredArticles.featuredArticlesResponse} />
               )}
               <Title text="Popular" />
