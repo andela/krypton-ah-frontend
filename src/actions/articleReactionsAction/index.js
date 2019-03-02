@@ -3,7 +3,6 @@ import actionTypes from './actionTypes';
 import axios from '../../helpers/axiosHelper/updateArticleReaction';
 import axiosHelper from '../../helpers/axiosHelper/totalArticleReactions';
 import triggerLoading from '../authAction/loading';
-import { PLEASE_SIGN_IN } from '../../constants';
 
 const {
   TOTAL_REACTIONS_FAILURE,

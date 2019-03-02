@@ -28,7 +28,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
       disabled={true}
       fitted={true}
       link={true}
-      name="thumbs up thumbs up outline"
+      name="thumbs up outline"
       size="small"
     />
   </i>
@@ -42,7 +42,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
       disabled={true}
       fitted={true}
       link={true}
-      name="thumbs down thumbs down outline"
+      name="thumbs down outline"
       size="small"
     />
   </i>
@@ -93,7 +93,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
       disabled={true}
       fitted={true}
       link={true}
-      name="thumbs up thumbs up outline"
+      name="thumbs up outline"
       size="small"
     />
   </i>
@@ -107,7 +107,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
       disabled={true}
       fitted={true}
       link={true}
-      name="thumbs down thumbs down outline"
+      name="thumbs down outline"
       size="small"
     />
   </i>

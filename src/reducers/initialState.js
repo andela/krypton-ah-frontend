@@ -18,18 +18,17 @@ const initialState = {
   featuredArticles: {
     featuredArticlesResponse: [],
     featuredArticlesfailure: false,
-    featuredArticlesSuccess: false,
+    featuredArticlesSuccess: false
   },
   categories: {
     categoriesResponseSuccess: false,
     categoriesResponse: [],
-    categoriesResponsefailure: false,
+    categoriesResponsefailure: false
   },
   tags: {
     tagsResponseSuccess: false,
     tagsResponse: [],
-    tagsResponsefailure: false,
-
+    tagsResponsefailure: false
   },
   readArticle: {
     articleIsLoading: false,
@@ -50,6 +49,10 @@ const initialState = {
     articles: [],
     userprofile: {},
     currentUser: {}
+  },
+  articleReaction: {
+    success: false,
+    newReaction: ''
   }
 };
 
