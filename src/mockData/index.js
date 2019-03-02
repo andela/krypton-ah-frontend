@@ -142,6 +142,7 @@ const fakeUser2 = {
   password: 'password'
 };
 const signupEndpoint = `${API_BASE_URL}/users/signup`;
+const createArticleEndpoint = `${API_BASE_URL}/articles`;
 const signinEndpoint = `${API_BASE_URL}/users/signin`;
 
 const signupOkResponse = {
@@ -187,7 +188,6 @@ const draftArticleOkResponse = {
   status: 201,
   success: true,
   data: {
-    token: 'sampleToken',
     message: 'article successfully saved as draft'
   }
 };
@@ -196,6 +196,13 @@ const loginBadResponse = {
   success: false,
   data: {
     message: 'Incorrect credentials'
+  }
+};
+const publishArticleBadResponse = {
+  status: 400,
+  success: false,
+  data: {
+    message: 'Empty Input Field'
   }
 };
 
@@ -238,34 +245,10 @@ const autoLoginResponse = {
 const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjp7ImlkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1Iiwicm9sZSI6W119LCJpYXQiOjE1NTEzNDg0NjEsImV4cCI6MTU1MTQzNDg2MX0.W-Q3vDCP1b4iKMOm_cBSMTzmRqvU9kpzcP-E2ka2n4U';
 
 export {
-  fetchArticles,
-  payload,
-  fakeUser2,
-  signupEndpoint,
-  signinEndpoint,
-  mockResponse,
-  signupOkResponse,
-  startAction,
-  signupSuccessAction,
-  signupFailureAction,
-  error,
-  loginOkResponse,
-  loginBadResponse,
-  publishArticleOkResponse,
-  draftArticleOkResponse,
-  items,
-  categories,
-  newCategories,
-  popularArticles,
-  trendingArticles,
-  mockArticleResponse,
-  mockHeader,
-  articlePayload,
-  draftArticlePayload,
-  socialToken,
-  mockPath,
-  jwtToken,
-  autoLoginResponse,
-  fetchArticlesresponse,
-  defaultprop
+  fetchArticles, payload, fakeUser2, signupEndpoint, signinEndpoint, mockResponse, signupOkResponse,
+  startAction, signupSuccessAction, signupFailureAction, error, loginOkResponse, loginBadResponse,
+  publishArticleOkResponse, draftArticleOkResponse, items, categories, newCategories,
+  popularArticles, trendingArticles, mockArticleResponse, createArticleEndpoint, mockHeader,
+  articlePayload, draftArticlePayload, socialToken, mockPath, publishArticleBadResponse,
+  jwtToken, autoLoginResponse, fetchArticlesresponse, defaultprop
 };

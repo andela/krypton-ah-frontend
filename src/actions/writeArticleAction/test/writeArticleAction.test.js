@@ -1,3 +1,4 @@
+/* eslint-disable no-throw-literal */
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import moxios from 'moxios';
@@ -8,10 +9,11 @@ import * as axios from '../../../helpers/axiosHelper/writeArticle';
 // import NETWORK_ERROR from '../../networkError/actionType';
 import {
   payload,
-  articlePayload,
-  // draftArticleOkResponse,
+  // articlePayload,
+  draftArticleOkResponse,
   // draftArticlePayload,
-  // publishArticleOkResponse,
+  publishArticleBadResponse,
+  publishArticleOkResponse,
   mockArticleResponse
 } from '../../../mockData/index';
 
@@ -41,45 +43,84 @@ describe('user authentication actions Signup', () => {
       payload
     });
   });
-  it('should call the signup success dispatch function', () => {
-    axios.createArticleCall = jest.fn().mockResolvedValue(mockArticleResponse);
-    actions.publishArticle(articlePayload)(dispatch);
-    expect(dispatch).toBeCalled();
-    expect(dispatch).toBeCalledWith({ type: actionTypes.ARTICLE_LOADING });
+  it(`should return an action object once ${actionTypes.SAVE_AS_DRAFT_SUCCESS} is fired`, () => {
+    expect(actions.draftArticleSuccess(payload)).toEqual({
+      type: actionTypes.SAVE_AS_DRAFT_SUCCESS,
+      payload
+    });
+  });
+  it(`should return an action object once ${actionTypes.SAVE_AS_DRAFT_FAILURE} is fired`, () => {
+    expect(actions.draftArticleFailure(payload)).toEqual({
+      type: actionTypes.SAVE_AS_DRAFT_FAILURE,
+      payload
+    });
   });
 
-  // it('should return an action if authentication response status is 200', async () => {
-  //   verify.createArticleCall = jest.fn();
+  it('should call the publish article success dispatch function', () => {
+    axios.createArticleCall = jest.fn().mockResolvedValue(mockArticleResponse);
+    actions.publishArticle(payload)(dispatch);
+    expect(dispatch).toBeCalled();
+    expect(dispatch).toBeCalledWith({ type: actionTypes.PUBLISH_LOADING });
+  });
 
-  //   const expectedAction = [
-  //     {
-  //       payload: {},
-  //       type: actions.SOCIAL_AUTH_SUCCESS
-  //     }
-  //   ];
-  //   await store.dispatch(socialLogin(socialToken, twitterPath));
-  //   expect(store.getActions()).toEqual(expectedAction);
-  //   expect(verify.verifySocialAuth).not.toHaveBeenCalled();
-  // });
+  it('should call the save article as draft success dispatch function', () => {
+    axios.createArticleCall = jest.fn().mockResolvedValue(mockArticleResponse);
+    actions.draftArticle(payload)(dispatch);
+    expect(dispatch).toBeCalled();
+    expect(dispatch).toBeCalledWith({ type: actionTypes.DRAFT_LOADING });
+  });
 
-  // it('should call the signup success dispatch function', async () => {
-  //   axios.createArticleCall = jest.fn().mockResolvedValue(publishArticleOkResponse);
-  //   await actions.publishArticle(articlePayload)(dispatch);
-  //   // expect(dispatch).toBeCalledTimes(2);
-  //   expect(dispatch).toBeCalledWith({
-  //     type: actionTypes.PUBLISH_SUCCESS,
-  //     payload: publishArticleOkResponse
-  //   });
-  // });
+  it('should call the create article success dispatch function', async () => {
+    axios.createArticleCall = jest.fn().mockResolvedValue(publishArticleOkResponse);
+    await actions.publishArticle(payload)(dispatch);
+    expect(dispatch).toBeCalledTimes(2);
+    expect(dispatch).toBeCalledWith({
+      type: actionTypes.PUBLISH_SUCCESS,
+      payload: publishArticleOkResponse
+    });
+    store.clearActions();
+  });
 
-  // it('should call the signup success dispatch function', async () => {
-  //   axios.createArticleCall = jest.fn().mockResolvedValue(publishArticleOkResponse);
-  //   await actions.userSignUp(payload)(dispatch);
-  //   expect(dispatch).toBeCalledTimes(2);
-  //   expect(dispatch).toBeCalledWith({
-  //     type: actionTypes.SIGNUP_SUCCESS,
-  //     payload: signupOkResponse,
-  //   });
-  //   store.clearActions();
-  // });
+  it('should call the create article failure dispatch function', async () => {
+    axios.createArticleCall = jest.fn(() => {
+      throw { response: publishArticleBadResponse };
+    });
+    try {
+      await actions.publishArticle(payload)(dispatch);
+    } catch (error) {
+      expect(dispatch).toBeCalledTimes(2);
+      expect(dispatch).toBeCalledWith({
+        type: actionTypes.PUBLISH_FAILURE,
+        payload: publishArticleBadResponse
+      });
+    }
+    store.clearActions();
+  });
+
+  it('should call the create save article as draft success dispatch function', async () => {
+    axios.createArticleCall = jest.fn().mockResolvedValue(draftArticleOkResponse);
+    await actions.draftArticle(payload)(dispatch);
+    expect(dispatch).toBeCalledTimes(2);
+    expect(dispatch).toBeCalledWith({
+      type: actionTypes.SAVE_AS_DRAFT_SUCCESS,
+      payload: draftArticleOkResponse
+    });
+    store.clearActions();
+  });
+
+  it('should call the create save article as draft failure dispatch function', async () => {
+    axios.createArticleCall = jest.fn(() => {
+      throw { response: publishArticleBadResponse };
+    });
+    try {
+      await actions.draftArticle(payload)(dispatch);
+    } catch (error) {
+      expect(dispatch).toBeCalledTimes(2);
+      expect(dispatch).toBeCalledWith({
+        type: actionTypes.SAVE_AS_DRAFT_FAILURE,
+        payload: publishArticleBadResponse
+      });
+    }
+    store.clearActions();
+  });
 });
