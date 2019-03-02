@@ -15,7 +15,10 @@ const items = [
   }
 ];
 
-const categories = ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing'];
+const categories = {
+  data:
+  ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing']
+};
 
 const newCategories = [
   { key: 1, name: 'Politics' },

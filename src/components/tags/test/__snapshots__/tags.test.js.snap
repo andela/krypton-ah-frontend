@@ -1,7 +1,160 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`button test should test for the button component 1`] = `<componentloader />`;
+exports[`button test should test for the button component 1`] = `
+<div
+  className="category"
+>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+</div>
+`;
 
-exports[`button test should test for the button component 2`] = `<componentloader />`;
+exports[`button test should test for the button component 2`] = `
+<div
+  className="category"
+>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+</div>
+`;
 
-exports[`button test should test for the button component 3`] = `<componentloader />`;
+exports[`button test should test for the button component 3`] = `
+<div
+  className="category"
+>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      >
+        #Politics
+      </ListHeader>
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      >
+        #Family
+      </ListHeader>
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      >
+        #Techonology
+      </ListHeader>
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      >
+        #Health
+      </ListHeader>
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      >
+        #Sports
+      </ListHeader>
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      >
+        #Wellbeing
+      </ListHeader>
+    </ListContent>
+  </ListItem>
+</div>
+`;
