@@ -1,5 +1,7 @@
 import { API_BASE_URL } from '../constants';
 
+export * from './profile';
+
 const items = [
   {
     description:
@@ -189,24 +191,15 @@ const fetchArticles = {
 const socialToken = 'hyakfhkdhiuashvk98924cxndusjdusnfixomj9';
 
 const mockPath = 'auth/facebook/';
-const profileData = {
-  firstname: 'Isaiah',
-  lastname: 'Afolayan',
-  profileImage: '',
-  bio: 'Software developer at Andela',
-  id: 'd1564aa6-e81d-41ab-8469-0aa573f4a6c5',
-  country: 'Nigeria',
-  phonenumber: '+2348145692034',
-  gender: 'male',
-  username: 'Isaiah'
-};
 
 const autoLoginResponse = {
   data: {
     message: 'Your account has been successfully activated! You can begin spreaing your ideas now.'
   }
 };
-const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjp7ImlkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1Iiwicm9sZSI6W119LCJpYXQiOjE1NTEyNDc5OTAsImV4cCI6MTU1MTMzNDM5MH0.UY_JMJtUnc3Z9ttWyP9F_flEIqTieaKn_2rfl7DOs_c';
+
+
+const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjp7ImlkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1Iiwicm9sZSI6W119LCJpYXQiOjE1NTEzNDg0NjEsImV4cCI6MTU1MTQzNDg2MX0.W-Q3vDCP1b4iKMOm_cBSMTzmRqvU9kpzcP-E2ka2n4U';
 
 export {
   fetchArticles,
@@ -230,7 +223,6 @@ export {
   mockHeader,
   socialToken,
   mockPath,
-  profileData,
   jwtToken,
   autoLoginResponse,
   fetchArticlesresponse,
