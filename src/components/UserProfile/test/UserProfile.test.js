@@ -53,6 +53,7 @@ describe('UserProfile', () => {
       const wrapper = shallow(
         <UserProfile updateUser={updateUserMock} profileData={{ firstname: 'Fistname' }} />
       );
+      wrapper.setState({ firstname: 'newFirstName' });
       wrapper.instance().handleSubmit(event);
       expect(updateUserMock).toHaveBeenCalledTimes(1);
     });

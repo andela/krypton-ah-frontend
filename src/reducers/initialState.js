@@ -42,6 +42,13 @@ const initialState = {
     success: false,
     successResponse: {},
     failureResponse: {}
+  },
+  user: {
+    fetchIsLoading: false,
+    updateIsLoading: false,
+    userId: '',
+    articles: [],
+    userprofile: {}
   }
 };
 
