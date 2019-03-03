@@ -3,7 +3,9 @@ import initialState from '../initialState';
 import readArticleReducer from '../readArticleReducer';
 import { payload, error } from '../../mockData/readArticle';
 
-const { READ_ARTICLE_FAILURE, READ_ARTICLE_LOADING, READ_ARTICLE_SUCCESS } = actionTypes;
+const {
+  READ_ARTICLE_FAILURE, READ_ARTICLE_LOADING, READ_ARTICLE_SUCCESS, TOGGLE_ARTICLE_BOOKMARK
+} = actionTypes;
 
 describe('read article reducer', () => {
   it('should return the initial state', () => {
@@ -53,6 +55,20 @@ it('should update state when the READ_ARTICLE_FAILURE action is dispatched', () 
       success: false,
       failureResponse: error.data,
       successResponse: {}
+    })
+  );
+});
+
+it('should update state when the TOGGLE_ARTICLE_BOOKMARK action is dispatched', () => {
+  expect(readArticleReducer(undefined,
+    { type: TOGGLE_ARTICLE_BOOKMARK })).toEqual((
+    initialState, {
+      articleIsLoading: false,
+      success: false,
+      failureResponse: {},
+      successResponse: {
+        bookmark: true
+      }
     })
   );
 });

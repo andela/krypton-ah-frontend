@@ -1,3 +1,4 @@
+import faker from 'faker';
 import { API_BASE_URL } from '../constants';
 
 export * from './profile';
@@ -122,13 +123,34 @@ const payload = {
   email: 'jo@jos.com',
   password: 'password123R'
 };
+
+const bookmarkPayload = {
+  userId: faker.random.uuid(),
+  articleId: faker.random.uuid(),
+};
+
 const fakeUser2 = {
   email: 'jo@jos.com',
   password: 'password'
 };
 const signupEndpoint = `${API_BASE_URL}/users/signup`;
 const signinEndpoint = `${API_BASE_URL}/users/signin`;
+const bookmarkEndpoint = `${API_BASE_URL}/articles/bookmark`;
 
+const bookmarkedResponse = {
+  success: true,
+  message: 'Article bookmarked succesfully',
+  data: {
+    id: faker.random.uuid(),
+    userId: faker.random.uuid(),
+    articleId: faker.random.uuid(),
+  }
+};
+
+const removeBookmarkResponse = {
+  success: true,
+  message: 'Article removed successfully'
+};
 const signupOkResponse = {
   status: 201,
   success: true,
@@ -209,6 +231,10 @@ export {
   fakeUser2,
   signupEndpoint,
   signinEndpoint,
+  bookmarkEndpoint,
+  bookmarkedResponse,
+  bookmarkPayload,
+  removeBookmarkResponse,
   mockResponse,
   signupOkResponse,
   startAction,

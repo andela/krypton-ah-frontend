@@ -10,9 +10,27 @@ describe('Read article component', () => {
       <ReadArticlePage
         selectedArticle={props.match.params.title}
         retrievedArticle={retrievedArticle}
-        getArticle={getArticle}
+        theArticle={getArticle}
+        createBookmark={props.createBookmark}
+        removeBookmark={props.removeBookmark}
       />
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  // it('should simulate handleIconClick', () => {
+  //   const wrapper = mount(
+  //     <ReadArticlePage
+  //       selectedArticle={props.match.params.title}
+  //       retrievedArticle={retrievedArticle}
+  //       theArticle={getArticle}
+  //       createBookmark={props.createBookmark}
+  //       removeBookmark={props.removeBookmark}
+  //   />
+  //   );
+  //   const rap = wrapper.instance().handleIconClick();
+  //   console.log(wrapper.debug());
+
+  //   expect(wrapper).toBeDefined();
+  // });
 });
