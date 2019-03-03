@@ -6,10 +6,8 @@ exports[`NavBar should match snapshot 1`] = `
     stickTopMenu={[Function]}
     unStickTopMenu={[Function]}
   />
-  <WhiteNavBar
-    avatarUrl="test-file-stub"
+  <Connect(WhiteNavBar)
     fixed={false}
-    isAuthenticated={false}
   />
 </Fragment>
 `;
@@ -41,194 +39,566 @@ exports[`TinyBlackBar should match snapshot 1`] = `
 </Visibility>
 `;
 
-exports[`WhiteNavBar should match snapshot 1`] = `
-<Fragment>
-  <ToastContainer
-    autoClose={5000}
-    bodyClassName={null}
-    className={null}
-    closeButton={
-      <CloseButton
-        ariaLabel="close"
-      />
+exports[`WhiteBar should match snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
     }
-    closeOnClick={true}
-    draggable={true}
-    draggablePercent={80}
-    hideProgressBar={false}
-    newestOnTop={false}
-    pauseOnFocusLoss={true}
-    pauseOnHover={true}
-    position="top-right"
-    progressClassName={null}
-    progressStyle={null}
-    rtl={false}
-    style={null}
-    toastClassName={null}
-    transition={[Function]}
-  />
-  <Menu
-    borderless={true}
-    className="whiteNavBar"
-    fixed={null}
+  }
+>
+  <MemoryRouter
+    keyLength={0}
   >
-    <MenuMenu
-      className="whiteBarMenu"
-      position="left"
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <MenuItem>
-        <Image
-          alt="AH-logo"
-          as="img"
-          className="ahIcon"
-          src="test-file-stub"
-          ui={true}
-        />
-      </MenuItem>
-      <MenuItem>
-        <h1>
-          Authors Haven
-        </h1>
-      </MenuItem>
-    </MenuMenu>
-    <MenuMenu
-      position="right"
-    >
-      <MenuItem>
-        <SearchModal />
-      </MenuItem>
-      <MenuItem>
-        <Link
-          replace={false}
-          to="/login"
+      <Connect(WhiteNavBar)>
+        <WhiteNavBar
+          avatarUrl=""
+          dispatch={[Function]}
+          fixed={false}
+          isAuthenticated={false}
+          userId=""
         >
-          <Button
-            as="button"
-            secondary={true}
+          <ToastContainer
+            autoClose={5000}
+            bodyClassName={null}
+            className={null}
+            closeButton={
+              <CloseButton
+                ariaLabel="close"
+              />
+            }
+            closeOnClick={true}
+            draggable={true}
+            draggablePercent={80}
+            hideProgressBar={false}
+            newestOnTop={false}
+            pauseOnFocusLoss={true}
+            pauseOnHover={true}
+            position="top-right"
+            progressClassName={null}
+            progressStyle={null}
+            rtl={false}
+            style={null}
+            toastClassName={null}
+            transition={[Function]}
           >
-            Write an Article
-          </Button>
-        </Link>
-      </MenuItem>
-    </MenuMenu>
-  </Menu>
-</Fragment>
+            <div
+              className="Toastify"
+            />
+          </ToastContainer>
+          <Menu
+            borderless={true}
+            className="whiteNavBar"
+            fixed={null}
+          >
+            <div
+              className="ui borderless whiteNavBar menu"
+            >
+              <MenuMenu
+                as="a"
+                className="whiteBarMenu"
+                href="/"
+                position="left"
+              >
+                <a
+                  className="left menu whiteBarMenu"
+                  href="/"
+                >
+                  <MenuItem>
+                    <div
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      <Image
+                        alt="AH-logo"
+                        as="img"
+                        className="ahIcon"
+                        src="test-file-stub"
+                        ui={true}
+                      >
+                        <img
+                          alt="AH-logo"
+                          className="ui image ahIcon"
+                          src="test-file-stub"
+                        />
+                      </Image>
+                    </div>
+                  </MenuItem>
+                  <MenuItem>
+                    <div
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      <h1>
+                        Authors Haven
+                      </h1>
+                    </div>
+                  </MenuItem>
+                </a>
+              </MenuMenu>
+              <MenuMenu
+                position="right"
+              >
+                <div
+                  className="right menu"
+                >
+                  <MenuItem>
+                    <div
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      <SearchModal>
+                        <Icon
+                          as="i"
+                          name="search"
+                          onClick={[Function]}
+                          size="big"
+                        >
+                          <i
+                            aria-hidden="true"
+                            className="search big icon"
+                            onClick={[Function]}
+                          />
+                        </Icon>
+                        <Modal
+                          centered={true}
+                          closeOnDimmerClick={true}
+                          closeOnDocumentClick={false}
+                          dimmer={true}
+                          eventPool="Modal"
+                          onClose={[Function]}
+                          open={false}
+                        >
+                          <Portal
+                            closeOnDocumentClick={false}
+                            closeOnEscape={true}
+                            eventPool="Modal"
+                            mountNode={<body />}
+                            onClose={[Function]}
+                            onMount={[Function]}
+                            onOpen={[Function]}
+                            onUnmount={[Function]}
+                            open={false}
+                            openOnTriggerClick={true}
+                          />
+                        </Modal>
+                      </SearchModal>
+                    </div>
+                  </MenuItem>
+                  <MenuItem>
+                    <div
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      <Link
+                        replace={false}
+                        to="/createarticle"
+                      >
+                        <a
+                          href="/createarticle"
+                          onClick={[Function]}
+                        >
+                          <Button
+                            as="button"
+                            secondary={true}
+                          >
+                            <button
+                              className="ui secondary button"
+                              onClick={[Function]}
+                            >
+                              Write an Article
+                            </button>
+                          </Button>
+                        </a>
+                      </Link>
+                    </div>
+                  </MenuItem>
+                </div>
+              </MenuMenu>
+            </div>
+          </Menu>
+        </WhiteNavBar>
+      </Connect(WhiteNavBar)>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
-exports[`WhiteNavBar with props should match snapshot 1`] = `
-<Fragment>
-  <ToastContainer
-    autoClose={5000}
-    bodyClassName={null}
-    className={null}
-    closeButton={
-      <CloseButton
-        ariaLabel="close"
-      />
+exports[`WhiteBar with valid props should match snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
     }
-    closeOnClick={true}
-    draggable={true}
-    draggablePercent={80}
-    hideProgressBar={false}
-    newestOnTop={false}
-    pauseOnFocusLoss={true}
-    pauseOnHover={true}
-    position="top-right"
-    progressClassName={null}
-    progressStyle={null}
-    rtl={false}
-    style={null}
-    toastClassName={null}
-    transition={[Function]}
-  />
-  <Menu
-    borderless={true}
-    className="whiteNavBar"
-    fixed="top"
+  }
+>
+  <MemoryRouter
+    keyLength={0}
   >
-    <MenuMenu
-      className="whiteBarMenu"
-      position="left"
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <MenuItem>
-        <Image
-          alt="AH-logo"
-          as="img"
-          className="ahIcon"
-          src="test-file-stub"
-          ui={true}
-        />
-      </MenuItem>
-      <MenuItem>
-        <h1>
-          Authors Haven
-        </h1>
-      </MenuItem>
-    </MenuMenu>
-    <MenuMenu
-      position="right"
-    >
-      <MenuItem>
-        <SearchModal />
-      </MenuItem>
-      <MenuItem>
-        <Link
-          replace={false}
-          to="/login"
+      <Connect(WhiteNavBar)>
+        <WhiteNavBar
+          avatarUrl="https://fakeAvatar.com"
+          dispatch={[Function]}
+          fixed={false}
+          isAuthenticated={true}
+          userId="userId"
         >
-          <Button
-            as="button"
-            secondary={true}
+          <ToastContainer
+            autoClose={5000}
+            bodyClassName={null}
+            className={null}
+            closeButton={
+              <CloseButton
+                ariaLabel="close"
+              />
+            }
+            closeOnClick={true}
+            draggable={true}
+            draggablePercent={80}
+            hideProgressBar={false}
+            newestOnTop={false}
+            pauseOnFocusLoss={true}
+            pauseOnHover={true}
+            position="top-right"
+            progressClassName={null}
+            progressStyle={null}
+            rtl={false}
+            style={null}
+            toastClassName={null}
+            transition={[Function]}
           >
-            Write an Article
-          </Button>
-        </Link>
-      </MenuItem>
-      <MenuItem>
-        <Dropdown
-          additionLabel="Add "
-          additionPosition="top"
-          className="link item"
-          closeOnBlur={true}
-          deburr={false}
-          icon="dropdown"
-          item={true}
-          minCharacters={1}
-          noResultsMessage="No results found."
-          openOnFocus={true}
-          pointing={true}
-          renderLabel={[Function]}
-          searchInput="text"
-          selectOnBlur={true}
-          selectOnNavigation={true}
-          simple={true}
-          trigger={
-            <Image
-              as="img"
-              avatar={true}
-              className="avatarImg"
-              src="https://fakeAvatar.com"
-              ui={true}
+            <div
+              className="Toastify"
             />
-          }
-          wrapSelection={true}
-        >
-          <DropdownMenu
-            className="right"
+          </ToastContainer>
+          <Menu
+            borderless={true}
+            className="whiteNavBar"
+            fixed={null}
           >
-            <DropdownItem>
-              PROFILE
-            </DropdownItem>
-            <DropdownItem>
-              BOOKMARKS
-            </DropdownItem>
-            <DropdownItem>
-              LOG OUT
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-      </MenuItem>
-    </MenuMenu>
-  </Menu>
-</Fragment>
+            <div
+              className="ui borderless whiteNavBar menu"
+            >
+              <MenuMenu
+                as="a"
+                className="whiteBarMenu"
+                href="/"
+                position="left"
+              >
+                <a
+                  className="left menu whiteBarMenu"
+                  href="/"
+                >
+                  <MenuItem>
+                    <div
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      <Image
+                        alt="AH-logo"
+                        as="img"
+                        className="ahIcon"
+                        src="test-file-stub"
+                        ui={true}
+                      >
+                        <img
+                          alt="AH-logo"
+                          className="ui image ahIcon"
+                          src="test-file-stub"
+                        />
+                      </Image>
+                    </div>
+                  </MenuItem>
+                  <MenuItem>
+                    <div
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      <h1>
+                        Authors Haven
+                      </h1>
+                    </div>
+                  </MenuItem>
+                </a>
+              </MenuMenu>
+              <MenuMenu
+                position="right"
+              >
+                <div
+                  className="right menu"
+                >
+                  <MenuItem>
+                    <div
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      <SearchModal>
+                        <Icon
+                          as="i"
+                          name="search"
+                          onClick={[Function]}
+                          size="big"
+                        >
+                          <i
+                            aria-hidden="true"
+                            className="search big icon"
+                            onClick={[Function]}
+                          />
+                        </Icon>
+                        <Modal
+                          centered={true}
+                          closeOnDimmerClick={true}
+                          closeOnDocumentClick={false}
+                          dimmer={true}
+                          eventPool="Modal"
+                          onClose={[Function]}
+                          open={false}
+                        >
+                          <Portal
+                            closeOnDocumentClick={false}
+                            closeOnEscape={true}
+                            eventPool="Modal"
+                            mountNode={<body />}
+                            onClose={[Function]}
+                            onMount={[Function]}
+                            onOpen={[Function]}
+                            onUnmount={[Function]}
+                            open={false}
+                            openOnTriggerClick={true}
+                          />
+                        </Modal>
+                      </SearchModal>
+                    </div>
+                  </MenuItem>
+                  <MenuItem>
+                    <div
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      <Link
+                        replace={false}
+                        to="/createarticle"
+                      >
+                        <a
+                          href="/createarticle"
+                          onClick={[Function]}
+                        >
+                          <Button
+                            as="button"
+                            secondary={true}
+                          >
+                            <button
+                              className="ui secondary button"
+                              onClick={[Function]}
+                            >
+                              Write an Article
+                            </button>
+                          </Button>
+                        </a>
+                      </Link>
+                    </div>
+                  </MenuItem>
+                  <MenuItem>
+                    <div
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      <Dropdown
+                        additionLabel="Add "
+                        additionPosition="top"
+                        className="link item"
+                        closeOnBlur={true}
+                        deburr={false}
+                        icon="dropdown"
+                        item={true}
+                        minCharacters={1}
+                        noResultsMessage="No results found."
+                        openOnFocus={true}
+                        pointing={true}
+                        renderLabel={[Function]}
+                        searchInput="text"
+                        selectOnBlur={true}
+                        selectOnNavigation={true}
+                        simple={true}
+                        trigger={
+                          <Image
+                            as="img"
+                            avatar={true}
+                            className="avatarImg"
+                            src="https://fakeAvatar.com"
+                            ui={true}
+                          />
+                        }
+                        wrapSelection={true}
+                      >
+                        <div
+                          aria-expanded={false}
+                          className="ui item simple pointing dropdown link item"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseDown={[Function]}
+                          role="listbox"
+                          tabIndex={0}
+                        >
+                          <Image
+                            as="img"
+                            avatar={true}
+                            className="avatarImg"
+                            src="https://fakeAvatar.com"
+                            ui={true}
+                          >
+                            <img
+                              className="ui avatar image avatarImg"
+                              src="https://fakeAvatar.com"
+                            />
+                          </Image>
+                          <Icon
+                            as="i"
+                            className=""
+                            name="dropdown"
+                            onClick={[Function]}
+                          >
+                            <i
+                              aria-hidden="true"
+                              className="dropdown icon"
+                              onClick={[Function]}
+                            />
+                          </Icon>
+                          <DropdownMenu
+                            className="right"
+                          >
+                            <div
+                              className="menu transition right"
+                            >
+                              <DropdownItem
+                                as="a"
+                                href="/profile/userId"
+                              >
+                                <a
+                                  className="item"
+                                  href="/profile/userId"
+                                  onClick={[Function]}
+                                  role="option"
+                                >
+                                  PROFILE
+                                </a>
+                              </DropdownItem>
+                              <DropdownItem
+                                as="a"
+                                href="/bookmarks/userId"
+                              >
+                                <a
+                                  className="item"
+                                  href="/bookmarks/userId"
+                                  onClick={[Function]}
+                                  role="option"
+                                >
+                                  BOOKMARKS
+                                </a>
+                              </DropdownItem>
+                              <DropdownItem
+                                as="a"
+                                href="/"
+                                onClick={[Function]}
+                              >
+                                <a
+                                  className="item"
+                                  href="/"
+                                  onClick={[Function]}
+                                  role="option"
+                                >
+                                  LOG OUT
+                                </a>
+                              </DropdownItem>
+                            </div>
+                          </DropdownMenu>
+                        </div>
+                      </Dropdown>
+                    </div>
+                  </MenuItem>
+                </div>
+              </MenuMenu>
+            </div>
+          </Menu>
+        </WhiteNavBar>
+      </Connect(WhiteNavBar)>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;

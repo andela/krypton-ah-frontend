@@ -61,6 +61,9 @@ exports[`Profile should match snapshot when an authenticated user view user prof
         userId="id"
       >
         <ProfileContainer
+          fetchCurrentUser={[Function]}
+          fetchCurrentUserFailure={[Function]}
+          fetchCurrentUserSuccess={[Function]}
           fetchIsLoading={false}
           fetchUser={[Function]}
           fetchUserFailure={[Function]}
@@ -1692,6 +1695,9 @@ exports[`Profile should match snapshot when an unauthenticated user view user pr
         userId="id"
       >
         <ProfileContainer
+          fetchCurrentUser={[Function]}
+          fetchCurrentUserFailure={[Function]}
+          fetchCurrentUserSuccess={[Function]}
           fetchIsLoading={false}
           fetchUser={[Function]}
           fetchUserFailure={[Function]}
@@ -3246,6 +3252,9 @@ exports[`Profile should match snapshot when current user view own profile 1`] = 
         userId="d1564aa6-e81d-41ab-8469-0aa573f4a6c5"
       >
         <ProfileContainer
+          fetchCurrentUser={[Function]}
+          fetchCurrentUserFailure={[Function]}
+          fetchCurrentUserSuccess={[Function]}
           fetchIsLoading={false}
           fetchUser={[Function]}
           fetchUserFailure={[Function]}
