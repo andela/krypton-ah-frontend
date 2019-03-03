@@ -10,7 +10,9 @@
   }
 
   .field {
-    label, .default.text, ::placeholder{
+    label,
+    .default.text,
+    ::placeholder {
       text-transform: uppercase;
     }
   }
@@ -25,6 +27,7 @@
     padding-left: 0;
     font-size: 1.3rem;
     margin-top: -0.5rem;
+    opacity: 1;
   }
   .field .input,
   .fields .field .dropdown.ui.selection {
@@ -38,7 +41,7 @@
   .btnRight {
     margin-top: 1rem;
   }
-  .bioField {
+  div.bioField.field {
     margin-top: 2rem;
   }
   .bio {
@@ -55,6 +58,27 @@
       height: 4rem;
       font-size: 1.4rem;
       margin-top: 1rem;
+    }
+  }
+}
+
+.form.ui.form.profileForm {
+  .equal.width.fields {
+    div.disabled.field {
+      opacity: 1;
+      div.disabled.input {
+        opacity: 1;
+        background-color: black;
+        input[disabled]{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  div.field.bioField {
+    opacity: 1;
+    div.disabled.field.bio{
+      opacity: 1;
     }
   }
 }
