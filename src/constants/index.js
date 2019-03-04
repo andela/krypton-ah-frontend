@@ -13,9 +13,6 @@ const socialMediaElements = [
   }
 ];
 
-const CLOUDINARY_UPLOAD_PRESET = 'b19rkup8';
-const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dx0nauane/image/upload';
-
 const articleDetails = {
   className: 'description',
   description: 'placeholder descritption',
@@ -75,8 +72,6 @@ const alreadyActivatedResponse = {
   }
 };
 
-const accountCreated = 'Account successfully created, kindly check your email to activate';
-
 const options = {
   headers: {
     authorization: localStorage.getItem(authentication)
@@ -85,6 +80,8 @@ const options = {
 
 export const { CLOUDINARY_API_KEY } = process.env;
 export const { CLOUDINARY_UPLOAD_PRESET } = process.env;
+const { CLOUDINARY_USERNAME } = process.env;
+export const CLOUDINARY_UPLOAD_URL = `https://api.cloudinary.com/v1_1/${CLOUDINARY_USERNAME}/image/upload`;
 
 export {
   socialMediaElements,
@@ -98,11 +95,8 @@ export {
   successMessage,
   draftMessage,
   networkErrorResponse,
-  CLOUDINARY_UPLOAD_URL,
-  CLOUDINARY_UPLOAD_PRESET,
   callbackUrl,
   activationResponse,
   alreadyActivatedResponse,
-  options,
-  accountCreated
+  options
 };
