@@ -1,27 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Grid, Image } from 'semantic-ui-react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { getUserIdFromLocalStorage } from '../../helpers/jwt';
 import ProfileNavBar from '../../components/ProfileNavBar';
 import UserProfile from '../../components/UserProfile';
 import profileImagePlaceholder from '../../images/avatar.png';
-import { profileData as profileDataMock } from '../../mockData';
+import * as userActions from '../../actions/userActions';
 import Loader from '../../components/Loader';
 import './ProfileContainer.scss';
 
 class ProfileContainer extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      userFetched: false
+    };
     this.getUserType = this.getUserType.bind(this);
     this.renderProfileHero = this.renderProfileHero.bind(this);
     this.renderPageBody = this.renderPageBody.bind(this);
     this.renderProfileView = this.renderProfileView.bind(this);
   }
 
-  componentWillMount() {
-    const { getUser, userId } = this.props;
-    getUser(userId);
+  componentDidMount() {
+    const { fetchUser, userId } = this.props;
+    fetchUser(userId);
+    // eslint-disable-next-line react/no-did-mount-set-state
+    this.setState({ userFetched: true });
   }
 
   getUserType(userId) {
@@ -52,11 +59,11 @@ class ProfileContainer extends React.Component {
   }
 
   renderProfileView() {
-    const { profileData, updateProfile, updateIsLoading, userId } = this.props;
+    const { profileData, updateUserProfile, updateIsLoading, userId } = this.props;
     const user = this.getUserType(userId);
     return (
       <UserProfile
-        updateUser={updateProfile}
+        updateUser={updateUserProfile}
         updateIsLoading={updateIsLoading}
         profileData={profileData}
         user={user}
@@ -78,10 +85,14 @@ class ProfileContainer extends React.Component {
 
   render() {
     const { profileData, fetchIsLoading, userId } = this.props;
-    const { firstname, lastname, profileImage, bio } = profileData;
+    const { firstname, lastname, profileImage, bio, id } = profileData;
+    const { userFetched } = this.state;
     const user = this.getUserType(userId);
     if (fetchIsLoading) {
       return <Loader />;
+    }
+    if (!id && userFetched) {
+      return <Redirect to="/not-found" />;
     }
     return (
       <Grid className="userProfilePage">
@@ -97,20 +108,54 @@ class ProfileContainer extends React.Component {
 }
 
 ProfileContainer.defaultProps = {
-  profileData: profileDataMock,
-  getUser: () => {},
-  updateProfile: () => {},
-  updateIsLoading: false,
-  fetchIsLoading: false
+  profileData: {}
 };
 
 ProfileContainer.propTypes = {
   profileData: PropTypes.object,
-  getUser: PropTypes.func,
+  fetchUser: PropTypes.func.isRequired,
   userId: PropTypes.string.isRequired,
-  updateProfile: PropTypes.func,
-  updateIsLoading: PropTypes.bool,
-  fetchIsLoading: PropTypes.bool
+  updateUserProfile: PropTypes.func.isRequired,
+  updateIsLoading: PropTypes.bool.isRequired,
+  fetchIsLoading: PropTypes.bool.isRequired
 };
 
-export default ProfileContainer;
+const mapDispatchToProps = dispatch => ({ ...bindActionCreators(userActions, dispatch) });
+const userProfileExistProps = (noProfileProps, neededData) => {
+  const profileData = {
+    ...noProfileProps.profileData,
+    ...neededData,
+    noProfile: false,
+    profileImage: neededData.avatar
+  };
+  return {
+    ...noProfileProps,
+    profileData
+  };
+};
+
+const mapStateToProps = (state) => {
+  const { userReducer } = state;
+  const { firstname, lastname, userprofile, id, fetchIsLoading, updateIsLoading } = userReducer;
+  const noProfileProps = {
+    fetchIsLoading,
+    updateIsLoading,
+    profileData: {
+      firstname,
+      lastname,
+      id,
+      noProfile: true
+    }
+  };
+  if (!userprofile) {
+    return noProfileProps;
+  }
+  const { UserId, createdAt, emailnotification, updatedAt, ...neededData } = userprofile;
+  return userProfileExistProps(noProfileProps, neededData);
+};
+
+export { ProfileContainer as ProfilePageContainer };
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProfileContainer);
