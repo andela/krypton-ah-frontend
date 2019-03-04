@@ -6,14 +6,24 @@ exports[`button test should test for the button component 1`] = `
     image="https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png"
   />
   <FeedContent>
-    <FeedDate
-      content="placeholder title"
-    />
+    <Link
+      replace={false}
+      to="/article/undefined"
+    >
+      <FeedDate
+        content="placeholder title"
+      />
+    </Link>
     <FeedSummary>
       this is a test description
     </FeedSummary>
     <Icons
+      date="current-date"
+      disabled={false}
+      id={1}
+      name="author-name"
       numberofcomments={23}
+      rating={0}
       ratingIcon="rating-class"
     />
   </FeedContent>
@@ -21,13 +31,107 @@ exports[`button test should test for the button component 1`] = `
 `;
 
 exports[`button test should test for the button component 2`] = `
+<ArticlesFeedContainer
+  articles={
+    Array [
+      Object {
+        "articleAuthor": Object {
+          "firstname": "hakeem",
+          "lastname": "ibrahim",
+          "userprofile": null,
+        },
+        "authorId": "65719288-0395-445e-b587-2b98b70bdec9",
+        "averageRating": 3,
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "createdAt": "2019-01-23T07:09:10.447Z",
+        "data": Object {
+          "message": Object {
+            "id": Array [
+              "id must be a valid uuid",
+            ],
+          },
+          "success": true,
+        },
+        "description": "Descriptive title",
+        "featuredImageUrl": "https://farm4.staticflickr.com/3894/15008518202_c265dfa55f_h.jpg",
+        "id": "65719288-0395-445e-b587-2b98b70bdec9",
+        "isPublished": true,
+        "numberOfReviews": null,
+        "readTime": 5,
+        "slug": "this-is-a-post-title-l78hgybf",
+        "tags": Array [],
+        "title": "This is a post title",
+        "updatedAt": "2019-01-23T07:09:10.447Z",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`button test should test for the button component 3`] = `
+<ArticlesFeedContainer
+  articles={
+    Array [
+      Object {
+        "articleAuthor": Object {
+          "firstname": "hakeem",
+          "lastname": "ibrahim",
+          "userprofile": null,
+        },
+        "authorId": "65719288-0395-445e-b587-2b98b70bdec9",
+        "averageRating": 3,
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "createdAt": "2019-01-23T07:09:10.447Z",
+        "data": Object {
+          "message": Object {
+            "id": Array [
+              "id must be a valid uuid",
+            ],
+          },
+          "success": true,
+        },
+        "description": "Descriptive title",
+        "featuredImageUrl": "https://farm4.staticflickr.com/3894/15008518202_c265dfa55f_h.jpg",
+        "id": "65719288-0395-445e-b587-2b98b70bdec9",
+        "isPublished": true,
+        "numberOfReviews": null,
+        "readTime": 5,
+        "slug": "this-is-a-post-title-l78hgybf",
+        "tags": Array [],
+        "title": "This is a post title",
+        "updatedAt": "2019-01-23T07:09:10.447Z",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`button test should test for the button component 4`] = `
 <Menu
   className="widgetContainer"
 >
   <div
     className="icons"
   >
-    <Connect(ReactionIcons) />
+    <Connect(ReactionIcons)
+      date="current-date"
+      selectedArticleId={1}
+    />
+  </div>
+</Menu>
+`;
+
+exports[`button test should test for the button component 5`] = `
+<Menu
+  className="widgetContainer"
+>
+  <div
+    className="icons"
+  >
+    <Connect(ReactionIcons)
+      date="current-date"
+      selectedArticleId={1}
+    />
   </div>
 </Menu>
 `;

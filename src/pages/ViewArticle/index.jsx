@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReadArticle from '../../components/ReadArticle';
-import Widgets from '../../components/widgets/ReactionIcons';
 import CommentSection from '../../components/CommentSection';
+import Widgets from '../../components/widgets/Icons';
 import './ViewArticle.scss';
+import '../../components/widgets/Articlewidgets/widget.scss';
 
 export default function ViewArticle(props) {
   const { title } = props.match.params;
@@ -11,7 +12,7 @@ export default function ViewArticle(props) {
     <Fragment>
       <ReadArticle selectedArticle={title} />
       <div className=" articleReactions">
-        <Widgets selectedArticleId={title} />
+        <Widgets disabled={false} name={false} selectedArticleId={title} ratingIcon={false} />
       </div>
       <CommentSection articleId={title} />
     </Fragment>

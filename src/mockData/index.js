@@ -1,5 +1,7 @@
 import { API_BASE_URL } from '../constants';
 
+export * from './profile';
+
 const items = [
   {
     description:
@@ -13,7 +15,10 @@ const items = [
   }
 ];
 
-const categories = ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing'];
+const categories = {
+  data:
+  ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing']
+};
 
 const newCategories = [
   { key: 1, name: 'Politics' },
@@ -82,6 +87,35 @@ const trendingArticles = [
   }
 ];
 
+const defaultprop = {
+  data: [
+    {
+      articleAuthor: { firstname: 'hakeem', lastname: 'ibrahim', userprofile: null },
+      authorId: '65719288-0395-445e-b587-2b98b70bdec9',
+      averageRating: 3,
+      content:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+      createdAt: '2019-01-23T07:09:10.447Z',
+      description: 'Descriptive title',
+      featuredImageUrl: 'https://farm4.staticflickr.com/3894/15008518202_c265dfa55f_h.jpg',
+      id: '65719288-0395-445e-b587-2b98b70bdec9',
+      isPublished: true,
+      numberOfReviews: null,
+      readTime: 5,
+      slug: 'this-is-a-post-title-l78hgybf',
+      tags: [],
+      title: 'This is a post title',
+      updatedAt: '2019-01-23T07:09:10.447Z',
+      data: {
+        message: {
+          id: ['id must be a valid uuid']
+        },
+        success: true
+      }
+    }
+  ]
+};
+
 const payload = {
   firstname: 'john',
   lastname: 'joseph',
@@ -149,34 +183,26 @@ const signupFailureAction = [
 
 const fetchArticlesresponse = {
   data: {
-
+    data: [{}, {}, {}, {}, {}, {}, {}, {}, {}]
   }
 };
 
 const fetchArticles = {
   data: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
 };
+
 const socialToken = 'hyakfhkdhiuashvk98924cxndusjdusnfixomj9';
 
 const mockPath = 'auth/facebook/';
-const profileData = {
-  firstname: 'Isaiah',
-  lastname: 'Afolayan',
-  profileImage: '',
-  bio: 'Software developer at Andela',
-  id: 'd1564aa6-e81d-41ab-8469-0aa573f4a6c5',
-  country: 'Nigeria',
-  phonenumber: '+2348145692034',
-  gender: 'male',
-  username: 'Isaiah'
-};
 
 const autoLoginResponse = {
   data: {
     message: 'Your account has been successfully activated! You can begin spreaing your ideas now.'
   }
 };
-const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjp7ImlkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1Iiwicm9sZSI6W119LCJpYXQiOjE1NTEyNDc5OTAsImV4cCI6MTU1MTMzNDM5MH0.UY_JMJtUnc3Z9ttWyP9F_flEIqTieaKn_2rfl7DOs_c';
+
+
+const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjp7ImlkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1Iiwicm9sZSI6W119LCJpYXQiOjE1NTEzNDg0NjEsImV4cCI6MTU1MTQzNDg2MX0.W-Q3vDCP1b4iKMOm_cBSMTzmRqvU9kpzcP-E2ka2n4U';
 
 export {
   fetchArticles,
@@ -200,8 +226,8 @@ export {
   mockHeader,
   socialToken,
   mockPath,
-  profileData,
   jwtToken,
   autoLoginResponse,
-  fetchArticlesresponse
+  fetchArticlesresponse,
+  defaultprop
 };

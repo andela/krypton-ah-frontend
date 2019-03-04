@@ -4,85 +4,153 @@ exports[`button test should test for the button component 1`] = `
 <div
   className="category"
 >
-  <ListItem
-    key="Politics"
-  >
-    <ListContent
-      key="Politics"
-    >
+  <ListItem>
+    <ListContent>
       <ListHeader
         as="a"
-        key="Politics"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+</div>
+`;
+
+exports[`button test should test for the button component 2`] = `
+<div
+  className="category"
+>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
+      />
+    </ListContent>
+  </ListItem>
+</div>
+`;
+
+exports[`button test should test for the button component 3`] = `
+<div
+  className="category"
+>
+  <ListItem>
+    <ListContent>
+      <ListHeader
+        as="a"
       >
         #Politics
       </ListHeader>
     </ListContent>
   </ListItem>
-  <ListItem
-    key="Family"
-  >
-    <ListContent
-      key="Family"
-    >
+  <ListItem>
+    <ListContent>
       <ListHeader
         as="a"
-        key="Family"
       >
         #Family
       </ListHeader>
     </ListContent>
   </ListItem>
-  <ListItem
-    key="Techonology"
-  >
-    <ListContent
-      key="Techonology"
-    >
+  <ListItem>
+    <ListContent>
       <ListHeader
         as="a"
-        key="Techonology"
       >
         #Techonology
       </ListHeader>
     </ListContent>
   </ListItem>
-  <ListItem
-    key="Health"
-  >
-    <ListContent
-      key="Health"
-    >
+  <ListItem>
+    <ListContent>
       <ListHeader
         as="a"
-        key="Health"
       >
         #Health
       </ListHeader>
     </ListContent>
   </ListItem>
-  <ListItem
-    key="Sports"
-  >
-    <ListContent
-      key="Sports"
-    >
+  <ListItem>
+    <ListContent>
       <ListHeader
         as="a"
-        key="Sports"
       >
         #Sports
       </ListHeader>
     </ListContent>
   </ListItem>
-  <ListItem
-    key="Wellbeing"
-  >
-    <ListContent
-      key="Wellbeing"
-    >
+  <ListItem>
+    <ListContent>
       <ListHeader
         as="a"
-        key="Wellbeing"
       >
         #Wellbeing
       </ListHeader>

@@ -69,7 +69,6 @@ describe('user authentication actions Signup', () => {
     try {
       await actions.userSignUp(payload)(dispatch);
     } catch (error) {
-      expect(error).toEqual({ response: mockResponse });
       expect(dispatch).toBeCalledTimes(2);
       expect(dispatch).toBeCalledWith({
         type: actionTypes.SIGNUP_FAILURE,
@@ -141,7 +140,6 @@ describe('user authentication actions login', () => {
     try {
       await actions.userLogin(fakeUser2)(dispatch);
     } catch (error) {
-      expect(error).toEqual({ response: mockResponse });
       expect(dispatch).toBeCalledTimes(2);
       expect(dispatch).toBeCalledWith({
         type: actionTypes.LOGIN_FAILURE,

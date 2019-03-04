@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import NavBar from '..';
 import TinyBlackBar from '../TinyBlackBar';
-import WhiteNavBar from '../WhiteNavBar';
+import WhiteBar from '../WhiteNavBar';
 
 describe('NavBar', () => {
   it('should match snapshot', () => {
@@ -31,14 +31,14 @@ describe('TinyBlackBar', () => {
 
 describe('WhiteNavBar', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<WhiteNavBar />);
+    const wrapper = shallow(<WhiteBar />);
     expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('WhiteNavBar with props', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<WhiteNavBar fixed isAuthenticated avatarUrl="https://fakeAvatar.com" />);
+    const wrapper = shallow(<WhiteBar fixed isAuthenticated avatarUrl="https://fakeAvatar.com" />);
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -1,6 +1,12 @@
 .articleReactions {
   margin: -10% 0 15% 14%;
   width: 90%;
+  .rating {
+    margin-top: 0rem;
+  }
+  .ui.widgetContainer.menu {
+    width: 30%;
+  }
 }
 .articleReactions .dates,
 .articleReactions .articleComment {

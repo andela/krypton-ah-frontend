@@ -59,7 +59,7 @@ exports[`Modal Social it should matches the snapshot 1`] = `
     </div>
   </a>
   <a
-    href="https://krypton-ah-stage.herokuapp.com/api/v1/auth/twitter"
+    href="https://krypton-ah-stage.herokuapp.com/api/v1/auth/"
     key="4"
   >
     <div
