@@ -10,8 +10,8 @@ class ReactionIcons extends Component {
     this.props.getTotalReactions(this.props.selectedArticleId);
   };
 
-  createLikeIcon = newReaction => (
-    <i role="presentation" onClick={this.createReaction.bind(this, 'like', newReaction)}>
+  createLikeIcon = () => (
+    <i role="presentation" onClick={this.createReaction.bind(this, 'like')}>
       <Icon disabled link size="small" fitted name="thumbs up outline" />
     </i>
   );
