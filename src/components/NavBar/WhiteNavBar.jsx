@@ -2,10 +2,11 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import { Dropdown, Image, Menu, Icon, Button } from 'semantic-ui-react';
+import { Dropdown, Image, Menu, Button } from 'semantic-ui-react';
 import 'react-toastify/dist/ReactToastify.css';
 import AHIcon from '../../images/Logo.png';
 import avatarPlaceholder from '../../images/avatar.png';
+import SearchModal from '../../containers/SearchContainer/SearchModal';
 
 export default function WhiteNavBar({ fixed, isAuthenticated, avatarUrl }) {
   return (
@@ -22,7 +23,7 @@ export default function WhiteNavBar({ fixed, isAuthenticated, avatarUrl }) {
         </Menu.Menu>
         <Menu.Menu position="right">
           <Menu.Item>
-            <Icon fitted size="big" name="search" />
+            <SearchModal />
           </Menu.Item>
           <Menu.Item>
             <Link to="/login">
@@ -32,11 +33,11 @@ export default function WhiteNavBar({ fixed, isAuthenticated, avatarUrl }) {
           {isAuthenticated ? (
             <Menu.Item>
               <Dropdown
-                pointing
-                simple
-                item
-                className="link item"
-                trigger={<Image src={avatarUrl} avatar className="avatarImg" />}>
+                  pointing
+                  simple
+                  item
+                  className="link item"
+                  trigger={<Image src={avatarUrl} avatar className="avatarImg" />}>
                 <Dropdown.Menu className="right">
                   <Dropdown.Item>PROFILE</Dropdown.Item>
                   <Dropdown.Item>BOOKMARKS</Dropdown.Item>
