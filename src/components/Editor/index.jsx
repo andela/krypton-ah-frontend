@@ -49,7 +49,7 @@ class Editor extends Component {
   handleImageUpload = async (event) => {
     const { article } = this.state;
     const file = event.target.files[0];
-    const response = imageUpload(file);
+    const response = await imageUpload(file);
     article.featuredImageUrl = response.data.secure_url.toString();
     this.setState({
       article
@@ -228,6 +228,7 @@ class Editor extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
+
   publish: article => dispatch(publishArticle(article)),
   saveAsDraft: article => dispatch(draftArticle(article))
 });
@@ -237,9 +238,11 @@ const mapStateToProps = state => ({ createArticle: state.createArticleReducer })
 export { Editor as ArticleEditor };
 export default connect(mapStateToProps, mapDispatchToProps)(Editor);
 
+
 Editor.propTypes = {
   saveAsDraft: PropTypes.func,
   publish: PropTypes.func,
   createArticle: PropTypes.object };
+
 
 Editor.defaultProps = { saveAsDraft: null, publish: null, createArticle: {} };

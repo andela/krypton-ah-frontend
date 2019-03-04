@@ -19,6 +19,14 @@ describe('Editor Component', () => {
     wrapper.find('#title').simulate('change', event);
     expect(handleChangeSpy.calledOnce).toBeDefined();
   });
+  it('should upload image to cloudinary', () => {
+    const event = { target: { files: ['file'] } };
+    const wrapper = shallow(<ArticleEditor />);
+    const handleUploadSpy = sinon.spy(wrapper.instance(), 'handleImageUpload');
+    wrapper.find('#fileUpload').simulate('change', event);
+    wrapper.update();
+    expect(handleUploadSpy.calledOnce).toBeDefined();
+  });
   it('should change the state after changing the article category', () => {
     let event = {};
     event = { target: { selectedIndex: 0 } };

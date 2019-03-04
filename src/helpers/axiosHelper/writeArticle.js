@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { CLOUDINARY_UPLOAD_URL, CLOUDINARY_UPLOAD_PRESET } from '../../constants/index';
 
-
 const { API_BASE_URL } = process.env;
 const options = {
   headers: {
