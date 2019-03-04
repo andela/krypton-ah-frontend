@@ -2,16 +2,12 @@
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import moxios from 'moxios';
-import * as actions from '../writeArticleActions';
+import * as actions from '../index';
 import actionTypes from '../actionTypes';
 import * as axios from '../../../helpers/axiosHelper/writeArticle';
-// import verify from '../../../helpers/axiosHelper/writeArticle';
-// import NETWORK_ERROR from '../../networkError/actionType';
 import {
   payload,
-  // articlePayload,
   draftArticleOkResponse,
-  // draftArticlePayload,
   publishArticleBadResponse,
   publishArticleOkResponse,
   mockArticleResponse

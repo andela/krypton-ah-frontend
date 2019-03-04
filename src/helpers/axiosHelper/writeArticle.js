@@ -19,7 +19,7 @@ export const imageUpload = async (file) => {
   try {
     const response = await axios({
       url: CLOUDINARY_UPLOAD_URL,
-      method: 'post',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },

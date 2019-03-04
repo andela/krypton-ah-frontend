@@ -12,7 +12,7 @@ import placeholder from '../../asset/images/previewImage.png';
 import { articleValidator } from '../../helpers/validate';
 import InlineError from '../../helpers/InlineError';
 import { newCategories } from '../../mockData/index';
-import { publishArticle, draftArticle } from '../../actions/writeArticleAction/writeArticleActions';
+import { publishArticle, draftArticle } from '../../actions/writeArticleAction';
 import Loading from '../Loader/Loading';
 import { imageUpload } from '../../helpers/axiosHelper/writeArticle';
 
@@ -61,16 +61,10 @@ class Editor extends Component {
     const { article } = this.state;
     const { saveAsDraft } = this.props;
     const errors = articleValidator(article);
-    if (article.featuredImageUrl === placeholder) {
-      article.featuredImageUrl = undefined;
-    }
-    if (errors) {
-      this.setState({ errors });
-    }
+    if (article.featuredImageUrl === placeholder) { article.featuredImageUrl = undefined; }
+    if (errors) { this.setState({ errors }); }
     saveAsDraft(article);
-    if (!article.featuredImageUrl) {
-      article.featuredImageUrl = placeholder;
-    }
+    if (!article.featuredImageUrl) { article.featuredImageUrl = placeholder; }
   };
 
   handleChange(event) {
@@ -92,16 +86,10 @@ class Editor extends Component {
     const { publish } = this.props;
     article.ispublished = true;
     const errors = articleValidator(article);
-    if (article.featuredImageUrl === placeholder) {
-      article.featuredImageUrl = undefined;
-    }
-    if (errors) {
-      this.setState({ errors });
-    }
+    if (article.featuredImageUrl === placeholder) { article.featuredImageUrl = undefined; }
+    if (errors) { this.setState({ errors }); }
     publish(article);
-    if (!article.featuredImageUrl) {
-      article.featuredImageUrl = placeholder;
-    }
+    if (!article.featuredImageUrl) { article.featuredImageUrl = placeholder; }
   }
 
   handleSelection(event) {
@@ -120,8 +108,7 @@ class Editor extends Component {
           id="title"
           name="title"
           value={article.title}
-          onChange={this.handleChange}
-        />
+          onChange={this.handleChange} />
       </Form.Field>
     );
   }
@@ -135,8 +122,7 @@ class Editor extends Component {
           name="description"
           maxLength="250"
           value={article.description}
-          onChange={this.handleChange}
-        />
+          onChange={this.handleChange} />
       </Form.Field>
     );
   }
@@ -144,23 +130,16 @@ class Editor extends Component {
   renderCategory(article) {
     return (
       <Form.Field className="categoryForm" required>
-        <label className="categoryLabel" htmlFor="category">
-          Category
-        </label>
+        <label className="categoryLabel" htmlFor="category">Category</label>
         <select
           id="category"
           name="category"
           value={article.category}
           onChange={this.handleSelection}
-          placeholder="Select article category"
-        >
-          <option value="" disabled>
-            Select Category
-          </option>
+          placeholder="Select article category">
+          <option value="" disabled>Select Category</option>
           {newCategories.map(category => (
-            <option key={category.key} value={category.name}>
-              {category.name}
-            </option>
+            <option key={category.key} value={category.name}>{category.name}</option>
           ))}
         </select>
         <hr className="categoryLine" />
@@ -176,8 +155,7 @@ class Editor extends Component {
           id="content"
           options={mediumEditorOptions}
           text={article.content}
-          onChange={this.handleEditorChange}
-        />
+          onChange={this.handleEditorChange} />
       </Form.Field>
     );
   }
@@ -197,19 +175,14 @@ class Editor extends Component {
         <label htmlFor="featuredImage">Featured Image</label>
         <div className="previewImage">
           <label htmlFor="fileUpload">
-            <img
-              className="featuredPreviewImage"
-              src={article.featuredImageUrl}
-              alt="featuredImage"
-            />
+            <img className="featuredPreviewImage" src={article.featuredImageUrl} alt="featuredImage" />
           </label>
           <Input
             id="fileUpload"
             type="file"
             content="Browse"
             name="featuredImage"
-            onChange={this.handleImageUpload}
-          />
+            onChange={this.handleImageUpload} />
         </div>
       </Form.Field>
     );
@@ -254,7 +227,8 @@ class Editor extends Component {
   }
 }
 
-export const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
+
   publish: article => dispatch(publishArticle(article)),
   saveAsDraft: article => dispatch(draftArticle(article))
 });
@@ -262,15 +236,13 @@ export const mapDispatchToProps = dispatch => ({
 const mapStateToProps = state => ({ createArticle: state.createArticleReducer });
 
 export { Editor as ArticleEditor };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Editor);
+export default connect(mapStateToProps, mapDispatchToProps)(Editor);
+
 
 Editor.propTypes = {
   saveAsDraft: PropTypes.func,
   publish: PropTypes.func,
-  createArticle: PropTypes.object
-};
+  createArticle: PropTypes.object };
+
 
 Editor.defaultProps = { saveAsDraft: null, publish: null, createArticle: {} };

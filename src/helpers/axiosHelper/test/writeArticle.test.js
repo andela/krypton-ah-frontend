@@ -1,7 +1,7 @@
 import moxios from 'moxios';
 
 import { createArticleCall } from '../writeArticle';
-import { articlePayload, createArticleEndpoint, publishArticleOkResponse } from '../../../mockData';
+import { articlePayload, createArticleEndpoint, publishArticleOkResponse } from '../../../mockData/index';
 
 describe('axios requests', () => {
   beforeEach(() => {
