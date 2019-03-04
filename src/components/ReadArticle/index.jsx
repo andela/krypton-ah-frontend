@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Image, Container, Header, Comment, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
@@ -6,7 +6,6 @@ import ShareArticle from '../ShareArticle';
 import calendar from '../../images/calendar.svg';
 import time from '../../images/time.svg';
 import './styles/ReadArticle.scss';
-
 import author from '../../images/avatar.png';
 import { getArticle } from '../../actions/readArticleAction';
 import { dateFormatter, readTimeFormatter } from '../../helpers/articleInfoFormatter';
@@ -16,12 +15,26 @@ class ReadArticle extends Component {
     this.props.getArticle(this.props.selectedArticle);
   };
 
-  getArticleContent = articleContent => (
+  getArticleTags = tags => (
+    <div className="tagHolder">
+      {tags
+        ? tags.map(tag => (
+          <span key={tag} className="articleTags">
+            {tag.tagName}
+          </span>
+        ))
+        : null}
+    </div>
+  );
+
+  getArticleContent = (articleContent, tags) => (
     <Container textAlign="justified">
       <div className="articleContent">
         <p>{articleContent}</p>
         <p>{articleContent}</p>
       </div>
+
+      {this.getArticleTags(tags)}
     </Container>
   );
 
@@ -49,26 +62,37 @@ class ReadArticle extends Component {
     return {};
   };
 
+  getArticleHeaders = (featuredImageUrl, title) => (
+    <Fragment>
+      <Image src={featuredImageUrl} size="massive" />
+      <Header as="h1" className="articleTitle">
+        {title}
+      </Header>
+    </Fragment>
+  );
+
   render() {
-    const { title,
+    const {
+      title,
       content,
       createdAt,
       id,
       description,
       featuredImageUrl,
       readTime,
-      articleAuthor } = this.props.retrievedArticle.successResponse;
+      tags,
+      articleAuthor
+    } = this.props.retrievedArticle.successResponse;
     const authorDetails = this.getAuthorDetails(articleAuthor);
     return (
       <Container className="readArticleContainer">
-        <Image src={featuredImageUrl} size="massive" />
-        <Header as="h1" className="articleTitle">{title}</Header>
+        {this.getArticleHeaders(featuredImageUrl, title)}
         <Comment.Group className="articleInfo">
           <Image avatar as="a" src={author} />
           {this.getArticleInfo(authorDetails.authorName, createdAt, readTime)}
         </Comment.Group>
         <Divider className="articleDivider" />
-        {this.getArticleContent(content)}
+        {this.getArticleContent(content, tags)}
         <div className="icon-bar">
           <ShareArticle title={title} id={id} description={description} />
         </div>

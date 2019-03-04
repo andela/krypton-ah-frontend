@@ -56,7 +56,7 @@ img.ui.image {
 }
 
 .ui.divider.articleDivider {
-  margin: 0.5rem 0 0 2.7rem;
+  margin: 2rem 0 0 2.7rem;
   width: 90%;
 }
 
@@ -91,6 +91,32 @@ img.ui.image {
 .ui.comments .comment > .content {
   padding-top: 0;
   width: 100%;
+}
+
+.tagHolder {
+  width: 100%;
+  color: #f0f0f0;
+  margin: {
+    left: 2.5rem;
+    right: 2.5rem;
+  }
+
+  .articleTags {
+    padding: 0.6rem;
+    text-transform: capitalize;
+    margin: 0.4rem;
+    color: #25232357;
+    font-weight: 400;
+    border-radius: 0.2rem;
+    border: 1px solid #46444457;
+  }
+}
+.articleReactions {
+  margin-left: 20%;
+
+  .ui.widgetContainer.menu {
+    width: 60%;
+  }
 }
 
 @media (max-width: 767px) {

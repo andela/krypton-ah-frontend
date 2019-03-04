@@ -44,10 +44,9 @@ class ReactionIcons extends Component {
     const outline = '';
     return (
       <Fragment>
-        <Icon disabled link size="small" fitted name="time">
+        <Icon className="articleDate" disabled link size="small" fitted name="time">
           <span>{dateFormatter(date)}</span>
         </Icon>
-        <i className="dates">{date}</i>
         {likeClicked ? this.createLikeIcon(outline) : this.createLikeIcon()}
         {likes}
         {dislikeClicked ? this.createDislikeIcon(outline) : this.createDislikeIcon()}

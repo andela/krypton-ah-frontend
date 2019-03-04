@@ -4,6 +4,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
 <Fragment>
   <Icon
     as="i"
+    className="articleDate"
     disabled={true}
     fitted={true}
     link={true}
@@ -14,11 +15,6 @@ exports[`Test for reaction Icons should have initial state of false and change w
       Invalid Date
     </span>
   </Icon>
-  <i
-    className="dates"
-  >
-    28th february 2019
-  </i>
   <i
     onClick={[Function]}
     role="presentation"
@@ -69,6 +65,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
 <Fragment>
   <Icon
     as="i"
+    className="articleDate"
     disabled={true}
     fitted={true}
     link={true}
@@ -79,11 +76,6 @@ exports[`Test for reaction Icons should have initial state of false and change w
       Invalid Date
     </span>
   </Icon>
-  <i
-    className="dates"
-  >
-    28th february 2019
-  </i>
   <i
     onClick={[Function]}
     role="presentation"
