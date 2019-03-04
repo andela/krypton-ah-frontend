@@ -35,6 +35,7 @@ exports[`home container test should test for the featuredarticles component 1`] 
             numberofcomments={23}
             rating={3}
             ratingIcon={null}
+            selectedArticleId={1}
           />
         </Card>
       </GridColumn>

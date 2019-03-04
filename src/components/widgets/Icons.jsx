@@ -4,17 +4,17 @@ import { Menu, Icon, Rating } from 'semantic-ui-react';
 import Reactions from './ReactionIcons';
 
 export default function Icons(props) {
-  const { id, ratingIcon, numberofcomments, date, name, rating, disabled } = props;
+  const { selectedArticleId, ratingIcon, numberofcomments, date, name, rating, disabled } = props;
   return (
     <Menu className="widgetContainer">
       <div className="icons">
         {ratingIcon ? (
           <React.Fragment>
-            <Reactions date={date} selectedArticleId={id} />
+            <Reactions date={date} selectedArticleId={selectedArticleId} />
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <Reactions date={date} />
+            <Reactions date={date} selectedArticleId={selectedArticleId} />
             <Icon disabled link size="small" name="bookmark outline" />
             <span>{numberofcomments}</span>
             <div className="rating">
@@ -28,7 +28,7 @@ export default function Icons(props) {
   );
 }
 Icons.defaultProps = {
-  id: 1,
+  selectedArticleId: 1,
   name: 'author-name',
   date: 'current-date',
   ratingIcon: 'rating-class',
@@ -37,7 +37,7 @@ Icons.defaultProps = {
   disabled: false
 };
 Icons.propTypes = {
-  id: PropTypes.number,
+  selectedArticleId: PropTypes.string,
   name: PropTypes.string,
   date: PropTypes.string,
   ratingIcon: PropTypes.string,
