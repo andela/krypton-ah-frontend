@@ -13,6 +13,9 @@ const socialMediaElements = [
   }
 ];
 
+const CLOUDINARY_UPLOAD_PRESET = 'b19rkup8';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dx0nauane/image/upload';
+
 const articleDetails = {
   className: 'description',
   description: 'placeholder descritption',
@@ -86,6 +89,8 @@ export {
   authentication,
   twitterPath,
   networkErrorResponse,
+  CLOUDINARY_UPLOAD_URL,
+  CLOUDINARY_UPLOAD_PRESET,
   callbackUrl,
   activationResponse,
   alreadyActivatedResponse,

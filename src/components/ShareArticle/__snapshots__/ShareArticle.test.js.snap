@@ -6,7 +6,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
 >
   <CreatedButton
     quote=" "
-    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+    url="undefined/article/ "
     windowHeight={400}
     windowWidth={550}
   >
@@ -24,8 +24,13 @@ exports[`Share Article Component should rendered share Article Icons without cra
         "ah-Krypton",
       ]
     }
+<<<<<<< HEAD
     title="news"
     url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+=======
+    title=" "
+    url="undefined/article/ "
+>>>>>>> add article actions and reducer to article component
     windowHeight={400}
     windowWidth={550}
   >
@@ -39,8 +44,13 @@ exports[`Share Article Component should rendered share Article Icons without cra
   </CreatedButton>
   <CreatedButton
     description=" "
+<<<<<<< HEAD
     title="news"
     url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+=======
+    title=" "
+    url="undefined/article/ "
+>>>>>>> add article actions and reducer to article component
     windowHeight={600}
     windowWidth={750}
   >
@@ -54,8 +64,13 @@ exports[`Share Article Component should rendered share Article Icons without cra
   </CreatedButton>
   <CreatedButton
     separator=" "
+<<<<<<< HEAD
     title="news"
     url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+=======
+    title=" "
+    url="undefined/article/ "
+>>>>>>> add article actions and reducer to article component
     windowHeight={400}
     windowWidth={550}
   >
@@ -69,11 +84,16 @@ exports[`Share Article Component should rendered share Article Icons without cra
   </CreatedButton>
   <CreatedButton
     body=" 
-https://krypton-ah-fe-stage.herokuapp.com/article/ "
+undefined/article/ "
     onClick={[Function]}
     openWindow={false}
+<<<<<<< HEAD
     subject="news"
     url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+=======
+    subject=" "
+    url="undefined/article/ "
+>>>>>>> add article actions and reducer to article component
   >
     <Icon
       className=""
