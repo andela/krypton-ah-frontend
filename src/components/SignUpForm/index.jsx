@@ -70,7 +70,7 @@ class SignUpForm extends React.Component {
           <FormInput type="password" name="password" placeholder="Password" value={user.password} handleChange={this.handleChange} />
         </Form.Group>
         {errors.password && <InlineError text={errors.password} />}
-        {this.props.auth.authIsLoading ? <Loading size="tiny" /> : null}
+        {this.props.auth.authIsLoading ? (<Loading size="tiny" />) : null}
         <Button type="submit" basic fluid huge="true" onClick={this.handleSubmit}>Sign Up</Button>
       </Form>
     );

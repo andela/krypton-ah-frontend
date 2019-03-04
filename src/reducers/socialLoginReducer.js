@@ -7,7 +7,9 @@ import initialState from './initialState';
  * @param {boolean} flag either true or false
  * @returns {object} - new updated state
  */
-const updateSocialLoginState = (state, flag) => ({ ...state, isAuthenticated: flag });
+const updateSocialLoginState = (state, flag) => (
+  { ...state, isAuthenticated: flag }
+);
 
 /**
  * @description - calls functions that updates state based on the action received

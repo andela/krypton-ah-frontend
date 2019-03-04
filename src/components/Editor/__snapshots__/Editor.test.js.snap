@@ -3,6 +3,7 @@
 exports[`Editor Component should rendered Editor component without crashing 1`] = `
 <Form
   as="form"
+  onSubmit={[Function]}
 >
   <FormField
     required={true}
@@ -32,7 +33,7 @@ exports[`Editor Component should rendered Editor component without crashing 1`] 
     <TextArea
       as="textarea"
       id="description"
-      maxLength="250"
+      maxLength="255"
       name="description"
       onChange={[Function]}
       rows={3}
@@ -105,6 +106,7 @@ exports[`Editor Component should rendered Editor component without crashing 1`] 
             "buttons": Array [
               "bold",
               "italic",
+              "quote",
               "underline",
               "anchor",
               "strikethrough",
@@ -167,27 +169,16 @@ exports[`Editor Component should rendered Editor component without crashing 1`] 
     <Button
       as="button"
       basic={true}
+      content="Save as Draft"
       floated="left"
-      onClick={[Function]}
-    >
-      <span
-        className="publishBtn"
-      >
-        Save as Draft
-      </span>
-    </Button>
+    />
     <Button
       as="button"
       basic={true}
+      content="Publish"
       floated="right"
       onClick={[Function]}
-    >
-      <span
-        className="publishBtn"
-      >
-        Publish
-      </span>
-    </Button>
+    />
   </div>
 </Form>
 `;

@@ -18,29 +18,24 @@ const initialState = {
   featuredArticles: {
     featuredArticlesResponse: [],
     featuredArticlesfailure: false,
-    featuredArticlesSuccess: false
+    featuredArticlesSuccess: false,
   },
   categories: {
     categoriesResponseSuccess: false,
     categoriesResponse: [],
-    categoriesResponsefailure: false
+    categoriesResponsefailure: false,
   },
   tags: {
     tagsResponseSuccess: false,
     tagsResponse: [],
-    tagsResponsefailure: false
+    tagsResponsefailure: false,
+
   },
   readArticle: {
     articleIsLoading: false,
     success: false,
     successResponse: {},
     failureResponse: {}
-  },
-  createArticle: {
-    articleIsLoading: false,
-    draftIsLoading: false,
-    success: false,
-    response: ''
   },
   totalArticleReactions: {
     totalReactionsLoading: false,

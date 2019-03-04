@@ -16,7 +16,8 @@ const items = [
 ];
 
 const categories = {
-  data: ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing']
+  data:
+  ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing']
 };
 
 const newCategories = [
@@ -121,28 +122,11 @@ const payload = {
   email: 'jo@jos.com',
   password: 'password123R'
 };
-const articlePayload = {
-  title: 'redux',
-  description: 'learn redux',
-  content: 'redux is fun and awesome',
-  catagory: 'technology',
-  isPublished: true,
-  tags: 'redux'
-};
-const draftArticlePayload = {
-  title: 'redux',
-  description: 'learn redux',
-  content: 'redux is fun and awesome',
-  catagory: 'technology',
-  isPublished: false,
-  tags: 'redux'
-};
 const fakeUser2 = {
   email: 'jo@jos.com',
   password: 'password'
 };
 const signupEndpoint = `${API_BASE_URL}/users/signup`;
-const createArticleEndpoint = `${API_BASE_URL}/articles`;
 const signinEndpoint = `${API_BASE_URL}/users/signin`;
 
 const signupOkResponse = {
@@ -153,19 +137,9 @@ const signupOkResponse = {
       'Account successfully created, Kindly check your email to activate your account. In case you did not receive the activation link in your mail, kindly visit this link localhost:3000/api/v1/users/resend/activation/mail to resend the mail.'
   }
 };
-const publishArticleOkResponse = {
-  status: 201,
-  success: true,
-  data: {
-    message: 'Article successfully created'
-  }
-};
 
 const mockResponse = {
   message: 'Successfully logged in'
-};
-const mockArticleResponse = {
-  message: 'Article Successfully created'
 };
 const error = {
   response: {
@@ -184,25 +158,11 @@ const loginOkResponse = {
     message: 'You have sccessfully login'
   }
 };
-const draftArticleOkResponse = {
-  status: 201,
-  success: true,
-  data: {
-    message: 'article successfully saved as draft'
-  }
-};
 const loginBadResponse = {
   status: 400,
   success: false,
   data: {
     message: 'Incorrect credentials'
-  }
-};
-const publishArticleBadResponse = {
-  status: 400,
-  success: false,
-  data: {
-    message: 'Empty Input Field'
   }
 };
 
@@ -214,7 +174,6 @@ const signupSuccessAction = [
     payload
   }
 ];
-
 const signupFailureAction = [
   {
     type: 'SIGNUP_FAILURE',
@@ -245,10 +204,29 @@ const autoLoginResponse = {
 const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjp7ImlkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1Iiwicm9sZSI6W119LCJpYXQiOjE1NTEzNDg0NjEsImV4cCI6MTU1MTQzNDg2MX0.W-Q3vDCP1b4iKMOm_cBSMTzmRqvU9kpzcP-E2ka2n4U';
 
 export {
-  fetchArticles, payload, fakeUser2, signupEndpoint, signinEndpoint, mockResponse, signupOkResponse,
-  startAction, signupSuccessAction, signupFailureAction, error, loginOkResponse, loginBadResponse,
-  publishArticleOkResponse, draftArticleOkResponse, items, categories, newCategories,
-  popularArticles, trendingArticles, mockArticleResponse, createArticleEndpoint, mockHeader,
-  articlePayload, draftArticlePayload, socialToken, mockPath, publishArticleBadResponse,
-  jwtToken, autoLoginResponse, fetchArticlesresponse, defaultprop
+  fetchArticles,
+  payload,
+  fakeUser2,
+  signupEndpoint,
+  signinEndpoint,
+  mockResponse,
+  signupOkResponse,
+  startAction,
+  signupSuccessAction,
+  signupFailureAction,
+  error,
+  loginOkResponse,
+  loginBadResponse,
+  items,
+  categories,
+  newCategories,
+  popularArticles,
+  trendingArticles,
+  mockHeader,
+  socialToken,
+  mockPath,
+  jwtToken,
+  autoLoginResponse,
+  fetchArticlesresponse,
+  defaultprop
 };

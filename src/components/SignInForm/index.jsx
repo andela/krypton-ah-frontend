@@ -45,9 +45,7 @@ class SignIn extends React.Component {
   render() {
     const { user, errors } = this.state;
 
-    if (this.props.auth.isAuthenticated) {
-      return <Redirect to="/createarticle" />;
-    }
+    if (this.props.auth.isAuthenticated) { return <Redirect to="/createarticle" />; }
     return (
       <Form onSubmit={this.handleSubmit}>
         <Form.Group widths="equal">
@@ -61,7 +59,7 @@ class SignIn extends React.Component {
         <Form.Field>
           <Checkbox label="Remember me" />
         </Form.Field>
-        {this.props.auth.authIsLoading ? <Loading size="tiny" /> : null}
+        {this.props.auth.authIsLoading ? (<Loading size="tiny" />) : null}
         <Button type="submit" basic fluid huge="true" onClick={this.handleSubmit}>
           Sign In
         </Button>

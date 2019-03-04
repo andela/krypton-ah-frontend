@@ -53,8 +53,8 @@ $border_color_1: none;
     }
     .featuredPreviewImage {
       min-width: 10rem;
-      width: 70%;
-      max-height: 30rem;
+      width: 90%;
+      max-height: 15rem;
       background-size: cover;
       cursor: pointer;
     }
@@ -173,11 +173,4 @@ select:focus {
 
 .categoryLine {
   border: 0.5px solid rgba(34, 36, 38, 0.15);
-}
-.publishBtn {
-  padding-right: 1rem;
-}
-.formButton .ui.centered.inline.loader.active,
-.formButton .ui.centered.inline.loader.visible {
-  display: inline-block;
 }
