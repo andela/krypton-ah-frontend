@@ -11,7 +11,6 @@ exports[`ViewArticle should match snapshot 1`] = `
     <Icons
       date="current-date"
       disabled={false}
-      id={1}
       name={false}
       numberofcomments={23}
       rating={0}

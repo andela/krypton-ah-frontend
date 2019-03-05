@@ -15,7 +15,7 @@ export default function MainFeaturedArticle(props) {
           <Feed.Date content={title} />
         </Link>
         <Feed.Summary>{description}</Feed.Summary>
-        <ArticlesIcons date={date} />
+        <ArticlesIcons date={date} selectedArticleId={id} />
       </Feed.Content>
     </Feed.Event>
   );
