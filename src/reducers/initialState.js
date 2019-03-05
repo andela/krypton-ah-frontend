@@ -50,6 +50,18 @@ const initialState = {
     articles: [],
     userprofile: {},
     currentUser: {}
+  },
+  getArticleRating: {
+    ArticleRatingLoading: false,
+    success: false,
+    successResponse: {},
+    failureResponse: {}
+  },
+  createArticleRating: {
+    ArticleRatingLoading: false,
+    success: false,
+    successResponse: {},
+    failureResponse: {}
   }
 };
 

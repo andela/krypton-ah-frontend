@@ -56,14 +56,8 @@ exports[`carousel conatiner test should test for the carousel component 1`] = `
         >
           hakeem ibrahim
         </p>
-        <Icons
+        <Connect(Icons)
           date="2019-01-23T07:09:10.447Z"
-          disabled={false}
-          name="author-name"
-          numberofcomments={23}
-          rating={0}
-          ratingIcon="rating-class"
-          selectedArticleId={1}
         />
       </p>
     </div>
@@ -127,14 +121,8 @@ exports[`carousel conatiner test should test for the carousel component 2`] = `
         >
           hakeem ibrahim
         </p>
-        <Icons
+        <Connect(Icons)
           date="2019-01-23T07:09:10.447Z"
-          disabled={false}
-          name="author-name"
-          numberofcomments={23}
-          rating={0}
-          ratingIcon="rating-class"
-          selectedArticleId={1}
         />
       </p>
     </div>

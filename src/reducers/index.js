@@ -4,9 +4,11 @@ import authReducer from './authReducer';
 import socialLogin from './socialLoginReducer';
 import readArticle from './readArticleReducer';
 import totalArticleReactions from './totalArticleReactionReducer';
-import userReducer from './userReducer';
+import { getRating, createRating } from './articlesReducers/articleRatingReducer';
 
 const rootReducer = combineReducers({
+  getRating,
+  createRating,
   trendingArticlesReducer,
   popularArticlesReducer,
   FeaturedArticlesReducer,
