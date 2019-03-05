@@ -13,12 +13,19 @@ const socialMediaElements = [
   }
 ];
 
+const CLOUDINARY_UPLOAD_PRESET = 'b19rkup8';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dx0nauane/image/upload';
+
 const articleDetails = {
   className: 'description',
   description: 'placeholder descritption',
   title: 'placeholder title',
   image: 'https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png'
 };
+
+const successMessage = 'article published successfully';
+
+const draftMessage = 'article is saved as draft';
 
 const advertimage = 'https://res.cloudinary.com/ah-krypton/image/upload/v1548328425/mm17kbfqf7sjrw2w45rq.png';
 
@@ -75,7 +82,6 @@ const options = {
 };
 
 export const { CLOUDINARY_API_KEY } = process.env;
-export const { CLOUDINARY_UPLOAD_PRESET } = process.env;
 
 export {
   socialMediaElements,
@@ -86,7 +92,11 @@ export {
   BASE_URL_CB,
   authentication,
   twitterPath,
+  successMessage,
+  draftMessage,
   networkErrorResponse,
+  CLOUDINARY_UPLOAD_URL,
+  CLOUDINARY_UPLOAD_PRESET,
   callbackUrl,
   activationResponse,
   alreadyActivatedResponse,
