@@ -2,14 +2,7 @@ import actionTypes from '../actions/authAction/actionTypes';
 import initialState from './initialState';
 import NETWORK_ERROR from '../actions/networkError/actionType';
 
-const {
-  AUTH_LOADING,
-  SIGNUP_SUCCESS,
-  SIGNUP_FAILURE,
-  LOGIN_SUCCESS,
-  LOGIN_FAILURE,
-  IS_AUTHENTICATED
-} = actionTypes;
+const { AUTH_LOADING, SIGNUP_SUCCESS, SIGNUP_FAILURE, LOGIN_SUCCESS, LOGIN_FAILURE } = actionTypes;
 
 const { auth } = initialState;
 

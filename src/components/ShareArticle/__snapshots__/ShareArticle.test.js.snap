@@ -6,7 +6,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
 >
   <CreatedButton
     quote=" "
-    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+    url="undefined/article/ "
     windowHeight={400}
     windowWidth={550}
   >
@@ -69,7 +69,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
   </CreatedButton>
   <CreatedButton
     body=" 
-https://krypton-ah-fe-stage.herokuapp.com/article/ "
+undefined/article/ "
     onClick={[Function]}
     openWindow={false}
     subject="news"

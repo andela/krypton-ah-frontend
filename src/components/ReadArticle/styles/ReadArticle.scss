@@ -43,7 +43,7 @@
 .ui.comments .comment.infoContainer {
   margin: -1% 1%;
   padding: 0%;
-  width: 50%;
+  width: 100%;
 }
 
 img.ui.image {
@@ -93,6 +93,15 @@ img.ui.image {
   width: 100%;
 }
 
+i {
+  cursor: pointer;
+
+  &.bookmarkIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 @media (max-width: 767px) {
   .ui.header.articleTitle {
     text-align: center;
@@ -118,6 +127,9 @@ img.ui.image {
 }
 .ui.massive.image {
   height: 30rem;
+}
+.ui.comments.articleInfo {
+  max-width: 90%;
 }
 @media only screen and (max-width: 991px) {
   .icon-bar {
