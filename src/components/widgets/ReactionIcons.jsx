@@ -6,25 +6,31 @@ import { dateFormatter } from '../../helpers/articleInfoFormatter';
 import { getTotalReactions, articleReaction } from '../../actions/articleReactionsAction';
 
 class ReactionIcons extends Component {
+  state = {
+    timeoutId: ''
+  };
+
   componentDidMount = () => {
     this.props.getTotalReactions(this.props.selectedArticleId);
   };
 
-  createLikeIcon = () => (
-    <i role="presentation" onClick={this.createReaction.bind(this, 'like')}>
-      <Icon disabled link size="small" fitted name="thumbs up outline" />
-    </i>
-  );
+  componentWillUnmount = () => {
+    clearTimeout(this.state.timeoutId);
+  };
 
-  createDislikeIcon = () => (
-    <i role="presentation" onClick={this.createReaction.bind(this, 'dislike')}>
-      <Icon disabled link size="small" fitted name="thumbs down outline" />
+  createReactionIcon = (reaction, position) => (
+    <i role="presentation" onClick={this.createReaction.bind(this, reaction)}>
+      <Icon disabled link size="small" fitted name={`thumbs ${position} outline`} />
     </i>
   );
 
   createReaction = (newReaction) => {
     this.props.articleReaction(this.props.selectedArticleId, newReaction);
-    setTimeout(() => this.props.getTotalReactions(this.props.selectedArticleId), 100);
+    const timeoutId = setTimeout(
+      () => this.props.getTotalReactions(this.props.selectedArticleId),
+      100
+    );
+    this.setState({ timeoutId });
   };
 
   render() {
@@ -37,9 +43,9 @@ class ReactionIcons extends Component {
           <span>{dateFormatter(date)}</span>
         </Icon>
         <i className="dates">{date}</i>
-        {this.createLikeIcon()}
+        {this.createReactionIcon('like', 'up')}
         {likes}
-        {this.createDislikeIcon()}
+        {this.createReactionIcon('dislike', 'down')}
         {dislikes}
         <i className="articleComment">
           <Icon disabled link size="small" fitted name="comments outline" />
