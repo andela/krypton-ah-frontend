@@ -7,8 +7,7 @@ const {
   FETCH_USER_SUCCESS,
   FETCH_USER_FAILURE,
   UPDATE_USER_SUCCESS,
-  UPDATE_USER_FAILURE,
-  FETCH_CURRENT_USER_SUCCESS
+  UPDATE_USER_FAILURE
 } = actionTypes;
 
 const { user } = initialState;
@@ -40,17 +39,13 @@ export default (state = user, action) => {
       return {
         ...state,
         userprofile: { ...action.payload },
-        updateIsLoading: false
+        updateIsLoading: false,
       };
     case UPDATE_USER_FAILURE:
       return {
         ...state,
-        updateIsLoading: false
-      };
-    case FETCH_CURRENT_USER_SUCCESS:
-      return {
-        ...state,
-        currentUser: { ...action.payload }
+        userprofile: { ...action.payload },
+        updateIsLoading: false,
       };
     default:
       return state;
