@@ -53,8 +53,6 @@ class Icons extends Component {
           ) : (
             <React.Fragment>
               <Reactions date={date} />
-              <Icon disabled link size="small" name="bookmark outline" />
-              <span>{numberofcomments}</span>
               <div className="rating">
                 {this.getRate(disabled, rating)}
                 {name ? <span>{name}</span> : ''}
