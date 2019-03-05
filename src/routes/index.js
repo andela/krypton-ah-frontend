@@ -26,19 +26,25 @@ export default [
     name: 'login',
     component: Login,
     exact: true,
-    path: '/login'
+    path: '/login',
+    routeType: 'unAuthenticated',
+    redirect: '/'
   },
   {
     name: 'viewArticle',
     component: ViewArticle,
     exact: true,
-    path: '/article/:title'
+    path: '/article/:title',
+    routeType: 'authenticated',
+    redirect: '/'
   },
   {
     name: 'signup',
     component: SignUp,
     exact: true,
-    path: '/signup'
+    path: '/signup',
+    routeType: 'unAuthenticated',
+    redirect: '/'
   },
   {
     name: 'verification',
@@ -56,7 +62,9 @@ export default [
     name: 'createarticle',
     component: CreateArticles,
     exact: true,
-    path: '/createarticle'
+    path: '/createarticle',
+    routeType: 'authenticated',
+    redirect: '/login'
   },
   {
     name: '404',

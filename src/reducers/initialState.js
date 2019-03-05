@@ -48,7 +48,8 @@ const initialState = {
     updateIsLoading: false,
     userId: '',
     articles: [],
-    userprofile: {}
+    userprofile: {},
+    currentUser: {}
   }
 };
 
