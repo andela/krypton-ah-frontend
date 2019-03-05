@@ -55,6 +55,7 @@
     "enzyme": "^3.8.0",
     "express": "^4.16.4",
     "jwt-decode": "^2.2.0",
+    "moment": "^2.24.0",
     "medium-editor": "^5.23.3",
     "normalize.css": "^8.0.1",
     "postcss-loader": "^3.0.0",

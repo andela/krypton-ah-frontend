@@ -36,6 +36,14 @@ const initialState = {
     successResponse: {},
     failureResponse: {}
   },
+  comment: {
+    commentIsLoading: false,
+    updateComment: false,
+    success: false,
+    commentsArray: [],
+    threadsArray: [],
+    commentLike: 0
+},
   createArticle: {
     articleIsLoading: false,
     draftIsLoading: false,
