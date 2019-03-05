@@ -59,7 +59,7 @@ export const fetchCurrentUser = userId => async (dispatch) => {
     if (error.response) {
       dispatch(fetchCurrentUserFailure());
     } else {
-      toast.warn(networkErrorResponse);
+      // toast.warn(networkErrorResponse);
       dispatch(fetchCurrentUserFailure());
     }
   }

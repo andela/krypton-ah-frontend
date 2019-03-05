@@ -47,7 +47,6 @@ class ReactionIcons extends Component {
         <Icon disabled link size="small" fitted name="time">
           <span>{dateFormatter(date)}</span>
         </Icon>
-        <i className="dates">{date}</i>
         {likeClicked ? this.createLikeIcon(outline) : this.createLikeIcon()}
         {likes}
         {dislikeClicked ? this.createDislikeIcon(outline) : this.createDislikeIcon()}

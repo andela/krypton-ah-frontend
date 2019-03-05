@@ -40,6 +40,9 @@ const socialLogin = (socialToken, pathname) => async (dispatch) => {
     }
     setToken(token);
     dispatch(loginSuccess(response));
+    dispatch({
+      type: 'IS_AUTHENTICATED'
+    });
   } catch (error) {
     dispatch(loginFailed(error));
   }

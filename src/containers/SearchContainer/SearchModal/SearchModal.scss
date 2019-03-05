@@ -8,26 +8,35 @@ i.icon {
   border: none;
 }
 
-.ui.input.search > input {
-  text-align: center;
-  font-family: inherit;
-  font-size: 2rem;
-  border: {
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0.2rem solid rgba(34, 36, 38, 0.15);
+.ui.input.search {
+  > input {
+    text-align: center;
+    font-family: inherit;
+    font-size: 2rem;
+    border: {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0.2rem solid rgba(34, 36, 38, 0.15);
+    }
   }
 }
 
-  .ui.fullscreen.modal {
-    width: 100% !important;
+.ui.input.innerSearch {
+  > input {
+    max-width: 50%;
+    margin: 0 auto;
   }
+}
+
+.ui.fullscreen.modal {
+  width: 100% !important;
+}
 .radioMargin {
-  margin-right: .7rem;
+  margin-right: 0.7rem;
   font-weight: 400;
 }
 
-.ui.segment {
+.ui.segment.radioCenter {
   text-align: center;
 }

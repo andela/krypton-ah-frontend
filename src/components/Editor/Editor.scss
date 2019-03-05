@@ -38,6 +38,7 @@ $border_color_1: none;
       font-size: 1.2em;
       font-weight: 400;
       text-transform: uppercase;
+      text-align: left;
     }
     > .selection.dropdown {
       width: 100%;
@@ -53,8 +54,8 @@ $border_color_1: none;
     }
     .featuredPreviewImage {
       min-width: 10rem;
-      width: 90%;
-      max-height: 15rem;
+      width: 70%;
+      max-height: 30rem;
       background-size: cover;
       cursor: pointer;
     }
@@ -69,6 +70,7 @@ $border_color_1: none;
           border-radius: 0;
           padding-left: 0;
           color: $textInput;
+          text-align: left;
           &:focus {
             border-bottom: rgb(105, 105, 105);
           }
@@ -173,4 +175,11 @@ select:focus {
 
 .categoryLine {
   border: 0.5px solid rgba(34, 36, 38, 0.15);
+}
+.publishBtn {
+  padding-right: 1rem;
+}
+.formButton .ui.centered.inline.loader.active,
+.formButton .ui.centered.inline.loader.visible {
+  display: inline-block;
 }
