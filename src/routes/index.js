@@ -7,6 +7,7 @@ import AccountVerification from '../components/AccountVerification';
 import socialAuth from '../components/socialAuth/socialAuth';
 import Profile from '../pages/Profile';
 import CreateArticles from '../pages/CreateArticles';
+import SearchPage from '../containers/SearchContainer/SearchPage';
 
 export default [
   {
@@ -65,6 +66,12 @@ export default [
     path: '/createarticle',
     routeType: 'authenticated',
     redirect: '/login'
+  },
+  {
+    name: 'search',
+    component: SearchPage,
+    exact: true,
+    path: '/search'
   },
   {
     name: '404',
