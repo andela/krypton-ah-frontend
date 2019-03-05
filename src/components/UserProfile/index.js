@@ -72,9 +72,10 @@ class UserProfile extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { updateUser, profileData } = this.props;
+    const { updateUser, profileData, imageFile } = this.props;
     const { state } = this;
-    const update = this.getUpdatedField(state, profileData);
+    const newState = imageFile ? { ...state, imageFile } : state;
+    const update = this.getUpdatedField(newState, profileData);
     if (Object.keys(update).length === 0) {
       return;
     }
@@ -188,14 +189,16 @@ class UserProfile extends React.Component {
 UserProfile.defaultProps = {
   updateUser: () => {},
   user: '',
-  updateIsLoading: false
+  updateIsLoading: false,
+  imageFile: null
 };
 
 UserProfile.propTypes = {
   profileData: PropTypes.object.isRequired,
   updateUser: PropTypes.func,
   user: PropTypes.string,
-  updateIsLoading: PropTypes.bool
+  updateIsLoading: PropTypes.bool,
+  imageFile: PropTypes.object
 };
 
 export default UserProfile;

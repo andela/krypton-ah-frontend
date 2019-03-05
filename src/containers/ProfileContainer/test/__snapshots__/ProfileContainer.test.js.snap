@@ -68,6 +68,7 @@ exports[`Profile should match snapshot when an authenticated user view user prof
           fetchUser={[Function]}
           fetchUserFailure={[Function]}
           fetchUserSuccess={[Function]}
+          newProfileImage={null}
           profileData={
             Object {
               "bio": "Software developer at Andela",
@@ -82,6 +83,8 @@ exports[`Profile should match snapshot when an authenticated user view user prof
               "username": "Isaiah",
             }
           }
+          removeImage={[Function]}
+          setImage={[Function]}
           updateIsLoading={false}
           updateUserFailure={[Function]}
           updateUserProfile={[Function]}
@@ -122,6 +125,57 @@ exports[`Profile should match snapshot when an authenticated user view user prof
                               src="test-file-stub"
                             />
                           </Image>
+                          <Connect(UploadImage)
+                            hidden={true}
+                          >
+                            <UploadImage
+                              fetchUser={[Function]}
+                              fetchUserFailure={[Function]}
+                              fetchUserSuccess={[Function]}
+                              hidden={true}
+                              imageFile={null}
+                              removeImage={[Function]}
+                              setImage={[Function]}
+                              updateUserFailure={[Function]}
+                              updateUserProfile={[Function]}
+                              updateUserSuccess={[Function]}
+                            >
+                              <div
+                                className="uploadImageContainer hidden"
+                              >
+                                <label
+                                  htmlFor="imageInput"
+                                >
+                                  <Icon
+                                    as="i"
+                                    className="UploadImageIcon"
+                                    name="camera"
+                                    size="big"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="camera big icon UploadImageIcon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </label>
+                                <input
+                                  accept="image/*"
+                                  className="hidden"
+                                  id="imageInput"
+                                  name="imageInput"
+                                  onChange={[Function]}
+                                  type="file"
+                                />
+                                <button
+                                  className="hidden"
+                                  id="imageButton"
+                                  onClick={[Function]}
+                                  type="button"
+                                />
+                              </div>
+                            </UploadImage>
+                          </Connect(UploadImage)>
                         </div>
                       </GridRow>
                       <GridRow
@@ -773,6 +827,7 @@ exports[`Profile should match snapshot when an authenticated user view user prof
                               render={[Function]}
                             >
                               <UserProfile
+                                imageFile={null}
                                 profileData={
                                   Object {
                                     "bio": "Software developer at Andela",
@@ -1702,6 +1757,7 @@ exports[`Profile should match snapshot when an unauthenticated user view user pr
           fetchUser={[Function]}
           fetchUserFailure={[Function]}
           fetchUserSuccess={[Function]}
+          newProfileImage={null}
           profileData={
             Object {
               "bio": "Software developer at Andela",
@@ -1716,6 +1772,8 @@ exports[`Profile should match snapshot when an unauthenticated user view user pr
               "username": "Isaiah",
             }
           }
+          removeImage={[Function]}
+          setImage={[Function]}
           updateIsLoading={false}
           updateUserFailure={[Function]}
           updateUserProfile={[Function]}
@@ -1756,6 +1814,57 @@ exports[`Profile should match snapshot when an unauthenticated user view user pr
                               src="test-file-stub"
                             />
                           </Image>
+                          <Connect(UploadImage)
+                            hidden={true}
+                          >
+                            <UploadImage
+                              fetchUser={[Function]}
+                              fetchUserFailure={[Function]}
+                              fetchUserSuccess={[Function]}
+                              hidden={true}
+                              imageFile={null}
+                              removeImage={[Function]}
+                              setImage={[Function]}
+                              updateUserFailure={[Function]}
+                              updateUserProfile={[Function]}
+                              updateUserSuccess={[Function]}
+                            >
+                              <div
+                                className="uploadImageContainer hidden"
+                              >
+                                <label
+                                  htmlFor="imageInput"
+                                >
+                                  <Icon
+                                    as="i"
+                                    className="UploadImageIcon"
+                                    name="camera"
+                                    size="big"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="camera big icon UploadImageIcon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </label>
+                                <input
+                                  accept="image/*"
+                                  className="hidden"
+                                  id="imageInput"
+                                  name="imageInput"
+                                  onChange={[Function]}
+                                  type="file"
+                                />
+                                <button
+                                  className="hidden"
+                                  id="imageButton"
+                                  onClick={[Function]}
+                                  type="button"
+                                />
+                              </div>
+                            </UploadImage>
+                          </Connect(UploadImage)>
                         </div>
                       </GridRow>
                       <GridRow
@@ -2331,6 +2440,7 @@ exports[`Profile should match snapshot when an unauthenticated user view user pr
                               render={[Function]}
                             >
                               <UserProfile
+                                imageFile={null}
                                 profileData={
                                   Object {
                                     "bio": "Software developer at Andela",
@@ -3259,6 +3369,7 @@ exports[`Profile should match snapshot when current user view own profile 1`] = 
           fetchUser={[Function]}
           fetchUserFailure={[Function]}
           fetchUserSuccess={[Function]}
+          newProfileImage={null}
           profileData={
             Object {
               "bio": "Software developer at Andela",
@@ -3273,6 +3384,8 @@ exports[`Profile should match snapshot when current user view own profile 1`] = 
               "username": "Isaiah",
             }
           }
+          removeImage={[Function]}
+          setImage={[Function]}
           updateIsLoading={false}
           updateUserFailure={[Function]}
           updateUserProfile={[Function]}
@@ -3313,6 +3426,57 @@ exports[`Profile should match snapshot when current user view own profile 1`] = 
                               src="test-file-stub"
                             />
                           </Image>
+                          <Connect(UploadImage)
+                            hidden={false}
+                          >
+                            <UploadImage
+                              fetchUser={[Function]}
+                              fetchUserFailure={[Function]}
+                              fetchUserSuccess={[Function]}
+                              hidden={false}
+                              imageFile={null}
+                              removeImage={[Function]}
+                              setImage={[Function]}
+                              updateUserFailure={[Function]}
+                              updateUserProfile={[Function]}
+                              updateUserSuccess={[Function]}
+                            >
+                              <div
+                                className="uploadImageContainer "
+                              >
+                                <label
+                                  htmlFor="imageInput"
+                                >
+                                  <Icon
+                                    as="i"
+                                    className="UploadImageIcon"
+                                    name="camera"
+                                    size="big"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="camera big icon UploadImageIcon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </label>
+                                <input
+                                  accept="image/*"
+                                  className="hidden"
+                                  id="imageInput"
+                                  name="imageInput"
+                                  onChange={[Function]}
+                                  type="file"
+                                />
+                                <button
+                                  className="hidden"
+                                  id="imageButton"
+                                  onClick={[Function]}
+                                  type="button"
+                                />
+                              </div>
+                            </UploadImage>
+                          </Connect(UploadImage)>
                         </div>
                       </GridRow>
                       <GridRow
@@ -4104,6 +4268,7 @@ exports[`Profile should match snapshot when current user view own profile 1`] = 
                               render={[Function]}
                             >
                               <UserProfile
+                                imageFile={null}
                                 profileData={
                                   Object {
                                     "bio": "Software developer at Andela",
@@ -5012,6 +5177,9 @@ exports[`Profile should match snapshot when updateIsLoading is false 1`] = `
           circular={true}
           src="test-file-stub"
           ui={true}
+        />
+        <Connect(UploadImage)
+          hidden={true}
         />
       </GridRow>
       <GridRow
