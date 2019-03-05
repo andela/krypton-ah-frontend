@@ -61,8 +61,9 @@ const initialState = {
     updateIsLoading: false,
     userId: '',
     articles: [],
-    userprofile: {}
-  },
+    userprofile: {},
+    currentUser: {}
+  }
 };
 
 export default initialState;

@@ -7,6 +7,7 @@ import AccountVerification from '../components/AccountVerification';
 import socialAuth from '../components/socialAuth/socialAuth';
 import Profile from '../pages/Profile';
 import CreateArticles from '../pages/CreateArticles';
+import SearchPage from '../containers/SearchContainer/SearchPage';
 
 export default [
   {
@@ -26,19 +27,25 @@ export default [
     name: 'login',
     component: Login,
     exact: true,
-    path: '/login'
+    path: '/login',
+    routeType: 'unAuthenticated',
+    redirect: '/'
   },
   {
     name: 'viewArticle',
     component: ViewArticle,
     exact: true,
-    path: '/article/:title'
+    path: '/article/:title',
+    routeType: 'authenticated',
+    redirect: '/'
   },
   {
     name: 'signup',
     component: SignUp,
     exact: true,
-    path: '/signup'
+    path: '/signup',
+    routeType: 'unAuthenticated',
+    redirect: '/'
   },
   {
     name: 'verification',
@@ -56,7 +63,15 @@ export default [
     name: 'createarticle',
     component: CreateArticles,
     exact: true,
-    path: '/createarticle'
+    path: '/createarticle',
+    routeType: 'authenticated',
+    redirect: '/login'
+  },
+  {
+    name: 'search',
+    component: SearchPage,
+    exact: true,
+    path: '/search'
   },
   {
     name: '404',

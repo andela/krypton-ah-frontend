@@ -48,6 +48,10 @@ export default (state = auth, action) => {
         response: action.payload,
         isAuthenticated: false
       };
+    case IS_AUTHENTICATED:
+      return {
+        isAuthenticated: true
+      };
     default:
       return state;
   }

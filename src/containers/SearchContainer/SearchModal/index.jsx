@@ -10,7 +10,7 @@ class SearchModal extends Component {
       article: '',
       open: false,
       search: false,
-      searchOption: ''
+      searchOption: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -55,7 +55,7 @@ class SearchModal extends Component {
           <Modal.Content>
             <form onSubmit={this.handleSubmit}>
               <Input type="text" name="article" value={article} placeholder="Type and hit Enter to search..." className="search" onChange={this.handleChange} />
-              <Segment>
+              <Segment className="radioCenter">
                 <Radio label="Author" name="searchOption" value="author" className="radioMargin" checked={this.state.searchOption === 'author'} onChange={this.handleRadioChange} />
                 <Radio label="Tag" name="searchOption" value="tag" className="radioMargin" checked={this.state.searchOption === 'tag'} onChange={this.handleRadioChange} />
                 <Radio label="Title" name="searchOption" value="title" className="radioMargin" checked={this.state.searchOption === 'title'} onChange={this.handleRadioChange} />
