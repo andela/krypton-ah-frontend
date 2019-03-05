@@ -2,6 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import PasswordMask from 'react-password-mask';
 import { Form, Button } from 'semantic-ui-react';
 import FormInput from '../FormInputGroup';
 import InlineError from '../../helpers/InlineError';
@@ -73,7 +74,7 @@ class SignUpForm extends React.Component {
         </Form.Group>
         {errors.email && <InlineError text={errors.email} />}
         <Form.Group widths="equal">
-          <FormInput type="password" name="password" placeholder="Password" value={user.password} handleChange={this.handleChange} />
+          <PasswordMask type="password" id="signUpPassword" name="password" placeholder="Password" value={user.password} onChange={this.handleChange} />
         </Form.Group>
         {errors.password && <InlineError text={errors.password} />}
         {this.props.auth.authIsLoading ? (<Loading size="tiny" />) : null}

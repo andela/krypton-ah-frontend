@@ -24,15 +24,23 @@ exports[`SignIn Form should matches the snapshot 1`] = `
   <FormGroup
     widths="equal"
   >
-    <FormInput
-      as={[Function]}
-      control={[Function]}
+    <t
+      buttonClassName=""
+      buttonStyles={
+        Object {
+          "width": "100%",
+        }
+      }
       fluid={true}
+      inputClassName=""
       name="password"
+      onBlur={[Function]}
       onChange={[Function]}
+      onKeyDown={[Function]}
       placeholder="Password"
       required={true}
       type="password"
+      useVendorStyles={true}
       value=""
     />
   </FormGroup>

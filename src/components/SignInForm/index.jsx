@@ -2,11 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Form, Checkbox, Button } from 'semantic-ui-react';
+import PasswordMask from 'react-password-mask';
 import { Redirect } from 'react-router-dom';
 import InlineError from '../../helpers/InlineError';
 import { signInValidator } from '../../helpers/validate';
 import { userLogin } from '../../actions/authAction/authActions';
 import Loading from '../Loader/Loading';
+import './SignInForm.scss';
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -52,8 +54,8 @@ class SignIn extends React.Component {
           <Form.Input type="email" className="email" fluid placeholder="Email Address" name="email" value={user.email} onChange={this.handleChange} required />
         </Form.Group>
         {errors.email && <InlineError text={errors.email} />}
-        <Form.Group widths="equal">
-          <Form.Input fluid type="password" placeholder="Password" value={user.password} name="password" onChange={this.handleChange} required />
+        <Form.Group widths="equal" fluid>
+          <PasswordMask type="password" id="password" inputStyles={{ width: '100%' }} placeholder="Password" value={user.password} name="password" onChange={this.handleChange} required />
         </Form.Group>
         {errors.password && <InlineError text={errors.password} />}
         <Form.Field>
