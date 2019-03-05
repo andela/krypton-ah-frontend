@@ -74,6 +74,9 @@ const options = {
   }
 };
 
+export const { CLOUDINARY_API_KEY } = process.env;
+export const { CLOUDINARY_UPLOAD_PRESET } = process.env;
+
 export {
   socialMediaElements,
   articleDetails,

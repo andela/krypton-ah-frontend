@@ -1,0 +1,26 @@
+.uploadImageContainer {
+    position: absolute;
+    bottom: 2rem;
+    right: 11rem;
+    border-radius: 100%;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+  .uploadImageInput {
+    display: none;
+  }
+ 
+  .raised {
+    z-index: 2;
+  }
+}
+
+.hidden {
+    display: none;
+}
+
+.userProfile img {
+  width: 14rem;
+  height: 14rem;
+}

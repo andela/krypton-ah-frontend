@@ -11,6 +11,7 @@ import profileImagePlaceholder from '../../images/avatar.png';
 import * as userActions from '../../actions/userActions';
 import Loader from '../../components/Loader';
 import './ProfileContainer.scss';
+import UploadImage from '../../components/UploadImage';
 
 class ProfileContainer extends React.Component {
   constructor(props) {
@@ -43,10 +44,14 @@ class ProfileContainer extends React.Component {
   }
 
   renderProfileHero(profileImage, lastname, firstname, bio) {
+    const { newProfileImage, userId } = this.props;
+    const previewUrl = newProfileImage ? newProfileImage.previewUrl : '';
+    const hidden = !(this.getUserType(userId) === 'owner');
     return (
       <Grid>
         <Grid.Row centered>
-          <Image src={profileImage || profileImagePlaceholder} circular />
+          <Image src={previewUrl || profileImage || profileImagePlaceholder} circular />
+          <UploadImage hidden={hidden} />
         </Grid.Row>
         <Grid.Row centered>
           <div>
@@ -59,7 +64,11 @@ class ProfileContainer extends React.Component {
   }
 
   renderProfileView() {
-    const { profileData, updateUserProfile, updateIsLoading, userId } = this.props;
+    let imageFile;
+    const { profileData, updateUserProfile, updateIsLoading, userId, newProfileImage } = this.props;
+    if (newProfileImage) {
+      imageFile = newProfileImage ? newProfileImage.imageFile : null;
+    }
     const user = this.getUserType(userId);
     return (
       <UserProfile
@@ -67,6 +76,7 @@ class ProfileContainer extends React.Component {
         updateIsLoading={updateIsLoading}
         profileData={profileData}
         user={user}
+        imageFile={imageFile}
       />
     );
   }
@@ -108,7 +118,8 @@ class ProfileContainer extends React.Component {
 }
 
 ProfileContainer.defaultProps = {
-  profileData: {}
+  profileData: {},
+  newProfileImage: null
 };
 
 ProfileContainer.propTypes = {
@@ -117,7 +128,8 @@ ProfileContainer.propTypes = {
   userId: PropTypes.string.isRequired,
   updateUserProfile: PropTypes.func.isRequired,
   updateIsLoading: PropTypes.bool.isRequired,
-  fetchIsLoading: PropTypes.bool.isRequired
+  fetchIsLoading: PropTypes.bool.isRequired,
+  newProfileImage: PropTypes.object
 };
 
 const mapDispatchToProps = dispatch => ({ ...bindActionCreators(userActions, dispatch) });
@@ -136,10 +148,19 @@ const userProfileExistProps = (noProfileProps, neededData) => {
 
 const mapStateToProps = (state) => {
   const { userReducer } = state;
-  const { firstname, lastname, userprofile, id, fetchIsLoading, updateIsLoading } = userReducer;
+  const {
+    firstname,
+    lastname,
+    userprofile,
+    id,
+    fetchIsLoading,
+    updateIsLoading,
+    newProfileImage
+  } = userReducer;
   const noProfileProps = {
     fetchIsLoading,
     updateIsLoading,
+    newProfileImage,
     profileData: {
       firstname,
       lastname,
