@@ -40,7 +40,7 @@ const initialState = {
     articleIsLoading: false,
     draftIsLoading: false,
     success: false,
-    response: ''
+    response: {}
   },
   totalArticleReactions: {
     totalReactionsLoading: false,

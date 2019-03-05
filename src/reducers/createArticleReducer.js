@@ -28,25 +28,23 @@ export default (state = createArticle, action) => {
       return {
         articleIsLoading: false,
         success: true,
-        response: action.payload.data.message
+        response: action.payload.data
       };
     case PUBLISH_FAILURE:
       return {
         articleIsLoading: false,
-        success: false,
-        response: action.payload.data.message
+        success: false
       };
     case SAVE_AS_DRAFT_SUCCESS:
       return {
         draftIsLoading: false,
         success: true,
-        response: action.payload.data.message
+        response: action.payload.data
       };
     case SAVE_AS_DRAFT_FAILURE:
       return {
         draftIsLoading: false,
-        success: false,
-        response: action.payload.data.message
+        success: false
       };
     default:
       return state;

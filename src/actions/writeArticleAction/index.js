@@ -1,6 +1,7 @@
 import { toast } from 'react-toastify';
 import { createArticleCall } from '../../helpers/axiosHelper/writeArticle';
 import actionTypes from './actionTypes';
+import { successMessage, draftMessage } from '../../constants';
 import triggerLoading from '../authAction/loading';
 
 const {
@@ -27,7 +28,7 @@ export const publishArticle = article => async (dispatch) => {
     dispatch(triggerLoading(PUBLISH_LOADING));
     const response = await createArticleCall(article);
     dispatch(publishArticleSuccess(response));
-    toast.success(response.data.message);
+    toast.success(successMessage);
   } catch (error) {
     if (error.response) {
       dispatch(publishArticleFailure(error.response));
@@ -51,7 +52,7 @@ export const draftArticle = article => async (dispatch) => {
     dispatch(triggerLoading(DRAFT_LOADING));
     const response = await createArticleCall(article);
     dispatch(draftArticleSuccess(response));
-    toast.success(response.data.message);
+    toast.success(draftMessage);
   } catch (error) {
     if (error.response) {
       dispatch(draftArticleFailure(error.response));
