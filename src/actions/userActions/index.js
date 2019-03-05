@@ -10,10 +10,7 @@ const {
   FETCH_USER_SUCCESS,
   FETCH_USER_FAILURE,
   UPDATE_USER_SUCCESS,
-  UPDATE_USER_FAILURE,
-  IS_AUTHENTICATED,
-  FETCH_CURRENT_USER_SUCCESS,
-  FETCH_CURRENT_USER_FAILURE
+  UPDATE_USER_FAILURE
 } = actionTypes;
 
 export const fetchUserSuccess = userData => ({
@@ -33,30 +30,6 @@ export const updateUserSuccess = userData => ({
 export const updateUserFailure = () => ({
   type: UPDATE_USER_FAILURE
 });
-
-export const fetchCurrentUserSuccess = userData => ({
-  type: FETCH_CURRENT_USER_SUCCESS,
-  payload: { profileImage: userData.userprofile.avatar, userId: userData.id }
-});
-
-export const fetchCurrentUserFailure = () => ({
-  type: FETCH_CURRENT_USER_FAILURE
-});
-
-export const fetchCurrentUser = userId => async (dispatch) => {
-  try {
-    const response = await getUser(userId);
-    dispatch({ type: IS_AUTHENTICATED });
-    dispatch(fetchCurrentUserSuccess(response.data.data));
-  } catch (error) {
-    if (error.response) {
-      dispatch(fetchCurrentUserFailure());
-    } else {
-      toast.warn(networkErrorResponse);
-      dispatch(fetchCurrentUserFailure());
-    }
-  }
-};
 
 export const fetchUser = userId => async (dispatch) => {
   try {

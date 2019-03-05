@@ -15,7 +15,6 @@ const {
   LOGIN_FAILURE,
   SIGNUP_SUCCESS,
   SIGNUP_FAILURE,
-  IS_AUTHENTICATED
 } = actionTypes;
 
 describe('user authentication reducer', () => {
@@ -95,13 +94,6 @@ describe('user authentication reducer', () => {
       success: false,
       response: payload,
       isAuthenticated: false,
-    }));
-  });
-  it('should update state when IS_AUTHENTICATED action is dispatched', () => {
-    expect(authReducer(initialState.auth, {
-      type: IS_AUTHENTICATED,
-    })).toEqual((initialState, {
-      isAuthenticated: true,
     }));
   });
 });
