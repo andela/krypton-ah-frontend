@@ -1,5 +1,10 @@
 import { toast } from 'react-toastify';
-import { getUser, updateProfile, createProfile } from '../../helpers/axiosHelper/user';
+import {
+  getUser,
+  updateProfile,
+  createProfile,
+  uploadToCloudinary
+} from '../../helpers/axiosHelper/user';
 import triggerLoading from '../authAction/loading';
 import actionTypes from './actionTypes';
 import { networkErrorResponse } from '../../constants';
@@ -13,7 +18,9 @@ const {
   UPDATE_USER_FAILURE,
   IS_AUTHENTICATED,
   FETCH_CURRENT_USER_SUCCESS,
-  FETCH_CURRENT_USER_FAILURE
+  FETCH_CURRENT_USER_FAILURE,
+  SET_IMAGE,
+  REMOVE_IMAGE
 } = actionTypes;
 
 export const fetchUserSuccess = userData => ({
@@ -72,10 +79,35 @@ export const fetchUser = userId => async (dispatch) => {
   }
 };
 
+export const setImage = (imageFile, previewUrl) => async (dispatch) => {
+  dispatch({
+    type: SET_IMAGE,
+    payload: { imageFile, previewUrl }
+  });
+};
+
+export const removeImage = () => async (dispatch) => {
+  dispatch({
+    type: REMOVE_IMAGE
+  });
+};
+
 export const updateUserProfile = (payload, create) => async (dispatch) => {
   try {
     dispatch(triggerLoading(UPDATE_USER_LOADING));
+    if (payload.imageFile) {
+      const cloudinaryResponse = await uploadToCloudinary(payload.imageFile);
+      if (cloudinaryResponse.statusText === 'OK') {
+        payload.avatar = cloudinaryResponse.data.url;
+      } else {
+        toast.error('Image upload failed!');
+        removeImage()(dispatch);
+        return;
+      }
+      removeImage()(dispatch);
+    }
     const response = create ? await createProfile(payload) : await updateProfile(payload);
+    dispatch(fetchCurrentUserSuccess({ userprofile: response.data.data }));
     dispatch(updateUserSuccess(response.data.data));
     toast.success(response.data.message);
   } catch (error) {

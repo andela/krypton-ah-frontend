@@ -7,7 +7,7 @@ import { Dropdown, Image, Menu, Button } from 'semantic-ui-react';
 import 'react-toastify/dist/ReactToastify.css';
 import AHIcon from '../../images/Logo.png';
 import avatarPlaceholder from '../../images/avatar.png';
-import { setToken } from '../../helpers/jwt';
+import { setToken, getUserIdFromLocalStorage } from '../../helpers/jwt';
 import SearchModal from '../../containers/SearchContainer/SearchModal';
 
 export class WhiteNavBar extends React.Component {
@@ -47,10 +47,10 @@ export class WhiteNavBar extends React.Component {
           trigger={<Image src={avatarUrl || avatarPlaceholder} avatar className="avatarImg" />}
         >
           <Dropdown.Menu className="right">
-            <Dropdown.Item as="a" href={`/profile/${userId}`}>
+            <Dropdown.Item as="a" href={`/profile/${userId || getUserIdFromLocalStorage()}`}>
               PROFILE
             </Dropdown.Item>
-            <Dropdown.Item as="a" href={`/bookmarks/${userId}`}>
+            <Dropdown.Item as="a" href={`/bookmarks/${userId || getUserIdFromLocalStorage()}`}>
               BOOKMARKS
             </Dropdown.Item>
             <Dropdown.Item as="a" href={`${window.location.pathname}`} onClick={this.logout}>

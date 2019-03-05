@@ -8,7 +8,9 @@ const {
   FETCH_USER_FAILURE,
   UPDATE_USER_SUCCESS,
   UPDATE_USER_FAILURE,
-  FETCH_CURRENT_USER_SUCCESS
+  FETCH_CURRENT_USER_SUCCESS,
+  SET_IMAGE,
+  REMOVE_IMAGE
 } = actionTypes;
 
 const { user } = initialState;
@@ -50,7 +52,18 @@ export default (state = user, action) => {
     case FETCH_CURRENT_USER_SUCCESS:
       return {
         ...state,
-        currentUser: { ...action.payload }
+        currentUser: { ...action.payload },
+        updateIsLoading: false
+      };
+    case SET_IMAGE:
+      return {
+        ...state,
+        newProfileImage: { ...action.payload }
+      };
+    case REMOVE_IMAGE:
+      return {
+        ...state,
+        newProfileImage: {}
       };
     default:
       return state;
