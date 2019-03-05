@@ -18,18 +18,17 @@ const initialState = {
   featuredArticles: {
     featuredArticlesResponse: [],
     featuredArticlesfailure: false,
-    featuredArticlesSuccess: false,
+    featuredArticlesSuccess: false
   },
   categories: {
     categoriesResponseSuccess: false,
     categoriesResponse: [],
-    categoriesResponsefailure: false,
+    categoriesResponsefailure: false
   },
   tags: {
     tagsResponseSuccess: false,
     tagsResponse: [],
-    tagsResponsefailure: false,
-
+    tagsResponsefailure: false
   },
   readArticle: {
     articleIsLoading: false,
@@ -44,6 +43,12 @@ const initialState = {
     commentsArray: [],
     threadsArray: [],
     commentLike: 0
+},
+  createArticle: {
+    articleIsLoading: false,
+    draftIsLoading: false,
+    success: false,
+    response: ''
   },
   totalArticleReactions: {
     totalReactionsLoading: false,

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component should match snapshot 1`] = `
+<Fragment>
+  <Icon
+    as="i"
+    name="search"
+    onClick={[Function]}
+    size="big"
+  />
+  <Modal
+    centered={true}
+    closeOnDimmerClick={true}
+    closeOnDocumentClick={false}
+    dimmer={true}
+    eventPool="Modal"
+    onClose={[Function]}
+    open={false}
+  >
+    <ModalHeader
+      className="headerBorder"
+    >
+      <Icon
+        as="i"
+        name="close"
+        onClick={[Function]}
+      />
+    </ModalHeader>
+    <ModalContent>
+      <form
+        onSubmit={[Function]}
+      >
+        <Input
+          className="search"
+          name="article"
+          onChange={[Function]}
+          placeholder="Type and hit Enter to search..."
+          type="text"
+          value=""
+        />
+        <Segment>
+          <Radio
+            checked={false}
+            className="radioMargin"
+            label="Author"
+            name="searchOption"
+            onChange={[Function]}
+            type="radio"
+            value="author"
+          />
+          <Radio
+            checked={false}
+            className="radioMargin"
+            label="Tag"
+            name="searchOption"
+            onChange={[Function]}
+            type="radio"
+            value="tag"
+          />
+          <Radio
+            checked={false}
+            className="radioMargin"
+            label="Title"
+            name="searchOption"
+            onChange={[Function]}
+            type="radio"
+            value="title"
+          />
+        </Segment>
+      </form>
+    </ModalContent>
+  </Modal>
+</Fragment>
+`;
