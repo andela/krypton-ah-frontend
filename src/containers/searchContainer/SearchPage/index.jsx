@@ -27,8 +27,7 @@ class SearchPage extends Component {
 
   render() {
     return (
-      <div className="searchPage">
-      </div>
+      <div className="searchPage" />
     );
   }
 }

@@ -8,7 +8,7 @@ import InlineError from '../../helpers/InlineError';
 import { validate } from '../../helpers/validate';
 import './SignUpForm.scss';
 import { userSignUp } from '../../actions/authAction/authActions';
-import { callbackUrl } from '../../constants';
+import { callbackUrl, accountCreated } from '../../constants';
 import Loading from '../Loader/Loading';
 
 class SignUpForm extends React.Component {
@@ -52,6 +52,12 @@ class SignUpForm extends React.Component {
   userSignUpForm(user, errors) {
     return (
       <Form onSubmit={this.handleSubmit}>
+        {this.props.auth.success ? (
+          <div className="accountCreated">
+            {' '}
+            { accountCreated }
+          </div>
+        ) : null}
         <Form.Group widths="equal" className="name-fields">
           <div className="formGroup">
             <FormInput type="text" placeholder="Firstname" name="firstname" value={user.firstname} handleChange={this.handleChange} />
