@@ -4,15 +4,16 @@ import moxios from 'moxios';
 import * as actions from './index';
 import actionTypes from './actionTypes';
 import axios from '../../helpers/axiosHelper/totalArticleReactions';
+import helper from '../../helpers/axiosHelper/updateArticleReaction';
 import { articleId, totalReactions as payload } from '../../mockData/readArticle';
+import { error, reactionType, validReaction } from '../../mockData/articleReactions';
 
-const error = {
-  response: {
-    data: { success: false, message: 'Value must be a UUID' }
-  }
-};
-
-const { TOTAL_REACTIONS_FAILURE, TOTAL_REACTIONS_LOADING, TOTAL_REACTIONS_SUCCESS } = actionTypes;
+const {
+  TOTAL_REACTIONS_FAILURE,
+  TOTAL_REACTIONS_LOADING,
+  TOTAL_REACTIONS_SUCCESS,
+  ARTICLE_REACTION_SUCCESS
+} = actionTypes;
 
 const mockStore = configureStore([thunk]);
 const store = mockStore({ totalReactions: {} });
@@ -56,6 +57,22 @@ describe('actions to fetch number of likes and dislikes', () => {
     expect(dispatch).toBeCalledWith({
       type: TOTAL_REACTIONS_SUCCESS,
       payload: payload.data
+    });
+  });
+
+  it('should return an action type ARTICLE_REACTION_SUCCESS when the operation is successful', () => {
+    expect(actions.articleReactionSuccess(reactionType)).toEqual({
+      type: ARTICLE_REACTION_SUCCESS,
+      payload: reactionType
+    });
+  });
+  it('should dispatch success action type and response as payload', async () => {
+    helper.updateArticleReaction = jest.fn().mockResolvedValue(validReaction);
+    await actions.articleReaction(articleId, reactionType)(dispatch);
+    expect(dispatch).toBeCalledTimes(1);
+    expect(dispatch).toBeCalledWith({
+      type: ARTICLE_REACTION_SUCCESS,
+      payload: reactionType
     });
   });
 });
