@@ -1,3 +1,4 @@
+import faker from 'faker';
 import { API_BASE_URL } from '../constants';
 
 export * from './profile';
@@ -121,6 +122,12 @@ const payload = {
   email: 'jo@jos.com',
   password: 'password123R'
 };
+
+const bookmarkPayload = {
+  userId: faker.random.uuid(),
+  articleId: faker.random.uuid(),
+};
+
 const articlePayload = {
   title: 'redux',
   description: 'learn redux',
@@ -137,6 +144,7 @@ const draftArticlePayload = {
   isPublished: false,
   tags: 'redux'
 };
+
 const fakeUser2 = {
   email: 'jo@jos.com',
   password: 'password'
@@ -144,7 +152,22 @@ const fakeUser2 = {
 const signupEndpoint = `${API_BASE_URL}/users/signup`;
 const createArticleEndpoint = `${API_BASE_URL}/articles`;
 const signinEndpoint = `${API_BASE_URL}/users/signin`;
+const bookmarkEndpoint = `${API_BASE_URL}/articles/bookmark`;
 
+const bookmarkedResponse = {
+  success: true,
+  message: 'Article bookmarked succesfully',
+  data: {
+    id: faker.random.uuid(),
+    userId: faker.random.uuid(),
+    articleId: faker.random.uuid(),
+  }
+};
+
+const removeBookmarkResponse = {
+  success: true,
+  message: 'Article removed successfully'
+};
 const signupOkResponse = {
   status: 201,
   success: true,
@@ -245,10 +268,33 @@ const autoLoginResponse = {
 const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjp7ImlkIjoiZDE1NjRhYTYtZTgxZC00MWFiLTg0NjktMGFhNTczZjRhNmM1Iiwicm9sZSI6W119LCJpYXQiOjE1NTEzNDg0NjEsImV4cCI6MTU1MTQzNDg2MX0.W-Q3vDCP1b4iKMOm_cBSMTzmRqvU9kpzcP-E2ka2n4U';
 
 export {
-  fetchArticles, payload, fakeUser2, signupEndpoint, signinEndpoint, mockResponse, signupOkResponse,
-  startAction, signupSuccessAction, signupFailureAction, error, loginOkResponse, loginBadResponse,
-  publishArticleOkResponse, draftArticleOkResponse, items, categories, newCategories,
-  popularArticles, trendingArticles, mockArticleResponse, createArticleEndpoint, mockHeader,
-  articlePayload, draftArticlePayload, socialToken, mockPath, publishArticleBadResponse,
-  jwtToken, autoLoginResponse, fetchArticlesresponse, defaultprop
+  fetchArticles,
+  payload,
+  fakeUser2,
+  signupEndpoint,
+  signinEndpoint,
+  bookmarkEndpoint,
+  bookmarkedResponse,
+  bookmarkPayload,
+  removeBookmarkResponse,
+  mockResponse,
+  signupOkResponse,
+  startAction,
+  signupSuccessAction,
+  signupFailureAction,
+  error,
+  loginOkResponse,
+  loginBadResponse,
+  items,
+  categories,
+  newCategories,
+  popularArticles,
+  trendingArticles,
+  mockHeader,
+  socialToken,
+  mockPath,
+  jwtToken,
+  autoLoginResponse,
+  fetchArticlesresponse,
+  defaultprop
 };

@@ -15,7 +15,6 @@ const rootReducer = combineReducers({
   CategoriesReducer,
   TagsReducer,
   authReducer,
-  userReducer,
   socialLogin,
   readArticle,
   commentReducer,

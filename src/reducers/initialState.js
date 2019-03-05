@@ -62,7 +62,7 @@ const initialState = {
     userId: '',
     articles: [],
     userprofile: {}
-  }
+  },
 };
 
 export default initialState;

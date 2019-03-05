@@ -1,3 +1,5 @@
+// import { createBookmark } from '../helpers/axiosHelper/bookmark';
+
 const payload = {
   articleAuthor: { firstname: 'hakeem', lastname: 'ibrahim', userprofile: null },
   authorId: '65719288-0395-445e-b587-2b98b70bdec9',
@@ -32,12 +34,14 @@ const error = {
     }
   }
 };
+
 const props = {
   match: { params: { title: '65719288-0395-445e-b587-2b98b70bdec9' } },
   totalArticleReactions: {
     successResponse: { likes: 2, dislikes: 1 }
   }
 };
+
 const retrievedArticle = {
   successResponse: {
     title: 'this is a valid articles 2',

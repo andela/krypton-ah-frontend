@@ -7,8 +7,4 @@ describe('Modal Social', () => {
     const wrapper = shallow(<SocialComponent />);
     expect(wrapper).toMatchSnapshot();
   });
-  it('renders four <Icon /> components', () => {
-    const wrapper = shallow(<SocialComponent />);
-    expect(wrapper.find('Icon')).toHaveLength(4);
-  });
 });
