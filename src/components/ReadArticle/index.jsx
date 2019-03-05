@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-expressions */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Image, Container, Header, Comment, Divider } from 'semantic-ui-react';
+import { Image, Container, Header, Comment, Divider, Icon } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import ShareArticle from '../ShareArticle';
 import calendar from '../../images/calendar.svg';
@@ -10,10 +11,14 @@ import './styles/ReadArticle.scss';
 import author from '../../images/avatar.png';
 import { getArticle } from '../../actions/readArticleAction';
 import { dateFormatter, readTimeFormatter } from '../../helpers/articleInfoFormatter';
+import { bookmarkedAction, removeBookmarkAction } from '../../actions/bookmarkAction';
+import { getUserIdFromLocalStorage } from '../../helpers/jwt';
 
 class ReadArticle extends Component {
   componentDidMount = () => {
-    this.props.getArticle(this.props.selectedArticle);
+    const id = this.props.selectedArticle;
+    const { theArticle } = this.props;
+    theArticle(id);
   };
 
   getArticleContent = articleContent => (
@@ -49,15 +54,20 @@ class ReadArticle extends Component {
     return {};
   };
 
+  handleIconClick = () => {
+    const authorizedToken = getUserIdFromLocalStorage();
+    const { createBookmark, removeBookmark } = this.props;
+    const { bookmark } = this.props.retrievedArticle.successResponse;
+    const detail = {
+      userId: authorizedToken,
+      articleId: this.props.selectedArticle
+    };
+    !bookmark ? createBookmark(detail) : removeBookmark(detail);
+  }
+
   render() {
-    const { title,
-      content,
-      createdAt,
-      id,
-      description,
-      featuredImageUrl,
-      readTime,
-      articleAuthor } = this.props.retrievedArticle.successResponse;
+    const { title, content, createdAt, id, description, featuredImageUrl,
+      readTime, articleAuthor, bookmark } = this.props.retrievedArticle.successResponse;
     const authorDetails = this.getAuthorDetails(articleAuthor);
     return (
       <Container className="readArticleContainer">
@@ -66,6 +76,7 @@ class ReadArticle extends Component {
         <Comment.Group className="articleInfo">
           <Image avatar as="a" src={author} />
           {this.getArticleInfo(authorDetails.authorName, createdAt, readTime)}
+          <Icon name={bookmark ? 'bookmark' : 'bookmark outline'} size="large" className="bookmarkIcon" onClick={this.handleIconClick} />
         </Comment.Group>
         <Divider className="articleDivider" />
         {this.getArticleContent(content)}
@@ -86,9 +97,12 @@ ReadArticle.propTypes = {
   readTime: PropTypes.number,
   featuredImageUrl: PropTypes.string,
   articleAuthor: PropTypes.object,
-  getArticle: PropTypes.func.isRequired,
+  theArticle: PropTypes.string.isRequired,
   retrievedArticle: PropTypes.object,
-  selectedArticle: PropTypes.string.isRequired
+  selectedArticle: PropTypes.string.isRequired,
+  bookmark: PropTypes.bool.isRequired,
+  createBookmark: PropTypes.func,
+  removeBookmark: PropTypes.func
 };
 
 ReadArticle.defaultProps = {
@@ -100,14 +114,22 @@ ReadArticle.defaultProps = {
   readTime: 0,
   featuredImageUrl: '',
   articleAuthor: {},
-  retrievedArticle: {}
+  retrievedArticle: {},
+  createBookmark: null,
+  removeBookmark: null
 };
 
+const mapDispatchToProps = dispatch => ({
+  createBookmark: detail => dispatch(bookmarkedAction(detail)),
+  removeBookmark: detail => dispatch(removeBookmarkAction(detail)),
+  theArticle: id => dispatch(getArticle(id))
+});
+
 const mapStateToProps = state => ({
-  retrievedArticle: state.readArticle
+  retrievedArticle: state.readArticle,
 });
 export { ReadArticle as ReadArticlePage };
 export default connect(
   mapStateToProps,
-  { getArticle }
+  mapDispatchToProps,
 )(ReadArticle);
