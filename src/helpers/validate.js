@@ -16,7 +16,7 @@ export function validate(user) {
   if (Validator.isEmpty(user.password)) {
     errors.password = 'Password field is required';
   } else if (!new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$', 'g').test(user.password)) {
-    errors.password = 'Password must be at least 8 characters, 1 uppercase letter, 1 number';
+    errors.password = 'Password must be at least 8 characters, with a number and uppercase letter';
   }
   return errors;
 }
@@ -32,7 +32,7 @@ export function signInValidator(user) {
   if (Validator.isEmpty(user.password)) {
     errors.password = 'Password field is required';
   } else if (!new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,20}$', 'g').test(user.password)) {
-    errors.password = 'Password must be at least 8 characters, 1 uppercase letter, 1 number';
+    errors.password = 'Password must be at least 8 characters, with a number and uppercase letter';
   }
   return errors;
 }
