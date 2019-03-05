@@ -230,7 +230,7 @@ class Editor extends Component {
   render() {
     const { article, errors } = this.state;
     if (this.props.createArticle.success) {
-      return <Redirect to={`/article/${this.props.createArticle.response.data.authorId}`} />;
+      return <Redirect to={`/article/${this.props.createArticle.response.data.id}`} />;
     }
     return (
       <Form>

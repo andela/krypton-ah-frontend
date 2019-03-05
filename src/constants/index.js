@@ -66,6 +66,8 @@ const activationResponse = {
   }
 };
 
+const accountCreated = 'Account successfully created, kindly check your email to activate';
+
 const alreadyActivatedResponse = {
   data: {
     message: 'Your account is already activated! kindly login to continue'
@@ -98,5 +100,6 @@ export {
   callbackUrl,
   activationResponse,
   alreadyActivatedResponse,
-  options
+  options,
+  accountCreated
 };

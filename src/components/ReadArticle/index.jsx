@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Parser } from 'html-to-react';
 import { Image, Container, Header, Comment, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import ShareArticle from '../ShareArticle';
 import calendar from '../../images/calendar.svg';
 import time from '../../images/time.svg';
 import './styles/ReadArticle.scss';
-
+import featuredImageUrlPlaceholder from '../../asset/images/featuredImagePlaceholder.png';
 import author from '../../images/avatar.png';
 import { getArticle } from '../../actions/readArticleAction';
 import { dateFormatter, readTimeFormatter } from '../../helpers/articleInfoFormatter';
 
+const htmlToReactParser = new Parser();
 class ReadArticle extends Component {
   componentDidMount = () => {
     this.props.getArticle(this.props.selectedArticle);
@@ -19,8 +21,7 @@ class ReadArticle extends Component {
   getArticleContent = articleContent => (
     <Container textAlign="justified">
       <div className="articleContent">
-        <p>{articleContent}</p>
-        <p>{articleContent}</p>
+        <p>{htmlToReactParser.parse(articleContent)}</p>
       </div>
     </Container>
   );
@@ -50,19 +51,23 @@ class ReadArticle extends Component {
   };
 
   render() {
-    const { title,
+    const {
+      title,
       content,
       createdAt,
       id,
       description,
       featuredImageUrl,
       readTime,
-      articleAuthor } = this.props.retrievedArticle.successResponse;
+      articleAuthor
+    } = this.props.retrievedArticle.successResponse;
     const authorDetails = this.getAuthorDetails(articleAuthor);
     return (
       <Container className="readArticleContainer">
-        <Image src={featuredImageUrl} size="massive" />
-        <Header as="h1" className="articleTitle">{title}</Header>
+        <Image src={featuredImageUrl || featuredImageUrlPlaceholder} size="massive" />
+        <Header as="h1" className="articleTitle">
+          {title}
+        </Header>
         <Comment.Group className="articleInfo">
           <Image avatar as="a" src={author} />
           {this.getArticleInfo(authorDetails.authorName, createdAt, readTime)}

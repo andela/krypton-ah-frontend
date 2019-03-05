@@ -1,18 +1,8 @@
 import axios from 'axios';
 import { CLOUDINARY_UPLOAD_URL, CLOUDINARY_UPLOAD_PRESET, API_BASE_URL, options } from '../../constants/index';
 
-<<<<<<< HEAD
-
-const { API_BASE_URL } = process.env;
-
-=======
->>>>>>> update demo
 export const createArticleCall = async (article) => {
-  const options = {
-    headers: {
-      authorization: localStorage.getItem('authentication')
-    }
-  };
+  options.headers.authorization = localStorage.getItem('authentication');
   const response = await axios.post(`${API_BASE_URL}/articles`, article, options);
   return response;
 };
