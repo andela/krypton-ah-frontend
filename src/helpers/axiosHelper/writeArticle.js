@@ -1,9 +1,12 @@
 import axios from 'axios';
-import { CLOUDINARY_UPLOAD_URL, CLOUDINARY_UPLOAD_PRESET } from '../../constants/index';
+import { CLOUDINARY_UPLOAD_URL, CLOUDINARY_UPLOAD_PRESET, API_BASE_URL, options } from '../../constants/index';
 
+<<<<<<< HEAD
 
 const { API_BASE_URL } = process.env;
 
+=======
+>>>>>>> update demo
 export const createArticleCall = async (article) => {
   const options = {
     headers: {

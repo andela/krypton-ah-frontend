@@ -6,7 +6,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
 >
   <CreatedButton
     quote=" "
-    url="undefined/article/ "
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
     windowHeight={400}
     windowWidth={550}
   >
@@ -31,6 +31,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
     title=" "
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     url="undefined/article/ "
 >>>>>>> add article actions and reducer to article component
 =======
@@ -40,6 +41,13 @@ exports[`Share Article Component should rendered share Article Icons without cra
     url="undefined/article/ "
 >>>>>>> add article actions and reducer to article component
 >>>>>>> add article actions and reducer to article component
+=======
+    url="undefined/article/ "
+>>>>>>> add article actions and reducer to article component
+=======
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+>>>>>>> update demo
+>>>>>>> update demo
     windowHeight={400}
     windowWidth={550}
   >
@@ -60,6 +68,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
     title=" "
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     url="undefined/article/ "
 >>>>>>> add article actions and reducer to article component
 =======
@@ -69,6 +78,13 @@ exports[`Share Article Component should rendered share Article Icons without cra
     url="undefined/article/ "
 >>>>>>> add article actions and reducer to article component
 >>>>>>> add article actions and reducer to article component
+=======
+    url="undefined/article/ "
+>>>>>>> add article actions and reducer to article component
+=======
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+>>>>>>> update demo
+>>>>>>> update demo
     windowHeight={600}
     windowWidth={750}
   >
@@ -89,6 +105,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
     title=" "
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     url="undefined/article/ "
 >>>>>>> add article actions and reducer to article component
 =======
@@ -98,6 +115,13 @@ exports[`Share Article Component should rendered share Article Icons without cra
     url="undefined/article/ "
 >>>>>>> add article actions and reducer to article component
 >>>>>>> add article actions and reducer to article component
+=======
+    url="undefined/article/ "
+>>>>>>> add article actions and reducer to article component
+=======
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+>>>>>>> update demo
+>>>>>>> update demo
     windowHeight={400}
     windowWidth={550}
   >
@@ -111,7 +135,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
   </CreatedButton>
   <CreatedButton
     body=" 
-undefined/article/ "
+https://krypton-ah-fe-stage.herokuapp.com/article/ "
     onClick={[Function]}
     openWindow={false}
 <<<<<<< HEAD
@@ -119,6 +143,7 @@ undefined/article/ "
     url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
 =======
     subject=" "
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     url="undefined/article/ "
@@ -130,6 +155,13 @@ undefined/article/ "
     url="undefined/article/ "
 >>>>>>> add article actions and reducer to article component
 >>>>>>> add article actions and reducer to article component
+=======
+    url="undefined/article/ "
+>>>>>>> add article actions and reducer to article component
+=======
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+>>>>>>> update demo
+>>>>>>> update demo
   >
     <Icon
       className=""
