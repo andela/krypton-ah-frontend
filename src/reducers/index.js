@@ -3,7 +3,10 @@ import { trendingArticlesReducer, popularArticlesReducer, FeaturedArticlesReduce
 import authReducer from './authReducer';
 import socialLogin from './socialLoginReducer';
 import readArticle from './readArticleReducer';
+import commentReducer from './commentReducer';
 import totalArticleReactions from './totalArticleReactionReducer';
+import userReducer from './userReducer';
+import createArticleReducer from './createArticleReducer';
 
 const rootReducer = combineReducers({
   trendingArticlesReducer,
@@ -14,7 +17,10 @@ const rootReducer = combineReducers({
   authReducer,
   socialLogin,
   readArticle,
-  totalArticleReactions
+  commentReducer,
+  totalArticleReactions,
+  totalArticleReactions,
+  createArticleReducer
 });
 
 export default rootReducer;
