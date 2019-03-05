@@ -95,12 +95,7 @@ exports[`WhiteNavBar should match snapshot 1`] = `
       position="right"
     >
       <MenuItem>
-        <Icon
-          as="i"
-          fitted={true}
-          name="search"
-          size="big"
-        />
+        <SearchModal />
       </MenuItem>
       <MenuItem>
         <Link
@@ -174,12 +169,7 @@ exports[`WhiteNavBar with props should match snapshot 1`] = `
       position="right"
     >
       <MenuItem>
-        <Icon
-          as="i"
-          fitted={true}
-          name="search"
-          size="big"
-        />
+        <SearchModal />
       </MenuItem>
       <MenuItem>
         <Link
