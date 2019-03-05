@@ -29,7 +29,6 @@ export const userSignUp = user => async (dispatch) => {
     dispatch(triggerLoading(AUTH_LOADING));
     const response = await signupCall(user);
     dispatch(signUpSuccess(response));
-    toast.success(response.data.message);
   } catch (error) {
     if (error.response) {
       dispatch(signUpFailure(error.response));

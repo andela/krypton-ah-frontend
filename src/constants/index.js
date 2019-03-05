@@ -68,6 +68,8 @@ const alreadyActivatedResponse = {
   }
 };
 
+const accountCreated = 'Account successfully created, kindly check your email to activate';
+
 const options = {
   headers: {
     authorization: localStorage.getItem(authentication)
@@ -87,5 +89,6 @@ export {
   callbackUrl,
   activationResponse,
   alreadyActivatedResponse,
-  options
+  options,
+  accountCreated
 };
