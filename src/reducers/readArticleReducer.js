@@ -1,7 +1,11 @@
 import actionTypes from '../actions/readArticleAction/actionTypes';
 import initialState from './initialState';
 
-const { READ_ARTICLE_LOADING, READ_ARTICLE_SUCCESS, READ_ARTICLE_FAILURE } = actionTypes;
+const {
+  READ_ARTICLE_LOADING,
+  READ_ARTICLE_SUCCESS,
+  READ_ARTICLE_FAILURE,
+  TOGGLE_ARTICLE_BOOKMARK } = actionTypes;
 
 const { readArticle } = initialState;
 
@@ -26,7 +30,14 @@ export default (state = readArticle, action) => {
         success: false,
         failureResponse: action.payload.data
       };
-
+    case TOGGLE_ARTICLE_BOOKMARK: {
+      const { successResponse } = state;
+      successResponse.bookmark = !successResponse.bookmark;
+      return {
+        ...state,
+        successResponse
+      };
+    }
     default:
       return state;
   }

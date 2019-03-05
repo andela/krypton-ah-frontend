@@ -8,27 +8,24 @@
   text-transform: uppercase;
 }
 
-h3.ui.header.commentsHeader{
-  color: black !important;
-
-}
-
-.ui.comments .comment .actions{
-width:100%;
-}
-
-.commentsContainer {
-  width: 100%;
-  margin: 2% 7% 10% 6%;
+.ui.container.commentContainer {
+  display: flex;
+  justify-content: center;
+  width: 75%;
   font-weight: 100;
   font-size: 0.7rem;
 }
-.commentDivider {
-  width: 80%;
+
+.commentList {
+  flex: 1;
+  margin-right: 5px;
 }
-.showThreads {
-  display: inline;
+
+.addComment {
+  flex: 1;
+  margin-left: 5px;
 }
+
 .ui.comments {
   .comment {
     .actions {
@@ -45,11 +42,62 @@ width:100%;
     }
   }
 }
+
+.addCommentText {
+  background-color: #1b1c1d;;
+  color: #FFFFFF;
+  text-shadow: none;
+  font-size: 14px;
+  padding: 7px 0;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  text-transform: uppercase;
+  width: 130px;
+}
+
 .moreComments {
   float: right;
   margin-top: -3%;
-  margin-right: 20%;
+  margin-right: 5%;
   cursor: pointer;
+}
+
+form.ui.form.CreateComment {
+  max-width: 80%;
+}
+
+.ui.form .field.try {
+  clear: both;
+  margin: 0;
+}
+
+.ui.form .field.try textarea {
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+button.ui.button.addCommentButton {
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  margin: 0;
+  margin-top: 10px;
+  float: right;
+  width: 113px;
+}
+
+.clearFloat {
+  clear: both;
+}
+
+.commentInfo {
+  font-size: 0.7rem;
 }
 
 .replyButton {

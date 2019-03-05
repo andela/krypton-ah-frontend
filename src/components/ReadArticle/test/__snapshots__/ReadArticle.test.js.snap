@@ -4,12 +4,13 @@ exports[`Read article component should matches the snapshot 1`] = `
 <ReadArticle
   articleAuthor={Object {}}
   content=""
+  createBookmark={null}
   createdAt=""
   description=""
   featuredImageUrl=""
-  getArticle={[Function]}
   id=""
   readTime={0}
+  removeBookmark={null}
   retrievedArticle={
     Object {
       "successResponse": Object {
@@ -29,6 +30,7 @@ exports[`Read article component should matches the snapshot 1`] = `
     }
   }
   selectedArticle="65719288-0395-445e-b587-2b98b70bdec9"
+  theArticle={[Function]}
   title=""
 >
   <Container
@@ -143,6 +145,19 @@ exports[`Read article component should matches the snapshot 1`] = `
               </CommentContent>
             </div>
           </Comment>
+          <Icon
+            as="i"
+            className="bookmarkIcon"
+            name="bookmark outline"
+            onClick={[Function]}
+            size="large"
+          >
+            <i
+              aria-hidden="true"
+              className="bookmark outline large icon bookmarkIcon"
+              onClick={[Function]}
+            />
+          </Icon>
         </div>
       </CommentGroup>
       <Divider
@@ -183,7 +198,7 @@ exports[`Read article component should matches the snapshot 1`] = `
           >
             <CreatedButton
               quote="this is a valid description wooooooooot toooooooooooooooooooot"
-              url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+              url="undefined/article/ "
               windowHeight={400}
               windowWidth={550}
             >
@@ -205,7 +220,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 quote="this is a valid description wooooooooot toooooooooooooooooooot"
                 role="button"
                 tabIndex="0"
-                url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+                url="undefined/article/ "
                 windowHeight={400}
                 windowWidth={550}
               >
@@ -266,7 +281,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 ]
               }
               title="this is a valid articles 2"
-              url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+              url="undefined/article/ "
               windowHeight={400}
               windowWidth={550}
             >
@@ -296,7 +311,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 role="button"
                 tabIndex="0"
                 title="this is a valid articles 2"
-                url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+                url="undefined/article/ "
                 windowHeight={400}
                 windowWidth={550}
               >
@@ -353,7 +368,7 @@ exports[`Read article component should matches the snapshot 1`] = `
             <CreatedButton
               description="this is a valid description wooooooooot toooooooooooooooooooot"
               title="this is a valid articles 2"
-              url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+              url="undefined/article/ "
               windowHeight={600}
               windowWidth={750}
             >
@@ -376,7 +391,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 role="button"
                 tabIndex="0"
                 title="this is a valid articles 2"
-                url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+                url="undefined/article/ "
                 windowHeight={600}
                 windowWidth={750}
               >
@@ -433,7 +448,7 @@ exports[`Read article component should matches the snapshot 1`] = `
             <CreatedButton
               separator=" "
               title="this is a valid articles 2"
-              url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+              url="undefined/article/ "
               windowHeight={400}
               windowWidth={550}
             >
@@ -456,7 +471,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 separator=" "
                 tabIndex="0"
                 title="this is a valid articles 2"
-                url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+                url="undefined/article/ "
                 windowHeight={400}
                 windowWidth={550}
               >
@@ -512,15 +527,15 @@ exports[`Read article component should matches the snapshot 1`] = `
             </CreatedButton>
             <CreatedButton
               body="this is a valid description wooooooooot toooooooooooooooooooot
-https://krypton-ah-fe-stage.herokuapp.com/article/ "
+undefined/article/ "
               onClick={[Function]}
               openWindow={false}
               subject="this is a valid articles 2"
-              url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+              url="undefined/article/ "
             >
               <ShareButton
                 body="this is a valid description wooooooooot toooooooooooooooooooot
-https://krypton-ah-fe-stage.herokuapp.com/article/ "
+undefined/article/ "
                 disabledStyle={
                   Object {
                     "opacity": 0.6,
@@ -533,14 +548,14 @@ https://krypton-ah-fe-stage.herokuapp.com/article/ "
                 opts={
                   Object {
                     "body": "this is a valid description wooooooooot toooooooooooooooooooot
-https://krypton-ah-fe-stage.herokuapp.com/article/ ",
+undefined/article/ ",
                     "subject": "this is a valid articles 2",
                   }
                 }
                 role="button"
                 subject="this is a valid articles 2"
                 tabIndex="0"
-                url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+                url="undefined/article/ "
               >
                 <div
                   className="SocialMediaShareButton SocialMediaShareButton--email"

@@ -1,3 +1,4 @@
+import faker from 'faker';
 import { API_BASE_URL } from '../constants';
 
 export * from './profile';
@@ -16,8 +17,7 @@ const items = [
 ];
 
 const categories = {
-  data:
-  ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing']
+  data: ['Politics', 'Family', 'Techonology', 'Health', 'Sports', 'Wellbeing']
 };
 
 const newCategories = [
@@ -122,13 +122,52 @@ const payload = {
   email: 'jo@jos.com',
   password: 'password123R'
 };
+
+const bookmarkPayload = {
+  userId: faker.random.uuid(),
+  articleId: faker.random.uuid(),
+};
+
+const articlePayload = {
+  title: 'redux',
+  description: 'learn redux',
+  content: 'redux is fun and awesome',
+  catagory: 'technology',
+  isPublished: true,
+  tags: 'redux'
+};
+const draftArticlePayload = {
+  title: 'redux',
+  description: 'learn redux',
+  content: 'redux is fun and awesome',
+  catagory: 'technology',
+  isPublished: false,
+  tags: 'redux'
+};
+
 const fakeUser2 = {
   email: 'jo@jos.com',
   password: 'password'
 };
 const signupEndpoint = `${API_BASE_URL}/users/signup`;
+const createArticleEndpoint = `${API_BASE_URL}/articles`;
 const signinEndpoint = `${API_BASE_URL}/users/signin`;
+const bookmarkEndpoint = `${API_BASE_URL}/articles/bookmark`;
 
+const bookmarkedResponse = {
+  success: true,
+  message: 'Article bookmarked succesfully',
+  data: {
+    id: faker.random.uuid(),
+    userId: faker.random.uuid(),
+    articleId: faker.random.uuid(),
+  }
+};
+
+const removeBookmarkResponse = {
+  success: true,
+  message: 'Article removed successfully'
+};
 const signupOkResponse = {
   status: 201,
   success: true,
@@ -137,9 +176,19 @@ const signupOkResponse = {
       'Account successfully created, Kindly check your email to activate your account. In case you did not receive the activation link in your mail, kindly visit this link localhost:3000/api/v1/users/resend/activation/mail to resend the mail.'
   }
 };
+const publishArticleOkResponse = {
+  status: 201,
+  success: true,
+  data: {
+    message: 'Article successfully created'
+  }
+};
 
 const mockResponse = {
   message: 'Successfully logged in'
+};
+const mockArticleResponse = {
+  message: 'Article Successfully created'
 };
 const error = {
   response: {
@@ -158,11 +207,25 @@ const loginOkResponse = {
     message: 'You have sccessfully login'
   }
 };
+const draftArticleOkResponse = {
+  status: 201,
+  success: true,
+  data: {
+    message: 'article successfully saved as draft'
+  }
+};
 const loginBadResponse = {
   status: 400,
   success: false,
   data: {
     message: 'Incorrect credentials'
+  }
+};
+const publishArticleBadResponse = {
+  status: 400,
+  success: false,
+  data: {
+    message: 'Empty Input Field'
   }
 };
 
@@ -174,6 +237,7 @@ const signupSuccessAction = [
     payload
   }
 ];
+
 const signupFailureAction = [
   {
     type: 'SIGNUP_FAILURE',
@@ -209,6 +273,10 @@ export {
   fakeUser2,
   signupEndpoint,
   signinEndpoint,
+  bookmarkEndpoint,
+  bookmarkedResponse,
+  bookmarkPayload,
+  removeBookmarkResponse,
   mockResponse,
   signupOkResponse,
   startAction,
