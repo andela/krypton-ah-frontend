@@ -6,7 +6,7 @@ import { Dropdown, Image, Menu, Button } from 'semantic-ui-react';
 import 'react-toastify/dist/ReactToastify.css';
 import AHIcon from '../../images/Logo.png';
 import avatarPlaceholder from '../../images/avatar.png';
-import SearchModal from '../../containers/SearchContainer/SearchModal';
+import SearchModal from '../../containers/try/SearchModal';
 
 export default function WhiteNavBar({ fixed, isAuthenticated, avatarUrl }) {
   return (

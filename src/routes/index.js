@@ -7,7 +7,7 @@ import AccountVerification from '../components/AccountVerification';
 import socialAuth from '../components/socialAuth/socialAuth';
 import Profile from '../pages/Profile';
 import CreateArticles from '../pages/CreateArticles';
-import SearchPage from '../containers/SearchContainer/SearchPage';
+import SearchPage from '../containers/try/SearchPage';
 
 export default [
   {
