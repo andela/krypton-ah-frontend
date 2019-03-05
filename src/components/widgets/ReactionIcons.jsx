@@ -47,22 +47,21 @@ class ReactionIcons extends Component {
         <Icon disabled link size="small" fitted name="time">
           <span>{dateFormatter(date)}</span>
         </Icon>
-        <i className="dates">{date}</i>
         {likeClicked ? this.createLikeIcon(outline) : this.createLikeIcon()}
-        {likes}
+        <span>{likes}</span>
         {dislikeClicked ? this.createDislikeIcon(outline) : this.createDislikeIcon()}
-        {dislikes}
+        <span>{dislikes}</span>
         <i className="articleComment">
           <Icon disabled link size="small" fitted name="comments outline" />
-          <span>{numberofcomments}</span>
         </i>
+        <span className="commentspan">{numberofcomments}</span>
       </Fragment>
     );
   }
 }
 ReactionIcons.defaultProps = {
   date: '28th february 2019',
-  numberofcomments: 23
+  numberofcomments: 0
 };
 
 ReactionIcons.propTypes = {

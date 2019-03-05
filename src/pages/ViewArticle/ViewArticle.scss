@@ -19,6 +19,13 @@
   cursor: pointer;
 }
 
+.articleReactions i.time.small.disabled.fitted.link.icon {
+  display: none;
+}
+
+.articleReactions span.commentspan {
+  display: none;
+}
 @media only screen and (min-width: 768px) {
   .articleReactions {
     margin: -5% 0 10% 14%;

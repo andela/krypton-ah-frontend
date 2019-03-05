@@ -278,6 +278,7 @@ p.popular.title {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.2rem;
+  line-height: 1.2rem;
   padding: 2px;
 }
 
@@ -392,6 +393,11 @@ a.header {
 .NewsLetter button.ui.black.basic.button {
   margin: 1rem;
   margin-right: 0;
+}
+.NewsLetter .ui.input > input {
+  padding: 0.7rem;
+  text-align: left;
+  font-size: 1.2rem;
 }
 
 .Categories .item {
