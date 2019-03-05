@@ -24,8 +24,8 @@ exports[`Share Article Component should rendered share Article Icons without cra
         "ah-Krypton",
       ]
     }
-    title="news"
-    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+    title=" "
+    url="undefined/article/ "
     windowHeight={400}
     windowWidth={550}
   >
@@ -39,8 +39,8 @@ exports[`Share Article Component should rendered share Article Icons without cra
   </CreatedButton>
   <CreatedButton
     description=" "
-    title="news"
-    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+    title=" "
+    url="undefined/article/ "
     windowHeight={600}
     windowWidth={750}
   >
@@ -54,8 +54,8 @@ exports[`Share Article Component should rendered share Article Icons without cra
   </CreatedButton>
   <CreatedButton
     separator=" "
-    title="news"
-    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+    title=" "
+    url="undefined/article/ "
     windowHeight={400}
     windowWidth={550}
   >
@@ -72,8 +72,8 @@ exports[`Share Article Component should rendered share Article Icons without cra
 undefined/article/ "
     onClick={[Function]}
     openWindow={false}
-    subject="news"
-    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+    subject=" "
+    url="undefined/article/ "
   >
     <Icon
       className=""
