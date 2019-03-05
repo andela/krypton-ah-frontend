@@ -6,9 +6,9 @@ export default function NewsLetter() {
   return (
     <Grid.Column className="NewsLetter">
       <Title text="NewsLetter" />
-      <Input placeholder="Search..." />
+      <Input placeholder="Subscribe..." />
       <Button basic color="black">
-        Submit
+        Subsrcibe
       </Button>
     </Grid.Column>
   );

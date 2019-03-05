@@ -32,7 +32,7 @@ Icons.defaultProps = {
   name: 'author-name',
   date: 'current-date',
   ratingIcon: 'rating-class',
-  numberofcomments: 23,
+  numberofcomments: 0,
   rating: 0,
   disabled: false
 };
