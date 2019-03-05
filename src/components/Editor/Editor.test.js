@@ -38,7 +38,6 @@ describe('Editor Component', () => {
     wrapper.update();
     expect(wrapper.find('Form')).toBeDefined();
   });
-
   it('should change the state after changing the article content', () => {
     const event = { target: { name: 'How to learn Nodejs' } };
     const wrapper = shallow(<ArticleEditor />);
@@ -46,5 +45,21 @@ describe('Editor Component', () => {
     wrapper.update();
     wrapper.find('ReactMediumEditor').simulate('change', event);
     expect(handleEditorChangeSpy.calledOnce).toBeDefined();
+  });
+  it('should upload image', () => {
+    const event = { target: { files: ['file'] } };
+    const wrapper = shallow(<ArticleEditor />);
+    const handleEditorChangeSpy = sinon.spy(wrapper.instance(), 'handleImageUpload');
+    wrapper.update();
+    wrapper.find('#fileUpload').simulate('change', event);
+    expect(handleEditorChangeSpy.calledOnce).toBeDefined();
+  });
+  it('should stimulate submit event when saving to draft', () => {
+    const wrapper = shallow(<ArticleEditor {...props} />);
+    wrapper.find('Form').simulate('submit', {
+      preventDefault: jest.fn()
+    });
+    wrapper.update();
+    expect(wrapper.find('Form')).toBeDefined();
   });
 });

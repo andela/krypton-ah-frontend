@@ -6,7 +6,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
 >
   <CreatedButton
     quote=" "
-    url="undefined/article/ "
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
     windowHeight={400}
     windowWidth={550}
   >
@@ -29,8 +29,12 @@ exports[`Share Article Component should rendered share Article Icons without cra
     url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
 =======
     title=" "
+<<<<<<< HEAD
     url="undefined/article/ "
 >>>>>>> add article actions and reducer to article component
+=======
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+>>>>>>> update demo
     windowHeight={400}
     windowWidth={550}
   >
@@ -49,8 +53,12 @@ exports[`Share Article Component should rendered share Article Icons without cra
     url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
 =======
     title=" "
+<<<<<<< HEAD
     url="undefined/article/ "
 >>>>>>> add article actions and reducer to article component
+=======
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+>>>>>>> update demo
     windowHeight={600}
     windowWidth={750}
   >
@@ -69,8 +77,12 @@ exports[`Share Article Component should rendered share Article Icons without cra
     url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
 =======
     title=" "
+<<<<<<< HEAD
     url="undefined/article/ "
 >>>>>>> add article actions and reducer to article component
+=======
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+>>>>>>> update demo
     windowHeight={400}
     windowWidth={550}
   >
@@ -84,7 +96,7 @@ exports[`Share Article Component should rendered share Article Icons without cra
   </CreatedButton>
   <CreatedButton
     body=" 
-undefined/article/ "
+https://krypton-ah-fe-stage.herokuapp.com/article/ "
     onClick={[Function]}
     openWindow={false}
 <<<<<<< HEAD
@@ -92,8 +104,12 @@ undefined/article/ "
     url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
 =======
     subject=" "
+<<<<<<< HEAD
     url="undefined/article/ "
 >>>>>>> add article actions and reducer to article component
+=======
+    url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
+>>>>>>> update demo
   >
     <Icon
       className=""

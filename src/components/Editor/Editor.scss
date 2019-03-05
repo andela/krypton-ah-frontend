@@ -38,6 +38,7 @@ $border_color_1: none;
       font-size: 1.2em;
       font-weight: 400;
       text-transform: uppercase;
+      text-align: left;
     }
     > .selection.dropdown {
       width: 100%;
@@ -69,6 +70,7 @@ $border_color_1: none;
           border-radius: 0;
           padding-left: 0;
           color: $textInput;
+          text-align: left;
           &:focus {
             border-bottom: rgb(105, 105, 105);
           }
