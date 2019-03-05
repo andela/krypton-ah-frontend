@@ -2,7 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { Icon } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getTotalReactions } from '../../actions/articleReactionsAction';
+import { dateFormatter } from '../../helpers/articleInfoFormatter';
+import { getTotalReactions, articleReaction } from '../../actions/articleReactionsAction';
 
 class ReactionIcons extends Component {
   state = {
@@ -14,22 +15,26 @@ class ReactionIcons extends Component {
     this.props.getTotalReactions(this.props.selectedArticleId);
   };
 
-  likeArticle = (outline = 'outline') => {
+  createLikeIcon = (outline = 'outline') => {
     const name = outline.length === 0 ? 'thumbs up' : `thumbs up ${outline}`;
     return (
-      <i role="presentation">
+      <i role="presentation" onClick={this.createReaction.bind(this, 'like')}>
         <Icon disabled link size="small" fitted name={`thumbs up ${name}`} />
       </i>
     );
   };
 
-  dislikeArticle = (outline = 'outline') => {
+  createDislikeIcon = (outline = 'outline') => {
     const name = outline.length === 0 ? 'thumbs down' : `thumbs down ${outline}`;
     return (
-      <i role="presentation">
+      <i role="presentation" onClick={this.createReaction.bind(this, 'dislike')}>
         <Icon disabled link size="small" fitted name={`thumbs down ${name}`} />
       </i>
     );
+  };
+
+  createReaction = (reaction) => {
+    this.props.articleReaction(this.props.selectedArticleId, reaction);
   };
 
   render() {
@@ -39,14 +44,17 @@ class ReactionIcons extends Component {
     const outline = '';
     return (
       <Fragment>
+        <Icon disabled link size="small" fitted name="time">
+          <span>{dateFormatter(date)}</span>
+        </Icon>
         <i className="dates">{date}</i>
-        {likeClicked ? this.likeArticle(outline) : this.likeArticle()}
+        {likeClicked ? this.createLikeIcon(outline) : this.createLikeIcon()}
         {likes}
-        {dislikeClicked ? this.dislikeArticle(outline) : this.dislikeArticle()}
+        {dislikeClicked ? this.createDislikeIcon(outline) : this.createDislikeIcon()}
         {dislikes}
         <i className="articleComment">
           <Icon disabled link size="small" fitted name="comments outline" />
-          {numberofcomments}
+          <span>{numberofcomments}</span>
         </i>
       </Fragment>
     );
@@ -62,7 +70,8 @@ ReactionIcons.propTypes = {
   numberofcomments: PropTypes.number,
   selectedArticleId: PropTypes.string.isRequired,
   getTotalReactions: PropTypes.func.isRequired,
-  totalArticleReactions: PropTypes.object.isRequired
+  totalArticleReactions: PropTypes.object.isRequired,
+  articleReaction: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -72,5 +81,5 @@ const mapStateToProps = state => ({
 export { ReactionIcons as ReactionIconsPage };
 export default connect(
   mapStateToProps,
-  { getTotalReactions }
+  { getTotalReactions, articleReaction }
 )(ReactionIcons);

@@ -2,12 +2,25 @@
 
 exports[`Test for reaction Icons should have initial state of false and change when clicked  1`] = `
 <Fragment>
+  <Icon
+    as="i"
+    disabled={true}
+    fitted={true}
+    link={true}
+    name="time"
+    size="small"
+  >
+    <span>
+      Invalid Date
+    </span>
+  </Icon>
   <i
     className="dates"
   >
     28th february 2019
   </i>
   <i
+    onClick={[Function]}
     role="presentation"
   >
     <Icon
@@ -21,6 +34,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
   </i>
   2
   <i
+    onClick={[Function]}
     role="presentation"
   >
     <Icon
@@ -44,19 +58,34 @@ exports[`Test for reaction Icons should have initial state of false and change w
       name="comments outline"
       size="small"
     />
-    23
+    <span>
+      23
+    </span>
   </i>
 </Fragment>
 `;
 
 exports[`Test for reaction Icons should have initial state of false and change when clicked  2`] = `
 <Fragment>
+  <Icon
+    as="i"
+    disabled={true}
+    fitted={true}
+    link={true}
+    name="time"
+    size="small"
+  >
+    <span>
+      Invalid Date
+    </span>
+  </Icon>
   <i
     className="dates"
   >
     28th february 2019
   </i>
   <i
+    onClick={[Function]}
     role="presentation"
   >
     <Icon
@@ -70,6 +99,7 @@ exports[`Test for reaction Icons should have initial state of false and change w
   </i>
   2
   <i
+    onClick={[Function]}
     role="presentation"
   >
     <Icon
@@ -93,7 +123,9 @@ exports[`Test for reaction Icons should have initial state of false and change w
       name="comments outline"
       size="small"
     />
-    23
+    <span>
+      23
+    </span>
   </i>
 </Fragment>
 `;

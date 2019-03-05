@@ -5,11 +5,7 @@ import moxios from 'moxios';
 import * as actions from '../fetchArticlesActions';
 import actionTypes from '../actionTypes';
 import * as axios from '../../../helpers/axiosHelper/articlesAxiosCalls';
-import {
-  payload,
-  fetchArticlesresponse,
-  fetchArticles
-} from '../../../mockData';
+import { payload, fetchArticlesresponse, fetchArticles, mockResponse } from '../../../mockData';
 
 const mockStore = configureStore([thunk]);
 const store = mockStore({ auth: {} });
@@ -32,21 +28,27 @@ describe('user authentication actions Signup', () => {
     });
   });
 
-  it(`should return an action object once ${actionTypes.FETCH_FEATURED_ARTICLES_SUCCESS} is fired`, () => {
+  it(`should return an action object once ${
+    actionTypes.FETCH_FEATURED_ARTICLES_SUCCESS
+  } is fired`, () => {
     expect(actions.fetchfeaturedSuccess(fetchArticlesresponse)).toEqual({
       type: actionTypes.FETCH_FEATURED_ARTICLES_SUCCESS,
       payload: fetchArticlesresponse
     });
   });
 
-  it(`should return an action object once ${actionTypes.FETCH_TRENDING_ARTICLES_SUCCESS} is fired`, () => {
+  it(`should return an action object once ${
+    actionTypes.FETCH_TRENDING_ARTICLES_SUCCESS
+  } is fired`, () => {
     expect(actions.fetchtrendingSuccess(fetchArticlesresponse)).toEqual({
       type: actionTypes.FETCH_TRENDING_ARTICLES_SUCCESS,
       payload: fetchArticlesresponse
     });
   });
 
-  it(`should return an action object once ${actionTypes.FETCH_POPULAR_ARTICLES_SUCCESS} is fired`, () => {
+  it(`should return an action object once ${
+    actionTypes.FETCH_POPULAR_ARTICLES_SUCCESS
+  } is fired`, () => {
     expect(actions.fetchpopularSuccess(fetchArticlesresponse)).toEqual({
       type: actionTypes.FETCH_POPULAR_ARTICLES_SUCCESS,
       payload: fetchArticlesresponse
@@ -60,26 +62,29 @@ describe('user authentication actions Signup', () => {
     });
   });
 
-  it(`should return an action object once ${actionTypes.FETCH_POPULAR_ARTICLES_SUCCESS} is fired`, () => {
+  it(`should return an action object once ${
+    actionTypes.FETCH_POPULAR_ARTICLES_SUCCESS
+  } is fired`, () => {
     expect(actions.fetchpopularSuccess(fetchArticlesresponse)).toEqual({
       type: actionTypes.FETCH_POPULAR_ARTICLES_SUCCESS,
       payload: fetchArticlesresponse
     });
   });
 
-  it(`should return an action object once ${actionTypes.FETCH_POPULAR_ARTICLES_SUCCESS} is fired`, () => {
-    expect(actions.fetchPopularFailure(fetchArticlesresponse)).toEqual({
-      type: actionTypes.FETCH_POPULAR_ARTICLES_FAILURE,
-      payload: fetchArticlesresponse
-    });
-  });
-
-
   it(`should return an action object once ${actionTypes.SIGNUP_FAILURE} is fired`, () => {
-    expect(actions.fetchPopularFailure(payload)).toEqual({
-      type: actionTypes.FETCH_POPULAR_ARTICLES_FAILURE,
+    expect(actions.fetchCategoriesFailure(payload)).toEqual({
+      type: actionTypes.FETCH_CATEGORIES_FAILURE,
       payload
     });
+  });
+});
+
+it(`should return an action object once ${
+  actionTypes.FETCH_POPULAR_ARTICLES_SUCCESS
+} is fired`, () => {
+  expect(actions.fetchPopularFailure(fetchArticlesresponse)).toEqual({
+    type: actionTypes.FETCH_POPULAR_ARTICLES_FAILURE,
+    payload: fetchArticlesresponse
   });
 });
 
@@ -117,7 +122,6 @@ describe('user authentication actions login', () => {
     expect(dispatch).toBeCalledTimes(1);
   });
 
-
   it('should throw error', async () => {
     axios.fetchCategories = jest.fn(() => {
       throw { response: 'hello' };
@@ -131,34 +135,45 @@ describe('user authentication actions login', () => {
     store.clearActions();
   });
 
-
   it('should throw error', async () => {
     axios.fetchTags = jest.fn(() => {
-      throw { response: 'hello' };
+      throw { response: mockResponse };
     });
     try {
-      await actions.fetchtags(payload)(dispatch);
+      await actions.fetchtags()(dispatch);
     } catch (error) {
-      expect(error).toEqual({ response: 'hello' });
+      expect(dispatch).toBeCalledTimes(1);
+      expect(dispatch).toBeCalledWith({
+        type: actionTypes.FETCH_TAGS_FAILURE,
+        payload: mockResponse
+      });
     }
-    expect(dispatch).toBeCalledTimes(1);
     store.clearActions();
   });
-
 
   it('should throw error', async () => {
     axios.fetchPopularArticles = jest.fn(() => {
-      throw { response: 'hello' };
+      throw {};
     });
     try {
-      await actions.fetchpopular(payload)(dispatch);
+      await actions.fetchpopular()(dispatch);
     } catch (error) {
-      expect(error).toEqual({ response: 'hello' });
+      expect(dispatch).toBeCalledTimes(2);
     }
-    expect(dispatch).toBeCalledTimes(2);
     store.clearActions();
   });
 
+  it('should throw error', async () => {
+    axios.fetchFeaturedArticles = jest.fn(() => {
+      throw {};
+    });
+    try {
+      await actions.fetchfeatured()(dispatch);
+    } catch (error) {
+      expect(dispatch).toBeCalledTimes(1);
+    }
+    store.clearActions();
+  });
 
   it('should throw error', async () => {
     axios.fetchPopularArticles = jest.fn(() => {
@@ -178,11 +193,34 @@ describe('user authentication actions login', () => {
       throw { response: 'hello' };
     });
     try {
-      await actions.fetchfeatured(payload)(dispatch);
+      await actions.fetchfeatured()(dispatch);
     } catch (error) {
-      expect(error).toEqual({ response: 'hello' });
+      expect(dispatch).toBeCalledTimes(1);
     }
-    expect(dispatch).toBeCalledTimes(1);
+    store.clearActions();
+  });
+
+  it('should throw error', async () => {
+    axios.fetchTags = jest.fn(() => {
+      throw {};
+    });
+    try {
+      await actions.fetchtags()(dispatch);
+    } catch (error) {
+      expect(dispatch).toBeCalledTimes(1);
+    }
+    store.clearActions();
+  });
+
+  it('should throw error', async () => {
+    axios.fetchCategories = jest.fn(() => {
+      throw {};
+    });
+    try {
+      await actions.fetchcategories()(dispatch);
+    } catch (error) {
+      expect(dispatch).toBeCalledTimes(1);
+    }
     store.clearActions();
   });
 });

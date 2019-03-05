@@ -1,12 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`button test should test for the Icons component 1`] = `
+exports[`widget test should test for the Icons component 1`] = `
 <ContextConsumer>
   <Component />
 </ContextConsumer>
 `;
 
-exports[`button test should test for the advert component 1`] = `
+exports[`widget test should test for the Icons component 2`] = `
+<Menu
+  className="widgetContainer"
+>
+  <div
+    className="icons"
+  >
+    <Connect(ReactionIcons)
+      date="current-date"
+      selectedArticleId={1}
+    />
+  </div>
+</Menu>
+`;
+
+exports[`widget test should test for the advert component 1`] = `
 <GridColumn
   className="Advert"
 >
@@ -19,18 +34,46 @@ exports[`button test should test for the advert component 1`] = `
 </GridColumn>
 `;
 
-exports[`button test should test for the button component 1`] = `
+exports[`widget test should test for the article feed  component 1`] = `<componentloader />`;
+
+exports[`widget test should test for the button component 1`] = `
 <Card
   className="widgetIcons"
 >
   <CardContent
-    className="className"
+    className={true}
   >
     <Feed>
       <MainFeaturedArticle
-        description="placeholder descritption"
-        image="https://res.cloudinary.com/ah-krypton/image/upload/v1550010452/widget.png"
-        title="placeholder title"
+        date="2019-01-23T07:09:10.447Z"
+        description="Descriptive title"
+        id="65719288-0395-445e-b587-2b98b70bdec9"
+        image="https://farm4.staticflickr.com/3894/15008518202_c265dfa55f_h.jpg"
+        key="65719288-0395-445e-b587-2b98b70bdec9"
+        slug="this-is-a-post-title-l78hgybf"
+        title="This is a post title"
+      />
+    </Feed>
+  </CardContent>
+</Card>
+`;
+
+exports[`widget test should test for the button component 2`] = `
+<Card
+  className="widgetIcons"
+>
+  <CardContent
+    className={true}
+  >
+    <Feed>
+      <MainFeaturedArticle
+        date="2019-01-23T07:09:10.447Z"
+        description="Descriptive title"
+        id="65719288-0395-445e-b587-2b98b70bdec9"
+        image="https://farm4.staticflickr.com/3894/15008518202_c265dfa55f_h.jpg"
+        key="65719288-0395-445e-b587-2b98b70bdec9"
+        slug="this-is-a-post-title-l78hgybf"
+        title="This is a post title"
       />
     </Feed>
   </CardContent>
