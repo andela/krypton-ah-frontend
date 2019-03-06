@@ -54,7 +54,7 @@ exports[`button test should test for the newsletter component 1`] = `
     text="NewsLetter"
   />
   <Input
-    placeholder="Search..."
+    placeholder="Subscribe..."
     type="text"
   />
   <Button
@@ -62,7 +62,7 @@ exports[`button test should test for the newsletter component 1`] = `
     basic={true}
     color="black"
   >
-    Submit
+    Subsrcibe
   </Button>
 </GridColumn>
 `;

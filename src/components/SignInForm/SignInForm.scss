@@ -1,5 +1,6 @@
 input#_password,input#password{
-  width: 21rem !important;
+  width: 20rem !important;
+  margin-left: 0.4rem;
 }
 
 .ui.form {
@@ -10,3 +11,27 @@ a {
     background: rgba(226, 226, 226, 0.33) !important;
 }
 }
+
+.ui.form .fields .field .ui.input input {
+    width: auto;
+    border: 1px solid #22242626;
+}
+
+input#_password,input#password {
+  width: 20rem !important;
+  margin {
+    left: 0.4rem;
+    bottom: 0.4rem
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .ui.form .fields .formGroup  {
+    width: 50%
+  }
+}
+  @media (max-width: 767px) {
+  input#_password,input#password{
+    width: 17.8rem !important;
+  }
+  }
