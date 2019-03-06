@@ -41,7 +41,7 @@ const articleReaction = (articleId, reactionType) => async (dispatch) => {
     await axios.updateArticleReaction(articleId, reactionType);
     dispatch(articleReactionSuccess(reactionType));
   } catch (error) {
-    toast.error(error.response.data.message);
+    toast.error('Please Login to make your opinion count');
   }
 };
 export {
