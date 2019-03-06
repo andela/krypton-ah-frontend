@@ -55,6 +55,10 @@ const initialState = {
     articles: [],
     userprofile: {},
     currentUser: {}
+  },
+  articleReaction: {
+    success: false,
+    newReaction: ''
   }
 };
 

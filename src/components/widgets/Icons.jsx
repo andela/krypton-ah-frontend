@@ -14,7 +14,7 @@ export default function Icons(props) {
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <Reactions date={date} selectedArticleId={selectedArticleId} />
+            <Reactions disabled date={date} selectedArticleId={selectedArticleId} />
             <Icon disabled link size="small" name="bookmark outline" />
             <span>{numberofcomments}</span>
             <div className="rating">
