@@ -12,8 +12,12 @@
   }
 }
 
-input#_signUpPassword,input#signUpPassword{
-  width: 21rem !important;
+input#_signUpPassword,input#signUpPassword {
+  width: 20rem !important;
+  margin: {
+    left: 0.4rem;
+    bottom: 0.4rem
+  }
 }
 
 .ui.form {
@@ -28,7 +32,12 @@ a {
 @media (min-width: 1025px) and (max-width: 1280px) {
 .ui.form .fields .formGroup  {
   width: 50%
-}  
+}
+}
+@media (max-width: 767px) {
+input#_signUpPassword,input#signUpPassword{
+  width: 17.8rem !important;
+}
 }
 .accountCreated {
   color: #fff;

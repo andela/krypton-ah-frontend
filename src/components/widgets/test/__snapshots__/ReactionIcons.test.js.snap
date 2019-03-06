@@ -15,11 +15,6 @@ exports[`Test for reaction Icons should have initial state of false and change w
     </span>
   </Icon>
   <i
-    className="dates"
-  >
-    28th february 2019
-  </i>
-  <i
     onClick={[Function]}
     role="presentation"
   >
@@ -32,7 +27,9 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
-  2
+  <span>
+    2
+  </span>
   <i
     onClick={[Function]}
     role="presentation"
@@ -46,7 +43,9 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
-  1
+  <span>
+    1
+  </span>
   <i
     className="articleComment"
   >
@@ -58,10 +57,12 @@ exports[`Test for reaction Icons should have initial state of false and change w
       name="comments outline"
       size="small"
     />
-    <span>
-      23
-    </span>
   </i>
+  <span
+    className="commentspan"
+  >
+    0
+  </span>
 </Fragment>
 `;
 
@@ -80,11 +81,6 @@ exports[`Test for reaction Icons should have initial state of false and change w
     </span>
   </Icon>
   <i
-    className="dates"
-  >
-    28th february 2019
-  </i>
-  <i
     onClick={[Function]}
     role="presentation"
   >
@@ -97,7 +93,9 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
-  2
+  <span>
+    2
+  </span>
   <i
     onClick={[Function]}
     role="presentation"
@@ -111,7 +109,9 @@ exports[`Test for reaction Icons should have initial state of false and change w
       size="small"
     />
   </i>
-  1
+  <span>
+    1
+  </span>
   <i
     className="articleComment"
   >
@@ -123,9 +123,11 @@ exports[`Test for reaction Icons should have initial state of false and change w
       name="comments outline"
       size="small"
     />
-    <span>
-      23
-    </span>
   </i>
+  <span
+    className="commentspan"
+  >
+    0
+  </span>
 </Fragment>
 `;

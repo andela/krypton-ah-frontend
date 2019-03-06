@@ -47,11 +47,17 @@ exports[`SignUp Form should matches the snapshot 1`] = `
   <FormGroup
     widths="equal"
   >
-    <FormInput
-      handleChange={[Function]}
+    <t
+      buttonClassName=""
+      id="signUpPassword"
+      inputClassName=""
       name="password"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
       placeholder="Password"
       type="password"
+      useVendorStyles={true}
       value=""
     />
   </FormGroup>

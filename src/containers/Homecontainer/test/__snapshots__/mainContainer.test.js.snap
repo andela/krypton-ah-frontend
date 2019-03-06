@@ -32,7 +32,7 @@ exports[`home container test should test for the featuredarticles component 1`] 
             disabled={true}
             id="65719288-0395-445e-b587-2b98b70bdec9"
             name="hakeem ibrahim"
-            numberofcomments={23}
+            numberofcomments={0}
             rating={3}
             ratingIcon={null}
             selectedArticleId={1}
