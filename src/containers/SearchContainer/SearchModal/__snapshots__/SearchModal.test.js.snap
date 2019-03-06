@@ -38,9 +38,7 @@ exports[`Search component should match snapshot 1`] = `
           type="text"
           value=""
         />
-        <Segment
-          className="radioCenter"
-        >
+        <Segment>
           <Radio
             checked={false}
             className="radioMargin"

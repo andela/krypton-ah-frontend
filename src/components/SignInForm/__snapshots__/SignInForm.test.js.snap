@@ -13,7 +13,6 @@ exports[`SignIn Form should matches the snapshot 1`] = `
       className="email"
       control={[Function]}
       fluid={true}
-      id="emailAddress"
       name="email"
       onChange={[Function]}
       placeholder="Email Address"
@@ -23,18 +22,17 @@ exports[`SignIn Form should matches the snapshot 1`] = `
     />
   </FormGroup>
   <FormGroup
-    fluid={true}
     widths="equal"
   >
     <t
       buttonClassName=""
-      id="password"
-      inputClassName=""
-      inputStyles={
+      buttonStyles={
         Object {
           "width": "100%",
         }
       }
+      fluid={true}
+      inputClassName=""
       name="password"
       onBlur={[Function]}
       onChange={[Function]}

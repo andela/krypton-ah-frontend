@@ -3,8 +3,6 @@
 exports[`Editor Component should rendered Editor component without crashing 1`] = `
 <Form
   as="form"
-  className="EditorInputs"
-  onSubmit={[Function]}
 >
   <FormField
     required={true}
