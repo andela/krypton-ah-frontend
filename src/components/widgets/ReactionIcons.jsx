@@ -58,7 +58,8 @@ ReactionIcons.propTypes = {
   selectedArticleId: PropTypes.string.isRequired,
   getTotalReactions: PropTypes.func.isRequired,
   totalArticleReactions: PropTypes.object.isRequired,
-  articleReaction: PropTypes.func.isRequired
+  articleReaction: PropTypes.func.isRequired,
+  disabled: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = state => ({
