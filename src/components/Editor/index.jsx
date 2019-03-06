@@ -233,7 +233,7 @@ class Editor extends Component {
       return <Redirect to={`/article/${this.props.createArticle.response.data.id}`} />;
     }
     return (
-      <Form>
+      <Form className="EditorInputs">
         {this.renderTitle(article, errors)}
         {errors.title && <InlineError text={errors.title} />}
         {this.renderDescription(article, errors)}

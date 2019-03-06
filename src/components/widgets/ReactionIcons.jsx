@@ -24,7 +24,7 @@ class ReactionIcons extends Component {
 
   createReaction = (newReaction) => {
     this.props.articleReaction(this.props.selectedArticleId, newReaction);
-    setTimeout(() => this.props.getTotalReactions(this.props.selectedArticleId), 100);
+    setTimeout(() => this.props.getTotalReactions(this.props.selectedArticleId), 500);
   };
 
   render() {
