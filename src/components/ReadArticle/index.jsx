@@ -59,16 +59,9 @@ class ReadArticle extends Component {
       description,
       featuredImageUrl,
       readTime,
-      articleAuthor,
-      authorId
+      articleAuthor
     } = this.props.retrievedArticle.successResponse;
     const authorDetails = this.getAuthorDetails(articleAuthor);
-    let userAvatar = '';
-    if (articleAuthor) {
-      if (articleAuthor.userprofile) {
-        userAvatar = articleAuthor.userprofile.avatar;
-      }
-    }
     return (
       <Container className="readArticleContainer">
         <Image src={featuredImageUrl || featuredImageUrlPlaceholder} size="massive" />
@@ -76,7 +69,7 @@ class ReadArticle extends Component {
           {title}
         </Header>
         <Comment.Group className="articleInfo">
-          <Image avatar as="a" src={userAvatar || author} href={`/profile/${authorId}`} />
+          <Image avatar as="a" src={author} />
           {this.getArticleInfo(authorDetails.authorName, createdAt, readTime)}
         </Comment.Group>
         <Divider className="articleDivider" />
