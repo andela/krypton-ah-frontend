@@ -168,6 +168,7 @@ exports[`Editor Component should rendered Editor component without crashing 1`] 
       as="button"
       basic={true}
       floated="left"
+      id="draftBtn"
       onClick={[Function]}
     >
       <span

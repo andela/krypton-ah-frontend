@@ -38,6 +38,14 @@ describe('Editor Component', () => {
     wrapper.update();
     expect(wrapper.find('Form')).toBeDefined();
   });
+  it('should save article as draft', () => {
+    const wrapper = shallow(<ArticleEditor {...props} />);
+    wrapper.find('#draftBtn').simulate('click', {
+      preventDefault: jest.fn()
+    });
+    wrapper.update();
+    expect(wrapper.find('#draftBtn')).toBeDefined();
+  });
 
   it('should change the state after changing the article content', () => {
     const event = { target: { name: 'How to learn Nodejs' } };
@@ -45,6 +53,15 @@ describe('Editor Component', () => {
     const handleEditorChangeSpy = sinon.spy(wrapper.instance(), 'handleEditorChange');
     wrapper.update();
     wrapper.find('ReactMediumEditor').simulate('change', event);
+    expect(handleEditorChangeSpy.calledOnce).toBeDefined();
+  });
+
+  it('should handle image upload', () => {
+    const event = { target: { files: ['files'] } };
+    const wrapper = shallow(<ArticleEditor />);
+    const handleEditorChangeSpy = sinon.spy(wrapper.instance(), 'handleImageUpload');
+    wrapper.update();
+    wrapper.find('#fileUpload').simulate('change', event);
     expect(handleEditorChangeSpy.calledOnce).toBeDefined();
   });
 });

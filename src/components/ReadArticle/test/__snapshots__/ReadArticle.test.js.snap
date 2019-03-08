@@ -183,7 +183,7 @@ exports[`Read article component should matches the snapshot 1`] = `
           >
             <CreatedButton
               quote="this is a valid description wooooooooot toooooooooooooooooooot"
-              url="undefined/article/ "
+              url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
               windowHeight={400}
               windowWidth={550}
             >
@@ -205,7 +205,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 quote="this is a valid description wooooooooot toooooooooooooooooooot"
                 role="button"
                 tabIndex="0"
-                url="undefined/article/ "
+                url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
                 windowHeight={400}
                 windowWidth={550}
               >
@@ -266,7 +266,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 ]
               }
               title="this is a valid articles 2"
-              url="undefined/article/ "
+              url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
               windowHeight={400}
               windowWidth={550}
             >
@@ -296,7 +296,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 role="button"
                 tabIndex="0"
                 title="this is a valid articles 2"
-                url="undefined/article/ "
+                url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
                 windowHeight={400}
                 windowWidth={550}
               >
@@ -353,7 +353,7 @@ exports[`Read article component should matches the snapshot 1`] = `
             <CreatedButton
               description="this is a valid description wooooooooot toooooooooooooooooooot"
               title="this is a valid articles 2"
-              url="undefined/article/ "
+              url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
               windowHeight={600}
               windowWidth={750}
             >
@@ -376,7 +376,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 role="button"
                 tabIndex="0"
                 title="this is a valid articles 2"
-                url="undefined/article/ "
+                url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
                 windowHeight={600}
                 windowWidth={750}
               >
@@ -433,7 +433,7 @@ exports[`Read article component should matches the snapshot 1`] = `
             <CreatedButton
               separator=" "
               title="this is a valid articles 2"
-              url="undefined/article/ "
+              url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
               windowHeight={400}
               windowWidth={550}
             >
@@ -456,7 +456,7 @@ exports[`Read article component should matches the snapshot 1`] = `
                 separator=" "
                 tabIndex="0"
                 title="this is a valid articles 2"
-                url="undefined/article/ "
+                url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
                 windowHeight={400}
                 windowWidth={550}
               >
@@ -512,15 +512,15 @@ exports[`Read article component should matches the snapshot 1`] = `
             </CreatedButton>
             <CreatedButton
               body="this is a valid description wooooooooot toooooooooooooooooooot
-undefined/article/ "
+https://krypton-ah-fe-stage.herokuapp.com/article/ "
               onClick={[Function]}
               openWindow={false}
               subject="this is a valid articles 2"
-              url="undefined/article/ "
+              url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
             >
               <ShareButton
                 body="this is a valid description wooooooooot toooooooooooooooooooot
-undefined/article/ "
+https://krypton-ah-fe-stage.herokuapp.com/article/ "
                 disabledStyle={
                   Object {
                     "opacity": 0.6,
@@ -533,14 +533,14 @@ undefined/article/ "
                 opts={
                   Object {
                     "body": "this is a valid description wooooooooot toooooooooooooooooooot
-undefined/article/ ",
+https://krypton-ah-fe-stage.herokuapp.com/article/ ",
                     "subject": "this is a valid articles 2",
                   }
                 }
                 role="button"
                 subject="this is a valid articles 2"
                 tabIndex="0"
-                url="undefined/article/ "
+                url="https://krypton-ah-fe-stage.herokuapp.com/article/ "
               >
                 <div
                   className="SocialMediaShareButton SocialMediaShareButton--email"
