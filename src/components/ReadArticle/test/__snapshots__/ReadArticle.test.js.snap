@@ -168,6 +168,9 @@ exports[`Read article component should matches the snapshot 1`] = `
               this is a good content wooooooooooooooooooot tooooooooooooooooooooooooot
             </p>
           </div>
+          <div
+            className="tagHolder"
+          />
         </div>
       </Container>
       <div
