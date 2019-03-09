@@ -1,10 +1,17 @@
 import { combineReducers } from 'redux';
-import { trendingArticlesReducer, popularArticlesReducer, FeaturedArticlesReducer, TagsReducer, CategoriesReducer } from './articlesReducers/fetchArticlesReducers';
+import {
+  trendingArticlesReducer,
+  popularArticlesReducer,
+  FeaturedArticlesReducer,
+  TagsReducer,
+  CategoriesReducer
+} from './articlesReducers/fetchArticlesReducers';
 import authReducer from './authReducer';
 import socialLogin from './socialLoginReducer';
 import readArticle from './readArticleReducer';
 import totalArticleReactions from './totalArticleReactionReducer';
 import userReducer from './userReducer';
+import newArticleReaction from './articleReactionsReducer';
 
 const rootReducer = combineReducers({
   trendingArticlesReducer,
@@ -16,7 +23,8 @@ const rootReducer = combineReducers({
   userReducer,
   socialLogin,
   readArticle,
-  totalArticleReactions
+  totalArticleReactions,
+  newArticleReaction
 });
 
 export default rootReducer;
