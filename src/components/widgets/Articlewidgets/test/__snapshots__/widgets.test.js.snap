@@ -17,14 +17,8 @@ exports[`button test should test for the button component 1`] = `
     <FeedSummary>
       this is a test description
     </FeedSummary>
-    <Icons
+    <Connect(Icons)
       date="current-date"
-      disabled={false}
-      name="author-name"
-      numberofcomments={23}
-      rating={0}
-      ratingIcon="rating-class"
-      selectedArticleId={1}
     />
   </FeedContent>
 </FeedEvent>
@@ -107,31 +101,13 @@ exports[`button test should test for the button component 3`] = `
 `;
 
 exports[`button test should test for the button component 4`] = `
-<Menu
-  className="widgetContainer"
->
-  <div
-    className="icons"
-  >
-    <Connect(ReactionIcons)
-      date="current-date"
-      selectedArticleId={1}
-    />
-  </div>
-</Menu>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`button test should test for the button component 5`] = `
-<Menu
-  className="widgetContainer"
->
-  <div
-    className="icons"
-  >
-    <Connect(ReactionIcons)
-      date="current-date"
-      selectedArticleId={1}
-    />
-  </div>
-</Menu>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

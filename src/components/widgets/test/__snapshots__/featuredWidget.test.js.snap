@@ -7,18 +7,9 @@ exports[`widget test should test for the Icons component 1`] = `
 `;
 
 exports[`widget test should test for the Icons component 2`] = `
-<Menu
-  className="widgetContainer"
->
-  <div
-    className="icons"
-  >
-    <Connect(ReactionIcons)
-      date="current-date"
-      selectedArticleId={1}
-    />
-  </div>
-</Menu>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`widget test should test for the advert component 1`] = `

@@ -50,19 +50,23 @@ class ReadArticle extends Component {
   };
 
   render() {
-    const { title,
+    const {
+      title,
       content,
       createdAt,
       id,
       description,
       featuredImageUrl,
       readTime,
-      articleAuthor } = this.props.retrievedArticle.successResponse;
+      articleAuthor
+    } = this.props.retrievedArticle.successResponse;
     const authorDetails = this.getAuthorDetails(articleAuthor);
     return (
       <Container className="readArticleContainer">
         <Image src={featuredImageUrl} size="massive" />
-        <Header as="h1" className="articleTitle">{title}</Header>
+        <Header as="h1" className="articleTitle">
+          {title}
+        </Header>
         <Comment.Group className="articleInfo">
           <Image avatar as="a" src={author} />
           {this.getArticleInfo(authorDetails.authorName, createdAt, readTime)}
@@ -87,6 +91,7 @@ ReadArticle.propTypes = {
   featuredImageUrl: PropTypes.string,
   articleAuthor: PropTypes.object,
   getArticle: PropTypes.func.isRequired,
+  getUserArticleRating: PropTypes.func.isRequired,
   retrievedArticle: PropTypes.object,
   selectedArticle: PropTypes.string.isRequired
 };
